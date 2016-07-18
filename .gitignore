@@ -1,0 +1,14 @@
+# File Types #
+##############
+
+*.png
+*.jpg
+*.aux
+*.log
+*.bbl
+*.toc
+*.gz
+*.bbg
+*.xcf
+*.gdoc
+*.key
