@@ -1,0 +1,832 @@
+%----------------------------------------------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article} % Default font size is 12pt, it can be changed here
+
+\usepackage{graphicx} % Required for including pictures
+\usepackage[font={small}]{caption}
+\usepackage{subcaption}
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+
+\usepackage{amsmath}
+\usepackage{bm}
+
+\usepackage{fancyhdr}
+
+\usepackage{enumerate}
+\usepackage[mathscr]{euscript}
+\usepackage{listings}
+\usepackage{epstopdf}
+\usepackage[toc,page]{appendix}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{titlesec}
+\usepackage{dcolumn}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usetikzlibrary{shapes,shadows,arrows,decorations.markings,calc,spy,backgrounds,patterns,decorations.pathmorphing}
+\tikzstyle{model}=[rectangle, rounded corners, thin, draw,align=center]
+\usepackage{pgfplots}   
+\usepackage{pgfplotstable}
+\usepackage{natbib}
+\usepackage{makeidx}
+
+\makeindex
+
+\linespread{1.2} % Line spacing
+
+\graphicspath{{Figures/}} % Specifies the directory where pictures are stored
+
+\numberwithin{equation}{section} % Handles equation numbering
+
+
+%----------------------------------------------------------------------------------------
+% DEFINE TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\makeatletter
+\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+\def\s@btitle{\relax}
+\def\subtitle#1{\gdef\s@btitle{#1}}
+\def\@maketitle{ \linespread{1.0}
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title \par}%
+                \if\s@btitle\relax
+                \else\typeout{[subtitle]}%
+                        \vskip .5pc
+                        \begin{large}%
+                                \textsl{\s@btitle}%
+                                \par
+                        \end{large}%
+                \fi
+    \vskip 2em%
+\includegraphics[scale=0.3]{pc_logo.jpg}
+\vskip 2em%
+    {\large
+      \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+    \vskip 3em%
+    {\large \@date}%
+  \end{center}%
+  \par
+  \vskip 1.5em}
+\makeatother
+\title{\textbf{Contact Binary Stars in Survey Data}}
+\author{Franklin Marsh\\
+\small{\emph{with advisor}}\\
+Philip I. Choi, Ph.D.\\
+Professor of Astronomy\\ Pomona College}
+\subtitle{A thesis submitted in partial fulfillment of the requirements of a degree of Bachelor of Arts
+in\\
+Physics\\
+at\\
+Pomona College}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+\thispagestyle{empty}
+\begin{abstract}
+
+\end{abstract}
+\newpage
+
+%----------------------------------------------------------------------------------------
+% ACKNOWLEDGMENTS
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{empty}
+\section*{Acknowledgments}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+% TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Include a table of contents
+
+\newpage % Begins the essay on a new page instead of on the same page as the table of contents 
+
+%----------------------------------------------------------------------------------------
+% INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section[Introduction - Contact Binaries at the Intersection]{\hyperlink{toc}{Introduction - Contact Binaries at the Intersection}} \label{sec: intro}
+
+\emph{Q: Why are contact binaries interesting (and important!)?}
+
+The contact binary star is placed at the intersection of some of the largest questions in modern astronomy.
+
+transients - large explosions that briefly outshine a galaxy's worth of stars.
+Our own sun, in their cycles of magnetic activity.
+habitability - could planets exist around such systems? Would massive flares render life impossible?
+gravitational waves - massive contact binaries consisting of O and B Type main sequence stars.
+the structure of the galaxy - how we can use them as standard candles. 
+
+
+The contact binary also stands at the intersection of ``old" and ``new" observational techniques. 
+
+As we shall see, the first contact binary was discovered in a survey. 
+
+We roughly can split observational science into two modes:
+
+1. Survey Mode: Look out and see what there is to see.
+
+2. Target Mode: Observe very specific set of objects in a way tailored to learn about known phenomena.
+
+In the 20th century, the science of astronomy was ``data poor". The limiting factor of discovery was observations from large telescopes of the day. The possession of data enabled the science. If a scientist had new, proprietary data, science would come out of it.
+
+At the turn of the 21st century (enabled by advances in data storage, processing and robotics, and as a direct result of Moore's law) observational astronomical science began to shift modes.
+
+Old telescopes were being remodeled, old gears, motors and lenses were being replaced with robotic systems, enabling their autonomous operation. New telescopes were being constructed with the express purpose of deeply surveying the sky - with minimal human intervention. No longer inhibited by human operators, telescopes could image the sky continuously - dawn to dusk. Data poured from these telescopes like water from a firehose. The new images filled massive stacks of servers: for the first time, astronomers were ``data rich". 
+
+The monstrous stream of data had to be filtered. Scientists interested in new discoveries had to find the proverbial needle in the haystack. The most productive scientist was no longer the scientist with the best data, it became the scientist with the best techniques for filtering, stacking, folding, combining, or otherwise analyzing the data. Astronomers started shifting back to ``Survey Mode".
+
+Asteroids were discovered by the thousands. The rate of supernova discovery accelerated from one every few years to \emph{one every night}.  The number of known eclipsing binaries ballooned from just over a thousand, to tens of thousands. The number of galaxies with known distances lept from BLANK to BLANK. This progress is accelerating: within the decade, at least three major sky surveys of unprecedented depth and cadence will come online.
+
+In the 21st century, we can study thousands of contact binary systems at once. 
+
+*present tense*
+
+In \S \ref{sec: background} I provide a brief history of the discovery of the first contact binary star, and outline major leaps of understanding in the field. In \S \ref{sec: observations}, I discuss the types of observations that can be used to learn about contact systems. In \S \ref{sec: analysis_techniques}, I explain the ways that astronomers are able to use measurements to physically characterize contact systems.
+
+I then present original research that I have undertaken with Dr. Tom Prince, Dr. Ashish Mahabal, Dr. Eric Bellm, and Dr. Andrew Drake at the California Institute of Technology. In \S \ref{sec: lc_morph}, we discuss how light-curve characteristics vary as a function of temperature. In \S \ref{sec: dec_var}, we present the results of the search for variability in contact binary luminosity on decadal time scales. In \S \ref{sec: flares}, we present the results of a search for flares on contact binary stars in survey data. Each section is prefaced with a list of driving questions (\emph{Q:}), which are questions that the reader will find answered in that section.
+
+What I hope this thesis is:
+1. An introduction to the field of 
+2. People have developed techniques for studying the sky when astronomy was data-poor: how can we adapt these techniques to be useful in data-rich astronomy.
+3. A roadmap for a promising summer student to use when continuing this work, either at Caltech or Pomona.
+
+\section[The Contact Binary Star]{\hyperlink{toc}{The Contact Binary Star}} \label{sec: background}
+
+\subsection[\emph{Discovery}]{\hyperlink{toc}{Discovery}}
+
+Q: \emph{How was the first contact binary star discovered?}
+
+To understand the history of the study of contact binaries, we must start at the source: the advent of a precise way of measuring the brightness of a celestial object.  
+
+In 1861, J.K.F. Z\"ollner, developed the first practical photometer. In \index{Z\"ollner's photometer}, the image of a real star as focused by a 5" objective lens was compared with the light of an artificial star, produced by a bunsen-like gas burner, in the same field of view \citep{staubermann2000trouble}. The brightness of this artificial star could be adjusted by changing the relative orientation of two prisms, until it matched that of the real star. By recording the relative angle of the prisms when the brightness of the artificial and real star were equal, a photometric measurement could be obtained. In the 1860s, Z\"ollner supplied 22 photometers to the great observatories throughout the western world. One of these photometers arrived at the Potsdam Observatory \index{Potsdam Observatory}, 15 miles southwest of Berlin's city center \citep{krisciunas2001brief}.
+
+Karl Hermann Gustav M\"uller \index{M\"uller, Karl Hermann Gustav}, and Paul Friedrich Ferdinand Kempf \index{Kempf, Paul Friedrich Ferdinand} collaborated on observations for the Potsdam \emph{Photometrische Durchmusterung des N\"ordlichen Himmels} (Photometric Catalogue of the Northern Heavens), one of the three great photometric catalogues of the late nineteenth century \citep{bolt2007biographical}. When it was finished, it contained the brightnesses and colors of roughly 14,000 stars down to visual magnitude 7.5 - a monumental undertaking.
+
+While Kempf and M\"uller were making the initial observations for Part III of their \emph{Durchmusterung}, they discovered that two measurements of an otherwise inconspicuous star (the first made in 1899, the second made in 1901) differed by an amount that was greater than was expected. In their survey, each star that showed the potential for variability was observed at a later date to verify the nature of variability.
+
+At the Potsdam Observatory on January 14th, 1903, the sun set at 4:20pm. An hour and a half later, (at 5:56pm) Kempf and M\"uller began constructing a complete light-curve of $BD +56^{\circ}.1400$, which would later be named W Ursae Majoris. They observed until 10:30PM. Follow-up observations three nights later allowed for the construction of the first light-curve of a contact binary star (Figure \ref{fig: muller1903new_1}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{staubermann2000trouble_4.png}
+\caption{Fig. 4 from \citet{staubermann2000trouble}, showing a modern reproduction of a Z\"ollner photometer. Note the tube: the refractor telescope.}
+\label{fig: staubermann2000trouble_4}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{muller1903new_1.png}
+\caption{The first light-curve of a contact binary star. Note that the solid curve is interpolated by eye and drawn carefully in pen. Figure 1 from \citet{muller1903new}.}
+\label{fig: muller1903new_1}
+\end{figure}
+
+The shape of the light-curve was unlike anything that M\"uller and Kempf had seen before, and they struggle to think of a physical system that can produce such a light curve, rejecting many hypotheses (LIST EXISTING HYPOTHESES), before speculating: \\
+
+\emph{``We may finally consider the hypothesis that the light-variation is produced by two celestial bodies almost equal in size and luminosity whose surfaces are at a slight distance from each other, and which at times almost centrally occult each other in their revolution... On this hypothesis we have only one difficulty, and the not inconsiderable one, as to whether such a system is mechanically possible and can remain stable for any length of time."} \\
+
+This is the beginning. In this thesis, written 114 years the initial discovery, we will journey to the forefront of contact binary research.
+
+%It turns out that M\"uller and Kempf  were correct in their speculation, as the vast majority of contact binaries are indeed two celestial bodies almost equal in size and luminosity.
+
+%While an increasing number of W UMa systems were discovered in the following years, it took until the late 1960's for a satisfactory physical characterization to be reached. Leon. B. Lucy, at Columbia College \citet{lucy1968light} \citet{lucy1968structure}
+
+%\citet{lucy1968structure} ``It is found that when the common envelope is convective the adiabatic constants of the envelopes of the two companions must be equal."
+
+%``the core solutions of stars with radiative envelopes are insensitive to conditions near the surface...consequently the common envelope will not, in general, be in hydrostatic equilibrium. "
+
+%Even if a physical explanation cannot be obtained \citet{o1951so}
+
+%\citet{eggen1967contact} was the first to discover the period-color correlation. Later, metallicity dependent effects were found by \citet{rubenstein2000metallicity}.
+
+%Based on observations on the Palomar and Mt. Wilson reflectors:
+
+%``It is concluded that contact systems do not form a state in the evolution of detached to semi-detached systems, but spend most of their main sequence life in their present form."
+
+%``The members of cluster and companions in wide visual pairs, plus the available spectroscopic data show that the contact systems have a total luminosity and mass that is equivalent to two equal stars of the observed colour."
+
+\subsection[Physical Characteristics]{\hyperlink{toc}{Physical Characteristics}}
+
+\citep[p.76, ][]{webbink2003contact} excellent review of remaining problems in contact binary study. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.5]{lucy1968light_1+garlick.png}
+\caption{Model for a contact binary system. The hatched areas denote convection zones, and the vertical dashed line is the axis of rotation. Figure 1 from \citet{lucy1968light}.}
+\label{fig: lucy1968light_1}
+\end{figure}
+
+\subsubsection[The Main-Sequence Star]{\hyperlink{toc}{The Main-Sequence Star}} \label{sec: The Main-Sequence Star}
+
+\emph{Q: What are contact binaries made of? How do contact binaries generate their luminosity? Why are contact binaries shaped like peanuts? How are eclipsing binaries classified? How common are contact binaries compared to all main-sequence stars? How do contact binaries form? How do contact binaries evolve over their lifetime? What is the ultimate fate of a contact binary? What do we know about the most massive contact binaries? What are some interesting magnetic phenomena that occur on contact binaries?  }
+
+\citet{carroll2006introduction}
+
+In order to understand the internal structure of contact binaries, we must first understand the structure of their two components: main-sequence stars. The most familiar example of a main sequence star is our Sun. When a star
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{carroll2006introduction_8_13.png}
+\caption{An observer's Hertsprung-Russel (H-R) diagram. The data are from the Hipparcos catalog.Figure 8.13 from \citet{carroll2006introduction}.}
+\label{fig: carroll2006introduction_8_13}
+\end{figure}
+
+
+
+We first consider the basic time-independent equations of stellar structure:
+
+\begin{equation}
+\frac{dP}{dr} = -G \frac{M_{r} \rho}{r^{2}} \qquad \frac{dM_{r}}{dr} = 4 \pi r^{2} \rho  \qquad \frac{dL_{r}}{dr} = 4 \pi r^{2} \rho \epsilon \qquad 
+\end{equation}
+
+\begin{equation}
+\frac{dT}{dr} = - \frac{3}{4ac} \frac{\bar{\kappa} \rho}{T^{3}} \frac{L_{r}}{4 \pi r^{2}}
+\end{equation}
+
+These time-independent equations of stellar structure assume that the stellar matter exists in the potential of a point mass $M_{r}$. 
+
+\begin{equation}
+\Psi_{\text{point}} = \frac{GM}{r}
+\end{equation}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.5]{kippenhahn1990stellar_22_7.png}
+\caption{The mass values $m$ from centre to surface are plotted against the stellar mass $M$ for zero-age main-sequence models. ``Cloudy" areas indicate the extent of the convective zones inside the models. Two solid lines give the $m$ values at which $r$ is 1/4 and 1/2 of the total radius $R$. The dashed lines show the mass elements inside which $50\%$ and $90\%$ of the total luminosity $L$ are produced. Figure 22.7 from (pp. 212) of \citet{kippenhahn1990stellar}.}
+\label{fig: kippenhahn1990stellar_22_7}
+\end{figure}
+
+Energy is generated at the core of low mass main sequence stars via the Proton-Proton Chain, or \emph{pp chain}. The pp chain has three branches, each producing helium our of Hydrogen (H), Helium (He) and Beryllium (Be). 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.4]{carroll2006introduction_10_8.png}
+\caption{A diagram of pp chain reactions. Percentages by the arrows indicate the branching ratios, revealing that the PP I and PP II chains occur much more frequently than the PP III chain. Figure 10.8 from \citet{carroll2006introduction}.}
+\label{fig: carroll2006introduction_10_8}
+\end{figure}
+
+The energy produced by all three branches of the pp chain can be represented:
+
+\begin{equation} \label{eqn: pp1}
+\epsilon_{pp} = 0.241 \rho X^{2} f_{pp} \psi_{pp} C_{pp} T_{6}^{-2/3} e^{-33.80 T_{6}^{-1/3}} \text{W } \text{kg}^{-1}
+\end{equation}
+
+Where $T_{6} \equiv T / 10^{6}$ K. When we expand Equation \ref{eqn: pp1} in a power law about the solar core temperature of $T_{\odot \text{, core}} = 1.5 \times 10^{7}$K, we see that the resulting power law has a $T^{4}$ dependence near $T_{\odot \text{, core}}$:
+
+\begin{equation} \label{eqn: pp2}
+\epsilon_{pp} \approx \epsilon_{0, pp}^{'} \rho X^{2} f_{pp} \psi_{pp} C_{pp} T_{6}^{4}
+\end{equation}
+
+\subsubsection[The Criterion for Stellar Convection]{\hyperlink{toc}{The Criterion for Stellar Convection}} \label{sec: The Criterion for Stellar Convection}
+
+In our study of contact binary stars, we will find it useful to derive the conditions necessary for stellar convection to occur. We follow closely the analysis presented in \citet{carroll2006introduction}.
+
+The two primary methods of energy transport in main-sequence stars are convection, and radiation. In radiation, the stellar material is in hydrostatic equilibrium, and energy is transported through it via electromagnetic waves. If conditions are such that radiation cannot transport energy away from the core efficiently enough, the stellar material itself will have to move to transport this energy, disrupting hydrostatic equilibrium. We call this disruption convection. 
+
+In their derivation, Carroll and Ostlie envision a bubble of gas with its own temperature, pressure, and density in a surrounding gas medium. 
+
+Absolute magnitudes and luminosities \citep{rucinski1997absolute} \citep{rucinski2006luminosity}
+
+The classical Roche model allows eclipsing binaries to be separated into morphological types \citep{terrell2001eclipsing}.
+
+\subsubsection{The Roche Potential}{\hyperlink{toc}{The Roche Potential}} \label{sec: The Roche Potential}
+
+The Roche model assumes: synchronous rotation, circular orbits, two point masses, in the rotating frame \citep{kopal1959close} :
+
+\citet{mochnacki1984accurate}:
+
+``In Cartesian coordinates, with the origin at the center of mass of the primary, the $x$-axis aligned with the centers of mass, and the $z$-axis parallel to the rotation axis, the potential at a point (x,y,z) co-rotating with binary system is given by: "
+
+\begin{equation} \label{eqn: roche1}
+\Psi(x, y, z) = -\frac{G(M_{1} + M_{2})}{2a} C
+\end{equation}
+
+where 
+
+\begin{equation} \label{eqn: roche2}
+C(x,y,z) = \frac{2}{1+q} \frac{1}{(x^{2} + y^{2} + z^{2})^{\frac{1}{2}}} + \frac{2q}{1 + q} \frac{1}{1 + q[(x -1)^{2} + y^{2} + z^{2}]^{\frac{1}{2}}} + (x - \frac{q}{1 + q})^{2} + y^{2}
+\end{equation}
+
+$q = \frac{m_{2}}{m_{1}}$, $(x,y,z)$ are in units of $a$, the separation between the two point masses.
+
+The Roche potential has points where $\nabla \Psi = 0$, called Lagrange Points (see Figure \ref{sluys2006roche}). 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.3]{mochnacki1972model_1.png}
+\caption{The coordinate system used in equations \ref{eqn: roche1} and \ref{eqn: roche2} to describe the potential $\Psi$ of a contact binary system. Figure 1 from \citet{mochnacki1972model}}
+\label{fig: mochnacki1972model_1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.75]{sluys2006roche.png}
+\caption{A composite 3D and contour plot of the Roche potential. The Roche lobe is the dark equipotential curve shaped like the $\infty$ symbol. Three out of the five Lagrange points are labelled $L_{1}, L_{2}, L_{3}$.  \citep{sluys2006roche}}
+\label{fig: sluys2006roche}
+\end{figure}
+
+Now that we understand the shape of the Roche potential, we can learn how the Roche potential is used to classify eclipsing binary stars, in a scheme primarily developed by the work of \citet{kopal1959close}. In Figure \ref{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}, we see three types of eclipsing binaries. In Detached systems, the photosphere of each component is well within the Roche lobe (the equipotential curve shaped like $\infty$). In a Semi-detached configuration, the photosphere of one component fills the Roche lobe, while the photosphere of the other component remains well within the Roche lobe. In Overcontact systems, both components overfill the Roche lobe, and a bridge of stellar material connects the two components, covering the $L_{1}$ point \citep{terrell2001eclipsing}.
+
+An important note on the semantics of binary star classification. \citet{kuiper1941interpretation}
+
+The origin of the term overcontact \citep{wilson2001binary}
+
+For an excellent review, see: \citep{kallrath2009eclipsing}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{pringle1985interacting_1_4+terrell2001eclipsing_2+3+4.png}
+\caption{Types of eclipsing binary systems based on Roche geometry. Figures 2,3, and 4 from \citet{terrell2001eclipsing}, and Figure 1.4 from \citet{pringle1985interacting}}
+\label{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}
+\end{figure}
+
+\subsubsection{Thermal Equilibrium Models}{\hyperlink{toc}{Thermal Equilibrium Models}} \label{sec: Thermal Equilibrium Models}
+
+\begin{equation} \label{eqn: equilibrium1}
+\nabla P = - \rho \nabla \Psi
+\end{equation}
+
+\begin{equation} \label{eqn: equilibrium2}
+\nabla \rho = \frac{dP(\Psi)}{d\Psi} = \rho(\Psi)
+\end{equation}
+
+If we assume a homogenous composition on equipotential surfaces, then all state variables (pressure, density, temperature) are functions of $\Psi$ alone. In order to achieve hydrostatic equilibrium, energy must be exchanged between the two components of the contact binary.
+
+We can construct two model main sequence stars, with masses $M_{1}$ and $M_{2}$. Main sequence stars will obey main-sequence scaling relationships, which are well defined laws the describe how stellar radii, density, and temperature vary with stellar mass \citep{kippenhahn1990stellar}. The mass - radius relationship is particularly important when constructing contact models. 
+
+\begin{equation} \label{eqn: mass_radius}
+ \bigg( \frac{R}{R_{\odot}} \bigg) = \bigg( \frac{M}{M_{\odot}} \bigg)^{\alpha}
+\end{equation}
+
+\begin{equation} \label{eqn: roche_mass_radius}
+\bigg( \frac{R_{1}}{R_{2}} \bigg) = \bigg( \frac{M_{1}}{M_{2}} \bigg)^{0.46}
+\end{equation}
+
+Because of the mass - luminosity relationship of main sequence stars, there is a mass ratio - luminosity ratio relationship for the components of contact binaries: 
+
+\begin{equation} \label{eqn: luminosity_radius}
+\bigg( \frac{L_{1}}{L_{2}} \bigg) = \bigg( \frac{M_{1}}{M_{2}} \bigg)^{0.9}
+\end{equation}
+
+
+In order for for the binaries to be in contact, their photospheres must touch physically. This allows us to introduce the contact criterion, in which the separation between the centers of the components are equal to the sum of the two radii:
+
+\begin{equation} \label{eqn: contact_criterion}
+a = R_{1} + R_{2}
+\end{equation}
+
+We can relate to the combined masses of the two stars to their periods using the generalized form of Kepler's Third Law: 
+
+\begin{equation} \label{eqn: kepler3}
+P^{2} = \frac{4\pi^{2}}{G(M_{1} + M_{2})} a^{3}
+\end{equation}
+
+
+Advection is a transport mechanism of a substance, or property (e.g. temperature, density) by a fluid due to the fluid's bulk motion.
+
+
+\subsubsection{Common-Envelope Evolution}{\hyperlink{toc}{Common-Envelope Evolution}} \label{sec: Common-Envelope Evolution}
+
+Common-envelope Evolution, (CEE) \citep{ivanova2013common}
+
+\subsection[Frequency and Density]{\hyperlink{toc}{Frequency and Density}}
+
+ \citep{rucinski1998contact} Studies using OGLE data on the galactic bulge (Baade's Window) indicates that the frequency of contact binaries relative to main sequence stars (or spatial frequency) is approximately $\frac{1}{130} = 0.7\%$, in the absolute magnitude range of $2.5 < M_{v} < 7.5$. A later study using ASAS data shows that the spatial frequency is 0.2\% in the solar neighborhood \citep{rucinski2006luminosity} in the absolute magnitude range of $3.5 < M_{v} < 5.5$.
+
+A catalog of 1022 contact binary systems in ROTSE - 1 data placed the the space density of contact binaries at $1.7 \pm 10^{-5} \text{pc}^{-3}$
+ 
+Contact binaries are the most frequently observed type of eclipsing binary star, because their eclipses can be detected at a wide range of orbital inclinations. In recent searches for eclipsing binary stars in survey data \citep{drake2014catalina} contact binary stars comprised 50\% of the new variable stars discovered. 
+
+\subsection[Mechanisms of Formation]{\hyperlink{toc}{Mechanisms of Formation}}
+
+Formed in Contact. \citet{lucy1968structure} was incorrect in assuming that contact systems exist at Zero Age Main Sequence (ZAMS).
+
+\citep{yildiz2013origin}
+
+\citep{li2007formation}
+
+Initially Detached, but then inspiral
+Angular Momentum Loss through stellar winds. 
+Angular Momentum Loss through tertiary components.  \citep{lohr2015orbital}
+
+A study by \citet{pribulla2006contact} has established a lower limit on the number of triple systems
+
+\subsection[Evolution in the Contact State]{\hyperlink{toc}{Evolution in the Contact State}}
+
+Thermal Relaxation Oscillations \citep{wang1994thermal}. May cause orbital period changes observed in \citet{qian2001orbital}.
+
+The structure of contact binaries \citep{kahler2004structure}
+
+Angular momentum and mass evolution \citep{gazeas2008angular}
+
+masses and angular momenta \citep{gazeas2006masses}
+
+contact binaries occupy a very narrow range of parameter space \citep{gazeas2009physical}
+
+Overall evolution \citep{stepien2008evolutionary}, 2016 review of close binary evolution \citep{tutukov2016evolution}
+
+Short period limit \citep{rucinski2007short} \citep{drake2014ultra} \cite{lohr2012period}
+
+\subsection[Evolution out of the Contact State]{\hyperlink{toc}{Evolution out of the Contact State}}
+
+It is generally accepted that the contact state of binary evolution ends with the inspiral and merger of the two components. The merger event is where the contact system becomes dynamically unstable, and rapidly coalesces into a single, rapidly rotating star. 
+
+The tidal interaction between the two components of a contact binary star.
+
+To understand when and why the contact state comes to an end, we must understand the range of conditions over which the contact state is stable.
+
+Merger \citet{tylenda2011v1309}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{tylenda2011v1309_1.png}
+\caption{Light curve of V1309 Sco from the OGLE-III and OGLE-IV projects: $I$ magnitude versus time of observations in Julian Dates. Time in years is marked on top of the figure. At maximum the object attained $I \approx 6.8$. Figure 1 from \citet{tylenda2011v1309}}
+\label{fig: tylenda2011v1309_1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{tylenda2011v1309_2.png}
+\caption{Figure 2 from \citet{tylenda2011v1309}}
+\label{fig: tylenda2011v1309_2}
+\end{figure}
+
+
+The contact binary in the OGLE merger had a period of approximately 1.4 days. Long-period contact binaries \citep{rucinski1998eclipsing} 
+
+Blue straggler \citet{andronov2006mergers}
+
+stability of the contact configuration \citep{rasio1995minimum}
+
+One of the ways that a contact binary system can merge is called the Darwin instability. In a Darwin instability, the ...
+
+In the early 1990s, large numbers of new contact binaries were discovered among blue stragglers, in open and globular clusters 
+
+\citep{kaluzny1988ccd} no discovery in six open clusters.
+
+In the globular cluster M71, four contact binaries discovered by \citet{yan1994primordial}, placing a lower limit of $1.3\%$ on the frequency of primordial binaries in M71 with initial orbital periods in the range of 2.5 to 5 days. 
+
+Short period eclipsing binaries have been found among blue stragglers in the globular cluster NGC5466 \citep{mateo1990blue}.
+
+Review of binaries in globular clusters \citep{hut1990binaries}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{mateo1990blue_1.png}
+\caption{A color-magnitude diagram of globular cluster NGC 5466. The blue stragglers are defined to be all stars located within the region bounded by the dashed lines. The mean $V$ magnitudes and $(B - V)$ colors of the eclipsing binaries discovered by \citet{mateo1990blue} are shown as open circles. Figure 1 from \citet{mateo1990blue}.}
+\label{fig: mateo1990blue_1}
+\end{figure}
+
+\subsection[Early-Type Contact Binaries]{\hyperlink{to}{Early-Type Contact Binaries}}
+
+TU Muscae \citep{penny2008tomographic}
+
+MY Cam \citep{lorenzo2014my}
+
+UW CMa \citep{antokhina2011light}
+
+V382 Cygni \citep{popper1978masses}
+
+Over forty have been found in the Small Magellanic Cloud \citep{hilditch2005forty}
+
+Massive contact binaries in M31 \citep{lee2014properties}, \citep{vilardell2006eclipsing}
+
+In modern survey data, we can observe individual eclipsing binary systems in nearby galaxies.
+
+
+
+\subsection[Magnetic Activity]{\hyperlink{toc}{Magnetic Activity}}
+
+In the solar atmosphere, the movement of plasma in the convective region creates magnetic fields, which in turn affect the motion of that same plasma. Contact binaries are rapidly rotating systems, with orbital periods of 0.2 to 0.8 days (compare this rate with the approximately 30 day solar rotational period)
+
+ Because late-type contact binaries have Common Convective Envelopes (or CCEs), 
+
+Some authors believe that the existence of the CCE buries the very strong surface magnetic field, which could prevent the production of flares \citep{qian2014optical}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.40]{qian2014optical_15.png}
+\caption{Fig. 15 from \citet{qian2014optical}}
+\label{fig: qian2014optical_15}
+\end{figure}
+
+\citep{balogh2015solar} book review of solar magnetic activity cycles.
+
+The applegate mechanism \citep{applegate1992mechanism} \citep{lanza2006internal}
+
+W UMa as X-ray sources \citep{stepien2001rosat}
+
+Observational starspots and magnetic activity cycles.  \citep{borkovits2005indirect,qian2000possible,kaszas1998period,qian2007ad,lee2004period,yang2012deep,zhang2004long}.
+
+It is possible that starspots are responsible for the variation in brightness observed by CRTS. Doppler imaging techniques have confirmed the presence of large starspots on the surface of some contact binaries \citep{barnes2004high}. 
+
+\citet{barnes2004high} has used an Echelle spectrograph on the 3.9-meter Anglo-Australian Telescope to perform doppler imaging of the AE Phe system (P = 0.362 d), revealing that the photosphere of the system is heavily spotted (Fig. \ref{fig: barnes2004high_5}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{barnes2004high_5.png}
+\caption{Fig. 5 from \citet{barnes2004high}}
+\label{fig: barnes2004high_5}
+\end{figure}
+
+The evolution and migration of starspots on contact binaries has been tracked with doppler imaging \citep{hendry2000doppler} and more recently, in Kepler data \citep{tran2013anticorrelated, balaji2015tracking}. Starspots are magnetic phenomenon, and so their occurrence is related to the magnetic activity of their host star \citep{berdyugina2005starspots}.  
+
+\section[Observations]{\hyperlink{toc}{Observations}} \label{sec: observations}
+
+\emph{Q: What kind of observations can astronomers obtain from contact binary systems?}
+
+Astronomy is unique as a science because all the information that can be obtained from an object in the sky comes to us as electromagnetic waves. Perhaps \emph{THE} question in observational astronomy is: ``What can we learn from these electromagnetic waves?". The study of contact binary stars is no different. 
+
+\subsection[Images of Contact Binaries]{\hyperlink{toc}{Images of Contact Binaries}} \label{sec: Images of Contact Binaries}
+
+The oldest type of astronomical information is image data: ``What do I see when I look through the telescope?". To put this question in more formal language: ``What is the distribution of the intensity of visible light as a function of position?". When we look at the moon, for example, we can learn a lot about it: we might see some crater "over here", with a given size, shape, color, etc. We might see a dark lunar mare (or ``sea"), ``over there", with another size, shape, color, etc. The moon is what we call a ``resolved source", meaning that features on it are distinguishable: we can separate ``over here" from ``over there". In other words, the distance between ``over here" and ``over there" is larger than the resolution limit of our telescope.
+
+Let's see if we can reasonably obtain image data from a contact binary:
+
+On a still, clear night at the Las Campanas observatory in Chile, Mike Long reports that the atmospheric resolution limit (or ``seeing") is 0.5 arcseconds. This is the best resolution that can be expected from a telescope on earth: Chile's Atacama desert is know for some of the best seeing on earth.
+
+\begin{equation} \label{eqn: arcseconds}
+0.5 \text{ arcseconds} * \frac{1}{3600} \frac{\text{arcseconds}}{\text{degrees}} = 1.4 \times 10^{-4} \text{ degrees} * \frac{\pi}{180} \frac{\text{radians}}{\text{degrees}} = 2.4 \times 10^{-6} \text{ radians}
+\end{equation}
+
+In order to distinguish between the two components of a contact binary, the resolution limit of our telescope must be smaller than the distance between the centers of the two components. 
+
+For a contact binary star of solar type, this is one solar radius $(1 R_{\odot} = 6.957 \times 10^{5} \text{ km})$. Let us place this hypothetical contact binary at the same distance as the nearest star, \emph{Proxima Centauri}, which is $4.243 \text{ light years} = 4.243 \text{ light years} = 1.301 \text{ parsecs} = 4.014 \times 10^{13} \text{ km}$.
+
+To calculate the angle that a solar type-contact binary at the distance of \emph{Proxima Centauri} would subtend, we will use the small angle approximation:
+
+\begin{equation} \label{eqn: smallangle}
+\sin(\theta) \approx \theta, \qquad \cos(\theta) \approx 1 - \frac{\theta^{2}}{2}, \qquad \tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} = \frac{\theta}{1 - \frac{\theta^{2}}{2}} \Rightarrow \tan(\theta) \approx \theta
+\end{equation}
+
+If we set up a right triangle as in \ref{fig: triangle}), we see than the tangent of the angle $\theta$ is equal to the radius of the sun divided by the distance to \emph{Proxima Centauri}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{triangle.png}
+\caption{Calculating the angle $\theta$ subtended by a solar-type contact binary at the distance of the nearest star.}
+\label{fig: triangle}
+\end{figure}
+
+\begin{equation} \label{eqn: example_angle}
+\frac{R_{\text{sun}}}{d_{\text{proxima centauri}}} = \frac{6.957 \times 10^{5} \text{ km}}{4.014 \times 10^{13} \text{ km}} = \tan(\theta) \approx \theta = 1.733 \times 10^{-8} \text{ radians}
+\end{equation}
+
+When comparing the resolution necessary to distinguish the components of a contact binary to the best resolution possible on earth:
+
+\begin{equation} \label{eqn: resolution_comparison}
+\frac{1.733 \times 10^{-8} \text{ radians}}{2.4 \times 10^{-6} \text{ radians}} \approx 0.01
+\end{equation}
+
+To summarize: we would need 100 times the resolving power achievable from the earth to obtain image data from a large contact binary at the distance of the nearest star. In actuality, the situation is worse. 44 Bootis is the nearest contact binary system to earth, at a distance of 13 parsecs (42 light years) it is 10 times further away than \emph{Proxima Centauri} \citep{eker2008new}. For this reason, we cannot obtain usable image data from contact binaries. 
+
+\subsection[Anatomy of a Contact Binary Light-Curve]{\hyperlink{toc}{Anatomy of a Contact Binary Light-Curve}} \label{sec: Anatomy of a Contact Binary Light-Curve}
+
+\emph{Q: Why does the flux received from a contact binary vary over time?}
+\emph{Q: How was the light-curve used to determine what a contact binary was?}
+\emph{Q: How can light-curve data be used to learn about contact binary systems? }
+
+In images, contact binaries appear as an unresolved point source. At first glance, it may appear that astronomers are stuck: they cannot ``see" the contact binary and so must remain uncertain about its characteristics. However, as Kempf and M\"{u}ller learned in 1903, the amount of light received from a contact binary varies as a function of time. This function is called the light-curve: \index{light-curve}
+
+\begin{equation} \label{eqn: light_curve}
+f(\text{Time}) = \text{ Flux Received at Telescope}
+\end{equation}
+
+A light curve is constructed from observations: by repeatedly measuring the brightness of a source over a certain time span, an astronomer can sample the light-curve and approximate its true shape.
+
+Kempf and M\"{u}ller knew that they could used the light-curve to learn about the shape of the contact binary system. First, they noted that the light-curve was periodic: after a certain amount of time, the trend in flux \emph{exactly repeated} itself. Thus they knew that the process that was responsible for the variation in the flux was cyclical in nature. 
+
+They knew that the period of the light variation in W UMa was very stable (``The error of the period can hardly be more than 0.5s..."). They assumed that a rotational or orbital mechanism was responsible for the light variation. They thought that the presence of a large dark spot on a rapidly rotating single star, which was hypothesized to be ``in an advanced stage of cooling". However, W UMa was a white star, not a cool red star, leading Kempf and M\"{u}ller to discredit this model. They also considered a single star in the shape of an ellipsoid - a large, however they calculated that this model did not describe the shape of the light-curve very well. In 1903, the eclipsing binary model was already proposed as a mechanism for the light-curves of certain stars (most notably Algol \index{Algol}). To construct their model, they looked at existing eclipsing binary light curves and imagined what would happen if they brought the two stars close together. If they brought the two stars close enough together so that the stars were almost touching, there was always variation in the light-curve, just like they observed.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{lc_anatomy.png}
+\caption{Light-curve is from CRTS data \citep{drake2014catalina}. Illustration of contact binary phase from an animation at: \url{http://cronodon.com/SpaceTech/BinaryStar.html}}
+\label{fig: lc_anatomy}
+\end{figure}
+
+
+In this section, I describe some of the major sources of modern observations of contact binaries. 
+
+Since the late 1990s, photometric surveys that frequently observe large areas of the sky have come online. Through the careful classification of periodic variable sources in survey datasets, larger and larger samples of contact binary systems have been assembled, making studies of contact binaries as a population possible. Previous surveys have compiled variable star catalogs which include many contact binary systems. Examples of such surveys are the All-Sky Automated Survey \citep[ASAS,][]{pojmanski2000all}, Robotic Optical Transient Search Experiment \citep[ROTSE,][]{akerlof2000rotse}, Trans-Atlantic Exoplanet Survey \citep[TrES,][]{devor2008identification}, Lincoln Near-Earth Asteroid Research program \citep[LINEAR,][]{palaversa2013exploring}, and Catalina Real-Time Transient Survey \citep[CRTS,][]{drake2014catalina}. Researchers have also selected pure samples of contact binary systems from large survey data sets for study. Researchers have previously used data from the Optical Gravitational Lensing Experiment \citep[OGLE,][]{rucinski1996eclipsing}, Super Wide Angle Search for Planets \citep[SuperWASP,][]{norton2011short}, and CRTS \citep{drake2014ultra} to construct pure contact binary samples for study. \citet{lee2015properties} have used this approach to study a pure sample detached eclipsing binaries from the CRTS variable catalog. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{modern_surveys.png}
+\caption{Images of the instruments used in six modern surveys. In the top left, SuperWASP \citep[SuperWASP,][]{norton2011short}, ASAS \citep[ASAS,][]{pojmanski2000all}, \citep[ROTSE,][]{akerlof2000rotse},  }
+\label{fig: modern_surveys}
+\end{figure}
+
+%Arrange chronologically?
+
+\subsection[The Kepler Spacecraft]{\hyperlink{toc}{The Kepler Spacecraft}}
+
+\subsection[The Sloan Digital Sky Survey]{\hyperlink{toc}{The Sloan Digital Sky Survey}}
+
+\cite{york2000sloan}
+
+\citep{ivezic2007sloan} 
+
+calibrations allow for stellar temperatures to be derived \cite{fukugita2011characterization}
+
+SEGUE is a program that collects stellar spectra.
+
+\subsection[The SuperWASP Survey]{\hyperlink{toc}{The SuperWASP Survey}}
+
+follow-up on 1-meter telescopes in South Africa \citep{koen2016multi}.
+
+more follow up \citep{darwish2016orbital}
+
+\subsection[The LINEAR Survey]{\hyperlink{toc}{The LINEAR Survey}}
+
+\subsection[The Catalina Surveys]{\hyperlink{toc}{The Catalina Surveys}}
+
+\subsection[Other Surveys]{\hyperlink{toc}{Other Surveys}}
+
+OGLE work has determined a criterion for overcontact based on Fourier coefficients \citep{rucinski1997eclipsing}. \citep{rucinski1993simple}
+
+Rucinski has used eclipse half-widths and Fourier components to estimate geometrical properties of the system:
+
+\citep{rucinski1973w}
+
+the reliability of the mass-ratio determination from light-curve only data \citep{hambalek2013reliability}
+
+ROTSE study using fourier methods \citep{coker2013study}
+
+\subsection[Future Surveys]{\hyperlink{toc}{Future Surveys}}
+
+
+
+\section[Analysis Techniques]{\hyperlink{toc}{Analysis Techniques}} \label{sec: analysis_techniques}
+
+\emph{Q: How do astronomers use their observations to learn about the physical characteristics of contact binary systems?}
+
+Observational tests of theories of contact binaries \citet{lucy1979observational}
+
+\subsection[Physical Light-Curve Modeling]{\hyperlink{toc}{Physical Light-Curve Modeling}} \label{sec: Physical Light-Curve Modeling}
+
+The photometric light-curve of a contact binary is one of the easiest measurements to obtain.
+
+The Wilson-Devinney Code 
+
+Fully automated approaches \citep{prsa2009fully} \citep{prsa2008artificial}
+
+recent advances in modeling code \citep{prvsa2013physics}
+
+employing neural networks to find true binary parameters \citep{zeraatgari2015neural}
+
+\subsection[O-C Analysis]{\hyperlink{toc}{O-C Analysis}} \label{sec: O-C Analysis}
+
+O-C Analysis is short for ``observed minus computed", referring to the fact that a measurement is the observed time of minimum light as compared to the computed time of minimum light. 
+
+1. A full light curve is obtained for the system in question. \\
+2. Based on this light curve, the period is calculated, and an epheremis is computed, listing all of the future times of minimum light. \\
+3. Then, light curves are obtained at future epochs. The time of minimum light are compared to previous times of minimum light. The difference $(O-C)$ is plotted as a function of epoch. \\
+
+On an O-C diagram, a linear change in period appears as a parabola.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{kalimeris1994orbital_4a.png}
+\caption{ The O - C diagram of V566 Oph, fit by a least squares polynomial. Fig. 4a from \citet{kalimeris1994orbital}}
+\label{fig: kalimeris1994orbital_4a}
+\end{figure}
+
+On orbital period change \citep{kalimeris1994orbital}
+
+In contact systems, orbital period changes can generally be divided into (1) short-term variations, which happen on decadal (10 year) timescales, and (2) long-term variations, which happen on a thermal timescale.
+
+Is O-C Analysis stable against the appearance and disappearance of starspots and photometric noise? \citep{kalimeris2002starspots}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{kalimeris2002starspots_7.png}
+\caption{ Fig. 7 from \citet{kalimeris2002starspots}}
+\label{fig: kalimeris2002starspots_7}
+\end{figure}
+
+automated approach with SuperWASP \citep{lohr2015orbital}
+
+In data from surveys, the data may be too sparse to estimate times of minimum light from multiple epochs within the survey. A Lomb-Scargle (or LS) \citep{scargle1982studies}
+
+\citep{horne1986prescription} 
+
+\begin{equation} \label{eqn: horne_baliunas}
+|\delta P| = (0.01728\text{ s}) \times (\frac{N_{0}}{100})^{-\frac{1}{2}} \times (\frac{T_{eff}}{5\text{yr}})^{-1} \\  \times (\frac{A/ \sigma_{N}}{10})^{-1} \times (\frac{P}{0.2\text{d}})^{2}
+\end{equation}
+
+
+\citet{qian2001orbital} has observed orbital period changes which indicate TRO. 
+
+\subsection[Doppler Imaging]{\hyperlink{toc}{Doppler Imaging}} \label{sec: doppler_imaging}
+
+\subsection[Fourier Analysis]{\hyperlink{toc}{Fourier Analysis}} \label{sec: fourier_analysis}
+
+\section[Pause]{\hyperlink{toc}{Pause}} \label{sec: pause}
+
+Data from large All-Sky surveys is very different in nature compared. 
+
+\section[Light-curve Morphology]{\hyperlink{toc}{Light-curve Morphology}} \label{sec: lc_morph}
+
+In our study, we aim to learn how contact binary light-curves vary as a function of photospheric temperature.
+
+\cite{o1951so}
+
+\section[Luminosity Variation on a Decadal Timescale]{\hyperlink{toc}{Luminosity Variation on a Decadal Timescale}} \label{sec: dec_var}
+
+In our study, we aim to learn how the luminosity of contact binary systems vary on decadal timescales.
+
+\section[Detection of Flares]{\hyperlink{toc}{Detection of Flares}} \label{sec: flares}
+
+In our study, we aim to learn about the flaring frequency of contact binaries and to determine if flare characteristics vary as a function of photospheric temperature.
+
+READ Walkowicz et al. 2011 and Shibayama et al. 2013. 
+
+Contact binaries are known X-ray sources \citep{chen2006w}. Flare have been observed in X-ray bands using ROSAT \citep{mcgale1996rosat}.
+EXOSAT has been used to observe a flare in X-ray and Microwave data on VW Cephei (P =  0.28 days, $T_{1}, T_{2}$ = 5500K, 5000K) \citep{vilhu1988simultaneous}. Extreme UV observations have identified coronal characteristics \citep{brickhouse1998extreme}. Long time series observations of single m-dwarfs  \citep{lacy1976uv}
+
+During a continuous monitoring campaign in the winters of 2008 and 2010, \citet{qian2014optical} observed a contact binary system CSTAR 038663 ($P = 0.27$ days, $T_{1}, T_{2} =$ 4616K, 4352K) for a total of 4167 hours (174 days) in the SDSS $i$ band using the CSTAR telescope array in the Antarctic. In this time, \citet{qian2014optical} discovered 15 $i$ band flares, revealing a flare rate of $0.0036$ flares per hour. These 15 flares had durations ranging from 0.006 to 0.014 days (9 to 20 minutes), and amplitudes ranging from 0.14 - 0.27 magnitudes above the quiescent magnitude.
+
+In 1049 close binaries observed by Kepler, \citet{gao2016white} have identified 234 ``flare binaries", on which a total of 6818 flares were detected. Kepler's continuous monitoring capability and precise photometry make it extremely well suited to the detection of white-light flares \citep{walkowicz2011white}. While CRTS does not match Kepler's observing cadence, photometric precision, or ability to observe a given target continuously, it observes 33,000 square degrees a much larger area of the sky than Kepler does (100 square degrees) \citep{drake2009first, basri2005kepler}.
+
+M-dwarfs have previously been searched for flares in Sloan Digital Sky Survey Stripe 82 data \citep{kowalski2009m}. Our study will be similar to that of \citet{kowalski2009m}, because we are also using survey observations of large regions of sky, as opposed to the continuous monitoring studies. \citet{hilton2010m} have discovered flares in the time resolved SDSS spectroscopic sample, using a Flare Line Index based on H$\alpha$ and H$\beta$ line strength.
+
+In CRTS data, we monitor 9851 contact binaries. We aim to verify the relationships described in \citet{gao2016white}, and focus on the contact binary subclass.
+We aim to place better constraints on the flare rate as a function of both orbital period and photospheric temperature. The dataset constitutes the equivalent of 40.6 years of monitoring continuous monitoring at an average cadence of one 30 second observation per 9 minutes. 
+
+
+% DO FIGURES LIKE THIS:
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale = .55]{ftmw.png}
+%\caption{FTMW spectra of YbF with Doppler shift evident}
+%\label{fig:ftmw}
+%\end{figure}
+
+%\ref{fig:ftmw}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% Conclusion
+%----------------------------------------------------------------------------------------
+
+\section[Conclusion]{\hyperlink{toc}{Conclusion}}
+
+%----------------------------------------------------------------------------------------
+% Appendix
+%----------------------------------------------------------------------------------------
+
+\appendix
+%\section[Data]{\hyperlink{toc}{Data}}
+
+%\subsection[Fourier-Transform Microwave Data]{\hyperlink{toc}{Fourier-Transform Microwave Data}}
+%\input{FTMW208}
+
+%----------------------------------------------------------------------------------------
+% BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\newpage
+\bibliographystyle{plainnat}
+\printindex
+\bibliography{thesis_bib}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
