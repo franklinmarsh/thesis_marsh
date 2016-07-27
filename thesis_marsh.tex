@@ -121,6 +121,8 @@ Pomona College}
 \thispagestyle{empty}
 \section*{Acknowledgments}
 
+To Mom and Dad
+
 \newpage
 
 %----------------------------------------------------------------------------------------
@@ -237,6 +239,21 @@ This is the beginning. In this thesis, written 114 years the initial discovery, 
 
 \subsection[Physical Characteristics]{\hyperlink{toc}{Physical Characteristics}}
 
+\emph{Q: What are contact binaries made of? How do contact binaries generate their luminosity? Why are contact binaries shaped like peanuts? How are eclipsing binaries classified? How common are contact binaries compared to all main-sequence stars? How do contact binaries form? How do contact binaries evolve over their lifetime? What is the ultimate fate of a contact binary? What do we know about the most massive contact binaries? What are some interesting magnetic phenomena that occur on contact binaries?  }
+
+In this section, we will work to gain a physical understanding of contact binary systems.
+
+Contact binary stars are made up of two main-sequence stars. In \S \ref{sec: The Main-Sequence Star} we will understand what main-sequence stars are like on the inside, how energy is generated in the cores of main-sequence stars, and how this energy is transported to the surface.
+
+Once we have got a firm grasp of the properties of main-sequence stars, we will bring two of them together to form a contact binary. In \S \ref{sec: The Roche Potential}, we learn that we must change the potential that the stellar matter exists in from the point potential to the Roche potential. Also, the components of contact binary stars can transfer mass and energy, from one to the other. We must take this into account when building our model.
+
+In \S \ref{sec: Frequency and Density}, we will learn how common contact binary stars as compared to single main-sequence stars. We will also learn how common they are in the Milky Way galaxy.
+
+In \S \ref{sec: Mechanisms of Formation}, we will learn how contact binaries are formed. We will be introduced to the concepts of angular momentum loss (AML), and Kozai-Lidov cycles.
+
+In \S \ref{sec: Evolution in the Contact State}, we will learn how contact binaries evolve during their lifetimes. We will see how this evolution can drive changes in the observable properties of contact binary systems.
+
+
 \citep[p.76, ][]{webbink2003contact} excellent review of remaining problems in contact binary study. 
 
 \begin{figure}[H]
@@ -248,7 +265,7 @@ This is the beginning. In this thesis, written 114 years the initial discovery, 
 
 \subsubsection[The Main-Sequence Star]{\hyperlink{toc}{The Main-Sequence Star}} \label{sec: The Main-Sequence Star}
 
-\emph{Q: What are contact binaries made of? How do contact binaries generate their luminosity? Why are contact binaries shaped like peanuts? How are eclipsing binaries classified? How common are contact binaries compared to all main-sequence stars? How do contact binaries form? How do contact binaries evolve over their lifetime? What is the ultimate fate of a contact binary? What do we know about the most massive contact binaries? What are some interesting magnetic phenomena that occur on contact binaries?  }
+
 
 \citet{carroll2006introduction}
 
@@ -261,19 +278,27 @@ In order to understand the internal structure of contact binaries, we must first
 \label{fig: carroll2006introduction_8_13}
 \end{figure}
 
+Astronomers have an excellent understanding of the observables (like mass, luminosity, or temperature) of main-sequence stars. Models of main-sequence stars that rely on basic time-independent equations of stellar structure have been successful.
 
+The time-independent equations of stellar structure \index{equations of stellar structure} are a set of relationships between the properties of main sequence stars. They tell how pressure ($P$), enclosed mass ($M_{r}$), enclosed luminosity ($L_{r}$), and temperature ($T$) change as a function of radius $r$. You will notice that that all of the following equations are actually derivatives. When we supply the appropriate boundary condition (eg. ``the temperature $T$ at 1 solar radius is 5800K"), the equations allow for the complete solution
 
-We first consider the basic time-independent equations of stellar structure:
-
-\begin{equation}
-\frac{dP}{dr} = -G \frac{M_{r} \rho}{r^{2}} \qquad \frac{dM_{r}}{dr} = 4 \pi r^{2} \rho  \qquad \frac{dL_{r}}{dr} = 4 \pi r^{2} \rho \epsilon \qquad 
+\begin{equation} \label{stellar_structure1}
+\frac{dP}{dr} = -G \frac{M_{r} \rho}{r^{2}} 
 \end{equation}
 
-\begin{equation}
+\begin{equation} \label{stellar_structure2}
+\frac{dM_{r}}{dr} = 4 \pi r^{2} \rho
+\end{equation}
+
+\begin{equation} \label{stellar_structure3}
+\frac{dL_{r}}{dr} = 4 \pi r^{2} \rho \epsilon
+\end{equation}
+
+\begin{equation} \label{stellar_structure4}
 \frac{dT}{dr} = - \frac{3}{4ac} \frac{\bar{\kappa} \rho}{T^{3}} \frac{L_{r}}{4 \pi r^{2}}
 \end{equation}
 
-These time-independent equations of stellar structure assume that the stellar matter exists in the potential of a point mass $M_{r}$. 
+In the equations of stellar structure, there is a hidden assumption. These time-independent equations of stellar structure assume that the stellar matter exists in the potential of a point mass $M_{r}$. 
 
 \begin{equation}
 \Psi_{\text{point}} = \frac{GM}{r}
@@ -501,6 +526,8 @@ Short period eclipsing binaries have been found among blue stragglers in the glo
 
 Review of binaries in globular clusters \citep{hut1990binaries}
 
+modern work on six binaries in NGC188 \citep{chen2016physical}
+
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.25]{mateo1990blue_1.png}
@@ -582,7 +609,7 @@ On a still, clear night at the Las Campanas observatory in Chile, Mike Long repo
 
 In order to distinguish between the two components of a contact binary, the resolution limit of our telescope must be smaller than the distance between the centers of the two components. 
 
-For a contact binary star of solar type, this is one solar radius $(1 R_{\odot} = 6.957 \times 10^{5} \text{ km})$. Let us place this hypothetical contact binary at the same distance as the nearest star, \emph{Proxima Centauri}, which is $4.243 \text{ light years} = 1.301 \text{ parsecs} = 4.014 \times 10^{13} \text{ km}$.
+For a contact binary star of solar type, this is about one solar radius: $1 R_{\odot} = 6.957 \times 10^{5} \text{ km}$. Let us place this hypothetical contact binary at the same distance as the nearest star, \emph{Proxima Centauri}, which is $4.243 \text{ light years} = 1.301 \text{ parsecs} = 4.014 \times 10^{13} \text{ km}$.
 
 To calculate the angle that a solar type-contact binary at the distance of \emph{Proxima Centauri} would subtend, we will use the small angle approximation:
 
@@ -590,7 +617,7 @@ To calculate the angle that a solar type-contact binary at the distance of \emph
 \sin(\theta) \approx \theta, \qquad \cos(\theta) \approx 1 - \frac{\theta^{2}}{2}, \qquad \tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} = \frac{\theta}{1 - \frac{\theta^{2}}{2}} \Rightarrow \tan(\theta) \approx \theta
 \end{equation}
 
-If we set up a right triangle as in \ref{fig: triangle}), we see than the tangent of the angle $\theta$ is equal to the radius of the sun divided by the distance to \emph{Proxima Centauri}.
+If we set up a right triangle (as in Fig. \ref{fig: triangle}), we see than the tangent of the angle $\theta$ is equal to the radius of the sun divided by the distance to \emph{Proxima Centauri}.
 
 \begin{figure}[H]
 \centering
@@ -611,6 +638,8 @@ When comparing the resolution necessary to distinguish the components of a conta
 
 To summarize: we would need 100 times the resolving power achievable from the earth to obtain image data from a large contact binary at the distance of the nearest star. In actuality, the situation is worse. 44 Bootis is the nearest contact binary system to earth, at a distance of 13 parsecs (42 light years) it is 10 times further away than \emph{Proxima Centauri} \citep{eker2008new}. For this reason, we cannot obtain usable image data from contact binaries. 
 
+\footnote{it is possible to achieve this resolution (as good as 0.0005") through long-baseline interferometry.}
+
 \subsection[Anatomy of a Contact Binary Light-Curve]{\hyperlink{toc}{Anatomy of a Contact Binary Light-Curve}} \label{sec: Anatomy of a Contact Binary Light-Curve}
 
 \emph{Q: Why does the flux received from a contact binary vary over time?}
@@ -619,7 +648,7 @@ To summarize: we would need 100 times the resolving power achievable from the ea
 
 In images, contact binaries appear as an unresolved point source. At first glance, it may appear that astronomers are stuck: they cannot ``see" the contact binary and so must remain uncertain about its characteristics. However, as Kempf and M\"{u}ller learned in 1903, the amount of light received from a contact binary varies as a function of time. This function is called the light-curve: \index{light-curve}
 
-\begin{equation} \label{eqn: light_curve}
+\begin{equation} \label{eqn: light_curve}f
 f(\text{Time}) = \text{ Flux Received at Telescope}
 \end{equation}
 
@@ -636,6 +665,19 @@ They knew that the period of the light variation in W UMa was very stable (``The
 \label{fig: lc_anatomy}
 \end{figure}
 
+The shape of a contact binary's light-curve can tell us a lot about it. Indeed, the aim of much of the original work in this thesis is to determine how the shape of the contact binary light-curve correlates with physical parameters. I'll now go through a few light-curve features 
+
+Not all contact binary light-curves look the same, so why is that?
+
+\subsubsection[Amplitude]{\hyperlink{toc}{Amplitude}} \label{sec: Amplitude}
+
+\subsubsection[Difference Between Eclipse Minima]{\hyperlink{toc}{Difference Between Eclipse Minima}} \label{sec: Difference Between Eclipse Minima}
+
+\subsubsection[Difference Between Out-of-Eclipse Maxima]{\hyperlink{toc}{Difference Between Out-of-Eclipse Maxima}} \label{sec: Difference Between Out-of-Eclipse Maxima}
+
+\subsubsection[Eclipse Width at Half-Minimum]{\hyperlink{toc}{Eclipse Width at Half-Minimum}} \label{sec: Eclipse Width at Half-Minimum}
+
+\subsection[Spectra]{\hyperlink{toc}{Spectra}} \label{sec: Spectra}
 
 In this section, I describe some of the major sources of modern observations of contact binaries. 
 
