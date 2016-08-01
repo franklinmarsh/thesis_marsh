@@ -392,7 +392,7 @@ For an excellent review, see: \citep{kallrath2009eclipsing}
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.25]{pringle1985interacting_1_4+terrell2001eclipsing_2+3+4.png}
-\caption{Types of eclipsing binary systems based on Roche geometry. Figures 2,3, and 4 from \citet{terrell2001eclipsing}, and Figure 1.4 from \citet{pringle1985interacting}}
+\caption{Types of eclipsing binary systems based on Roche geometry. In the bottom panel, (labelled ``overcontact"), the photosphere of the star (shaded in orange), lies between the inner and outer Jacobi equipotentials. Figures 2,3, and 4 from \citet{terrell2001eclipsing}, and Figure 1.4 from \citet{pringle1985interacting}}
 \label{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}
 \end{figure}
 
@@ -440,6 +440,23 @@ P^{2} = \frac{4\pi^{2}}{G(M_{1} + M_{2})} a^{3}
 
 Advection is a transport mechanism of a substance, or property (e.g. temperature, density) by a fluid due to the fluid's bulk motion.
 
+\citep{shu1976structure} contact discontinuity model
+
+\subsection{Interior Structure}{\hyperlink{toc}{Interior Structure}} \label{sec: Interior Structure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{lubow1977structure_2.png}
+\caption{An equatorial cross-section of a 1 $M_{\odot}$ + 0.5 $M_{\odot}$ zero-age contact binary of solar composition. The filling factor of this model is $f = 0.41$, and the binary period is $P_{d} = 0.228$ days. Fig. 2 from \citet{lubow1977structure}}
+\label{fig: lubow1977structure_2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{lubow1977structure_3.png}
+\caption{An equatorial cross-section of a 2 $M_{\odot}$ + 1 $M_{\odot}$ zero-age contact binary of solar composition. The filling factor of this model is $f = 0.84$, and the binary period is $P_{d} = 0.314$ days. Fig. 3 from \citet{lubow1977structure}}
+\label{fig: lubow1977structure_3}
+\end{figure}
 
 \subsubsection{Common-Envelope Evolution}{\hyperlink{toc}{Common-Envelope Evolution}} \label{sec: Common-Envelope Evolution}
 
@@ -640,7 +657,7 @@ When comparing the resolution necessary to distinguish the components of a conta
 
 To summarize: we would need 100 times the resolving power achievable from the earth to obtain image data from a large contact binary at the distance of the nearest star. In actuality, the situation is worse. 44 Bootis is the nearest contact binary system to earth, at a distance of 13 parsecs (42 light years) it is 10 times further away than \emph{Proxima Centauri} \citep{eker2008new}. For this reason, we cannot obtain usable image data from contact binaries \footnote{it is possible to achieve this resolution (as good as 0.0005") through long-baseline interferometry. Using the CHARA array on Mount Wilson, researchers have constructed a resolved image of the eclipsing binary system $\beta$ \emph{Lyrae} \index{$\beta$ Lyrae} \citep{zhao2008first}. However, interferometric imaging is only possible for the brightest stars, so is not useful for contact binaries.}.
 
-\subsection[Anatomy of a Contact Binary Light-Curve]{\hyperlink{toc}{Anatomy of a Contact Binary Light-Curve}} \label{sec: Anatomy of a Contact Binary Light-Curve}
+\subsection[Photometry of Contact Binaries]{\hyperlink{toc}{Photometry of Contact Binaries}} \label{sec: Photometry of Contact Binaries}
 
 \emph{Q: Why does the flux received from a contact binary vary over time?}
 \emph{Q: How was the light-curve used to determine what a contact binary was?}
@@ -677,7 +694,11 @@ Not all contact binary light-curves look the same, so why is that?
 
 \subsubsection[Eclipse Width at Half-Minimum]{\hyperlink{toc}{Eclipse Width at Half-Minimum}} \label{sec: Eclipse Width at Half-Minimum}
 
-\subsection[Spectra]{\hyperlink{toc}{Spectra}} \label{sec: Spectra}
+How much can the shape of the light-curve tell us about the geometry of the contact binary system? When astronomers constructed the first computer models of contact binaries (based on the initial solution in \cite{lucy1968light}
+
+\subsection[Spectra of Contact Binaries]{\hyperlink{toc}{Spectra of Contact Binaries}} \label{sec: Spectra of Contact Binaries}
+
+time-series spectra are some of the most complete observations of contact binaries.
 
 In this section, I describe some of the major sources of modern observations of contact binaries. 
 
@@ -802,8 +823,6 @@ In data from surveys, the data may be too sparse to estimate times of minimum li
 
 \subsection[Doppler Imaging]{\hyperlink{toc}{Doppler Imaging}} \label{sec: doppler_imaging}
 
-\subsection[Fourier Analysis]{\hyperlink{toc}{Fourier Analysis}} \label{sec: fourier_analysis}
-
 \section[Pause]{\hyperlink{toc}{Pause}} \label{sec: pause}
 
 Data from large All-Sky surveys is very different in nature compared data taken on a single night with a single telescope. Working with all-sky surveys presents huge advantages to working with traditional light-curve data, but it also has major drawbacks.
@@ -811,6 +830,39 @@ Data from large All-Sky surveys is very different in nature compared data taken 
 In ``traditional" variable star observing, an observer slews the telescope to the target at the beginning of the night, and then takes a continuous sequence of images (from which she will make photometric measurements) at regularly spaced time intervals, until the star has rotated one full period, or until morning twilight. The observe can only look at one target at once, but the selected target is observed many times in one night.
 
 In All-Sky surveys, the observing mode is different. All throughout the night, the telescope pans to a filed taking a few images, and then rapidly moving on to the next field. A given source might only be observed one or two times in a given night. The survey operates night after night, and after many years, it has amassed hundreds of observations of any point on the sky.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{lc_unfolded.png}
+\caption{Observations of a contact binary, as returned by CRTS. Note that the observed flux varies significantly from observation to observation, but we cannot see the periodic nature of the variability with our eyes}
+\label{fig: lc_unfolded}
+\end{figure}
+
+
+Hidden in this data is an underlying periodic function - the light-curve caused by the rotation of the contact binary. The period is hidden in this data, we just need to find it.
+
+The data that we have here is a \emph{time-series}\index{time-series}: a number of measurements of of the flux of a source at many different times. The problem of finding a period in time-series data is usually handled with a \emph{Fourier Transform} \index{Fourier Transform}.
+
+In the Fourier Transform, 
+
+The CRTS telescope does not return to this source at regular times.
+
+The algorithm that is most widely used to find periods in unevenly sampled time-series \citet{scargle1982studies}
+
+We calculate the phase of each observation, by dividing by the period found in the signal.
+
+\begin{equation} \label{phase_fold}
+\theta = \frac{(\text{Time } \% \text{ Period})}{\text{Period}}
+\end{equation}
+
+where (\%) is the ``modulo" (or remainder operator)
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{lc_folded.png}
+\caption{Observations of a contact binary by CRTS, folded by the period as detected by the lomb-scargle algorithm.}
+\label{fig: lc_folded}
+\end{figure}
 
 
 \section[Light-curve Morphology]{\hyperlink{toc}{Light-curve Morphology}} \label{sec: lc_morph}
@@ -838,13 +890,13 @@ In the eight years between 2005 and 2013, CRTS observes a given source roughly 3
 
 Thankfully, we can introduce some assumptions that will make the task of succinctly describing our light-curves easier. First, we assume that our light-curve is a \emph{continuous function}. This means that there are not jumps or breaks in the true variation of light. The light-curve has a value at every point in phase, and is differentiable at every point in phase. Second, we assume that \emph{the light-curve is periodic}: that the pattern of light variation will exactly repeat itself after some amount of time. In \S\ref{sec: dec_var}, we learn that this is not exactly true for contact binaries when we observe them over many years. But for now, this assumption will serve us well.
 
-Now, armed with our two new assumptions and light-curve data, we can construct a light-curve function. There are many ways to construct a continuous, periodic function from a set of data: \\
+Now, armed with our two new assumptions and light-curve data, we can construct a light-curve function. There are many ways to construct a continuous, periodic function from a set of data. \\
 
 1. Polynomial Fit. \\
 
 \begin{multline} \label{eqn: polynomial_fit}
-f(p) = \theta_{0} + \theta_{1}t + \theta_{1}p^{2} + \theta_{2}p^{3} + ... (0 \leq p < 1) \\
-f(p) = \sum_{i = 0}^{n} \theta_{i}p^{i}  (0 \leq p < 1)
+f(\theta) = a_{0} + a_{1}\theta + a_{1}\theta^{2} + a_{2}\theta^{3} + ... (0 \leq p < 1) \\
+f(\theta) = \sum_{i = 0}^{n} a_{i}\theta^{i}  (0 \leq \theta < 1)
 \end{multline}
 
 2. Polynomial - Spline Fit. \\
@@ -853,15 +905,18 @@ f(p) = \sum_{i = 0}^{n} \theta_{i}p^{i}  (0 \leq p < 1)
 f(p) = 
 \end{multline}
 
+\citep{gettel2006catalog} a spline fit is employed. \citep{akerlof1994applicaiton} explanation of spline fit.
+
 3. Fourier (Harmonic) Fit. \\
 
 \begin{multline} \label{eqn: harmonic_fit} 
-f(p) = 
+f(p) =  \\
+f(p) = \sum_{i = 0}^{n} a_{i} \cos(2 \pi i p)
 \end{multline}
 
 There are many other forms that can be used to represent a continuous periodic function - but these are the most obvious choices. Each has advantages and disadvantages. For example, if the light-curve has large derivatives at some points in the phase (it has ``sharp turns"), a polynomial spline fit may be the best choice.
 
-We have elected to use the harmonic fit, because it has a history of use in the description contact binary light-curves. It is easy to implement and can fit the data accurately
+We have elected to use the harmonic fit, because it has a history of use in the description contact binary light-curves. It is easy to implement and can fit the data accurately, provided that there are not sharp turns.
 
 Recall (as in Eqn. \ref{eqn: light_curve}) 
 
@@ -882,6 +937,7 @@ In our study, we aim to learn how the luminosity of contact binary systems vary 
 f(\text{Phase, Time}) = \text{ Flux Received at Telescope}
 \end{equation}
 
+\citep{bradstreet1988mapping}
 
 
 \section[Detection of Flares]{\hyperlink{toc}{Detection of Flares}} \label{sec: flares}
