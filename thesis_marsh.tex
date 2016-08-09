@@ -152,13 +152,13 @@ the structure of the galaxy - how we can use them as standard candles.
 
 The contact binary also stands at the intersection of ``old" and ``new" observational techniques. 
 
-As we shall see, the first contact binary was discovered in a survey. 
-
 We roughly can split observational science into two modes:
 
 1. Survey Mode: Look out and see what there is to see.
 
 2. Target Mode: Observe very specific set of objects in a way tailored to learn about known phenomena.
+
+As we will see, the first contact binary was discovered in a survey. 
 
 In the 20th century, the science of astronomy was ``data poor". The limiting factor of discovery was observations from large telescopes of the day. The possession of data enabled the science. If a scientist had new, proprietary data, science would come out of it.
 
@@ -166,7 +166,7 @@ At the turn of the 21st century (enabled by advances in data storage, processing
 
 Old telescopes were being remodeled, old gears, motors and lenses were being replaced with robotic systems, enabling their autonomous operation. New telescopes were being constructed with the express purpose of deeply surveying the sky - with minimal human intervention. No longer inhibited by human operators, telescopes could image the sky continuously - dawn to dusk. Data poured from these telescopes like water from a firehose. The new images filled massive stacks of servers: for the first time, astronomers were ``data rich". 
 
-The monstrous stream of data had to be filtered. Scientists interested in new discoveries had to find the proverbial needle in the haystack. The most productive scientist was no longer the scientist with the best data, it became the scientist with the best techniques for filtering, stacking, folding, combining, or otherwise analyzing the data. Astronomers started shifting back to ``Survey Mode".
+The monstrous stream of data had to be filtered. Scientists interested in new discoveries had to find the proverbial needle in the haystack. The most productive scientist was no longer the scientist with access to the best data, it became the scientist with the best techniques for filtering, stacking, folding, combining, or otherwise analyzing the data. Astronomers started shifting back to ``Survey Mode".
 
 Asteroids were discovered by the thousands. The rate of supernova discovery accelerated from one every few years to \emph{one every night}.  The number of known eclipsing binaries ballooned from just over a thousand, to tens of thousands. The number of galaxies with known distances lept from BLANK to BLANK. This progress is accelerating: within the decade, at least three major sky surveys of unprecedented depth and cadence will come online.
 
@@ -265,11 +265,7 @@ In \S \ref{sec: Evolution in the Contact State}, we will learn how contact binar
 
 \subsubsection[The Main-Sequence Star]{\hyperlink{toc}{The Main-Sequence Star}} \label{sec: The Main-Sequence Star}
 
-
-
-\citet{carroll2006introduction}
-
-In order to understand the internal structure of contact binaries, we must first understand the structure of their two components: main-sequence stars. The most familiar example of a main sequence star is our Sun. When a star
+In order to understand the internal structure of contact binaries, we must first understand the structure of their two components: main-sequence stars.  The main sequence was an empirically derived group: When astronomers started recording the luminosity and color of lots of stars, they observed that most stars obeyed a relationship between luminosity and color. This relationship can be visualized in an \emph{Hertzprung-Russell Diagram} (or H-R \index{Hertzprung-Russell Diagram} Diagram), like Figure \ref{fig: carroll2006introduction_8_13}. They called the main cluster of points on this diagram the ``Main Sequence". The most familiar example of a main sequence star is our Sun. When a star is fusing hydrogen into helium at its core, we say that it is on the main sequence.
 
 \begin{figure}[H]
 \centering
@@ -280,7 +276,7 @@ In order to understand the internal structure of contact binaries, we must first
 
 Astronomers have an excellent understanding of the observables (like mass, luminosity, or temperature) of main-sequence stars. Models of main-sequence stars that rely on basic time-independent equations of stellar structure have been successful.
 
-The time-independent equations of stellar structure \index{equations of stellar structure} are a set of relationships between the properties of main sequence stars. They tell how pressure ($P$), enclosed mass ($M_{r}$), enclosed luminosity ($L_{r}$), and temperature ($T$) change as a function of radius $r$. You will notice that that all of the following equations are actually derivatives. When we supply the appropriate boundary condition (eg. ``the temperature $T$ at 1 solar radius is 5800K"), the equations allow for the complete solution
+The time-independent equations of stellar structure \index{equations of stellar structure} are a set of relationships between the properties of main sequence stars. They tell how pressure ($P$), enclosed mass ($M_{r}$), enclosed luminosity ($L_{r}$), and temperature ($T$) change as a function of radius $r$. You will notice that that all of the following equations are actually derivatives. When we supply the appropriate boundary condition (eg. ``the temperature $T$ at 1 solar radius is 5800K"), the equations allow for the complete solution of the run of temperature, pressure, and mass through the star.
 
 \begin{equation} \label{stellar_structure1}
 \frac{dP}{dr} = -G \frac{M_{r} \rho}{r^{2}} 
@@ -298,11 +294,68 @@ The time-independent equations of stellar structure \index{equations of stellar 
 \frac{dT}{dr} = - \frac{3}{4ac} \frac{\bar{\kappa} \rho}{T^{3}} \frac{L_{r}}{4 \pi r^{2}}
 \end{equation}
 
-In the equations of stellar structure, there is a hidden assumption. These time-independent equations of stellar structure assume that the stellar matter exists in the potential of a point mass $M_{r}$. 
+\subsubsection{The Roche Potential}{\hyperlink{toc}{The Roche Potential}} \label{sec: The Roche Potential}
 
-\begin{equation}
+In the equations of stellar structure, there is a hidden assumption. These time-independent equations of stellar structure assume that the stellar matter exists in the potential of a point mass:
+
+\begin{equation} \label{point_mass}
 \Psi_{\text{point}} = \frac{GM}{r}
 \end{equation}
+
+However, a contact binary system cannot be modeled as a point mass. A contact binary most definitely contains \emph{two} masses, because it contains two stellar components. We can approximate these stellar components as two point masses, separated by a distance $a$.
+
+
+The Roche model assumes: synchronous rotation, circular orbits, two point masses, in the rotating frame \citep{kopal1959close} :
+
+\citet{mochnacki1984accurate}:
+
+``In Cartesian coordinates, with the origin at the center of mass of the primary, the $x$-axis aligned with the centers of mass, and the $z$-axis parallel to the rotation axis, the potential at a point (x,y,z) co-rotating with binary system is given by: "
+
+\begin{equation} \label{eqn: roche1}
+\Psi_{\text{roche}}(x,y,z)= -\frac{G(M_{1} + M_{2})}{2a} C
+\end{equation}
+
+where 
+
+\begin{equation} \label{eqn: roche2}
+C(x,y,z) = \frac{2}{1+q} \frac{1}{(x^{2} + y^{2} + z^{2})^{\frac{1}{2}}} + \frac{2q}{1 + q} \frac{1}{1 + q[(x -1)^{2} + y^{2} + z^{2}]^{\frac{1}{2}}} + (x - \frac{q}{1 + q})^{2} + y^{2}
+\end{equation}
+
+$q = \frac{m_{2}}{m_{1}}$, $(x,y,z)$ are in units of $a$, the separation between the two point masses.
+
+The Roche potential has points where $\nabla \Psi = 0$, called Lagrange Points (see Figure \ref{sluys2006roche}). 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.3]{mochnacki1972model_1.png}
+\caption{The coordinate system used in equations \ref{eqn: roche1} and \ref{eqn: roche2} to describe the potential $\Psi$ of a contact binary system. Figure 1 from \citet{mochnacki1972model}}
+\label{fig: mochnacki1972model_1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.75]{sluys2006roche.png}
+\caption{A composite 3D and contour plot of the Roche potential. The Roche lobe is the dark equipotential curve shaped like the $\infty$ symbol. Three out of the five Lagrange points are labelled $L_{1}, L_{2}, L_{3}$.  \citep{sluys2006roche}}
+\label{fig: sluys2006roche}
+\end{figure}
+
+Now that we understand the shape of the Roche potential, we can learn how the Roche potential is used to classify eclipsing binary stars, in a scheme primarily developed by the work of \citet{kopal1959close}. In Figure \ref{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}, we see three types of eclipsing binaries. In Detached systems, the photosphere of each component is well within the Roche lobe (the equipotential curve shaped like $\infty$). In a Semi-detached configuration, the photosphere of one component fills the Roche lobe, while the photosphere of the other component remains well within the Roche lobe. In Overcontact systems, both components overfill the Roche lobe, and a bridge of stellar material connects the two components, covering the $L_{1}$ point \citep{terrell2001eclipsing}.
+
+An important note on the semantics of binary star classification. \citet{kuiper1941interpretation}
+
+The origin of the term overcontact \citep{wilson2001binary}
+
+For an excellent review, see: \citep{kallrath2009eclipsing}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{pringle1985interacting_1_4+terrell2001eclipsing_2+3+4.png}
+\caption{Types of eclipsing binary systems based on Roche geometry. In the bottom panel, (labelled ``overcontact"), the photosphere of the star (shaded in orange), lies between the inner and outer Jacobi equipotentials. Figures 2,3, and 4 from \citet{terrell2001eclipsing}, and Figure 1.4 from \citet{pringle1985interacting}}
+\label{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}
+\end{figure}
+
+
+
 
 
 \begin{figure}[H]
@@ -345,58 +398,12 @@ Absolute magnitudes and luminosities \citep{rucinski1997absolute} \citep{rucinsk
 
 The classical Roche model allows eclipsing binaries to be separated into morphological types \citep{terrell2001eclipsing}.
 
-\subsubsection{The Roche Potential}{\hyperlink{toc}{The Roche Potential}} \label{sec: The Roche Potential}
-
-The Roche model assumes: synchronous rotation, circular orbits, two point masses, in the rotating frame \citep{kopal1959close} :
-
-\citet{mochnacki1984accurate}:
-
-``In Cartesian coordinates, with the origin at the center of mass of the primary, the $x$-axis aligned with the centers of mass, and the $z$-axis parallel to the rotation axis, the potential at a point (x,y,z) co-rotating with binary system is given by: "
-
-\begin{equation} \label{eqn: roche1}
-\Psi(x, y, z) = -\frac{G(M_{1} + M_{2})}{2a} C
-\end{equation}
-
-where 
-
-\begin{equation} \label{eqn: roche2}
-C(x,y,z) = \frac{2}{1+q} \frac{1}{(x^{2} + y^{2} + z^{2})^{\frac{1}{2}}} + \frac{2q}{1 + q} \frac{1}{1 + q[(x -1)^{2} + y^{2} + z^{2}]^{\frac{1}{2}}} + (x - \frac{q}{1 + q})^{2} + y^{2}
-\end{equation}
-
-$q = \frac{m_{2}}{m_{1}}$, $(x,y,z)$ are in units of $a$, the separation between the two point masses.
-
-The Roche potential has points where $\nabla \Psi = 0$, called Lagrange Points (see Figure \ref{sluys2006roche}). 
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.3]{mochnacki1972model_1.png}
-\caption{The coordinate system used in equations \ref{eqn: roche1} and \ref{eqn: roche2} to describe the potential $\Psi$ of a contact binary system. Figure 1 from \citet{mochnacki1972model}}
-\label{fig: mochnacki1972model_1}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.75]{sluys2006roche.png}
-\caption{A composite 3D and contour plot of the Roche potential. The Roche lobe is the dark equipotential curve shaped like the $\infty$ symbol. Three out of the five Lagrange points are labelled $L_{1}, L_{2}, L_{3}$.  \citep{sluys2006roche}}
-\label{fig: sluys2006roche}
-\end{figure}
-
-Now that we understand the shape of the Roche potential, we can learn how the Roche potential is used to classify eclipsing binary stars, in a scheme primarily developed by the work of \citet{kopal1959close}. In Figure \ref{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}, we see three types of eclipsing binaries. In Detached systems, the photosphere of each component is well within the Roche lobe (the equipotential curve shaped like $\infty$). In a Semi-detached configuration, the photosphere of one component fills the Roche lobe, while the photosphere of the other component remains well within the Roche lobe. In Overcontact systems, both components overfill the Roche lobe, and a bridge of stellar material connects the two components, covering the $L_{1}$ point \citep{terrell2001eclipsing}.
-
-An important note on the semantics of binary star classification. \citet{kuiper1941interpretation}
-
-The origin of the term overcontact \citep{wilson2001binary}
-
-For an excellent review, see: \citep{kallrath2009eclipsing}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.25]{pringle1985interacting_1_4+terrell2001eclipsing_2+3+4.png}
-\caption{Types of eclipsing binary systems based on Roche geometry. In the bottom panel, (labelled ``overcontact"), the photosphere of the star (shaded in orange), lies between the inner and outer Jacobi equipotentials. Figures 2,3, and 4 from \citet{terrell2001eclipsing}, and Figure 1.4 from \citet{pringle1985interacting}}
-\label{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}
-\end{figure}
 
 \subsubsection{Thermal Equilibrium Models}{\hyperlink{toc}{Thermal Equilibrium Models}} \label{sec: Thermal Equilibrium Models}
+
+We know that the two components of a contact binary system have very similar temperatures from observational data. However, observational data also tells us that the two components of contact systems are very rarely equal in mass.
+
+``Up to a third of the energy generated by the primary is transferred to the secondary"\citep{mochnacki1981contact}
 
 \begin{equation} \label{eqn: equilibrium1}
 \nabla P = - \rho \nabla \Psi
@@ -442,6 +449,27 @@ Advection is a transport mechanism of a substance, or property (e.g. temperature
 
 \citep{shu1976structure} contact discontinuity model
 
+\citep{lubow1977structure}
+
+\citet{gazeas2008angular} have shown that orbital parameters of contact binary systems obey certain relationships.
+
+\begin{equation} \label{gazeas2008angular_6}
+P = 0.1159 * a^{\frac{3}{2}} M^{\frac{1}{2}}
+\end{equation}
+
+Where $P$ is the orbital period in days, $M = M_{1} + M_{2}$ is the total mass of the binary system, and $a$ is the semi major axis of the system in meters.
+
+We can also calculate the orbital angular momentum $H_{\text{orb}}$ 
+
+\begin{equation} \label{gazeas2008angular_7}
+H_{\text{orb}} = 1.25 \times 10^{52} * M^{\frac{5}{3}} P^{\frac{1}{3}} q(1 + q)^{-2}
+\end{equation}
+
+where $q = \frac{M_{1}}{M_{2}}$ is the mass ratio of the components.
+
+
+\citep{gazeas2006masses}
+
 \subsection{Interior Structure}{\hyperlink{toc}{Interior Structure}} \label{sec: Interior Structure}
 
 \begin{figure}[H]
@@ -466,9 +494,14 @@ Common-envelope Evolution, (CEE) \citep{ivanova2013common}
 
  \citep{rucinski1998contact} Studies using OGLE data on the galactic bulge (Baade's Window) indicates that the frequency of contact binaries relative to main sequence stars (or spatial frequency) is approximately $\frac{1}{130} = 0.7\%$, in the absolute magnitude range of $2.5 < M_{v} < 7.5$. A later study using ASAS data shows that the spatial frequency is 0.2\% in the solar neighborhood \citep{rucinski2006luminosity} in the absolute magnitude range of $3.5 < M_{v} < 5.5$.
 
-A catalog of 1022 contact binary systems in ROTSE - 1 data placed the the space density of contact binaries at $1.7 \pm 10^{-5} \text{pc}^{-3}$
+A catalog of 1022 contact binary systems in ROTSE - 1 data placed the the space density of contact binaries at $1.7 \pm 10^{-5} \text{pc}^{-3}$ \citep{gettel2006catalogue}
  
 Contact binaries are the most frequently observed type of eclipsing binary star, because their eclipses can be detected at a wide range of orbital inclinations. In recent searches for eclipsing binary stars in survey data \citep{drake2014catalina} contact binary stars comprised 50\% of the new variable stars discovered. 
+
+Existing catalog of contact binaries in the field \citep{pribulla2003catalogue}
+
+
+
 
 \subsection[Mechanisms of Formation]{\hyperlink{toc}{Mechanisms of Formation}}
 
@@ -476,13 +509,31 @@ Formed in Contact. \citet{lucy1968structure} was incorrect in assuming that cont
 
 \citep{yildiz2013origin}
 
+\citep{bilir2005kinematics}
+
 \citep{li2007formation}
 
 Initially Detached, but then inspiral
 Angular Momentum Loss through stellar winds. 
-Angular Momentum Loss through tertiary components.  \citep{lohr2015orbital}
 
-A study by \citet{pribulla2006contact} has established a lower limit on the number of triple systems
+
+In recent years, evidence has been amassing for the formation via companion pathway. In this pathway, two stars begin in a stable orbit. When a third star is introduced into the system, it steals angular momentum from the first two stars, resulting in a closer orbit. 
+
+There is evidence that this companion stays in orbit around the contact binary.
+A study by \citet{pribulla2006contact} has established a lower limit on the number of triple systems. Angular Momentum Loss through tertiary components.  \citep{lohr2015orbital} In a search of 13,927 eclipsing binaries in the SuperWASP catalog, 24\% had period-changes indicating a closely orbiting companion.
+
+In the Kozai-Lidov mechanism \index{Kozai-Lidov mechanism}, the orbit of two inner bodies is perturbed by a third body orbiting farther out. The equations of motion for the three-body system, a specific angular momentum is conserved:
+
+\begin{equation} \label{kozai_1}
+L_{z} = \sqrt{1- e^{2}} \cos i
+\end{equation}
+
+Because the quantity $L_{z}$ is conserved, orbital eccentricity $e$ can be traded for orbital inclination $i$. So, three body systems with undergo Kozai-Lidov cycles, with a certain period:
+
+\begin{equation} \label{kozai_2}
+T_{\text{Kozai}} = 2 \pi \frac{\sqrt{GM}}{G m_{2}} \frac{a_{2}^{3}}{a^{\frac{3}{2}}} (1 - e^{2}_{2})^{\frac{3}{2}}
+\end{equation}
+
 
 \subsection[Evolution in the Contact State]{\hyperlink{toc}{Evolution in the Contact State}}
 
@@ -490,7 +541,11 @@ Thermal Relaxation Oscillations \citep{wang1994thermal}. May cause orbital perio
 
 The structure of contact binaries \citep{kahler2004structure}
 
-Angular momentum and mass evolution \citep{gazeas2008angular}
+the surface of the contact system does not obey a simple gravity brightening law \citep{kahler2004evolutionary}, \citep{hilditch1988evolutionary}.
+
+\citep{rubenstein2001effect}
+
+Angular momentum and mass evolution. Some of the most recent modeling work indicates that the typical duration of the contact state is 1 to 1.5 Gyr \citep{gazeas2008angular}.
 
 masses and angular momenta \citep{gazeas2006masses}
 
@@ -554,13 +609,7 @@ modern work on six binaries in NGC188 \citep{chen2016physical}
 
 \subsection[Early-Type Contact Binaries]{\hyperlink{to}{Early-Type Contact Binaries}}
 
-TU Muscae \citep{penny2008tomographic}
-
-MY Cam \citep{lorenzo2014my}
-
-UW CMa \citep{antokhina2011light}
-
-V382 Cygni \citep{popper1978masses}
+When astronomers say that a star is ``Early-Type" \index{Early-Type}, they mean that it is ``early" on the spectral classification sequence (OBAFGKM). O and B stars are more massive, more luminous and hotter than our sun. Early-Type contact binaries deserve a special section due to their extreme mass, luminosity, rarity, and short lifetime. There are only a handful of O and B Type contact binary systems known. The four best studied systems are TU Muscae \citep{penny2008tomographic}, MY Cam \citep{lorenzo2014my}, UW CMa \citep{antokhina2011light}, V382 Cygni \citep{popper1978masses}. 
 
 Over forty have been found in the Small Magellanic Cloud \citep{hilditch2005forty}
 
@@ -572,7 +621,9 @@ In modern survey data, we can observe individual eclipsing binary systems in nea
 
 \subsection[Magnetic Activity]{\hyperlink{toc}{Magnetic Activity}}
 
-In the solar atmosphere, the movement of plasma in the convective region creates magnetic fields, which in turn affect the motion of that same plasma. Contact binaries are rapidly rotating systems, with orbital periods of 0.2 to 0.8 days (compare this rate with the approximately 30 day solar rotational period)
+In the solar atmosphere, the movement of plasma in the convective region creates magnetic fields, which in turn affect the motion of that same plasma. Contact binaries are rapidly rotating systems, with orbital periods of 0.2 to 0.8 days (compare this rate with the approximately 30 day solar rotational period), so they have the potential to form much stronger magnetic fields.
+
+There is a lot of evidence that contact binary stars have strong magnetic fields. Astronomers observe changes in their light-curves, indicating that starspots may be appearing and disappearing on their photospheres. Doppler imaging of contact binaries can reveal the shapes and locations of the starspots on the photosphere (Fig. \ref{fig: barnes2004high_5})
 
  Because late-type contact binaries have Common Convective Envelopes (or CCEs), 
 
@@ -698,7 +749,9 @@ How much can the shape of the light-curve tell us about the geometry of the cont
 
 \subsection[Spectra of Contact Binaries]{\hyperlink{toc}{Spectra of Contact Binaries}} \label{sec: Spectra of Contact Binaries}
 
-time-series spectra are some of the most complete observations of contact binaries.
+time-series spectra are some of the most complete observations of contact binaries. 
+
+Analyzing spectra of contact binaries is challenging. Abundances of elements cannot be determined precisely due to the broadening and blending of spectral lines caused by the fast rotation \citep{gazeas2006masses}. 
 
 In this section, I describe some of the major sources of modern observations of contact binaries. 
 
@@ -825,18 +878,22 @@ In data from surveys, the data may be too sparse to estimate times of minimum li
 
 \section[Pause]{\hyperlink{toc}{Pause}} \label{sec: pause}
 
-Data from large All-Sky surveys is very different in nature compared data taken on a single night with a single telescope. Working with all-sky surveys presents huge advantages to working with traditional light-curve data, but it also has major drawbacks.
+Data from large All-Sky surveys is very different in nature compared with data taken on a single night with a single telescope. Working with all-sky surveys presents huge advantages to working with traditional light-curve data, but it also has major drawbacks.
 
 In ``traditional" variable star observing, an observer slews the telescope to the target at the beginning of the night, and then takes a continuous sequence of images (from which she will make photometric measurements) at regularly spaced time intervals, until the star has rotated one full period, or until morning twilight. The observe can only look at one target at once, but the selected target is observed many times in one night.
 
-In All-Sky surveys, the observing mode is different. All throughout the night, the telescope pans to a filed taking a few images, and then rapidly moving on to the next field. A given source might only be observed one or two times in a given night. The survey operates night after night, and after many years, it has amassed hundreds of observations of any point on the sky.
+In All-Sky surveys, the observing mode is different. All throughout the night, the telescope pans to a field, taking a few images, and then rapidly moving on to the next field. A given source might only be observed one or two times in a given night. The survey operates night after night, and after several years, it has amassed hundreds of observations of any point on the sky.
+
+When we look in a survey database for photometric measurements of a known contact binary we often see data that looks like the data in Figure \ref{fig: lc_unfolded}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{lc_unfolded.png}
-\caption{Observations of a contact binary, as returned by CRTS. Note that the observed flux varies significantly from observation to observation, but we cannot see the periodic nature of the variability with our eyes}
+\caption{Observations of a contact binary, as returned by CRTS. The x-axis is the time of observation (in days), and the y-axis is the relative flux of the observation. Vertical bars about each point denote the uncertainty in the relative flux measurement. Note that the observed flux varies significantly from observation to observation, but we cannot see the periodic nature of the variability with our eyes}
 \label{fig: lc_unfolded}
 \end{figure}
+
+We know that the data in Figure \ref{fig: lc_unfolded} is not data from a source with constant brightness. Look at the size of the error bar on each point. The error bar on each point is much smaller than the scatter in the distribution. We would call this source a variable source.
 
 
 Hidden in this data is an underlying periodic function - the light-curve caused by the rotation of the contact binary. The period is hidden in this data, we just need to find it.
@@ -864,6 +921,8 @@ where (\%) is the ``modulo" (or remainder operator)
 \label{fig: lc_folded}
 \end{figure}
 
+In Figure \ref{fig: lc_folded}, we see survey data of a contact binary, after it has been folded by the orbital period. We see a coherent light-curve with a beautiful shape.
+
 
 \section[Light-curve Morphology]{\hyperlink{toc}{Light-curve Morphology}} \label{sec: lc_morph}
 
@@ -885,6 +944,8 @@ number & number & number \\ \hline
 \end{center}
 \label{default}
 \end{table}%
+
+In \ref{sec: pause} We were able to construct a coherent light-curve out of survey data taken at random times by folding the data by the orbital period.
 
 In the eight years between 2005 and 2013, CRTS observes a given source roughly 350 times. In other words, it reports about 350 timestamps ($t$), 350 fluxes ($f$), and 350 errors ($e$) on those fluxes. So, the raw data comes to us as $\approx 350 \times 3 = 1050$ individual numbers. These numbers are perfectly valid descriptors of the light-curve, but they are not easily understandable.  
 
@@ -918,12 +979,14 @@ There are many other forms that can be used to represent a continuous periodic f
 
 We have elected to use the harmonic fit, because it has a history of use in the description contact binary light-curves. It is easy to implement and can fit the data accurately, provided that there are not sharp turns.
 
+By choosing a fitting function, we have turned our raw data from CRTS (which was 1000 numbers) into a continuous, periodic function which we can use to derive other, physically meaningful features.
+
 Recall (as in Eqn. \ref{eqn: light_curve}) 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.25]{lc_features.png}
-\caption{ }
+\caption{A graphical description of the light-curve features that we derive for contact binaries in our sample.}
 \label{fig: lc_features}
 \end{figure}
 
@@ -931,11 +994,13 @@ Recall (as in Eqn. \ref{eqn: light_curve})
 
 \section[Luminosity Variation on a Decadal Timescale]{\hyperlink{toc}{Luminosity Variation on a Decadal Timescale}} \label{sec: dec_var}
 
-In our study, we aim to learn how the luminosity of contact binary systems vary on decadal timescales. In \S\ref{lc_morph} we talked about the light-curve as if it was one single function. In actuality, the shape of contact binary light-curves change over time (Eqn. \ref{light_curve_redux}.
+In our study, we aim to learn how the luminosity of contact binary systems vary on decadal timescales. In \S\ref{lc_morph} we talked about the light-curve as if it was one single function. In actuality, the shape of contact binary light-curves change over time (Eqn. \ref{light_curve_redux}). 
 
 \begin{equation} \label{eqn: light_curve_redux}
 f(\text{Phase, Time}) = \text{ Flux Received at Telescope}
 \end{equation}
+
+We can detect light-curve changes with a survey that observes the same set of contact binaries over a timespan of several years (like CRTS). 
 
 \citep{bradstreet1988mapping}
 
