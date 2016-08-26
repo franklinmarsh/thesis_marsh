@@ -37,6 +37,8 @@
 \usepackage{natbib}
 \usepackage{makeidx}
 
+\usepackage{pdfpages}
+
 \makeindex
 
 \linespread{1.2} % Line spacing
@@ -523,13 +525,11 @@ Common-envelope Evolution, (CEE) \citep{ivanova2013common}
 
  \citep{rucinski1998contact} Studies using OGLE data on the galactic bulge (Baade's Window) indicates that the frequency of contact binaries relative to main sequence stars (or spatial frequency) is approximately $\frac{1}{130} = 0.7\%$, in the absolute magnitude range of $2.5 < M_{v} < 7.5$. A later study using ASAS data shows that the spatial frequency is 0.2\% in the solar neighborhood \citep{rucinski2006luminosity} in the absolute magnitude range of $3.5 < M_{v} < 5.5$.
 
-A catalog of 1022 contact binary systems in ROTSE - 1 data placed the the space density of contact binaries at $1.7 \pm 10^{-5} \text{pc}^{-3}$ \citep{gettel2006catalogue}
+A catalog of 1022 contact binary systems in ROTSE - 1 data placed the the space density of contact binaries at $1.7 \pm 10^{-5} \text{pc}^{-3}$ \citep{gettel2006catalog}
  
 Contact binaries are the most frequently observed type of eclipsing binary star, because their eclipses can be detected at a wide range of orbital inclinations. In recent searches for eclipsing binary stars in survey data \citep{drake2014catalina} contact binary stars comprised 50\% of the new variable stars discovered. 
 
 Existing catalog of contact binaries in the field \citep{pribulla2003catalogue}
-
-
 
 
 \subsection[Mechanisms of Formation]{\hyperlink{toc}{Mechanisms of Formation}}
@@ -568,6 +568,8 @@ T_{\text{Kozai}} = 2 \pi \frac{\sqrt{GM}}{G m_{2}} \frac{a_{2}^{3}}{a^{\frac{3}{
 
 Thermal Relaxation Oscillations \citep{wang1994thermal}. May cause orbital period changes observed in \citet{qian2001orbital}.
 
+Kahler's first paper on the structure of contact binaries \citep{kahler2002structure}
+
 The structure of contact binaries \citep{kahler2004structure}
 
 the surface of the contact system does not obey a simple gravity brightening law \citep{kahler2004structure}, \citep{hilditch1988evolutionary}.
@@ -578,7 +580,7 @@ Angular momentum and mass evolution. Some of the most recent modeling work indic
 
 masses and angular momenta \citep{gazeas2006masses} angular momentum loss \citep{vilhu1981contact}
 
-contact binaries occupy a very narrow range of parameter space \citep{gazeas2009physical}
+contact binaries occupy a very narrow range of parameter space \citep{gazeas2009physical} \citep{awadalla2005absolute}
 
 Overall evolution \citep{stepien2008evolutionary}, 2016 review of close binary evolution \citep{tutukov2016evolution}
 
@@ -616,6 +618,8 @@ Blue straggler \citet{andronov2006mergers}
 
 stability of the contact configuration \citep{rasio1995minimum}
 
+minimum mass ratio \citep{arbutina2009possible} \citep{arbutina2009}
+
 One of the ways that a contact binary system can merge is called the Darwin instability. In a Darwin instability, the ...
 
 In the early 1990s, large numbers of new contact binaries were discovered among blue stragglers, in open and globular clusters 
@@ -641,7 +645,9 @@ modern work on six binaries in NGC188 \citep{chen2016physical}
 
 When astronomers say that a star is ``Early-Type" \index{Early-Type}, they mean that it is ``early" on the spectral classification sequence (OBAFGKM). O and B stars are more massive, more luminous and hotter than our sun. Early-Type contact binaries deserve a special section due to their extreme mass, luminosity, rarity, and short lifetime. There are only a handful of O and B Type contact binary systems known. The four best studied systems are TU Muscae \citep{penny2008tomographic}, MY Cam \citep{lorenzo2014my}, UW CMa \citep{antokhina2011light}, V382 Cygni \citep{popper1978masses}. 
 
-Over forty have been found in the Small Magellanic Cloud \citep{hilditch2005forty}
+Over forty have been found in the Small Magellanic Cloud \citep{hilditch2005forty} 
+
+Additional SMC study of intermediate period system \citep{priya2013photometric}.
 
 Massive contact binaries in M31 \citep{lee2014properties}, \citep{vilardell2006eclipsing}
 
@@ -673,7 +679,7 @@ W UMa as X-ray sources \citep{stepien2001rosat}
 
 Observational starspots and magnetic activity cycles.  \citep{borkovits2005indirect,qian2000possible,kaszas1998period,qian2007ad,lee2004period,yang2012deep,zhang2004long}.
 
-It is possible that starspots are responsible for the variation in brightness observed by CRTS. Doppler imaging techniques have confirmed the presence of large starspots on the surface of some contact binaries \citep{barnes2004high}. 
+It is possible that starspots are responsible for the variation in brightness observed by CRTS. Doppler imaging techniques have confirmed the presence of large starspots on the surface of some contact binaries \citep{barnes2004high}.  An example of a well observed change in the contact binary light-curve \citep{gazeas2006modeling}.
 
 \citet{barnes2004high} has used an Echelle spectrograph on the 3.9-meter Anglo-Australian Telescope to perform doppler imaging of the AE Phe system (P = 0.362 d), revealing that the photosphere of the system is heavily spotted (Fig. \ref{fig: barnes2004high_5}).
 
@@ -683,6 +689,15 @@ It is possible that starspots are responsible for the variation in brightness ob
 \caption{Fig. 5 from \citet{barnes2004high}}
 \label{fig: barnes2004high_5}
 \end{figure}
+
+Contact binaries are known X-ray sources \citep{chen2006w}. Flares have been observed in X-ray bands using ROSAT \citep{mcgale1996rosat}.
+EXOSAT has been used to observe a flare in X-ray and Microwave data on VW Cephei (P =  0.28 days, $T_{1}, T_{2}$ = 5500K, 5000K) \citep{vilhu1988simultaneous}. Extreme UV observations have identified coronal characteristics \citep{brickhouse1998extreme}. Long time series observations of single m-dwarfs  \citep{lacy1976uv}
+
+During a continuous monitoring campaign in the winters of 2008 and 2010, \citet{qian2014optical} observed a contact binary system CSTAR 038663 ($P = 0.27$ days, $T_{1}, T_{2} =$ 4616K, 4352K) for a total of 4167 hours (174 days) in the SDSS $i$ band using the CSTAR telescope array in the Antarctic. In this time, \citet{qian2014optical} discovered 15 $i$ band flares, revealing a flare rate of $0.0036$ flares per hour. These 15 flares had durations ranging from 0.006 to 0.014 days (9 to 20 minutes), and amplitudes ranging from 0.14 - 0.27 magnitudes above the quiescent magnitude.
+
+In 1049 close binaries observed by Kepler, \citet{gao2016white} have identified 234 ``flare binaries", on which a total of 6818 flares were detected. Kepler's continuous monitoring capability and precise photometry make it extremely well suited to the detection of white-light flares \citep{walkowicz2011white}. While CRTS does not match Kepler's observing cadence, photometric precision, or ability to observe a given target continuously, it observes 33,000 square degrees a much larger area of the sky than Kepler does (100 square degrees) \citep{drake2009first, basri2005kepler}.
+
+M-dwarfs have previously been searched for flares in Sloan Digital Sky Survey Stripe 82 data \citep{kowalski2009m}. Our study will be similar to that of \citet{kowalski2009m}, because we are also using survey observations of large regions of sky, as opposed to the continuous monitoring studies. \citet{hilton2010m} have discovered flares in the time resolved SDSS spectroscopic sample, using a Flare Line Index based on H$\alpha$ and H$\beta$ line strength.
 
 The evolution and migration of starspots on contact binaries has been tracked with doppler imaging \citep{hendry2000doppler} and more recently, in Kepler data \citep{tran2013anticorrelated, balaji2015tracking}. Starspots are magnetic phenomenon, and so their occurrence is related to the magnetic activity of their host star \citep{berdyugina2005starspots}.  
 
@@ -766,6 +781,10 @@ The shape of a contact binary's light-curve can tell us a lot about it. Indeed, 
 
 Not all contact binary light-curves look the same, so why is that?
 
+What information does can be learned about a contact binary system based only on it's light-curve?
+
+This means that the light-curve of a system with two (relatively) small and cool $M$ type components should be qualitatively and quantitatively identical to the light-curve of a system with two massive and hot $G$ type components, given the systems have the same geometry $[f,q,i]$.
+
 \subsubsection[Amplitude]{\hyperlink{toc}{Amplitude}} \label{sec: Amplitude}
 
 One of the most obvious features of the contact binary light-curve is its Amplitude \index{Amplitude, light-curve}. The amplitude is how much the brightness of the contact binary varies from its minimum brightness, to its maximum brightness.
@@ -782,18 +801,22 @@ How much can the shape of the light-curve tell us about the geometry of the cont
 
 time-series spectra are some of the most complete observations of contact binaries. 
 
+\citep{hrivnak1989radial} radial velocities and IR data of OO Aql.
+
 Analyzing spectra of contact binaries is challenging. Abundances of elements cannot be determined precisely due to the broadening and blending of spectral lines caused by the fast rotation \citep{gazeas2006masses}. 
 
 \subsection[X-ray and Ultraviolet Data on Contact Binaries]{\hyperlink{toc}{X-ray and Ultraviolet Data on Contact Binaries}} \label{sec: X-ray and Ultraviolet Data on Contact Binaries}
 
-Earth's atmosphere is opaque to X-ray and ultraviolet (UV) light, but the advent of space-based observatories has made observations of the sky possible in these passbands.
+Contact binaries are much brighter than main-sequence stars in the ultraviolet, owing to their strong magnetic fields cause by rapid rotation. Earth's atmosphere is opaque to X-ray and ultraviolet (UV) light, but the advent of space-based observatories has made observations of the sky possible in these passbands.
 
-Contact binaries are much brighter than main-sequence stars in the ultraviolet, owing to their strong magnetic fields.
+\citep{cruddace1984contact} first \emph{Einstein} survey of 17 contact binaries. Fig 2 has the X-ray luminosity- period relation.
+\citep{vilhu1987chromospheric} ``the two components of a contact binary have identical chromospheres and transition regions" $F_{x} / F_{bol}$ remains roughly constant with $(B - V)$ color.
+\citep{stepien2001rosat} supersaturation in contact binaries.
 
 
 In this section, I describe some of the major sources of modern observations of contact binaries. 
 
-Since the late 1990s, photometric surveys that frequently observe large areas of the sky have come online. Through the careful classification of periodic variable sources in survey datasets, larger and larger samples of contact binary systems have been assembled, making studies of contact binaries as a population possible. Previous surveys have compiled variable star catalogs which include many contact binary systems. Examples of such surveys are the All-Sky Automated Survey \citep[ASAS,][]{pojmanski2000all}, Robotic Optical Transient Search Experiment \citep[ROTSE,][]{akerlof2000rotse}, Trans-Atlantic Exoplanet Survey \citep[TrES,][]{devor2008identification}, Lincoln Near-Earth Asteroid Research program \citep[LINEAR,][]{palaversa2013exploring}, and Catalina Real-Time Transient Survey \citep[CRTS,][]{drake2014catalina}. Researchers have also selected pure samples of contact binary systems from large survey data sets for study. Researchers have previously used data from the Optical Gravitational Lensing Experiment \citep[OGLE,][]{rucinski1996eclipsing}, Super Wide Angle Search for Planets \citep[SuperWASP,][]{norton2011short}, and CRTS \citep{drake2014ultra} to construct pure contact binary samples for study. \citet{lee2015properties} have used this approach to study a pure sample detached eclipsing binaries from the CRTS variable catalog. 
+Examples of such surveys are the All-Sky Automated Survey \citep[ASAS,][]{pojmanski2000all}, Robotic Optical Transient Search Experiment \citep[ROTSE,][]{akerlof2000rotse}, Trans-Atlantic Exoplanet Survey \citep[TrES,][]{devor2008identification}, Lincoln Near-Earth Asteroid Research program \citep[LINEAR,][]{palaversa2013exploring}, and Catalina Real-Time Transient Survey \citep[CRTS,][]{drake2014catalina}. Researchers have also selected pure samples of contact binary systems from large survey data sets for study. Researchers have previously used data from the Optical Gravitational Lensing Experiment \citep[OGLE,][]{rucinski1996eclipsing}, Super Wide Angle Search for Planets \citep[SuperWASP,][]{norton2011short}, and CRTS \citep{drake2014ultra} to construct pure contact binary samples for study. \citet{lee2015properties} have used this approach to study a pure sample detached eclipsing binaries from the CRTS variable catalog. 
 
 \begin{figure}[H]
 \centering
@@ -822,23 +845,6 @@ follow-up on 1-meter telescopes in South Africa \citep{koen2016multi}.
 
 more follow up \citep{darwish2016orbital}
 
-\subsection[The LINEAR Survey]{\hyperlink{toc}{The LINEAR Survey}}
-
-\subsection[The Catalina Surveys]{\hyperlink{toc}{The Catalina Surveys}}
-
-\subsection[Other Surveys]{\hyperlink{toc}{Other Surveys}}
-
-OGLE work has determined a criterion for overcontact based on Fourier coefficients \citep{rucinski1997eclipsing}. \citep{rucinski1993simple}
-
-Rucinski has used eclipse half-widths and Fourier components to estimate geometrical properties of the system:
-
-\citep{rucinski1973w}
-
-the reliability of the mass-ratio determination from light-curve only data \citep{hambalek2013reliability}
-
-ROTSE study using fourier methods \citep{coker2013study}
-
-phenomenological study \citep{andronov2012phenomenological}
 
 \subsection[Future Surveys]{\hyperlink{toc}{Future Surveys}}
 
@@ -861,15 +867,53 @@ Observational tests of theories of contact binaries \citet{lucy1979observational
 
 In \S\ref{sec: Photometry of Contact Binaries}, we learned about how contact binary light-curves contain information about the physical nature of the system. Since the majority of data on contact binaries is in the form of photometric light-curve measurements, there has been much effort spent on refining the process of light-curve analysis.
 
-In this section, we will learn how physical models can be fit to observational light-curves.
+In this section, we will learn how light-curves can be synthesized from physical models like those of \citet{lucy1968contact}. We also will learn how these synthesized light-curves can be fit to observations. It is important to know about the degeneracies present in this type of analysis. 
 
-The Wilson-Devinney Code \index{Wilson-Devinney Code} 
+A large number of papers 
+
+The Wilson-Devinney Code (hereafter WD code) \index{Wilson-Devinney Code} was the first code that could produce contact binary light-curves in large quantities. 
 
 Fully automated approaches \citep{prsa2009fully} \citep{prsa2008artificial}
 
 recent advances in modeling code \citep{prvsa2013physics}
 
+useful review \citep{gimenez2006close}
+
+\texttt{phoebe} is a user friendly implementation of the WD code in \texttt{python} developed by an international team of researchers. A researcher can feed a light-curve into \texttt{phoebe}. Assumptions about the model atmospheres and other aspects of stellar physics allow for a physical model to be fit to the data.
+
+Almost always, \texttt{phoebe} models based on observational data are underdetermined. There are so many free parameters in the models (which allow the user to fit for starspots of various shapes and sizes, and include the light of an unresolved tertiary component), many degenerate perfect fits to observed data can always be found. Unfortunately, the WD code is frequently treated as a black box, and single-band photometry is used, parameters for spots and third light are fit. The degeneracy of these solutions is rarely if ever mentioned. 
+
+However, radial velocity data can can be used to break degeneracies by providing an independent measurement of the system's total mass and mass-ratio \index{mass ratio, $q$}
+
+Alternatives include \texttt{ROCHE} \index{\texttt{ROCHE} code} \citep{pribulla2012roche}
+
+Simultaneous fitting of physical models of the contact binary light-curve and radial velocity data can provide almost totally determined solutions. 
+
+\subsection[Nomographic Light-Curve Solutions]{\hyperlink{toc}{Nomographic Light-Curve Solutions}} \label{sec: Nomographic Light-Curve Solutions}
+
+As larger and larger numbers of contact binaries were discovered, astronomers saw the motivation for providing a less computationally-intensive way of determining system geometry. 
+
+\citet{mochnacki1972model} First nomographic solution, inspired work by Rucinski. \citep{rucinski1973w}
+
+In this method, the physical model of the contact binary is used in reverse (as compared to \S\ref{sec: Physical Light-Curve Modeling}). A grid of models is produced, covering the parameter space of system geometry $[f,q,i]$. Then, light-curves are generated for each model. The observed light-curve is then compared with a whole catalog of computed light-curves. 
+
+The main advantage of this method is that the model degeneracy can be estimated. Often, (especially for systems with a low orbital inclination) many models will be supported by the observed data.
+
+OGLE work has determined a criterion for overcontact based on Fourier coefficients \citep{rucinski1997eclipsing}. \citep{rucinski1993simple}
+
+Rucinski has used eclipse half-widths and Fourier components to estimate geometrical properties of the system:
+
+the reliability of the mass-ratio determination from light-curve only data \citep{hambalek2013reliability}
+
+ROTSE study using fourier methods \citep{coker2013study}
+
+phenomenological study \citep{andronov2012phenomenological}
+
 employing neural networks to find true binary parameters \citep{zeraatgari2015neural}
+
+Difference between $q_{sp}$ and $q_{ph}$ \citep{van1985contribution}
+
+\citep{rucinski1973w} \citep{rucinski1993light} \citep{terrell2005photometric} \citep{hambalek2013}
 
 \subsection[O-C Analysis]{\hyperlink{toc}{O-C Analysis}} \label{sec: O-C Analysis}
 
@@ -928,7 +972,7 @@ In data from surveys, the data may be too sparse to estimate times of minimum li
 
 \subsection[Doppler Imaging]{\hyperlink{toc}{Doppler Imaging}} \label{sec: doppler_imaging}
 
-\section[Pause]{\hyperlink{toc}{Pause}} \label{sec: pause}
+\section[Working with Survey Data]{\hyperlink{toc}{Working with Survey Data}} \label{sec: Working with Survey Data}
 
 Data from large All-Sky surveys is very different in nature compared with data taken on a single night with a single telescope. Working with all-sky surveys presents huge advantages to working with traditional light-curve data, but it also has major drawbacks.
 
@@ -975,12 +1019,15 @@ where (\%) is the ``modulo" (or remainder operator)
 
 In Figure \ref{fig: lc_folded}, we see survey data of a contact binary, after it has been folded by the orbital period. We see a coherent light-curve with a beautiful shape.
 
+This phase-folded light-curve is similar to what would be obtained in a night of  observation by a single observer.
 
-\section[Light-curve Morphology]{\hyperlink{toc}{Light-curve Morphology}} \label{sec: lc_morph}
+\section[Paper I: Introduction to the CRTS Data]{\hyperlink{toc}{Paper I: Introduction to the CRTS Data}} \label{sec: Paper I: Introduction to the CRTS Data}
 
-\S\label{sec: lc_morph} begins the ``original research" part of the thesis. In this section we aim to learn how contact binary light-curves vary as a function of photospheric temperature. We have access to over 9,000 white-light light-curves from the CRTS survey and multicolor photometry from the SDSS survey. This is all the data we will need to begin our study.
+This work was submitted to the Monthly Notices of the Royal Astronomical Society (MNRAS) on June 20th, 2016, and was accepted on August 19th, 2016.
 
-\subsection[Our Observations]{Our Observations} \label{sec: Our Observations}
+\includepdf[pages = -]{Marshetal2016.pdf}
+
+\section[Paper II: Geometrical Parameters]{\hyperlink{toc}{Paper II: Geometrical Parameters}} \label{sec: Paper II: Geometrical Parameters}
 
 \subsection[Light-curve Features]{Light-curve Features} \label{sec: Light-curve Features}
 
@@ -1099,7 +1146,7 @@ The following light-curve features have units of time. $P_{\text{h1}}$ and $P_{\
 
 \cite{o1951so}
 
-\section[Luminosity Variation on a Decadal Timescale]{\hyperlink{toc}{Luminosity Variation on a Decadal Timescale}} \label{sec: dec_var}
+\section[Paper III: Optical and UV Variability]{\hyperlink{toc}{Paper III: Optical and UV Variability}} \label{sec: Paper III: Optical and UV Variability}
 
 In our study, we aim to learn how the luminosity of contact binary systems vary on decadal timescales. In \S\ref{lc_morph} we talked about the light-curve as if it was one single function. In actuality, the shape of contact binary light-curves change over time (Eqn. \ref{light_curve_redux}). 
 
@@ -1111,47 +1158,13 @@ We can detect light-curve changes with a survey that observes the same set of co
 
 We detect deviations of the light-curve with respect to the harmonic fit performed on all CRTS observations. We can consider the harmonic the ``average" light-curve of the contact binary during the eight-year CRTS observation timespan. This is because the CRTS measurements are randomly, (but uniformly) sampled in time, and the harmonic fit assigns equal weight to every measurement.
 
-\begin{figure}
-\begin{center}
-\includegraphics[scale = 0.20]{example_lc_phase.png}
-\includegraphics[scale = 0.20]{example_lc_resi.png}
-\caption{The light-curve of a contact binary as observed by CRTS. In the top panel, we see that the light-curve is normalized in flux such that the maximum value of the harmonic fit (in black) is 1.0. We see that the light-curve has been divided into four distinct regions by phase. In the bottom panel, we see the harmonic fit residuals as a function of observation time. Observations from each one of the four bins have been separated. The light-curve of this contact binary does not change over the eight-year observation timespan, the residuals are centered around 0 for observations in each phase bin. The orbital period of this binary is 0.323716 days. The variability amplitude of this object binary is 0.57.}
-\end{center}
-\label{fig: lc_label}
-\end{figure}
 
 \citep{bradstreet1988mapping}
 
 
-\section[Detection of Flares]{\hyperlink{toc}{Detection of Flares}} \label{sec: flares}
+\section[The Future]{\hyperlink{toc}{The Future}}
 
-In our study, we aim to learn about the flaring frequency of contact binaries and to determine if flare characteristics vary as a function of photospheric temperature.
-
-READ Walkowicz et al. 2011 and Shibayama et al. 2013. 
-
-Contact binaries are known X-ray sources \citep{chen2006w}. Flare have been observed in X-ray bands using ROSAT \citep{mcgale1996rosat}.
-EXOSAT has been used to observe a flare in X-ray and Microwave data on VW Cephei (P =  0.28 days, $T_{1}, T_{2}$ = 5500K, 5000K) \citep{vilhu1988simultaneous}. Extreme UV observations have identified coronal characteristics \citep{brickhouse1998extreme}. Long time series observations of single m-dwarfs  \citep{lacy1976uv}
-
-During a continuous monitoring campaign in the winters of 2008 and 2010, \citet{qian2014optical} observed a contact binary system CSTAR 038663 ($P = 0.27$ days, $T_{1}, T_{2} =$ 4616K, 4352K) for a total of 4167 hours (174 days) in the SDSS $i$ band using the CSTAR telescope array in the Antarctic. In this time, \citet{qian2014optical} discovered 15 $i$ band flares, revealing a flare rate of $0.0036$ flares per hour. These 15 flares had durations ranging from 0.006 to 0.014 days (9 to 20 minutes), and amplitudes ranging from 0.14 - 0.27 magnitudes above the quiescent magnitude.
-
-In 1049 close binaries observed by Kepler, \citet{gao2016white} have identified 234 ``flare binaries", on which a total of 6818 flares were detected. Kepler's continuous monitoring capability and precise photometry make it extremely well suited to the detection of white-light flares \citep{walkowicz2011white}. While CRTS does not match Kepler's observing cadence, photometric precision, or ability to observe a given target continuously, it observes 33,000 square degrees a much larger area of the sky than Kepler does (100 square degrees) \citep{drake2009first, basri2005kepler}.
-
-M-dwarfs have previously been searched for flares in Sloan Digital Sky Survey Stripe 82 data \citep{kowalski2009m}. Our study will be similar to that of \citet{kowalski2009m}, because we are also using survey observations of large regions of sky, as opposed to the continuous monitoring studies. \citet{hilton2010m} have discovered flares in the time resolved SDSS spectroscopic sample, using a Flare Line Index based on H$\alpha$ and H$\beta$ line strength.
-
-In CRTS data, we monitor 9851 contact binaries. We aim to verify the relationships described in \citet{gao2016white}, and focus on the contact binary subclass.
-We aim to place better constraints on the flare rate as a function of both orbital period and photospheric temperature. The dataset constitutes the equivalent of 40.6 years of monitoring continuous monitoring at an average cadence of one 30 second observation per 9 minutes. 
-
-
-% DO FIGURES LIKE THIS:
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale = .55]{ftmw.png}
-%\caption{FTMW spectra of YbF with Doppler shift evident}
-%\label{fig:ftmw}
-%\end{figure}
-
-%\ref{fig:ftmw}
+In this section, I'd like to outline a few projects that are possible with existing datasets. I will also summarize a few future surveys that I believe have great potential to improve our understanding of contact binary systems.
 
 %------------------------------------------------
 
@@ -1168,10 +1181,6 @@ We aim to place better constraints on the flare rate as a function of both orbit
 %----------------------------------------------------------------------------------------
 
 \appendix
-%\section[Data]{\hyperlink{toc}{Data}}
-
-%\subsection[Fourier-Transform Microwave Data]{\hyperlink{toc}{Fourier-Transform Microwave Data}}
-%\input{FTMW208}
 
 %----------------------------------------------------------------------------------------
 % BIBLIOGRAPHY
