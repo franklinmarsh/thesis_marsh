@@ -218,7 +218,7 @@ The shape of the light-curve was unlike anything that M\"uller and Kempf had see
 
 \emph{``We may finally consider the hypothesis that the light-variation is produced by two celestial bodies almost equal in size and luminosity whose surfaces are at a slight distance from each other, and which at times almost centrally occult each other in their revolution... On this hypothesis we have only one difficulty, and the not inconsiderable one, as to whether such a system is mechanically possible and can remain stable for any length of time."} \\
 
-This passage marks the beginning of the study of contact binary stars . In this thesis, written 114 years the initial discovery, we will journey to the forefront of contact binary research.
+This passage marks the beginning of the study of contact binary stars. In this thesis, written 114 years after this initial discovery, we will journey to the forefront of contact binary research.
 
 %It turns out that M\"uller and Kempf  were correct in their speculation, as the vast majority of contact binaries are indeed two celestial bodies almost equal in size and luminosity.
 
@@ -294,11 +294,48 @@ The time-independent equations of stellar structure \index{equations of stellar 
 \frac{dT}{dr} = - \frac{3}{4ac} \frac{\bar{\kappa} \rho}{T^{3}} \frac{L_{r}}{4 \pi r^{2}}
 \end{equation}
 
+While the details of the nuclear fusion that occurs at the cores of main-sequence are unimportant for our study, I will briefly outline the main reactions.
+
+Energy is generated at the core of low-mass main sequence stars via the Proton-Proton Chain, or \emph{pp-chain}\index{pp-chain}. The pp-chain has three branches, each producing helium our of Hydrogen (H), Helium (He) and Beryllium (Be). 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.4]{carroll2006introduction_10_8.png}
+\caption{A diagram of pp chain reactions. Percentages by the arrows indicate the branching ratios, revealing that the PP I and PP II chains occur much more frequently than the PP III chain. Figure 10.8 from \citet{carroll2006introduction}.}
+\label{fig: carroll2006introduction_10_8}
+\end{figure}
+
+The energy produced by all three branches of the pp chain can be represented:
+
+\begin{equation} \label{eqn: pp1}
+\epsilon_{pp} = 0.241 \rho X^{2} f_{pp} \psi_{pp} C_{pp} T_{6}^{-2/3} e^{-33.80 T_{6}^{-1/3}} \text{W } \text{kg}^{-1}
+\end{equation}
+
+Where $T_{6} \equiv T / 10^{6}$ K. When we expand Equation \ref{eqn: pp1} in a power law about the solar core temperature of $T_{\odot \text{, core}} = 1.5 \times 10^{7}$K, we see that the resulting power law has a $T^{4}$ dependence near $T_{\odot \text{, core}}$:
+
+\begin{equation} \label{eqn: pp2}
+\epsilon_{pp} \approx \epsilon_{0, pp}^{'} \rho X^{2} f_{pp} \psi_{pp} C_{pp} T_{6}^{4}
+\end{equation}
+
+Through this conversion of mass to energy, low-mass main-sequence stars shine. For the rest of this thesis, we can treat the core of the main-sequence star as a ``black-box" which outputs energy.
+
 \subsubsection[The Main-Sequence Homology Relations]{\hyperlink{toc}{The Main-Sequence Homology Relations}} \label{sec: The Main-Sequence Homology Relations}
 
-The Main-Sequence Homology Relations (sometimes called the Main-Sequence Scaling Relations) are relationships between the Luminosity $L$, Mass $M$, Radius $R$ ,and temperature $T$ of Zero-age main-sequence\index{Zero-age main-sequence} (ZAMS) stars. 
+The Main-Sequence Homology Relations (sometimes called the Main-Sequence Scaling Relations) are relationships between the Luminosity $L$, Mass $M$, Radius $R$, and temperature $T$ of Zero-age main-sequence\index{Zero-age main-sequence} (ZAMS) stars. These relationships exist because 
 
 We can calculate these homology relations using the time-independent equations of stellar structure. \citep{spineda2005homology}
+
+\begin{equation} \label{homology_L}
+L \propto M^{5.5} \text{(Low mass)}, \qquad L \propto M^{3} \text{(High mass)}  \\
+\end{equation}
+
+\begin{equation} \label{homology_R}
+R \propto M^{0.1} \text{(Low mass)}, \qquad R \propto M^{0.8} \text{(High mass)}  \\
+\end{equation}
+
+\begin{equation} \label{homology_T}
+T \propto \bigg(\frac{L}{R^{2}}\bigg)^{\frac{1}{4}} \propto M^{1.3} \text{(Low mass)}, \qquad T \propto M^{0.4} \text{(High mass)} 
+\end{equation}
 
 \subsubsection[The Roche Potential]{\hyperlink{toc}{The Roche Potential}} \label{sec: The Roche Potential}
 
@@ -308,14 +345,9 @@ In the equations of stellar structure, there is a hidden assumption. These time-
 \Psi_{\text{point}} = \frac{GM}{r}
 \end{equation}
 
-However, a contact binary system cannot be modeled as a point mass. A contact binary most definitely contains \emph{two} masses, because it contains two stellar components. We can approximate these stellar components as two point masses, separated by a distance $a$.
+However, a contact binary system cannot be modeled as a point mass. A contact binary most definitely contains \emph{two} masses, because it contains two stellar components. We can approximate these stellar components as two point masses, separated by a distance $a$. Despite this necessary point-mass approximation, the Roche model can be used to calculate the structure of binary stars \citep{kippenhahn1970simple}. In contact binary systems, the two stellar components are rapidly rotating about their center of mass. The Roche model assumes synchronous rotation, circular orbits and two point masses. Its coordinate system is based in the rotating frame \citep{kopal1959close}.
 
-In contact binary systems, the two stellar components are rapidly rotating about their center of mass.
-
-
-The Roche model assumes: synchronous rotation, circular orbits, two point masses, in the rotating frame \citep{kopal1959close} :
-
-\citet{mochnacki1984accurate}:
+\citet{mochnacki1984accurate} has computed the Roche potential in Cartesian (x,y,z) coordinates, useful for performing numerical integrations.
 
 ``In Cartesian coordinates, with the origin at the center of mass of the primary, the $x$-axis aligned with the centers of mass, and the $z$-axis parallel to the rotation axis, the potential at a point (x,y,z) co-rotating with binary system is given by: "
 
@@ -355,7 +387,7 @@ Now we know how Detached, Semi-Detached, and Overcontact binaries are classified
 
 Since the first half of the 20th century, most astronomers believe that the term ``contact" means that the photospheres of the two components are touching physically. This is incorrect, according to the original classification scheme of \citet{kopal1959close}. He intended contact to mean that the photospheres of the stars were in contact with their Roche Lobes, (the inner Jacobi Equipotential). Though the term "contact" binary is technically incorrect, it is the most common usage in the literature, and is now the accepted name for these kinds of stars. For an excellent review of this naming issue, see \citet{wilson2001binary}
 
-The Roche lobe, (as we have been calling it) is also referred to as the \emph{Inner Jacobi Equipotential} \index{Inner Jacobi Equipotential}. There also exists an \emph{Outer Jacobi Equipotential}. In Figure \ref{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}, the Outer Jacobi Equipotential is the outer-most curve that is drawn. It passes through the $L_{2}$ point.
+The Roche lobe, (as we have been calling it) is also referred to as the \emph{Inner Jacobi Equipotential} \index{Inner Jacobi Equipotential}. There also exists an \emph{Outer Jacobi Equipotential}. In Figure \ref{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}, the Outer Jacobi Equipotential is the outer-most curve that is drawn. It passes through the $L_{2}$ point. The Inner Jacobi Equipotential is the curve that we have been referring to as the ``Roche Lobe". It is the curve shaped like the $\infty$ symbol.
 
 An important note on the semantics of binary star classification. \citet{kuiper1941interpretation}
 
@@ -368,6 +400,16 @@ For an excellent review, see: \citep{kallrath2009eclipsing}
 \label{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}
 \end{figure}
 
+We can use the Cartesian Roche potential (Equations \ref{eqn: roche1} and \ref{eqn: roche2}) to calculate the relative volume within the Roche lobe (Inner Jacobi Equipotential) of the two components. We can measure the size of a Roche lobe by using an average radius $r$, which is defined so that $\frac{4}{3} \pi r^{3}$ is equal to the volume within the Roche lobe.
+
+\citet{paczynski1971evolutionary}
+
+\begin{equation} \label{paczynski1971evolutionary_4}
+\frac{r_{1}}{A} = \frac{2}{3^{\frac{4}{3}}} \Big( \frac{M_{1}}{M_{1} + M_{2}} \Big)^{\frac{1}{3}} \qquad 
+\end{equation}
+
+Analytical approximations for the effective radius $r_{L}$ of a Roche Lobe. \citet{eggleton1983approximation}
+
 \subsubsection[The Geometrical Elements of Contact Binary Systems]{\hyperlink{toc}{The Geometrical Elements of Contact Binary Systems}} \label{sec: The Geometrical Elements of Contact Binary Systems}
 
 In the previous section, we have learned how to differentiate contact binary systems from the other types of eclipsing binary stars. In this section, we will learn how to describe specific contact binaries in terms of their geometrical elements. When we refer to the geometry of the contact binary system, we are really referring to the geometry of its photosphere. The vast majority of what we know of contact binary systems comes from their visible light-curves, which is why there is the convention of treating the photosphere as the ``boundary" of the system.
@@ -376,8 +418,13 @@ Astronomers have developed a set of geometrical elements that can describe the l
 
 The first geometrical element of note is the mass ratio $q = \frac{M_{1}}{M_{2}}$\index{mass ratio} of the contact binary. The mass ratio is an important geometrical element in that it influences the shape of the Roche potential. We can see the effect of the mass-ratio term in equation \ref{eqn: roche2}. The Roche potential for a system with a mass ratio of unity (one) is perfectly symmetrical about the $L_{1}$ point. The Roche potential for a system with a mass ratio that is far from unity is not symmetrical about the $L_{1}$ point: the more massive component has an inner Jacobi equipotential that encloses more area.
 
-The second geometrical element is the Roche lobe fill-out factor, $f$\index{fill-out factor}. This is the element that is used to describe the location of the photosphere with respect to the inner and outer Jacobi equipotentials.
+The second geometrical element is the Roche lobe fill-out factor, $f$\index{fill-out factor}. This is the element that is used to describe the location of the photosphere with respect to the Inner and Outer Jacobi equipotentials.
 
+The fill-out factor has a variety of definitions, but the most common is:
+
+\begin{equation} \label{fill-out factor}
+f = \frac{C_{1} - C}{(C_{1} - C_{2}) + 1}
+\end{equation}
 
 
 \begin{figure}[H]
@@ -387,27 +434,6 @@ The second geometrical element is the Roche lobe fill-out factor, $f$\index{fill
 \label{fig: kippenhahn1990stellar_22_7}
 \end{figure}
 
-Energy is generated at the core of low mass main sequence stars via the Proton-Proton Chain, or \emph{pp chain}. The pp chain has three branches, each producing helium our of Hydrogen (H), Helium (He) and Beryllium (Be). 
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.4]{carroll2006introduction_10_8.png}
-\caption{A diagram of pp chain reactions. Percentages by the arrows indicate the branching ratios, revealing that the PP I and PP II chains occur much more frequently than the PP III chain. Figure 10.8 from \citet{carroll2006introduction}.}
-\label{fig: carroll2006introduction_10_8}
-\end{figure}
-
-The energy produced by all three branches of the pp chain can be represented:
-
-\begin{equation} \label{eqn: pp1}
-\epsilon_{pp} = 0.241 \rho X^{2} f_{pp} \psi_{pp} C_{pp} T_{6}^{-2/3} e^{-33.80 T_{6}^{-1/3}} \text{W } \text{kg}^{-1}
-\end{equation}
-
-Where $T_{6} \equiv T / 10^{6}$ K. When we expand Equation \ref{eqn: pp1} in a power law about the solar core temperature of $T_{\odot \text{, core}} = 1.5 \times 10^{7}$K, we see that the resulting power law has a $T^{4}$ dependence near $T_{\odot \text{, core}}$:
-
-\begin{equation} \label{eqn: pp2}
-\epsilon_{pp} \approx \epsilon_{0, pp}^{'} \rho X^{2} f_{pp} \psi_{pp} C_{pp} T_{6}^{4}
-\end{equation}
-
 \subsubsection[The Criterion for Stellar Convection]{\hyperlink{toc}{The Criterion for Stellar Convection}} \label{sec: The Criterion for Stellar Convection}
 
 In our study of contact binary stars, we will find it useful to derive the conditions necessary for stellar convection to occur. We follow closely the analysis presented in \citet{carroll2006introduction}.
@@ -416,14 +442,13 @@ The two primary methods of energy transport in main-sequence stars are convectio
 
 In their derivation, Carroll and Ostlie envision a bubble of gas with its own temperature, pressure, and density in a surrounding gas medium. 
 
-Absolute magnitudes and luminosities \citep{rucinski1997absolute} \citep{rucinski2006luminosity}
-
-The classical Roche model allows eclipsing binaries to be separated into morphological types \citep{terrell2001eclipsing}.
 
 
-\subsubsection{Thermal Equilibrium Models}{\hyperlink{toc}{Thermal Equilibrium Models}} \label{sec: Thermal Equilibrium Models}
+\subsubsection[Thermal Equilibrium Models]{\hyperlink{toc}{Thermal Equilibrium Models}} \label{sec: Thermal Equilibrium Models}
 
-We know that the two components of a contact binary system have very similar temperatures from observational data. However, observational data also tells us that the two components of contact systems are very rarely equal in mass.
+We know that the two components of a contact binary system have very similar temperatures from observational data. This means that 
+
+However, observational data also tells us that the two components of contact systems are very rarely equal in mass.
 
 ``Up to a third of the energy generated by the primary is transferred to the secondary"\citep{mochnacki1981contact}
 
@@ -522,6 +547,7 @@ Contact binaries are the most frequently observed type of eclipsing binary star,
 
 Existing catalog of contact binaries in the field \citep{pribulla2003catalogue}
 
+Absolute magnitudes \citep{rucinski1997absolute} 
 
 \subsection[Mechanisms of Formation]{\hyperlink{toc}{Mechanisms of Formation}}
 
@@ -776,18 +802,6 @@ What information does can be learned about a contact binary system based only on
 
 This means that the light-curve of a system with two (relatively) small and cool $M$ type components should be qualitatively and quantitatively identical to the light-curve of a system with two massive and hot $G$ type components, given the systems have the same geometry $[f,q,i]$.
 
-\subsubsection[Amplitude]{\hyperlink{toc}{Amplitude}} \label{sec: Amplitude}
-
-One of the most obvious features of the contact binary light-curve is its Amplitude \index{Amplitude, light-curve}. The amplitude is how much the brightness of the contact binary varies from its minimum brightness, to its maximum brightness.
-
-\subsubsection[Difference Between Eclipse Minima]{\hyperlink{toc}{Difference Between Eclipse Minima}} \label{sec: Difference Between Eclipse Minima}
-
-\subsubsection[Difference Between Out-of-Eclipse Maxima]{\hyperlink{toc}{Difference Between Out-of-Eclipse Maxima}} \label{sec: Difference Between Out-of-Eclipse Maxima}
-
-\subsubsection[Eclipse Width at Half-Minimum]{\hyperlink{toc}{Eclipse Width at Half-Minimum}} \label{sec: Eclipse Width at Half-Minimum}
-
-How much can the shape of the light-curve tell us about the geometry of the contact binary system? When astronomers constructed the first computer models of contact binaries (based on the initial solution in \cite{lucy1968light}
-
 \subsection[Spectra of Contact Binaries]{\hyperlink{toc}{Spectra of Contact Binaries}} \label{sec: Spectra of Contact Binaries}
 
 time-series spectra are some of the most complete observations of contact binaries. 
@@ -803,50 +817,6 @@ Contact binaries are much brighter than main-sequence stars in the ultraviolet, 
 \citep{cruddace1984contact} first \emph{Einstein} survey of 17 contact binaries. Fig 2 has the X-ray luminosity- period relation.
 \citep{vilhu1987chromospheric} ``the two components of a contact binary have identical chromospheres and transition regions" $F_{x} / F_{bol}$ remains roughly constant with $(B - V)$ color.
 \citep{stepien2001rosat} supersaturation in contact binaries.
-
-
-In this section, I describe some of the major sources of modern observations of contact binaries. 
-
-Examples of such surveys are the All-Sky Automated Survey \citep[ASAS,][]{pojmanski2000all}, Robotic Optical Transient Search Experiment \citep[ROTSE,][]{akerlof2000rotse}, Trans-Atlantic Exoplanet Survey \citep[TrES,][]{devor2008identification}, Lincoln Near-Earth Asteroid Research program \citep[LINEAR,][]{palaversa2013exploring}, and Catalina Real-Time Transient Survey \citep[CRTS,][]{drake2014catalina}. Researchers have also selected pure samples of contact binary systems from large survey data sets for study. Researchers have previously used data from the Optical Gravitational Lensing Experiment \citep[OGLE,][]{rucinski1996eclipsing}, Super Wide Angle Search for Planets \citep[SuperWASP,][]{norton2011short}, and CRTS \citep{drake2014ultra} to construct pure contact binary samples for study. \citet{lee2015properties} have used this approach to study a pure sample detached eclipsing binaries from the CRTS variable catalog. 
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.25]{modern_surveys.png}
-\caption{Images of the instruments used in six modern surveys. In the top left, SuperWASP \citep[SuperWASP,][]{norton2011short}, ASAS \citep[ASAS,][]{pojmanski2000all}, \citep[ROTSE,][]{akerlof2000rotse},  }
-\label{fig: modern_surveys}
-\end{figure}
-
-%Arrange chronologically?
-
-\subsection[The Kepler Spacecraft]{\hyperlink{toc}{The Kepler Spacecraft}}
-
-\subsection[The Sloan Digital Sky Survey]{\hyperlink{toc}{The Sloan Digital Sky Survey}}
-
-\cite{york2000sloan}
-
-\citep{ivezic2007sloan} 
-
-calibrations allow for stellar temperatures to be derived \cite{fukugita2011characterization}
-
-SEGUE is a program that collects stellar spectra.
-
-\subsection[The SuperWASP Survey]{\hyperlink{toc}{The SuperWASP Survey}}
-
-follow-up on 1-meter telescopes in South Africa \citep{koen2016multi}.
-
-more follow up \citep{darwish2016orbital}
-
-
-\subsection[Future Surveys]{\hyperlink{toc}{Future Surveys}}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.25]{future_missions.png}
-\caption{}
-\label{fig: future_missions}
-\end{figure}
-
-
 
 \section[Analysis Techniques]{\hyperlink{toc}{Analysis Techniques}} \label{sec: analysis_techniques}
 
@@ -1010,7 +980,36 @@ where (\%) is the ``modulo" (or remainder operator)
 
 In Figure \ref{fig: lc_folded}, we see survey data of a contact binary, after it has been folded by the orbital period. We see a coherent light-curve with a beautiful shape.
 
-This phase-folded light-curve is similar to what would be obtained in a night of  observation by a single observer.
+This phase-folded light-curve is similar to what would be obtained in a night of observation by a single observer.
+
+Examples of such surveys are the All-Sky Automated Survey \citep[ASAS,][]{pojmanski2000all}, Robotic Optical Transient Search Experiment \citep[ROTSE,][]{akerlof2000rotse}, Trans-Atlantic Exoplanet Survey \citep[TrES,][]{devor2008identification}, Lincoln Near-Earth Asteroid Research program \citep[LINEAR,][]{palaversa2013exploring}, and Catalina Real-Time Transient Survey \citep[CRTS,][]{drake2014catalina}. Researchers have also selected pure samples of contact binary systems from large survey data sets for study. Researchers have previously used data from the Optical Gravitational Lensing Experiment \citep[OGLE,][]{rucinski1996eclipsing}, Super Wide Angle Search for Planets \citep[SuperWASP,][]{norton2011short}, and CRTS \citep{drake2014ultra} to construct pure contact binary samples for study. \citet{lee2015properties} have used this approach to study a pure sample detached eclipsing binaries from the CRTS variable catalog. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{modern_surveys.png}
+\caption{Images of the instruments used in six modern surveys. In the top left, SuperWASP \citep[SuperWASP,][]{norton2011short}, ASAS \citep[ASAS,][]{pojmanski2000all}, \citep[ROTSE,][]{akerlof2000rotse},  }
+\label{fig: modern_surveys}
+\end{figure}
+
+%Arrange chronologically?
+
+\subsection[The Kepler Spacecraft]{\hyperlink{toc}{The Kepler Spacecraft}}
+
+\subsection[The Sloan Digital Sky Survey]{\hyperlink{toc}{The Sloan Digital Sky Survey}}
+
+\cite{york2000sloan}
+
+\citep{ivezic2007sloan} 
+
+calibrations allow for stellar temperatures to be derived \cite{fukugita2011characterization}
+
+SEGUE is a program that collects stellar spectra.
+
+\subsection[The SuperWASP Survey]{\hyperlink{toc}{The SuperWASP Survey}}
+
+follow-up on 1-meter telescopes in South Africa \citep{koen2016multi}.
+
+more follow up \citep{darwish2016orbital}
 
 \section[Paper I: Introduction to the CRTS Data]{\hyperlink{toc}{Paper I: Introduction to the CRTS Data}} \label{sec: Paper I: Introduction to the CRTS Data}
 
@@ -1172,6 +1171,14 @@ Evryscope is a wide-field, high-entendue survey instrument. It can perform photo
 \subsection[H$\alpha$ Fluxes in PTF]{\hyperlink{toc}{H$\alpha$ Fluxes in PTF}}
 
 The Palomar Transient Facility
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{future_missions.png}
+\caption{}
+\label{fig: future_missions}
+\end{figure}
+
 
 %------------------------------------------------
 
