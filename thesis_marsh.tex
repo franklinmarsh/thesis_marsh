@@ -171,18 +171,19 @@ The monstrous stream of data that was provided by these new systems had to be fi
 
 Asteroids were discovered by the thousands. The rate of supernova discovery accelerated from one every few years to approximately \emph{one every night}.  The number of known eclipsing binaries ballooned from just over a thousand, to tens of thousands. The number of galaxies with known distances was increased dramatically by the Sloan Digital Sky Survey. This progress is accelerating: within the decade, at least three major sky surveys of unprecedented depth and cadence will come online.
 
-In the 21st century, we can study thousands of contact binary systems at once, using data from all-sky surveys. This approach presents huge advantages over taking painstaking observations of single contact binary systems. Due to the sheer number of systems studied, conclusions about contact binary behavior can be supported by robust statistics.
+In the 21st century, we can study thousands of contact binary systems at once, using data from all-sky surveys. This approach presents huge advantages over taking painstaking observations of single contact binary systems. Due to the sheer number of systems studied, conclusions about contact binary behavior can be supported by robust statistics. However, there are also weaknesses to this approach. Many of the techniques that have been developed for extracting physical information out of observational data do not work well with survey data. We are forced to develop new techniques, and ask different questions.
 
-However, there are also weaknesses to this approach. Many of the techniques that have been developed for extracting physical information out of observational data do not work well with survey data. We are forced to develop new techniques, and ask different questions.
+In \S \ref{sec: background} I provide a brief history of the discovery of the first contact binary star, and outline major leaps of understanding in the field. In \S\ref{sec: observations}, I discuss the types of observations that can be used to learn about contact systems. In \S\ref{sec: analysis_techniques}, I explain the ways that astronomers are able to use measurements to physically characterize contact systems. We are introduced to survey data in \S\ref{sec: Working with Survey Data}. I then present original research that I have undertaken with Dr. Tom Prince, Dr. Ashish Mahabal, Dr. Eric Bellm, and Dr. Andrew Drake at the California Institute of Technology. In \S \ref{sec: lc_morph}, we discuss how light-curve characteristics vary as a function of temperature. In \S \ref{sec: dec_var}, we present the results of the search for variability in contact binary luminosity on decadal time scales. In \S \ref{sec: flares}, we present the results of a search for flares on contact binary stars in survey data. In \S\ref{sec: The Future}, I provide three projects that a student can undertake right now to continue the study of contact binary stars.
 
-In \S \ref{sec: background} I provide a brief history of the discovery of the first contact binary star, and outline major leaps of understanding in the field. In \S \ref{sec: observations}, I discuss the types of observations that can be used to learn about contact systems. In \S \ref{sec: analysis_techniques}, I explain the ways that astronomers are able to use measurements to physically characterize contact systems.
+Each section is prefaced with a list of driving questions (\emph{Q:}), which are questions that the reader will find answered in that section.
 
-I then present original research that I have undertaken with Dr. Tom Prince, Dr. Ashish Mahabal, Dr. Eric Bellm, and Dr. Andrew Drake at the California Institute of Technology. In \S \ref{sec: lc_morph}, we discuss how light-curve characteristics vary as a function of temperature. In \S \ref{sec: dec_var}, we present the results of the search for variability in contact binary luminosity on decadal time scales. In \S \ref{sec: flares}, we present the results of a search for flares on contact binary stars in survey data. Each section is prefaced with a list of driving questions (\emph{Q:}), which are questions that the reader will find answered in that section.
+In this thesis, my main objectives are:
 
-What I hope this thesis is:
-1. An introduction to the field of 
-2. People have developed techniques for studying the sky when astronomy was data-poor: how can we adapt these techniques to be useful in data-rich astronomy.
-3. A roadmap for a promising summer student to use when continuing this work, either at Caltech or Pomona.
+1. To provide an introduction to the field of Contact Binary study.
+2. To provide an example of how we can adapt techniques developed during the age of ``data-poor" astronomy to ``data-rich" astronomy.
+3. To provide a roadmap that a future student can use to continue this work.
+
+Let us begin...
 
 \section[The Contact Binary Star]{\hyperlink{toc}{The Contact Binary Star}} \label{sec: background}
 
@@ -218,7 +219,7 @@ The shape of the light-curve was unlike anything that M\"uller and Kempf had see
 
 \emph{``We may finally consider the hypothesis that the light-variation is produced by two celestial bodies almost equal in size and luminosity whose surfaces are at a slight distance from each other, and which at times almost centrally occult each other in their revolution... On this hypothesis we have only one difficulty, and the not inconsiderable one, as to whether such a system is mechanically possible and can remain stable for any length of time."} \\
 
-This passage marks the beginning of the study of contact binary stars. In this thesis, written 114 years after this initial discovery, we will journey to the forefront of contact binary research.
+This passage marks the beginning of the study of contact binary stars. In this thesis (written 114 years after the initial discovery), we will journey to the forefront of contact binary research.
 
 %It turns out that M\"uller and Kempf  were correct in their speculation, as the vast majority of contact binaries are indeed two celestial bodies almost equal in size and luminosity.
 
@@ -317,13 +318,13 @@ Where $T_{6} \equiv T / 10^{6}$ K. When we expand Equation \ref{eqn: pp1} in a p
 \epsilon_{pp} \approx \epsilon_{0, pp}^{'} \rho X^{2} f_{pp} \psi_{pp} C_{pp} T_{6}^{4}
 \end{equation}
 
-Through this conversion of mass to energy, low-mass main-sequence stars shine. For the rest of this thesis, we can treat the core of the main-sequence star as a ``black-box" which outputs energy.
+Through this conversion of mass to energy, low-mass main-sequence stars shine. For the rest of this thesis, we can treat the core of the main-sequence star as a ``black-box" which pumps energy into the outer layers of the star..
 
 \subsubsection[The Main-Sequence Homology Relations]{\hyperlink{toc}{The Main-Sequence Homology Relations}} \label{sec: The Main-Sequence Homology Relations}
 
-The Main-Sequence Homology Relations (sometimes called the Main-Sequence Scaling Relations) are relationships between the Luminosity $L$, Mass $M$, Radius $R$, and temperature $T$ of Zero-age main-sequence\index{Zero-age main-sequence} (ZAMS) stars. These relationships exist because 
+The Main-Sequence Homology Relations (sometimes called the Main-Sequence Scaling Relations) are relationships between the Luminosity $L$, Mass $M$, Radius $R$, and temperature $T$ of Zero-age main-sequence\index{Zero-age main-sequence} (ZAMS) stars. These relationships exist because main sequence stars with the same reaction mechanism at their cores (e.g. the pp-chain) are homologous. Two stars that both produce the vast majority of their energy through the pp-chain and obey the same equations of stellar structure, have homologous structures, i.e. the smaller star is just a ``scaled-down" version of the larger star.
 
-We can calculate these homology relations using the time-independent equations of stellar structure. \citep{spineda2005homology}
+We can calculate these homology relations using the time-independent equations of stellar structure. \citet{spineda2005homology} has already calculated them for us, they are reproduced here:
 
 \begin{equation} \label{homology_L}
 L \propto M^{5.5} \text{(Low mass)}, \qquad L \propto M^{3} \text{(High mass)}  \\
@@ -337,6 +338,25 @@ R \propto M^{0.1} \text{(Low mass)}, \qquad R \propto M^{0.8} \text{(High mass)}
 T \propto \bigg(\frac{L}{R^{2}}\bigg)^{\frac{1}{4}} \propto M^{1.3} \text{(Low mass)}, \qquad T \propto M^{0.4} \text{(High mass)} 
 \end{equation}
 
+Of the three observables ($L, R, T$), luminosity $L$ has the strongest dependence on mass $M$. The homology relationships are broken in to two (Low mass) and (High mass) because of the differing primary reaction mechanisms at the cores of stars of different masses. The homology relationships are great for providing reasonable approximations of stellar parameters. 
+
+For example, if I told you that ``The mass of Proxima Centauri is about 0.12 $M_{\odot}$", and asked you to calculate the luminosity of Proxima Centauri, you would perform the following calculation:
+
+(proxima centauri mass is a bad example)
+
+\begin{equation} \label{homology_ex}
+\Big( \frac{M_{\text{proxima centauri}}}{M_{\odot}} \Big) = 0.12 \qquad \Big( \frac{L_{\text{proxima centauri}}}{L_{\odot}} \Big) = \Big( \frac{M_{\text{proxima centauri}}}{M_{\odot}} \Big)^{5.5} = 0.12^{5.5} \approx 9 \times 10^{-6} L_{\odot}
+\end{equation}
+
+Mass of proxima centauri is from \citep{segransan2003first}
+
+\subsubsection[ZAMS to TAMS]{\hyperlink{toc}{ZAMS to TAMS}} \label{sec: ZAMS to TAMS}
+
+\emph{ZAMS}\index{ZAMS, Zero-Age Main-Sequence} stands for Zero-Age Main-Sequence. \emph{TAMS}\index{TAMS, Terminal-Age Main-Sequence} stands for Terminal-Age Main-Sequence.
+
+In the context of contact binaries, it is important to discuss the changes that occur to a star as it progresses through its main-sequence life. At ZAMS, the main-sequence star is the most compact. As it gets older, its radius increases slightly.
+
+
 \subsubsection[The Roche Potential]{\hyperlink{toc}{The Roche Potential}} \label{sec: The Roche Potential}
 
 In the equations of stellar structure, there is a hidden assumption. These time-independent equations of stellar structure assume that the stellar matter exists in the potential of a point mass:
@@ -345,9 +365,9 @@ In the equations of stellar structure, there is a hidden assumption. These time-
 \Psi_{\text{point}} = \frac{GM}{r}
 \end{equation}
 
-However, a contact binary system cannot be modeled as a point mass. A contact binary most definitely contains \emph{two} masses, because it contains two stellar components. We can approximate these stellar components as two point masses, separated by a distance $a$. Despite this necessary point-mass approximation, the Roche model can be used to calculate the structure of binary stars \citep{kippenhahn1970simple}. In contact binary systems, the two stellar components are rapidly rotating about their center of mass. The Roche model assumes synchronous rotation, circular orbits and two point masses. Its coordinate system is based in the rotating frame \citep{kopal1959close}.
+However, a contact binary system cannot be modeled as a point mass. A contact binary most definitely contains \emph{two} masses, because it contains two stellar components. We can approximate these stellar components as two point masses, separated by a distance $a$. Despite this necessary point-mass approximation, the Roche model can be used to calculate the structure of binary stars \citep{kippenhahn1970simple}. The Roche model assumes synchronous rotation, circular orbits and two point masses. Its coordinate system is based in the rotating frame \citep{kopal1959close}.
 
-\citet{mochnacki1984accurate} has computed the Roche potential in Cartesian (x,y,z) coordinates, useful for performing numerical integrations.
+\citet{mochnacki1984accurate} has computed the Roche potential in Cartesian (x,y,z) coordinates, useful for performing numerical integrations. They write:
 
 ``In Cartesian coordinates, with the origin at the center of mass of the primary, the $x$-axis aligned with the centers of mass, and the $z$-axis parallel to the rotation axis, the potential at a point (x,y,z) co-rotating with binary system is given by: "
 
@@ -385,7 +405,7 @@ In this scheme, eclipsing binaries are classified according to the location of t
 
 Now we know how Detached, Semi-Detached, and Overcontact binaries are classified - but wait: Where are the \emph{Contact Binaries}? In this section, we have been referring to contact binaries as ``Overcontact Binaries". But why did we have to make the name change?
 
-Since the first half of the 20th century, most astronomers believe that the term ``contact" means that the photospheres of the two components are touching physically. This is incorrect, according to the original classification scheme of \citet{kopal1959close}. He intended contact to mean that the photospheres of the stars were in contact with their Roche Lobes, (the inner Jacobi Equipotential). Though the term "contact" binary is technically incorrect, it is the most common usage in the literature, and is now the accepted name for these kinds of stars. For an excellent review of this naming issue, see \citet{wilson2001binary}
+Since the first half of the 20th century, most astronomers believe that the term ``contact" means that the photospheres of the two components are touching physically. This is incorrect, according to the original classification scheme of \citet{kopal1959close}. He intended contact to mean that the photospheres of the stars were in contact with their Roche Lobes, (the inner Jacobi Equipotential). Though the term ``contact" binary is technically incorrect, it is the most common usage in the literature, and is now the accepted name for these kinds of stars. For an excellent review of this naming issue, see \citet{wilson2001binary}
 
 The Roche lobe, (as we have been calling it) is also referred to as the \emph{Inner Jacobi Equipotential} \index{Inner Jacobi Equipotential}. There also exists an \emph{Outer Jacobi Equipotential}. In Figure \ref{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}, the Outer Jacobi Equipotential is the outer-most curve that is drawn. It passes through the $L_{2}$ point. The Inner Jacobi Equipotential is the curve that we have been referring to as the ``Roche Lobe". It is the curve shaped like the $\infty$ symbol.
 
@@ -414,11 +434,11 @@ Analytical approximations for the effective radius $r_{L}$ of a Roche Lobe. \cit
 
 In the previous section, we have learned how to differentiate contact binary systems from the other types of eclipsing binary stars. In this section, we will learn how to describe specific contact binaries in terms of their geometrical elements. When we refer to the geometry of the contact binary system, we are really referring to the geometry of its photosphere. The vast majority of what we know of contact binary systems comes from their visible light-curves, which is why there is the convention of treating the photosphere as the ``boundary" of the system.
 
-Astronomers have developed a set of geometrical elements that can describe the location of the photosphere with respect to certain Roche equipotentials \index{Roche equipotential}. 
+Astronomers have developed a set of geometrical elements that can describe the location of the photosphere with respect to the inner and outer Jacobi equipotentials\index{Jacobi equipotentials}\index{Roche equipotential}. 
 
 The first geometrical element of note is the mass ratio $q = \frac{M_{1}}{M_{2}}$\index{mass ratio} of the contact binary. The mass ratio is an important geometrical element in that it influences the shape of the Roche potential. We can see the effect of the mass-ratio term in equation \ref{eqn: roche2}. The Roche potential for a system with a mass ratio of unity (one) is perfectly symmetrical about the $L_{1}$ point. The Roche potential for a system with a mass ratio that is far from unity is not symmetrical about the $L_{1}$ point: the more massive component has an inner Jacobi equipotential that encloses more area.
 
-The second geometrical element is the Roche lobe fill-out factor, $f$\index{fill-out factor}. This is the element that is used to describe the location of the photosphere with respect to the Inner and Outer Jacobi equipotentials.
+The second geometrical element is the Roche lobe fill-out factor (also called the degree of contact), $f$\index{fill-out factor}. This is the element that is used to describe the location of the photosphere with respect to the Inner and Outer Jacobi equipotentials.
 
 The fill-out factor has a variety of definitions, but the most common is:
 
@@ -426,31 +446,33 @@ The fill-out factor has a variety of definitions, but the most common is:
 f = \frac{C_{1} - C}{(C_{1} - C_{2}) + 1}
 \end{equation}
 
+When the photosphere of a contact binary is exactly filling the inner Jacobi equipotential, eqn. \ref{fill-out factor} gives $f = 0$. When the photosphere of a contact binary fills the outer Jacobi equipotential, eqn. \ref{fill-out factor} gives $f = 1$.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale = 0.5]{kippenhahn1990stellar_22_7.png}
-\caption{The mass values $m$ from centre to surface are plotted against the stellar mass $M$ for zero-age main-sequence models. ``Cloudy" areas indicate the extent of the convective zones inside the models. Two solid lines give the $m$ values at which $r$ is 1/4 and 1/2 of the total radius $R$. The dashed lines show the mass elements inside which $50\%$ and $90\%$ of the total luminosity $L$ are produced. Figure 22.7 from (pp. 212) of \citet{kippenhahn1990stellar}.}
-\label{fig: kippenhahn1990stellar_22_7}
+\includegraphics[scale = 0.3]{rucinski1993realm_5.png}
+\caption{The widths of the ``neck" between stars, $d$, as a function of the degree of contact, $f$, for a few values of the mass-ratio, $q$. The width of the neck is expressed in units of the separation between components, $a$. Fig. 5 from \citet{rucinski1993realm}.}
+\label{fig: rucinski1993realm_5}
 \end{figure}
 
-\subsubsection[The Criterion for Stellar Convection]{\hyperlink{toc}{The Criterion for Stellar Convection}} \label{sec: The Criterion for Stellar Convection}
+In Fig. \ref{fig: rucinski1993realm_5}, we see the diameter of the ``neck" region (containing the $L_{1}$ point), is a sizable fraction (0.1 to 0.3) of the separation of the centers of mass of the star for $f > 0.2$.
 
-In our study of contact binary stars, we will find it useful to derive the conditions necessary for stellar convection to occur. We follow closely the analysis presented in \citet{carroll2006introduction}.
+The final element that is commonly reported is $i$, or the inclination of the contact binary's orbit with respect to the line of sight of the observer. This element is not intrinsic to the contact binary system, so it actually does not provide any information about the physics of the contact binary system. This element is reported because together with $f$ and $q$, it completely defines the shape of the observed contact binary light-curve.
 
-The two primary methods of energy transport in main-sequence stars are convection, and radiation. In radiation, the stellar material is in hydrostatic equilibrium, and energy is transported through it via electromagnetic waves. If conditions are such that radiation cannot transport energy away from the core efficiently enough, the stellar material itself will have to move to transport this energy, disrupting hydrostatic equilibrium. We call this disruption convection. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.3]{rucinski2001photometric_1.png}
+\caption{The light-curve of a contact binary star with $q = 0.35$, $f = 0.25$. Orbital inclination $i$ is varied in $2^{\circ}$ steps. Fig 1. from \citet{rucinski2001photometric}.}
+\label{fig: rucinski2001photometric_1}
+\end{figure}
 
-In their derivation, Carroll and Ostlie envision a bubble of gas with its own temperature, pressure, and density in a surrounding gas medium. 
-
-
+We will see how the shape of the contact binary light-curve can be used to estimate the system geometry as described by $[f,q,i]$ in \S\ref{sec: Physical Light-Curve Modeling} and \S\ref{sec: Nomographic Light-Curve Solutions}.
 
 \subsubsection[Thermal Equilibrium Models]{\hyperlink{toc}{Thermal Equilibrium Models}} \label{sec: Thermal Equilibrium Models}
 
-We know that the two components of a contact binary system have very similar temperatures from observational data. This means that 
+This class of models that we will explore in this section was first developed in the late 1960's. The great triumph of the thermal-equilibrium model is that it adequately explained the observed shape of the contact binary light-curve. 
 
-However, observational data also tells us that the two components of contact systems are very rarely equal in mass.
-
-``Up to a third of the energy generated by the primary is transferred to the secondary"\citep{mochnacki1981contact}
+Under the condition of hydrostatic equilibrium, the gradient in the pressure $P$ is equal to the negative of the density $- \rho$ times the gradient in the potential $\nabla \Psi$. 
 
 \begin{equation} \label{eqn: equilibrium1}
 \nabla P = - \rho \nabla \Psi
@@ -460,7 +482,25 @@ However, observational data also tells us that the two components of contact sys
 \nabla \rho = \frac{dP(\Psi)}{d\Psi} = \rho(\Psi)
 \end{equation}
 
-If we assume a homogenous composition on equipotential surfaces, then all state variables (pressure, density, temperature) are functions of $\Psi$ alone. In order to achieve hydrostatic equilibrium, energy must be exchanged between the two components of the contact binary.
+If we assume a homogenous composition on equipotential surfaces, then all state variables (pressure, density, temperature, surface gravity) are functions of $\Psi$ alone. Since the temperature $T$ is constant across the surface, we can say that the shared photosphere is in thermal equilibrium. According to observations of contact binaries, this is true: the temperature of the shared photosphere does not vary by much across its surface. 
+
+This is troubling in the light of the Main-Sequence Homology Relations discussed in \ref{sec: Main-Sequence Homology Relations}. Recall that, for a single main-sequence star:
+
+\begin{equation} \label{homology_T_reprint}
+T \propto M^{1.3} \text{(Low mass)}, \qquad T \propto M^{0.4} \text{(High mass)} 
+\end{equation}
+
+A typical mass ratio $q = \frac{m_{1}}{m_{2}}$ for a contact binary star is 0.5. For a contact binary with a low mass,
+
+\begin{equation}
+\frac{T_{1}}{T_{2}} = \Big( \frac{M_{1}}{M_{2}} \Big)^{1.3}
+\end{equation}
+
+However, observations indicate that the two components of a contact binary system (almost always) do \emph{not} have equal-mass. 
+
+``Up to a third of the energy generated by the primary is transferred to the secondary"\citep{mochnacki1981contact}
+
+In order to achieve hydrostatic equilibrium, energy must be exchanged between the two components of the contact binary.
 
 We can construct two model main sequence stars, with masses $M_{1}$ and $M_{2}$. Main sequence stars will obey main-sequence scaling relationships, which are well defined laws the describe how stellar radii, density, and temperature vary with stellar mass \citep{kippenhahn1990stellar}. The mass - radius relationship is particularly important when constructing contact models. 
 
@@ -517,7 +557,15 @@ where $q = \frac{M_{1}}{M_{2}}$ is the mass ratio of the components.
 
 \citep{gazeas2006masses}
 
-\subsection{Interior Structure}{\hyperlink{toc}{Interior Structure}} \label{sec: Interior Structure}
+\subsection[Interior Structure]{\hyperlink{toc}{Interior Structure}} \label{sec: Interior Structure}
+
+In this section, we will learn what types of interior structures that contact binaries can have. We will discuss the different energy transport mechanisms which operate inside contact binary systems.
+
+In stars, there are two primary mechanisms of energy transport:
+
+1. Radiation (Radiative Transport): In Radiative Transport, energy is able to leave the star through the dispersion of photons (electromagnetic energy) through the stellar medium (which is mostly Hydrogen gas). \\
+
+2. Convection (Convective Transport): Convective Transport occurs when Radiative Transport is not efficient enough to transport the energy  \\
 
 \begin{figure}[H]
 \centering
@@ -531,6 +579,21 @@ where $q = \frac{M_{1}}{M_{2}}$ is the mass ratio of the components.
 \includegraphics[scale = 0.25]{lubow1977structure_3.png}
 \caption{An equatorial cross-section of a 2 $M_{\odot}$ + 1 $M_{\odot}$ zero-age contact binary of solar composition. The filling factor of this model is $f = 0.84$, and the binary period is $P_{d} = 0.314$ days. Fig. 3 from \citet{lubow1977structure}}
 \label{fig: lubow1977structure_3}
+\end{figure}
+
+\subsubsection[The Criterion for Stellar Convection]{\hyperlink{toc}{The Criterion for Stellar Convection}} \label{sec: The Criterion for Stellar Convection}
+
+In our study of contact binary stars, we will find it useful to derive the conditions necessary for stellar convection to occur. We follow closely the analysis presented in \citet{carroll2006introduction}.
+
+The two primary methods of energy transport in main-sequence stars are convection, and radiation. In radiation, the stellar material is in hydrostatic equilibrium, and energy is transported through it via electromagnetic waves. If conditions are such that radiation cannot transport energy away from the core efficiently enough, the stellar material itself will have to move to transport this energy, disrupting hydrostatic equilibrium. We call this disruption convection. 
+
+In their derivation, Carroll and Ostlie envision a bubble of gas with its own temperature, pressure, and density in a surrounding gas medium. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.5]{kippenhahn1990stellar_22_7.png}
+\caption{The mass values $m$ from centre to surface are plotted against the stellar mass $M$ for zero-age main-sequence models. ``Cloudy" areas indicate the extent of the convective zones inside the models. Two solid lines give the $m$ values at which $r$ is 1/4 and 1/2 of the total radius $R$. The dashed lines show the mass elements inside which $50\%$ and $90\%$ of the total luminosity $L$ are produced. Figure 22.7 from (pp. 212) of \citet{kippenhahn1990stellar}.}
+\label{fig: kippenhahn1990stellar_22_7}
 \end{figure}
 
 \subsubsection{Common-Envelope Evolution}{\hyperlink{toc}{Common-Envelope Evolution}} \label{sec: Common-Envelope Evolution}
@@ -551,6 +614,10 @@ Absolute magnitudes \citep{rucinski1997absolute}
 
 \subsection[Mechanisms of Formation]{\hyperlink{toc}{Mechanisms of Formation}}
 
+Like any astronomical object made up of stars, the starting point in the life of contact binaries is a cold cloud of interstellar gas (which is primarily hydrogen). The gas cloud would like to contract upon itself because of its own gravity, but cannot, because it is supported by its own gas pressure. As the cloud cools (by radiating its energy into the surrounding space), its internal gas pressure decreases and the cloud is allowed to contract. Eventually, the cloud collapses into a small enough space that the temperature and pressure start to increase at the cloud's center. When temperatures get high enough for nuclear fusion to occur, the protostar can support itself against further collapse. 
+
+At the onset of nuclear fusion, we say that the protostar has become a star, at Zero Age Main Sequence\index{Zero-Age Main Sequence} or (ZAMS)\index{ZAMS}.  
+ 
 Formed in Contact. \citet{lucy1968structure} was incorrect in assuming that contact systems exist at Zero Age Main Sequence (ZAMS).
 
 \citep{yildiz2013origin}
@@ -562,11 +629,12 @@ Formed in Contact. \citet{lucy1968structure} was incorrect in assuming that cont
 Initially Detached, but then inspiral
 Angular Momentum Loss through stellar winds. 
 
-
 In recent years, evidence has been amassing for the formation via companion pathway. In this pathway, two stars begin in a stable orbit. When a third star is introduced into the system, it steals angular momentum from the first two stars, resulting in a closer orbit. 
 
 There is evidence that this companion stays in orbit around the contact binary.
 A study by \citet{pribulla2006contact} has established a lower limit on the number of triple systems. Angular Momentum Loss through tertiary components.  \citep{lohr2015orbital} In a search of 13,927 eclipsing binaries in the SuperWASP catalog, 24\% had period-changes indicating a closely orbiting companion.
+
+Presence of tertiary components detected via spectral imaging \citep{hendry1998detection}
 
 In the Kozai-Lidov mechanism \index{Kozai-Lidov mechanism}, the orbit of two inner bodies is perturbed by a third body orbiting farther out. The equations of motion for the three-body system, a specific angular momentum is conserved:
 
@@ -579,7 +647,6 @@ Because the quantity $L_{z}$ is conserved, orbital eccentricity $e$ can be trade
 \begin{equation} \label{kozai_2}
 T_{\text{Kozai}} = 2 \pi \frac{\sqrt{GM}}{G m_{2}} \frac{a_{2}^{3}}{a^{\frac{3}{2}}} (1 - e^{2}_{2})^{\frac{3}{2}}
 \end{equation}
-
 
 \subsection[Evolution in the Contact State]{\hyperlink{toc}{Evolution in the Contact State}}
 
@@ -602,7 +669,6 @@ contact binaries occupy a very narrow range of parameter space \citep{gazeas2009
 Overall evolution \citep{stepien2008evolutionary}, 2016 review of close binary evolution \citep{tutukov2016evolution}
 
 Short period limit \citep{rucinski2007short} \citep{drake2014ultra} \cite{lohr2012period} \citep{rucinski1992can}
-
 
 \subsection[Evolution out of the Contact State]{\hyperlink{toc}{Evolution out of the Contact State}}
 
@@ -661,6 +727,8 @@ modern work on six binaries in NGC188 \citep{chen2016physical}
 \subsection[Early-Type Contact Binaries]{\hyperlink{to}{Early-Type Contact Binaries}}
 
 When astronomers say that a star is ``Early-Type" \index{Early-Type}, they mean that it is ``early" on the spectral classification sequence (OBAFGKM). O and B stars are more massive, more luminous and hotter than our sun. Early-Type contact binaries deserve a special section due to their extreme mass, luminosity, rarity, and short lifetime. There are only a handful of O and B Type contact binary systems known. The four best studied systems are TU Muscae \citep{penny2008tomographic}, MY Cam \citep{lorenzo2014my}, UW CMa \citep{antokhina2011light}, V382 Cygni \citep{popper1978masses}. 
+
+These massive O and B type contact binaries are very different from less massive (F,G,K,M) type contact binaries. Because O and B type stars have such short life-times, O and B type contact binaries are especially short-lived. Also, very few O and B type contact binaries are formed, because the stellar initial mass function (IMF) \index{Initial Mass Function}, is heavily skewed towards low-mass $M$ stars. The combination of these two effects makes massive O and B type contact binaries exceedingly rare. In fact, less than 10 systems have been discovered so far.
 
 Over forty have been found in the Small Magellanic Cloud \citep{hilditch2005forty} 
 
@@ -724,7 +792,7 @@ The evolution and migration of starspots on contact binaries has been tracked wi
 
 \emph{Q: What kind of observations can astronomers obtain from contact binary systems?}
 
-Astronomy is unique as a science because all the information that can be obtained from an object in the sky comes to us as electromagnetic waves. Perhaps \emph{THE} question in observational astronomy is: ``What can we learn from these electromagnetic waves?". The study of contact binary stars is no different. In this section, we will learn the ways that researchers study electromagnetic waves from contact binary stars.
+Astronomy is unique as a science because (almost, thanks LIGO) all the information that can be obtained from an object in the sky comes to us as electromagnetic waves. Perhaps \emph{THE} question in observational astronomy is: ``What can we learn from these electromagnetic waves?". The study of contact binary stars is no different. In this section, we will learn the ways that researchers study electromagnetic waves from contact binary stars.
 
 \subsection[Images of Contact Binaries]{\hyperlink{toc}{Images of Contact Binaries}} \label{sec: Images of Contact Binaries}
 
@@ -806,6 +874,13 @@ This means that the light-curve of a system with two (relatively) small and cool
 
 time-series spectra are some of the most complete observations of contact binaries. 
 
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{PTFS1622am_DBSP.png}
+\caption{Two spectra of the contact binary star PTFS1622am, as observed with the Double-Beam Spectrograph at the 200" Hale Telescope. The two colors indicate the separate chips that the spectra was observed on. The Spectral Flux Density is in arbitrary units, what is more import is to observed the relative flux.}
+\label{fig: PTFS1622am_DBSP}
+\end{figure}
+
 \citep{hrivnak1989radial} radial velocities and IR data of OO Aql.
 
 Analyzing spectra of contact binaries is challenging. Abundances of elements cannot be determined precisely due to the broadening and blending of spectral lines caused by the fast rotation \citep{gazeas2006masses}. 
@@ -878,7 +953,9 @@ Difference between $q_{sp}$ and $q_{ph}$ \citep{van1985contribution}
 
 \subsection[O-C Analysis]{\hyperlink{toc}{O-C Analysis}} \label{sec: O-C Analysis}
 
-O-C Analysis is short for ``observed minus computed", referring to the fact that a measurement is the observed time of minimum light as compared to the computed time of minimum light. 
+O - C Analysis is one of the oldest analysis techniques for analyzing eclipsing binary stars. Historically, great effort has been spent on compiling ``times of periastron", for the bright eclipsing binary stars. Simply, the time when the eclipsing binary is at its minimum brightness is noted, over a large number of orbital periods.
+
+O-C Analysis is short for ``observed minus computed", referring to the fact that a measurement is the observed time of minimum light as compared to the computed time of minimum light. The process can be described as follows:
 
 1. A full light curve is obtained for the system in question. \\
 2. Based on this light curve, the period is calculated, and an epheremis is computed, listing all of the future times of minimum light. \\

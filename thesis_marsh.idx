@@ -10,22 +10,28 @@
 \indexentry{equations of stellar structure|hyperpage}{13}
 \indexentry{pp-chain|hyperpage}{14}
 \indexentry{Zero-age main-sequence|hyperpage}{15}
+\indexentry{ZAMS, Zero-Age Main-Sequence|hyperpage}{16}
+\indexentry{TAMS, Terminal-Age Main-Sequence|hyperpage}{16}
 \indexentry{Inner Jacobi Equipotential|hyperpage}{18}
+\indexentry{Jacobi equipotentials|hyperpage}{19}
 \indexentry{Roche equipotential|hyperpage}{19}
-\indexentry{mass ratio|hyperpage}{19}
-\indexentry{fill-out factor|hyperpage}{19}
-\indexentry{Kozai-Lidov mechanism|hyperpage}{24}
-\indexentry{Early-Type|hyperpage}{27}
-\indexentry{light-curve|hyperpage}{32}
-\indexentry{Algol|hyperpage}{32}
-\indexentry{$\beta $ Lyrae|hyperpage}{32}
-\indexentry{Wilson-Devinney Code|hyperpage}{34}
-\indexentry{mass ratio, $q$|hyperpage}{35}
-\indexentry{\texttt{ROCHE} code|hyperpage}{35}
-\indexentry{$L_{2}$|hyperpage}{36}
-\indexentry{time-series|hyperpage}{38}
-\indexentry{Fourier Transform|hyperpage}{39}
-\indexentry{feature selection|hyperpage}{56}
-\indexentry{Lomb-Scargle algorithm|hyperpage}{56}
-\indexentry{photon counting|hyperpage}{60}
-\indexentry{gphoton|hyperpage}{61}
+\indexentry{mass ratio|hyperpage}{20}
+\indexentry{fill-out factor|hyperpage}{20}
+\indexentry{Zero-Age Main Sequence|hyperpage}{26}
+\indexentry{ZAMS|hyperpage}{26}
+\indexentry{Kozai-Lidov mechanism|hyperpage}{27}
+\indexentry{Early-Type|hyperpage}{30}
+\indexentry{Initial Mass Function|hyperpage}{30}
+\indexentry{light-curve|hyperpage}{35}
+\indexentry{Algol|hyperpage}{35}
+\indexentry{$\beta $ Lyrae|hyperpage}{35}
+\indexentry{Wilson-Devinney Code|hyperpage}{38}
+\indexentry{mass ratio, $q$|hyperpage}{39}
+\indexentry{\texttt{ROCHE} code|hyperpage}{39}
+\indexentry{$L_{2}$|hyperpage}{40}
+\indexentry{time-series|hyperpage}{42}
+\indexentry{Fourier Transform|hyperpage}{42}
+\indexentry{feature selection|hyperpage}{60}
+\indexentry{Lomb-Scargle algorithm|hyperpage}{60}
+\indexentry{photon counting|hyperpage}{64}
+\indexentry{gphoton|hyperpage}{65}

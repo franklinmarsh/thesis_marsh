@@ -7,6 +7,12 @@ Warning--entry type for "spineda2005homology" isn't style-file defined
 --line 12 of file thesis_bib.bib
 Warning--entry type for "sluys2006roche" isn't style-file defined
 --line 467 of file thesis_bib.bib
+Warning--I didn't find a database entry for "segransan2003first"
+Warning--I didn't find a database entry for "kippenhahn1970simple"
+Warning--I didn't find a database entry for "paczynski1971evolutionary"
+Warning--I didn't find a database entry for "eggleton1983approximation"
+Warning--I didn't find a database entry for "rucinski2001photometric"
+Warning--I didn't find a database entry for "hendry1998detection"
 Warning--I didn't find a database entry for "kahler2002structure"
 Warning--I didn't find a database entry for "awadalla2005absolute"
 Warning--I didn't find a database entry for "arbutina2009possible"
@@ -28,45 +34,45 @@ Warning--to sort, need author or key in spineda2005homology
 Warning--empty journal in bradstreet1988mapping
 Warning--empty publisher in carroll2006introduction
 Warning--empty journal in pringle1985interacting
-You've used 124 entries,
+You've used 125 entries,
             2773 wiz_defined-function locations,
-            1251 strings with 26526 characters,
-and the built_in function-call counts, 64190 in all, are:
-= -- 5430
-> -- 4692
-< -- 69
-+ -- 1597
-- -- 1470
-* -- 5643
-:= -- 10190
-add.period$ -- 371
-call.type$ -- 124
-change.case$ -- 839
+            1260 strings with 26739 characters,
+and the built_in function-call counts, 64477 in all, are:
+= -- 5453
+> -- 4702
+< -- 70
++ -- 1602
+- -- 1473
+* -- 5660
+:= -- 10232
+add.period$ -- 373
+call.type$ -- 125
+change.case$ -- 843
 chr.to.int$ -- 121
-cite$ -- 253
-duplicate$ -- 2576
-empty$ -- 4656
-format.name$ -- 1641
-if$ -- 13080
-int.to.chr$ -- 4
+cite$ -- 255
+duplicate$ -- 2591
+empty$ -- 4688
+format.name$ -- 1645
+if$ -- 13141
+int.to.chr$ -- 5
 int.to.str$ -- 1
 missing$ -- 127
-newline$ -- 627
-num.names$ -- 492
-pop$ -- 1560
+newline$ -- 631
+num.names$ -- 496
+pop$ -- 1573
 preamble$ -- 1
-purify$ -- 721
+purify$ -- 724
 quote$ -- 0
-skip$ -- 2088
+skip$ -- 2099
 stack$ -- 0
-substring$ -- 2148
-swap$ -- 184
+substring$ -- 2150
+swap$ -- 187
 text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1339
+type$ -- 1350
 warning$ -- 4
-while$ -- 534
+while$ -- 537
 width$ -- 0
-write$ -- 1598
-(There were 23 warnings)
+write$ -- 1608
+(There were 29 warnings)
