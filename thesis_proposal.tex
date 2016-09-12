@@ -1,0 +1,67 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{natbib}
+
+\title{Contact Binary Stars in Survey Data}
+\author{Franklin Marsh (with advisor Philip Choi)}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+Contact Binaries consist of two main-sequence stars in close physical proximity. The vast majority of contact binary systems have orbital periods ranging from 0.22 to 1.0 days, giving them the shortest orbital periods of two non-degenerate objects. Analysis of the radial velocity curves and light-curves of contact binaries reveals that the even though the two components of a contact binary have unequal masses (and in fact prefer to), they share a common photospheric envelope with a temperature that differs by less than $\approx 100$K across its surface \citep{rucinski1993realm}. The isothermal nature of the envelope, (despite differing component masses) can only be maintained via energy transport from the more massive primary to the secondary, through the neck ($L_{1}$ point) of the binary.
+
+The contact binary star is placed at the intersection of some of the largest questions in modern astronomy. The merger of the two components of a contact binary star creates an intermediate luminosity red transient, an explosion that is brighter than a classical nova. Strong magnetic fields induced by the contact binary's rapid rotation produce large starspots and flares, which can teach us about these same phenomena on our sun. When a contact binary forms from two massive O-type stars, a binary black hole can be formed when the system ends its lifetime. Contact binaries are a well-defined class with strict relationships between parameters like mass, luminosity, temperature, and orbital period. This means that by measuring a few parameters, many others can be accurately predicted, so contact binaries can be used as standard candles. Their abundance makes them useful for studies of the structure of the Milky Way. In these ways, the contact binary stands at the intersection of time-domain, solar, gravitational wave, and stellar astronomy.
+
+We will combine data from two deep photometric surveys to investigate the contact binary class. Specifically, we will assess the white-light variability of contact binaries on decadal timescales using eight years of Catalina Real-Time Transient Survey (CRTS) data. The leading model for white-light variability of contact binaries on decadal timescales is the disappearance and appearance of large starspots. We will find that data from these two surveys can be used to determine a contact binary's temperature, and whether it has starspots. 
+
+\section{Methodology}
+
+In our study, we will use data from two separate surveys: (1) We will use CRTS data spanning eight years, which allows for the variation in the luminosity of each system on a decadal timescale to be measured, and (2) We will use SDSS data which provides multiband photometric measurements taken within the timespan of a few minutes, allowing the temperature of each binary to be measured. We find that over 9,000 contact binaries are visible in both surveys. 
+
+\subsection{CRTS Photometry}
+
+The Catalina Sky Survey (CSS) uses three telescopes to survey the sky between declinations of -75 and +65 degrees. Although the CSS was originally designed for the detection of Near Earth Asteroids, the CRTS project aggregates time-series photometry for over 500 million stationary ``background" sources \citep{drake2009first, mahabal2011discovery, djorgovski2012catalina}. CRTS observations are taken in ``white light", i.e. without filters, to maximize survey depth. CRTS can perform photometric measurements on sources with visual magnitudes in the range of $\sim13$ to $20$. Though we only used eight years of data, CRTS continues collecting data to this day. 
+
+The CRTS photometry used in this work is publicly accessible through the Catalina Surveys Data Release 2 at \texttt{crts.caltech.edu}. 
+
+The number of observations that CSS has collected for the candidate systems that we study ranges from 90 (for the least observed systems) to 540 (for the most observed systems). The median number of CSS observations per candidate system is $336$, with a standard deviation of $86$ observations.  The mean photometric error varies from 0.05 magnitudes to 0.10 magnitudes for most systems, increasing as a function of CRTS magnitude. 
+
+\subsection{SDSS Photometry}
+
+The Sloan Digital Sky Survey provides multiband photometry in the \emph{u},\emph{g},\emph{r},\emph{i}, and \emph{z} bands. Because of its drift-scanning configuration, SDSS is well suited to performing photometry on short-period variable stars ($P < 1$ day), because all of the bands are exposed within a short time of each other: there is a delay of roughly 5 minutes between the exposure of the $g$ and $r$ images. \citep{york2000sloan}. We will use the SDSS DR10 $(g - r)$ colour to calculate the temperature of the binary systems in this study \citep{ahn2014tenth}. 
+
+\begin{figure}
+\includegraphics[scale = 0.25]{example_lc_phase.png}
+\includegraphics[scale = 0.25]{example_lc_resi.png}
+\caption{The light-curve of a contact binary as observed by CRTS. In the top panel, we see that the light-curve is normalized in flux such that the maximum value of the harmonic fit (in black) is 1.0. We see that the light-curve has been divided into four distinct regions by phase. In the bottom panel, we see the harmonic fit residuals as a function of observation time. Observations from each one of the four bins have been separated. The light-curve of this contact binary does not change over the eight-year observation timespan, the residuals are centered around 0 for observations in each phase bin. The orbital period of this binary is 0.323716 days. The variability amplitude of this object binary is 0.57 magnitudes.}
+\label{lc_label}
+\end{figure}
+
+\section{Expected Results}
+
+By combining the two surveys, we can observe the appearance and disappearance of starspots on the photospheres of contact binaries. By measuring the temperature of each contact binary system with SDSS, we can determine at which temperatures contact binaries exhibit the strongest white-light variability. In Fig. \ref{lc_label} we see an example of a light-curve of one contact binary as observed by CRTS. We can monitor for changes in the light-curve by fitting the phase-folded observations (top panel), and examining the residuals as a function of time (bottom panel). \\
+
+Using this type of analysis, we expect to be able to answer the following questions: \\
+
+1) Is the level of optical variability correlated with the temperature of the contact binary? \\
+
+2) What kind of model (e.g. linear, sinusoid) best describes the variability due to starspots? \\
+
+3) Are there relationships between the shape of the white light-curve and the temperature of the contact binary? \\
+
+These three questions will guide the analysis in my thesis. My thesis will expand on work that I have published previously \citep{marsh2016characterization}.
+
+\bibliographystyle{plain}
+\bibliography{thesis_bib.bib}
+
+\end{document}  
