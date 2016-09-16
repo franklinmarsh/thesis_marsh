@@ -4,20 +4,22 @@ The top-level auxiliary file: thesis_marsh.aux
 The style file: plainnat.bst
 Database file #1: thesis_bib.bib
 Warning--entry type for "spineda2005homology" isn't style-file defined
---line 12 of file thesis_bib.bib
+--line 31 of file thesis_bib.bib
 Warning--entry type for "sluys2006roche" isn't style-file defined
---line 467 of file thesis_bib.bib
+--line 487 of file thesis_bib.bib
 Warning--I didn't find a database entry for "segransan2003first"
 Warning--I didn't find a database entry for "kippenhahn1970simple"
 Warning--I didn't find a database entry for "paczynski1971evolutionary"
 Warning--I didn't find a database entry for "eggleton1983approximation"
 Warning--I didn't find a database entry for "rucinski2001photometric"
+Warning--I didn't find a database entry for "von1924radiative.bib"
 Warning--I didn't find a database entry for "hendry1998detection"
 Warning--I didn't find a database entry for "kahler2002structure"
 Warning--I didn't find a database entry for "awadalla2005absolute"
 Warning--I didn't find a database entry for "arbutina2009possible"
 Warning--I didn't find a database entry for "arbutina2009"
 Warning--I didn't find a database entry for "priya2013photometric"
+Warning--I didn't find a database entry for "rucinski1998extreme"
 Warning--I didn't find a database entry for "gazeas2006modeling"
 Warning--I didn't find a database entry for "hrivnak1989radial"
 Warning--I didn't find a database entry for "cruddace1984contact"
@@ -36,7 +38,7 @@ Warning--empty publisher in carroll2006introduction
 Warning--empty journal in pringle1985interacting
 You've used 125 entries,
             2773 wiz_defined-function locations,
-            1260 strings with 26739 characters,
+            1262 strings with 26778 characters,
 and the built_in function-call counts, 64477 in all, are:
 = -- 5453
 > -- 4702
@@ -75,4 +77,4 @@ warning$ -- 4
 while$ -- 537
 width$ -- 0
 write$ -- 1608
-(There were 29 warnings)
+(There were 31 warnings)
