@@ -317,6 +317,8 @@ Where $T_{6} \equiv T / 10^{6}$ K. When we expand Equation \ref{eqn: pp1} in a p
 \epsilon_{pp} \approx \epsilon_{0, pp}^{'} \rho X^{2} f_{pp} \psi_{pp} C_{pp} T_{6}^{4}
 \end{equation}
 
+At temperatures near the solar-temperature of 5800K, 
+
 Through this conversion of mass to energy, low-mass main-sequence stars shine. For the rest of this thesis, we can treat the core of the main-sequence star as a ``black-box" which pumps energy into the outer layers of the star..
 
 \subsubsection[The Main-Sequence Homology Relations]{\hyperlink{toc}{The Main-Sequence Homology Relations}} \label{sec: The Main-Sequence Homology Relations}
@@ -359,11 +361,12 @@ In the context of contact binaries, it is important to discuss the changes that 
 
 By far, the parameter that has the largest effect on the stellar observables is the mass. However the chemical composition of a star can also influence its observables. Astronomers will use a simplified system consisting of three numbers $[X,Y,Z]$ to refer to the chemical composition of a star:
 
-\begin{equation} \label{def_metallicity}
-X = \text{Hydrogen Abundance} \qquad Y = \text{Helium Abundance} \qquad Z = \text{Abundance of everything else} \qquad X + Y + Z = 1
-\end{equation}
+\begin{multline} \label{def_metallicity}
+X = \text{Hydrogen Abundance} \qquad Y = \text{Helium Abundance} \qquad Z = \text{Abundance of everything else} \\
+X + Y + Z = 1
+\end{multline}
 
-When astronomers refer to ``Metallicity", they are often referring to $Z$: the fraction of the mass of the star that is not hydrogen or helium.
+When astronomers refer to ``Metallicity", they are often referring to $Z$: the fraction of the mass of the star that is not hydrogen or helium. For our own sun, $Z = 0.02$, which is referred to as the \emph{solar metallicity} \index{solar metallicity}
 
 Metallicity influences the observables of main-sequence stars through affecting the opacity $\kappa$ of the stellar material.
 
@@ -907,7 +910,7 @@ time-series spectra are some of the most complete observations of contact binari
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{PTFS1622am_DBSP.png}
-\caption{Two spectra of the contact binary star PTFS1622am, as observed with the Double-Beam Spectrograph at the 200" Hale Telescope. The two colors indicate the separate chips that the spectra was observed on. The Spectral Flux Density is in arbitrary units, what is more import is to observed the relative flux.}
+\caption{Two spectra of the contact binary star PTFS1622am, as observed with the Double-Beam Spectrograph at the 200" Hale Telescope. The two colors indicate the separate chips that the spectra was observed on. The Spectral Flux Density is in arbitrary units, what is more important is to observe the relative flux.}
 \label{fig: PTFS1622am_DBSP}
 \end{figure}
 
@@ -989,9 +992,9 @@ O-C Analysis is short for ``observed minus computed", referring to the fact that
 
 1. A full light curve is obtained for the system in question. \\
 2. Based on this light curve, the period is calculated, and an epheremis is computed, listing all of the future times of minimum light. \\
-3. Then, light curves are obtained at future epochs. The time of minimum light are compared to previous times of minimum light. The difference $(O-C)$ is plotted as a function of epoch. \\
+3. Then, light curves are obtained at future epochs. The observed times of minimum light (O) are compared to previous times of minimum light as computed by the epheremis (C). The difference $(O-C)$ is plotted as a function of epoch. \\
 
-On an O-C diagram, a linear change in period appears as a parabola.
+On an O-C diagram, a linear change in period (of the form $P = a \times t + b$, for $c \neq 0$) appears as a parabola.
 
 \begin{figure}[H]
 \centering
@@ -1000,9 +1003,7 @@ On an O-C diagram, a linear change in period appears as a parabola.
 \label{fig: kalimeris1994orbital_4a}
 \end{figure}
 
-On orbital period change \citep{kalimeris1994orbital}
-
-The orbital period of a contact binary can change for a variety of reasons, but an observed period change always implies underlying geometrical and structural changes.
+The orbital period of a contact binary can change for a variety of reasons, but an observed period change always implies underlying geometrical and structural changes \citep{kalimeris1994orbital}.
 
 In contact systems, orbital period changes can generally be divided into (1) short-term variations, which happen on decadal (10 year) timescales, and (2) long-term variations, which happen on a thermal timescale.
 
@@ -1039,6 +1040,8 @@ In data from surveys, the data may be too sparse to estimate times of minimum li
 \citet{qian2001orbital} has observed orbital period changes which indicate TRO. 
 
 \subsection[Doppler Imaging]{\hyperlink{toc}{Doppler Imaging}} \label{sec: doppler_imaging}
+
+
 
 \section[Working with Survey Data]{\hyperlink{toc}{Working with Survey Data}} \label{sec: Working with Survey Data}
 
@@ -1100,9 +1103,11 @@ Examples of such surveys are the All-Sky Automated Survey \citep[ASAS,][]{pojman
 
 %Arrange chronologically?
 
-\subsection[The Kepler Spacecraft]{\hyperlink{toc}{The Kepler Spacecraft}}
+\subsection[Modern Sources of Survey Data]{\hyperlink{toc}{Modern Sources of Survey Data}}
 
-\subsection[The Sloan Digital Sky Survey]{\hyperlink{toc}{The Sloan Digital Sky Survey}}
+\subsubsection[The Kepler Spacecraft]{\hyperlink{toc}{The Kepler Spacecraft}}
+
+\subsubsection[The Sloan Digital Sky Survey]{\hyperlink{toc}{The Sloan Digital Sky Survey}}
 
 \cite{york2000sloan}
 
@@ -1112,13 +1117,13 @@ calibrations allow for stellar temperatures to be derived \cite{fukugita2011char
 
 SEGUE is a program that collects stellar spectra.
 
-\subsection[The SuperWASP Survey]{\hyperlink{toc}{The SuperWASP Survey}}
+\subsubsection[The SuperWASP Survey]{\hyperlink{toc}{The SuperWASP Survey}}
 
 follow-up on 1-meter telescopes in South Africa \citep{koen2016multi}.
 
 more follow up \citep{darwish2016orbital}
 
-\section[Paper I: Introduction to the CRTS Data]{\hyperlink{toc}{Paper I: Introduction to the CRTS Data}} \label{sec: Paper I: Introduction to the CRTS Data}
+\section[Paper I: Characterization of 9,380 Contact Binaries from the CRTS Variable Sources Catalogue]{\hyperlink{toc}{Paper I: Characterization of 9,380 Contact Binaries from the CRTS Variable Sources Catalogue}} \label{sec: Paper I: Introduction to the CRTS Data}
 
 This work was submitted to the Monthly Notices of the Royal Astronomical Society (MNRAS) on June 20th, 2016, and was accepted on August 19th, 2016.
 
@@ -1268,6 +1273,8 @@ In this section, I'd like to outline a few projects that are possible with exist
 $\pi$ steradian (quarter of the sky) imaging survey. GALEX also completed a deep imaging survey, where a small portion of the sky was imaged for a long time. The two (FUV, NUV) detectors on GALEX are \emph{photon counting}\index{photon counting}, meaning that they record the time of arrival (to 5 milliseconds) and location (x,y pixel coordinated) of each incident photon. This means that it is possible construct light-curves from this data.
 
 The python package \texttt{gphoton}\index{gphoton} allows the user to easily access and download GALEX photon-counting data. The user can construct light-curves out of the individual photon counts, to perform a periodicity analysis.
+
+\url{https://archive.stsci.edu/prepds/gphoton/}
 
 \citet{mccale1996rosat} have shown that the coronal rotation rate of convective contact binaries can be measured by using X-ray light-curves.
 

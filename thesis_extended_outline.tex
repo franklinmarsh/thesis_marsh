@@ -1,0 +1,181 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{natbib}
+
+\title{Contact Binary Stars in Survey Data}
+\author{Franklin Marsh (with advisor Philip Choi)}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+The contact binary star is placed at the intersection of some of the largest questions in modern astronomy. In this introduction, we will see how contact binaries connect to a range of issues in modern astrophysics.
+
+Modern observational techniques have allowed for the detection of transients \index{transients}(light sources that appear for a brief time and then disappear) in vast quantities. The supernova \index{supernova} is a common example of a transient. By observing hundreds of supernovae, astronomers discovered that not all supernovae are the same - some are brighter than others, some last longer than others. They have also discovered transients that are not supernovae. In recent years, astronomers have been gaining information about transients that are much brighter than novae, but dimmer than supernovae. They named this class ``Intermediate Luminosity Red Transients" (ILRT). Until recently, there was not a viable physical model for these transients. In late 2008, an ILRT emerged in the constellation of Scorpius. When astronomers looked in archival data - they found a contact binary in the spot where the nova had occurred. The leading theory is that the merger of the two components of a contact binary system causes these Intermediate Luminosity Red Transients.
+
+While contact binaries systems are very different than the sun, they are important tools for testing the solar-stellar connection\index{solar-stellar connection}: the idea that the sun is similar to other stars and that we can learn about other stars by observing the sun, and vice-versa. While the sun takes almost a month to rotate, almost all contact binaries complete a full orbit in less than a day. Contact binaries have much greater angular momenta than single stars of the same spectral type. Contact binaries have strong magnetic fields (as much as 1000 times stronger than the sun's), because they are moving about their rotational axis much more quickly. We will see that a each component of a solar type contact binary exhibits a similar structure to the sun: a radiative inner layer surrounded by a convective envelope. For this reason, contact binaries exhibit the same magnetic phenomena (such as starspots, and flares) as the sun does - except these phenomena on contact binaries are much more dramatic, owing to their stronger magnetic fields. The dramatic magnetic phenomena in contact binaries is observable from large distances. From the earth, we can monitor the magnetic activity of thousands of contact binary stars. This is the subject of much of the original work in this thesis.
+
+%Recently, planets have been discovered in orbit around eclipsing binary systems. While planets around contact systems have not been discovered, they are a possibility. Would massive flares and orbital instabilities render life impossible?
+
+With the recent direct observation of gravitational waves by LIGO, there has been renewed interest in gravitational wave sources. The source of the first gravitational wave detection was two intermediate mass (20 - 30$M_{\odot}$) black holes, which was an unexpected result. Astronomers were uncertain about how two intermediate mass back holes could get close enough to each other to merge. The short-lived, massive contact binary stars offer a solution to this problem. The vast majority of contact binary stars have components with similar masses to the sun. However, a few consist of two very massive O or B type stars. When a O or B type star ends its life, it undergoes a supernova explosion, resulting in a black hole. Additionally, some astronomers believe that a massive star can collapse directly to a black hole, without first undergoing a supernova.  Each of the two stellar components in a O or B type contact binary is massive enough to form its own black hole at the end it its life. In this way, O and B type contact binaries provide a mechanism for producing two intermediate black holes in a close orbit.
+
+As we will learn, contact binaries are a well-defined class with strict relationships between parameters like mass, luminosity, temperature, and orbital period. This means that by measuring a few parameters, many others can be accurately predicted. There are theoretically and empirically defined relationships between a contact binary's period, temperature, and luminosity. This means, by measuring a contact binary's orbital period (which can be done easily and precisely) astronomers can predict the contact binary's absolute luminosity (which is difficult to measure with traditional methods). For this reason, contact binaries are important \emph{standard candles}\index{standard candle}. Contact binaries are much more common than Cepheid Variables, or RR Lyrae variables. They can be used to trace the structure of the milky way galaxy, and accurately determine distances to other galaxies.
+
+In these ways, the contact binary stands at the intersection of time-domain, solar, gravitational wave, and stellar astronomy. But the study of contact binaries also stand at another important intersection: the intersection of ``old" and ``new" observational techniques. 
+
+We roughly can split observational astronomy into two modes, which I will call:
+
+1. ``Survey Mode": Look out and see what there is to see, without a particular target in mind.
+
+2. ``Target Mode": Observe very specific set of objects in a way tailored to learn about known phenomena.
+
+In the 20th century, much of the science of astronomy operated int ``target mode". The science of astronomy was ``data poor". The limiting factor of discovery was observations from large telescopes of the day. If a scientist had new, proprietary data, science would come out of it. At the turn of the 21st century (enabled by advances in data storage, processing and robotics, and as a direct result of Moore's law) observational astronomical science began to shift modes.
+
+Old telescopes were being remodeled, old gears, motors and lenses were being replaced with robotic systems, enabling their autonomous operation. New telescopes were being constructed with the express purpose of deeply surveying the sky - with minimal human intervention. No longer inhibited by human operators, telescopes could image the sky continuously - dawn to dusk. Data poured from these telescopes like water from a firehose. Since the 1990s, the new images filled massive stacks of servers: for the first time, astronomers were ``data rich". 
+
+The monstrous stream of data that was provided by these new systems had to be filtered. The most productive scientist was no longer the scientist with access to the best data, it became the scientist with the best techniques for filtering, stacking, folding, combining, or otherwise analyzing the data. Astronomers started shifting back to ``Survey Mode".
+
+Asteroids were discovered by the thousands. The rate of supernova discovery accelerated from one every few years to approximately \emph{one every night}.  The number of known eclipsing binaries ballooned from just over a thousand, to tens of thousands. The number of galaxies with known distances was increased dramatically by the Sloan Digital Sky Survey. This progress is accelerating: within the decade, at least three major sky surveys of unprecedented depth and cadence will come online.
+
+In the 21st century, we can study thousands of contact binary systems at once, using data from all-sky surveys. This approach presents huge advantages over taking painstaking observations of single contact binary systems. Due to the sheer number of systems studied, conclusions about contact binary behavior can be supported by robust statistics. However, there are also weaknesses to this approach. Many of the techniques that have been developed for extracting physical information out of observational data do not work well with survey data, because survey data tends to be of lower quality. We are forced to develop new techniques, and ask different questions.
+
+Each section in this thesis is prefaced with a list of driving questions (\emph{Q:}), which are questions that the reader will find answered in that section.
+
+In \S \ref{sec: background} I provide a brief history of the discovery of the first contact binary star, and outline major leaps of understanding in the field. In \S\ref{sec: observations}, I discuss the types of observations that can be used to learn about contact systems. In \S\ref{sec: analysis_techniques}, I describe some ways that astronomers use models to convert raw observational data into measurements of physical parameters. We are introduced to survey data in \S\ref{sec: Working with Survey Data}. I then present original research that I have undertaken with Dr. Tom Prince, Dr. Ashish Mahabal, Dr. Eric Bellm, and Dr. Andrew Drake at the California Institute of Technology. In \S\ref{sec: The Future}, I provide three projects that a student can undertake right now to continue the study of contact binary stars.
+
+
+In this thesis, my main objectives are: \\
+
+1. To provide an introduction to the field of Contact Binary study. \\
+2. To provide an example of how we can adapt techniques developed during the age of ``data-poor" astronomy to ``data-rich" astronomy. \\
+3. To provide a roadmap that a future student can use to continue this work. \\
+
+\section{The Contact Binary Star} \label{sec: background}
+
+\subsection[\emph{Discovery}]{\hyperlink{toc}{Discovery}}
+
+Q: \emph{How was the first contact binary star discovered?}
+
+To understand the history of the study of contact binaries, we must start at the source: the advent of a precise way of measuring the brightness of a celestial object.  
+
+In 1861, J.K.F. Z\"ollner, developed the first practical photometer. In Z\"ollner's photometer \index{Z\"ollner's photometer}, the image of a real star as focused by a 5" objective lens was compared with the light of an artificial star, produced by a bunsen-like gas burner, in the same field of view \citep{staubermann2000trouble}. The brightness of this artificial star could be adjusted by changing the relative orientation of two prisms, until it matched that of the real star. By recording the relative angle of the prisms when the brightness of the artificial and real star were equal, a photometric measurement could be obtained. In the 1860s, Z\"ollner supplied 22 photometers to the great observatories throughout the western world. One of these photometers arrived at the Potsdam Observatory\index{Potsdam Observatory}, 15 miles southwest of Berlin's city center \citep{krisciunas2001brief}.
+
+Karl Hermann Gustav M\"uller \index{M\"uller, Karl Hermann Gustav}, and Paul Friedrich Ferdinand Kempf \index{Kempf, Paul Friedrich Ferdinand} collaborated on observations for the Potsdam \emph{Photometrische Durchmusterung des N\"ordlichen Himmels} (Photometric Catalogue of the Northern Heavens), one of the three great photometric catalogues of the late nineteenth century \citep{bolt2007biographical}. When it was finished, it contained the brightnesses and colors of roughly 14,000 stars down to visual magnitude 7.5 - a monumental undertaking.
+
+While Kempf and M\"uller were making the initial observations for Part III of their \emph{Durchmusterung}, they discovered that two measurements of an otherwise inconspicuous star (the first made in 1899, the second made in 1901) differed by an amount that was greater than was expected. In their survey, each star that showed the potential for variability was observed at a later date to verify the nature of variability.
+
+At the Potsdam Observatory on January 14th, 1903, the sun set at 4:20pm. An hour and a half later, (at 5:56pm) Kempf and M\"uller began constructing a complete light-curve of $BD +56^{\circ}.1400$, which would later be named W Ursae Majoris. They observed until 10:30PM. Follow-up observations three nights later allowed for the construction of the first light-curve of a contact binary star (Figure \ref{fig: muller1903new_1}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{staubermann2000trouble_4.png}
+\caption{Fig. 4 from \citet{staubermann2000trouble}, showing a modern reproduction of a Z\"ollner photometer. Note the tube: the refractor telescope.}
+\label{fig: staubermann2000trouble_4}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{muller1903new_1.png}
+\caption{The first light-curve of a contact binary star. Note that the solid curve is interpolated by eye and drawn carefully in pen. Figure 1 from \citet{muller1903new}.}
+\label{fig: muller1903new_1}
+\end{figure}
+
+The shape of the light-curve was unlike anything that M\"uller and Kempf had seen before, and they struggle to think of a physical system that can produce such a light curve, rejecting many hypotheses, before speculating: \\
+
+\emph{``We may finally consider the hypothesis that the light-variation is produced by two celestial bodies almost equal in size and luminosity whose surfaces are at a slight distance from each other, and which at times almost centrally occult each other in their revolution... On this hypothesis we have only one difficulty, and the not inconsiderable one, as to whether such a system is mechanically possible and can remain stable for any length of time."} \\
+
+This passage marks the beginning of the study of contact binary stars. In this thesis (written 114 years after the initial discovery), we will journey to the forefront of contact binary research.
+
+%It turns out that M\"uller and Kempf  were correct in their speculation, as the vast majority of contact binaries are indeed two celestial bodies almost equal in size and luminosity.
+
+%While an increasing number of W UMa systems were discovered in the following years, it took until the late 1960's for a satisfactory physical characterization to be reached. Leon. B. Lucy, at Columbia College \citet{lucy1968light} \citet{lucy1968structure}
+
+%\citet{lucy1968structure} ``It is found that when the common envelope is convective the adiabatic constants of the envelopes of the two companions must be equal."
+
+%``the core solutions of stars with radiative envelopes are insensitive to conditions near the surface...consequently the common envelope will not, in general, be in hydrostatic equilibrium. "
+
+%Even if a physical explanation cannot be obtained \citet{o1951so}
+
+%\citet{eggen1967contact} was the first to discover the period-color correlation. Later, metallicity dependent effects were found by \citet{rubenstein2000metallicity}.
+
+%Based on observations on the Palomar and Mt. Wilson reflectors:
+
+%``It is concluded that contact systems do not form a state in the evolution of detached to semi-detached systems, but spend most of their main sequence life in their present form."
+
+%``The members of cluster and companions in wide visual pairs, plus the available spectroscopic data show that the contact systems have a total luminosity and mass that is equivalent to two equal stars of the observed colour."
+
+\subsection[Physical Characteristics]{\hyperlink{toc}{Physical Characteristics}}
+
+%\emph{Q: What are contact binaries made of? How do contact binaries generate their luminosity? Why are contact binaries shaped like peanuts? How are eclipsing binaries classified? How common are contact binaries compared to all main-sequence stars? How do contact binaries form? How do contact binaries evolve over their lifetime? What is the ultimate fate of a contact binary? What do we know about the most massive contact binaries? What are some interesting magnetic phenomena that occur on contact binaries?  }
+
+In this section, we will work to gain a physical understanding of contact binary systems.
+
+Contact binary stars are made up of two main-sequence stars. In \S \ref{sec: The Main-Sequence Star} we will understand what main-sequence stars are like on the inside, how energy is generated in the cores of main-sequence stars, and how this energy is transported to their surfaces.
+
+Once we have got a firm grasp of the properties of main-sequence stars, we will bring two of them together to form a contact binary. In \S \ref{sec: The Roche Potential}, we learn that we must change the potential that the stellar matter exists in from the point potential to the Roche potential. Also, the components of contact binary stars can transfer mass and energy, from one to the other. We must take this into account when building our model.
+
+In \S \ref{sec: Frequency and Density}, we will learn how common contact binary stars as compared to single main-sequence stars. We will also learn how common they are in the Milky Way galaxy.
+
+In \S \ref{sec: Mechanisms of Formation}, we will learn how contact binaries are formed. We will be introduced to the concepts of angular momentum loss (AML), and Kozai-Lidov cycles.
+
+In \S \ref{sec: Evolution in the Contact State}, we will learn how contact binaries evolve during their lifetimes. We will see how this evolution can drive changes in the observable properties of contact binary systems.
+
+%\citep[p.76, ][]{webbink2003contact} excellent review of remaining problems in contact binary study. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.5]{lucy1968light_1+garlick.png}
+\caption{Model for a contact binary system. The hatched areas denote convection zones, and the vertical dashed line is the axis of rotation. Figure 1 from \citet{lucy1968light}.}
+\label{fig: lucy1968light_1}
+\end{figure}
+
+\section{Methodology}
+
+In our study, we will use data from two separate surveys: (1) We will use CRTS data spanning eight years, which allows for the variation in the luminosity of each system on a decadal timescale to be measured, and (2) We will use SDSS data which provides multiband photometric measurements taken within the timespan of a few minutes, allowing the temperature of each binary to be measured. We find that over 9,000 contact binaries are visible in both surveys. 
+
+\subsection{CRTS Photometry}
+
+The Catalina Sky Survey (CSS) uses three telescopes to survey the sky between declinations of -75 and +65 degrees. Although the CSS was originally designed for the detection of Near Earth Asteroids, the CRTS project aggregates time-series photometry for over 500 million stationary ``background" sources \citep{drake2009first, mahabal2011discovery, djorgovski2012catalina}. CRTS observations are taken in ``white light", i.e. without filters, to maximize survey depth. CRTS can perform photometric measurements on sources with visual magnitudes in the range of $\sim13$ to $20$. Though we only used eight years of data, CRTS continues collecting data to this day. 
+
+The CRTS photometry used in this work is publicly accessible through the Catalina Surveys Data Release 2 at \texttt{crts.caltech.edu}. 
+
+The number of observations that CSS has collected for the candidate systems that we study ranges from 90 (for the least observed systems) to 540 (for the most observed systems). The median number of CSS observations per candidate system is $336$, with a standard deviation of $86$ observations.  The mean photometric error varies from 0.05 magnitudes to 0.10 magnitudes for most systems, increasing as a function of CRTS magnitude. 
+
+\subsection{SDSS Photometry}
+
+The Sloan Digital Sky Survey provides multiband photometry in the \emph{u},\emph{g},\emph{r},\emph{i}, and \emph{z} bands. Because of its drift-scanning configuration, SDSS is well suited to performing photometry on short-period variable stars ($P < 1$ day), because all of the bands are exposed within a short time of each other: there is a delay of roughly 5 minutes between the exposure of the $g$ and $r$ images. \citep{york2000sloan}. We will use the SDSS DR10 $(g - r)$ colour to calculate the temperature of the binary systems in this study \citep{ahn2014tenth}. 
+
+\begin{figure}
+\includegraphics[scale = 0.25]{example_lc_phase.png}
+\includegraphics[scale = 0.25]{example_lc_resi.png}
+\caption{The light-curve of a contact binary as observed by CRTS. In the top panel, we see that the light-curve is normalized in flux such that the maximum value of the harmonic fit (in black) is 1.0. We see that the light-curve has been divided into four distinct regions by phase. In the bottom panel, we see the harmonic fit residuals as a function of observation time. Observations from each one of the four bins have been separated. The light-curve of this contact binary does not change over the eight-year observation timespan, the residuals are centered around 0 for observations in each phase bin. The orbital period of this binary is 0.323716 days. The variability amplitude of this object binary is 0.57 magnitudes.}
+\label{lc_label}
+\end{figure}
+
+\section{Expected Results}
+
+By combining the two surveys, we can observe the appearance and disappearance of starspots on the photospheres of contact binaries. By measuring the temperature of each contact binary system with SDSS, we can determine at which temperatures contact binaries exhibit the strongest white-light variability. In Fig. \ref{lc_label} we see an example of a light-curve of one contact binary as observed by CRTS. We can monitor for changes in the light-curve by fitting the phase-folded observations (top panel), and examining the residuals as a function of time (bottom panel). \\
+
+Using this type of analysis, we expect to be able to answer the following questions: \\
+
+1) Is the level of optical variability correlated with the temperature of the contact binary? \\
+
+2) What kind of model (e.g. linear, sinusoid) best describes the variability due to starspots? \\
+
+3) Are there relationships between the shape of the white light-curve and the temperature of the contact binary? \\
+
+These three questions will guide the analysis in my thesis. My thesis will expand on work that I have published previously \citep{marsh2016characterization}.
+
+\bibliographystyle{plain}
+\bibliography{thesis_bib.bib}
+
+\end{document}  
