@@ -242,17 +242,13 @@ This passage marks the beginning of the study of contact binary stars. In this t
 
 %\emph{Q: What are contact binaries made of? How do contact binaries generate their luminosity? Why are contact binaries shaped like peanuts? How are eclipsing binaries classified? How common are contact binaries compared to all main-sequence stars? How do contact binaries form? How do contact binaries evolve over their lifetime? What is the ultimate fate of a contact binary? What do we know about the most massive contact binaries? What are some interesting magnetic phenomena that occur on contact binaries?  }
 
-In this section, we will work to gain a physical understanding of contact binary systems.
-
-Contact binary stars are made up of two main-sequence stars. In \S \ref{sec: The Main-Sequence Star} we will understand what main-sequence stars are like on the inside, how energy is generated in the cores of main-sequence stars, and how this energy is transported to their surfaces.
+In this section, we will gain a physical understanding of contact binary systems. Contact binary stars are made up of two main-sequence stars. In \S \ref{sec: The Main-Sequence Star} we will understand what main-sequence stars are like on the inside, how energy is generated in the cores of main-sequence stars, and how this energy is transported to their surfaces.
 
 Once we have got a firm grasp of the properties of main-sequence stars, we will bring two of them together to form a contact binary. In \S \ref{sec: The Roche Potential}, we learn that we must change the potential that the stellar matter exists in from the point potential to the Roche potential. Also, the components of contact binary stars can transfer mass and energy, from one to the other. We must take this into account when building our model.
 
 In \S \ref{sec: Frequency and Density}, we will learn how common contact binary stars as compared to single main-sequence stars. We will also learn how common they are in the Milky Way galaxy.
 
-In \S \ref{sec: Mechanisms of Formation}, we will learn how contact binaries are formed. We will be introduced to the concepts of angular momentum loss (AML), and Kozai-Lidov cycles.
-
-In \S \ref{sec: Evolution in the Contact State}, we will learn how contact binaries evolve during their lifetimes. We will see how this evolution can drive changes in the observable properties of contact binary systems.
+In \S \ref{sec: Mechanisms of Formation}, we will learn how contact binaries are formed. We will be introduced to the concepts of angular momentum loss (AML), and Kozai-Lidov cycles. In \S \ref{sec: Evolution in the Contact State}, we will learn how contact binaries evolve during their lifetimes. We will see how this evolution can drive changes in the observable properties of contact binary systems.
 
 %\citep[p.76, ][]{webbink2003contact} excellent review of remaining problems in contact binary study. 
 
@@ -265,7 +261,7 @@ In \S \ref{sec: Evolution in the Contact State}, we will learn how contact binar
 
 \subsubsection[The Main-Sequence Star]{\hyperlink{toc}{The Main-Sequence Star}} \label{sec: The Main-Sequence Star}
 
-In order to understand the internal structure of contact binaries, we must first understand the structure of their two components: main-sequence stars.  The main sequence was an empirically derived group: When astronomers started recording the luminosity and color of lots of stars, they observed that most stars obeyed a relationship between luminosity and color. This relationship can be visualized in an \emph{Hertzprung-Russell Diagram} (or H-R \index{Hertzprung-Russell Diagram} Diagram), like Figure \ref{fig: carroll2006introduction_8_13}. They called the main cluster of points on this diagram the ``Main Sequence". The most familiar example of a main sequence star is our Sun. When a star is fusing hydrogen into helium at its core, we say that it is on the main sequence.
+In order to understand the internal structure of contact binaries, we must first understand the structure of their two components: main-sequence stars.  The main sequence was an empirically derived group: When astronomers started recording the luminosity and color of large numbers of stars, they observed that most stars obeyed a relationship between luminosity and color. This relationship can be visualized in an \emph{Hertzprung-Russell Diagram} (or H-R \index{Hertzprung-Russell Diagram} Diagram), like Figure \ref{fig: carroll2006introduction_8_13}. They called the main cluster of points on this diagram the ``Main Sequence". The most familiar example of a main sequence star is our Sun. When a star is fusing hydrogen into helium at its core, we say that it is on the main sequence.
 
 \begin{figure}[H]
 \centering
@@ -294,8 +290,6 @@ The time-independent equations of stellar structure \index{equations of stellar 
 \frac{dT}{dr} = - \frac{3}{4ac} \frac{\bar{\kappa} \rho}{T^{3}} \frac{L_{r}}{4 \pi r^{2}}
 \end{equation}
 
-While the details of the nuclear fusion that occurs at the cores of main-sequence are unimportant for our study, I will briefly outline the main reactions.
-
 Energy is generated at the core of low-mass main sequence stars via the Proton-Proton Chain, or \emph{pp-chain}\index{pp-chain}. The pp-chain has three branches, each producing helium our of Hydrogen (H), Helium (He) and Beryllium (Be). 
 
 \begin{figure}[H]
@@ -305,21 +299,7 @@ Energy is generated at the core of low-mass main sequence stars via the Proton-P
 \label{fig: carroll2006introduction_10_8}
 \end{figure}
 
-The energy produced by all three branches of the pp chain can be represented:
-
-\begin{equation} \label{eqn: pp1}
-\epsilon_{pp} = 0.241 \rho X^{2} f_{pp} \psi_{pp} C_{pp} T_{6}^{-2/3} e^{-33.80 T_{6}^{-1/3}} \text{W } \text{kg}^{-1}
-\end{equation}
-
-Where $T_{6} \equiv T / 10^{6}$ K. When we expand Equation \ref{eqn: pp1} in a power law about the solar core temperature of $T_{\odot \text{, core}} = 1.5 \times 10^{7}$K, we see that the resulting power law has a $T^{4}$ dependence near $T_{\odot \text{, core}}$:
-
-\begin{equation} \label{eqn: pp2}
-\epsilon_{pp} \approx \epsilon_{0, pp}^{'} \rho X^{2} f_{pp} \psi_{pp} C_{pp} T_{6}^{4}
-\end{equation}
-
-At temperatures near the solar-temperature of 5800K, 
-
-Through this conversion of mass to energy, low-mass main-sequence stars shine. For the rest of this thesis, we can treat the core of the main-sequence star as a ``black-box" which pumps energy into the outer layers of the star..
+At temperatures near the temperature of the solar core, the efficiency of the pp-chain $\epsilon$ is proportional to $T^{4}$, so hotter stars can get more energy out of the pp-chain. For stars with higher core temperatures than the sun, another reaction (the CNO-cycle\index{CNO-cycle}) becomes much more efficient than the pp-chain. Through the conversion of mass to energy via the pp-chain, low-mass main-sequence stars shine. For the rest of this thesis, we can treat the core of the main-sequence star as a ``black-box" which pumps energy into the outer layers of the star..
 
 \subsubsection[The Main-Sequence Homology Relations]{\hyperlink{toc}{The Main-Sequence Homology Relations}} \label{sec: The Main-Sequence Homology Relations}
 
@@ -418,13 +398,9 @@ In this scheme, eclipsing binaries are classified according to the location of t
 
 Now we know how Detached, Semi-Detached, and Overcontact binaries are classified - but wait: Where are the \emph{Contact Binaries}? In this section, we have been referring to contact binaries as ``Overcontact Binaries". But why did we have to make the name change?
 
-Since the first half of the 20th century, most astronomers believe that the term ``contact" means that the photospheres of the two components are touching physically. This is incorrect, according to the original classification scheme of \citet{kopal1959close}. He intended contact to mean that the photospheres of the stars were in contact with their Roche Lobes, (the inner Jacobi Equipotential). Though the term ``contact" binary is technically incorrect, it is the most common usage in the literature, and is now the accepted name for these kinds of stars. For an excellent review of this naming issue, see \citet{wilson2001binary}
+Since the first half of the 20th century, most astronomers believe that the term ``contact" means that the photospheres of the two components are touching physically. This is incorrect, according to the original classification scheme of \citet{kopal1959close}. He intended contact to mean that the photospheres of the stars were in contact with their Roche Lobes, (the inner Jacobi Equipotential). Though the term ``contact" binary is technically incorrect, it is the most common usage in the literature, and is now the accepted name for these kinds of stars. For an excellent review of this naming issue, see \citet{wilson2001binary}. For a review of the classification scheme, see p. 109 of \citet {kallrath2009eclipsing}.
 
 The Roche lobe, (as we have been calling it) is also referred to as the \emph{Inner Jacobi Equipotential} \index{Inner Jacobi Equipotential}. There also exists an \emph{Outer Jacobi Equipotential}. In Figure \ref{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}, the Outer Jacobi Equipotential is the outer-most curve that is drawn. It passes through the $L_{2}$ point. The Inner Jacobi Equipotential is the curve that we have been referring to as the ``Roche Lobe". It is the curve shaped like the $\infty$ symbol.
-
-An important note on the semantics of binary star classification. \citet{kuiper1941interpretation}
-
-For an excellent review, see: \citep{kallrath2009eclipsing}
 
 \begin{figure}[H]
 \centering
@@ -505,11 +481,7 @@ A typical mass ratio $q = \frac{m_{1}}{m_{2}}$ for a contact binary star is 0.5.
 \frac{T_{1}}{T_{2}} = \Big( \frac{M_{1}}{M_{2}} \Big)^{1.3}
 \end{equation}
 
-However, observations indicate that the two components of a contact binary system (almost always) do \emph{not} have equal-mass. 
-
-``Up to a third of the energy generated by the primary is transferred to the secondary"\citep{mochnacki1981contact}
-
-In order to achieve hydrostatic equilibrium, energy must be exchanged between the two components of the contact binary.
+However, observations indicate that the two components of a contact binary system (almost always) do \emph{not} have equal-mass. This means that, in order to achieve hydrostatic equilibrium, energy must be exchanged between the two components of the contact binary. In fact, up to a third of the energy generated by the primary is transferred to the secondary \citep{mochnacki1981contact}.
 
 We can construct two model main sequence stars, with masses $M_{1}$ and $M_{2}$. Main sequence stars will obey main-sequence scaling relationships, which are well defined laws the describe how stellar radii, density, and temperature vary with stellar mass \citep{kippenhahn1990stellar}. The mass - radius relationship is particularly important when constructing contact models. 
 
@@ -578,18 +550,13 @@ T_{eff}(\theta) \approx g_{eff}^{0.25}(\theta)
 
 \citep{von1924radiative.bib}
 
-
 \citep{gazeas2006masses}
 
 \subsection[Interior Structure]{\hyperlink{toc}{Interior Structure}} \label{sec: Interior Structure}
 
 In this section, we will learn what types of interior structures that contact binaries can have. We will discuss the different energy transport mechanisms which operate inside contact binary systems.
 
-In stars, there are two primary mechanisms of energy transport:
-
-1. Radiation (Radiative Transport): In Radiative Transport, energy is able to leave the star through the dispersion of photons (electromagnetic energy) through the stellar medium (which is mostly Hydrogen gas). \\
-
-2. Convection (Convective Transport): Convective Transport occurs when Radiative Transport is not efficient enough to transport the energy out of the star. In convection, energy is transferred through the physical motion of the stellar medium. \\
+In stars, there are two primary mechanisms of energy transport: In Radiative Transport, energy is able to leave the star through the dispersion of photons (electromagnetic energy) through the stellar medium (which is mostly Hydrogen gas). Convective Transport occurs when Radiative Transport is not efficient enough to transport the energy out of the star. In convection, energy is transferred through the physical motion of the stellar medium. \\
 
 \begin{figure}[H]
 \centering
@@ -638,11 +605,11 @@ Absolute magnitudes \citep{rucinski1997absolute}
 
 \subsection[Mechanisms of Formation]{\hyperlink{toc}{Mechanisms of Formation}}
 
-Like any astronomical object made up of stars, the starting point in the life of contact binaries is a cold cloud of interstellar gas (which is primarily hydrogen). The gas cloud would like to contract upon itself because of its own gravity, but cannot, because it is supported by its own gas pressure. As the cloud cools (by radiating its energy into the surrounding space), its internal gas pressure decreases and the cloud is allowed to contract. Eventually, the cloud collapses into a small enough space that the temperature and pressure start to increase at the cloud's center. When temperatures get high enough for nuclear fusion to occur, the protostar can support itself against further collapse. 
+Like any astronomical object made up of stars, the starting point in the life of contact binaries is a cold cloud of interstellar gas (which is primarily hydrogen). The gas cloud would like to contract upon itself because of its own gravity, but cannot, because it is supported by its own gas pressure. As the cloud cools (by radiating its energy into the surrounding space), its internal gas pressure decreases and the cloud is allowed to contract. Eventually, the cloud collapses into a small enough space that the temperature and pressure start to increase at the cloud's center. When temperatures get high enough for nuclear fusion to occur, the protostar can support itself against further collapse. At the onset of nuclear fusion, we say that the protostar has become a star, at Zero Age Main Sequence\index{Zero-Age Main Sequence} or (ZAMS)\index{ZAMS}.  
 
-At the onset of nuclear fusion, we say that the protostar has become a star, at Zero Age Main Sequence\index{Zero-Age Main Sequence} or (ZAMS)\index{ZAMS}.  
- 
-Formed in Contact. \citet{lucy1968structure} was incorrect in assuming that contact systems exist at Zero Age Main Sequence (ZAMS).
+Early theories of contact binary formation posited that contact systems could form in contact \citet{lucy1968structure}. However, the symmetry and precise amount of required angular momentum rendered this formation path unlikely. Instead, it is much more likely that contact binaries start as two separate main-sequence stars which gradually fall into a contact configuration.
+
+Indeed, binary stars are abundant in our galaxy, with over half of all stars being part of a binary or multiple system \citep{carroll2006introduction}. What causes a binary star to become a contact binary? The answer is always angular momentum loss, or AML\index{angular momentum loss, AML}. The system of two stars in orbit looses angular momentum, resulting in an orbit with a smaller semi-major axis
 
 \citep{yildiz2013origin}
 
@@ -674,7 +641,7 @@ T_{\text{Kozai}} = 2 \pi \frac{\sqrt{GM}}{G m_{2}} \frac{a_{2}^{3}}{a^{\frac{3}{
 
 \subsection[Evolution in the Contact State]{\hyperlink{toc}{Evolution in the Contact State}}
 
-As we learned in \S\ref{sec: ZAMS to TAMS}, the characteristics of a main-sequence star change as it progresses through its main-sequence lifetime. 
+As we learned in \S\ref{sec: ZAMS to TAMS}, the characteristics of a main-sequence star change as it progresses through its main-sequence lifetime. As a main-sequence star progresses from ZAMS to TAMS\index{ZAMS}\index{TAMS}, its radius increases slightly, and its photosphere becomes  
 
 Thermal Relaxation Oscillations \citep{wang1994thermal}. May cause orbital period changes observed in \citet{qian2001orbital}.
 
@@ -699,8 +666,6 @@ Short period limit \citep{rucinski2007short} \citep{drake2014ultra} \cite{lohr20
 \subsection[Evolution out of the Contact State]{\hyperlink{toc}{Evolution out of the Contact State}}
 
 It is generally accepted that the contact state of binary evolution ends with the inspiral and merger of the two components. The merger event is where the contact system becomes dynamically unstable, and rapidly coalesces into a single, rapidly rotating star. 
-
-The tidal interaction between the two components of a contact binary star.
 
 To understand when and why the contact state comes to an end, we must understand the range of conditions over which the contact state is stable.
 
@@ -896,7 +861,11 @@ This means that the light-curve of a system with two (relatively) small and cool
 
 \subsection[Spectra of Contact Binaries]{\hyperlink{toc}{Spectra of Contact Binaries}} \label{sec: Spectra of Contact Binaries}
 
-time-series spectra are some of the most complete observations of contact binaries. 
+Time-series spectra are some of the most complete observations of contact binaries. By fitting a blackbody curve to the spectrum of a star, we can calculate its temperature to greater precision than we can by using color filters. In addition, spectral features of a known wavelength can be used to measure the velocity of the source. Contact binaries are rapidly rotating systems, which causes spectral lines to be broadened. The analysis of the rotational velocities of contact binaries is especially challenging because unlike some binary systems, the two components are of approximately equal brightness.
+
+\citep{hrivnak1989radial} radial velocities and IR data of OO Aql.
+
+Analyzing spectra of contact binaries is challenging. Abundances of elements cannot be determined precisely due to the broadening and blending of spectral lines caused by the fast rotation \citep{gazeas2006masses}. 
 
 \begin{figure}[H]
 \centering
@@ -905,9 +874,6 @@ time-series spectra are some of the most complete observations of contact binari
 \label{fig: PTFS1622am_DBSP}
 \end{figure}
 
-\citep{hrivnak1989radial} radial velocities and IR data of OO Aql.
-
-Analyzing spectra of contact binaries is challenging. Abundances of elements cannot be determined precisely due to the broadening and blending of spectral lines caused by the fast rotation \citep{gazeas2006masses}. 
 
 \subsection[X-ray and Ultraviolet Data on Contact Binaries]{\hyperlink{toc}{X-ray and Ultraviolet Data on Contact Binaries}} \label{sec: X-ray and Ultraviolet Data on Contact Binaries}
 
@@ -1120,6 +1086,8 @@ This work was submitted to the Monthly Notices of the Royal Astronomical Society
 
 \section[Paper II: Geometrical Parameters]{\hyperlink{toc}{Paper II: Geometrical Parameters}} \label{sec: Paper II: Geometrical Parameters}
 
+We hope to detect systems for which the light-curve shape is not explainable by Roche-geometry. We will do this by deriving a set of measurements that describe the shape of a light-curve. We will then measure optical light-curves of contact binaries from the CRTS variable sources catalog, and then we will measure a set of theoretical models published in \citet{rucinski1993light}. 
+
 \subsection[Light-curve Features]{Light-curve Features} \label{sec: Light-curve Features}
 
 In order to understand how the light-curves change as a function of temperature, we must first figure out a way to describe a light-curve in a way that makes sense, both to humans and computers. In data science, this problem is called ``feature selection" \index{feature selection}. Let's consider what our light curve data actually is: a set of measurements of the flux of a contact binary. These measurements are taken at a certain time ($t$), have a certain value, in our case a measurement of flux ($f$), and this measured value has an associated error ($e$). From CRTS, we obtain lots of these measurements. Our light curve looks like this:
@@ -1234,12 +1202,11 @@ The following light-curve features have units of time. $P_{\text{h1}}$ and $P_{\
 \text{h2width} = P_{\text{h2}} - P_{\text{h2}}  \\
 \end{multline}
 
-
-\cite{o1951so}
-
 \section[Paper III: Optical and UV Variability]{\hyperlink{toc}{Paper III: Optical and UV Variability}} \label{sec: Paper III: Optical and UV Variability}
 
-In our study, we aim to learn how the luminosity of contact binary systems vary on decadal timescales. In \S\ref{lc_morph} we talked about the light-curve as if it was one single function. In actuality, the shape of contact binary light-curves change over time (Eqn. \ref{light_curve_redux}). 
+In our study, we aim to learn how the luminosity of contact binary systems vary on decadal timescales. We hope to learn the relationship between the UV-color of a contact binary, and its optical variability. 
+
+In \S\ref{lc_morph} we talked about the light-curve as if it was one single function. In actuality, the shape of contact binary light-curves change over time (Eqn. \ref{light_curve_redux}). 
 
 \begin{equation} \label{eqn: light_curve_redux}
 f(\text{Phase, Time}) = \text{ Flux Received at Telescope}
@@ -1247,7 +1214,9 @@ f(\text{Phase, Time}) = \text{ Flux Received at Telescope}
 
 We can detect light-curve changes with a survey that observes the same set of contact binaries over a timespan of several years (like CRTS). In order to detect changes in the contact binary light-curve in CRTS data, we will re-use much of the machinery that we have developed in \S\ref{lc_morph}.
 
-We detect deviations of the light-curve with respect to the harmonic fit performed on all CRTS observations. We can consider the harmonic the ``average" light-curve of the contact binary during the eight-year CRTS observation timespan. This is because the CRTS measurements are randomly, (but uniformly) sampled in time, and the harmonic fit assigns equal weight to every measurement.
+We detect deviations of the light-curve with respect to the harmonic fit performed on all CRTS observations. We can consider the harmonic the ``average" light-curve of the contact binary during the eight-year CRTS observation timespan. This is because the CRTS measurements are randomly, (but uniformly) sampled in time, and the harmonic fit assigns equal weight to every measurement. 
+
+We can measure the difference between observations and the harmonic fit as a function of time. If this difference becomes too large to attribute to photometric noise, we know that the contact binary is changing its brightness over a timespan of many years.
 
 
 \citep{bradstreet1988mapping}

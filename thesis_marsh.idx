@@ -9,8 +9,9 @@
 \indexentry{Hertzprung-Russell Diagram|hyperpage}{13}
 \indexentry{equations of stellar structure|hyperpage}{13}
 \indexentry{pp-chain|hyperpage}{14}
+\indexentry{CNO-cycle|hyperpage}{14}
 \indexentry{Zero-age main-sequence|hyperpage}{15}
-\indexentry{ZAMS, Zero-Age Main-Sequence|hyperpage}{16}
+\indexentry{ZAMS, Zero-Age Main-Sequence|hyperpage}{15}
 \indexentry{TAMS, Terminal-Age Main-Sequence|hyperpage}{16}
 \indexentry{solar metallicity|hyperpage}{16}
 \indexentry{Inner Jacobi Equipotential|hyperpage}{19}
@@ -18,21 +19,21 @@
 \indexentry{Roche equipotential|hyperpage}{20}
 \indexentry{mass ratio|hyperpage}{20}
 \indexentry{fill-out factor|hyperpage}{20}
-\indexentry{Zero-Age Main Sequence|hyperpage}{28}
-\indexentry{ZAMS|hyperpage}{28}
+\indexentry{Zero-Age Main Sequence|hyperpage}{27}
+\indexentry{ZAMS|hyperpage}{27}
 \indexentry{Kozai-Lidov mechanism|hyperpage}{28}
 \indexentry{Early-Type|hyperpage}{31}
-\indexentry{Initial Mass Function|hyperpage}{32}
+\indexentry{Initial Mass Function|hyperpage}{31}
+\indexentry{light-curve|hyperpage}{36}
+\indexentry{Algol|hyperpage}{36}
 \indexentry{$\beta $ Lyrae|hyperpage}{36}
-\indexentry{light-curve|hyperpage}{37}
-\indexentry{Algol|hyperpage}{37}
-\indexentry{Wilson-Devinney Code|hyperpage}{40}
-\indexentry{mass ratio, $q$|hyperpage}{41}
-\indexentry{\texttt{ROCHE} code|hyperpage}{41}
+\indexentry{Wilson-Devinney Code|hyperpage}{39}
+\indexentry{mass ratio, $q$|hyperpage}{40}
+\indexentry{\texttt{ROCHE} code|hyperpage}{40}
 \indexentry{$L_{2}$|hyperpage}{42}
 \indexentry{time-series|hyperpage}{44}
-\indexentry{Fourier Transform|hyperpage}{45}
+\indexentry{Fourier Transform|hyperpage}{44}
 \indexentry{feature selection|hyperpage}{62}
 \indexentry{Lomb-Scargle algorithm|hyperpage}{62}
-\indexentry{photon counting|hyperpage}{66}
+\indexentry{photon counting|hyperpage}{67}
 \indexentry{gphoton|hyperpage}{67}
