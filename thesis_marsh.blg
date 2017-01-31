@@ -3,78 +3,50 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis_marsh.aux
 The style file: plainnat.bst
 Database file #1: thesis_bib.bib
-Warning--entry type for "spineda2005homology" isn't style-file defined
---line 43 of file thesis_bib.bib
 Warning--entry type for "sluys2006roche" isn't style-file defined
---line 499 of file thesis_bib.bib
-Warning--I didn't find a database entry for "segransan2003first"
-Warning--I didn't find a database entry for "kippenhahn1970simple"
-Warning--I didn't find a database entry for "paczynski1971evolutionary"
-Warning--I didn't find a database entry for "eggleton1983approximation"
-Warning--I didn't find a database entry for "rucinski2001photometric"
-Warning--I didn't find a database entry for "von1924radiative.bib"
-Warning--I didn't find a database entry for "hendry1998detection"
-Warning--I didn't find a database entry for "kahler2002structure"
-Warning--I didn't find a database entry for "awadalla2005absolute"
-Warning--I didn't find a database entry for "arbutina2009possible"
-Warning--I didn't find a database entry for "arbutina2009"
-Warning--I didn't find a database entry for "priya2013photometric"
-Warning--I didn't find a database entry for "rucinski1998extreme"
-Warning--I didn't find a database entry for "gazeas2006modeling"
-Warning--I didn't find a database entry for "hrivnak1989radial"
-Warning--I didn't find a database entry for "cruddace1984contact"
-Warning--I didn't find a database entry for "vilhu1987chromospheric"
-Warning--I didn't find a database entry for "lucy1968contact"
-Warning--I didn't find a database entry for "gimenez2006close"
-Warning--I didn't find a database entry for "pribulla2012roche"
-Warning--I didn't find a database entry for "van1985contribution"
-Warning--I didn't find a database entry for "rucinski1993light"
-Warning--I didn't find a database entry for "terrell2005photometric"
-Warning--I didn't find a database entry for "hambalek2013"
-Warning--I didn't find a database entry for "mccale1996rosat"
-Warning--to sort, need author or key in spineda2005homology
+--line 703 of file thesis_bib.bib
 Warning--empty journal in bradstreet1988mapping
 Warning--empty publisher in carroll2006introduction
 Warning--empty journal in pringle1985interacting
-You've used 125 entries,
+You've used 141 entries,
             2773 wiz_defined-function locations,
-            1262 strings with 26778 characters,
-and the built_in function-call counts, 64477 in all, are:
-= -- 5453
-> -- 4702
-< -- 70
-+ -- 1602
-- -- 1473
-* -- 5660
-:= -- 10232
-add.period$ -- 373
-call.type$ -- 125
-change.case$ -- 843
-chr.to.int$ -- 121
-cite$ -- 255
-duplicate$ -- 2591
-empty$ -- 4688
-format.name$ -- 1645
-if$ -- 13141
-int.to.chr$ -- 5
+            1320 strings with 28016 characters,
+and the built_in function-call counts, 71573 in all, are:
+= -- 6150
+> -- 4953
+< -- 90
++ -- 1691
+- -- 1545
+* -- 6153
+:= -- 11291
+add.period$ -- 426
+call.type$ -- 141
+change.case$ -- 916
+chr.to.int$ -- 136
+cite$ -- 285
+duplicate$ -- 2963
+empty$ -- 5354
+format.name$ -- 1750
+if$ -- 14678
+int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 127
-newline$ -- 631
-num.names$ -- 496
-pop$ -- 1573
+missing$ -- 144
+newline$ -- 712
+num.names$ -- 564
+pop$ -- 1704
 preamble$ -- 1
-purify$ -- 724
+purify$ -- 780
 quote$ -- 0
-skip$ -- 2099
+skip$ -- 2362
 stack$ -- 0
-substring$ -- 2150
-swap$ -- 187
-text.length$ -- 10
+substring$ -- 2553
+swap$ -- 234
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1350
-warning$ -- 4
-while$ -- 537
+type$ -- 1526
+warning$ -- 3
+while$ -- 623
 width$ -- 0
-write$ -- 1608
-(There were 31 warnings)
+write$ -- 1824
+(There were 4 warnings)
