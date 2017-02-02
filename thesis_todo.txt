@@ -14,6 +14,7 @@ o 2.2.5 The Roche Potential
 	-add conclusion and fix first formula.
 o 2.2.6 The Geometrical Elements of Contact Binary Systems
 o 2.2.7 Thermal Equilibrium Models 
+	-rewrite the majority of this section.
 	-discuss lucy model
 	-some scientists no longer believe the roche model is adequate.
 o 2.2.8 Surface Brightness
@@ -26,5 +27,12 @@ o 4.3 O-C Analysis
 o 5 Working with Survey Data
 	-explain the characteristics of CRTS data.
 
-Thurs, Jan 26th. 
+By Thurs, Mar. 9th
+o Finish all of Section 2
+By Thurs, Mar. 28th
+o Finish all of Section 3 and 4
+By Thurs, Apr. 6th
+o Finish Section 5
+By THurs, Apr. 20th
+o Finish Section 6, completing the first draft.
 
