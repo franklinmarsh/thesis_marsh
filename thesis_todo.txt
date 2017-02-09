@@ -7,7 +7,7 @@ o 2.2.1 The Main-Sequence Star
 o 2.2.2 The Main-Sequence Homology Relations
 	-fix example, because proxima centauri is a bad example. Use Tau Ceti, instead. 0.55L_sun
 o 2.2.3 ZAMS to TAMS
-	-find percentage change in radius / temperature from ZAMS to TAMS.
+	-proofread and spell-check
 o 2.2.4 Metallicity
 	-Clean writing and check for typos, otherwise good.
 o 2.2.5 The Roche Potential 
@@ -26,6 +26,10 @@ o 4.3 O-C Analysis
 	-Relate period change to M dot using equations from existing literature.
 o 5 Working with Survey Data
 	-explain the characteristics of CRTS data.
+
+COMPLETED
+ 2.2.3 ZAMS to TAMS
+	-find percentage change in radius / temperature from ZAMS to TAMS.
 
 By Thurs, Mar. 9th
 o Finish all of Section 2

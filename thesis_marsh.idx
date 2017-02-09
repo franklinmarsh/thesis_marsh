@@ -1,51 +1,58 @@
-\indexentry{transients|hyperpage}{6}
-\indexentry{supernova|hyperpage}{6}
-\indexentry{solar-stellar connection|hyperpage}{6}
-\indexentry{standard candle|hyperpage}{7}
-\indexentry{Z\"ollner's photometer|hyperpage}{9}
-\indexentry{Potsdam Observatory|hyperpage}{9}
-\indexentry{M\"uller, Karl Hermann Gustav|hyperpage}{9}
-\indexentry{Kempf, Paul Friedrich Ferdinand|hyperpage}{9}
-\indexentry{Hertzprung-Russell Diagram|hyperpage}{13}
-\indexentry{equations of stellar structure|hyperpage}{13}
-\indexentry{pp-chain|hyperpage}{14}
-\indexentry{CNO-cycle|hyperpage}{14}
-\indexentry{Zero-age main-sequence|hyperpage}{15}
-\indexentry{ZAMS, Zero-Age Main-Sequence|hyperpage}{15}
-\indexentry{TAMS, Terminal-Age Main-Sequence|hyperpage}{15}
-\indexentry{solar metallicity|hyperpage}{17}
-\indexentry{Inner Jacobi Equipotential|hyperpage}{19}
-\indexentry{Jacobi equipotentials|hyperpage}{20}
-\indexentry{Roche equipotential|hyperpage}{20}
-\indexentry{mass ratio|hyperpage}{20}
-\indexentry{fill-out factor|hyperpage}{21}
-\indexentry{radial mixing|hyperpage}{25}
-\indexentry{opacity \kappa|hyperpage}{27}
+\indexentry{transients|hyperpage}{5}
+\indexentry{supernova|hyperpage}{5}
+\indexentry{solar-stellar connection|hyperpage}{5}
+\indexentry{standard candle|hyperpage}{6}
+\indexentry{Z\"ollner's photometer|hyperpage}{8}
+\indexentry{Potsdam Observatory|hyperpage}{8}
+\indexentry{M\"uller, Karl Hermann Gustav|hyperpage}{8}
+\indexentry{Kempf, Paul Friedrich Ferdinand|hyperpage}{8}
+\indexentry{Hertzprung-Russell Diagram|hyperpage}{12}
+\indexentry{equations of stellar structure|hyperpage}{12}
+\indexentry{pp-chain|hyperpage}{13}
+\indexentry{CNO-cycle|hyperpage}{13}
+\indexentry{Zero-age main-sequence|hyperpage}{14}
+\indexentry{ZAMS, Zero-Age Main-Sequence|hyperpage}{14}
+\indexentry{TAMS, Terminal-Age Main-Sequence|hyperpage}{14}
+\indexentry{solar metallicity|hyperpage}{16}
+\indexentry{Inner Jacobi Equipotential|hyperpage}{18}
+\indexentry{Jacobi equipotentials|hyperpage}{19}
+\indexentry{Roche equipotential|hyperpage}{19}
+\indexentry{mass ratio|hyperpage}{19}
+\indexentry{fill-out factor|hyperpage}{20}
+\indexentry{radial mixing|hyperpage}{24}
+\indexentry{opacity \kappa|hyperpage}{26}
 \indexentry{orbital period|hyperpage}{27}
 \indexentry{period-color relation|hyperpage}{27}
 \indexentry{ZAMS|hyperpage}{28}
 \indexentry{ZAMS, Zero-age main-sequence|hyperpage}{29}
+\indexentry{frequency|hyperpage}{30}
+\indexentry{density|hyperpage}{30}
 \indexentry{Zero-Age Main Sequence|hyperpage}{31}
 \indexentry{ZAMS|hyperpage}{31}
 \indexentry{angular momentum loss, AML|hyperpage}{31}
-\indexentry{solar wind|hyperpage}{31}
+\indexentry{mass transfer|hyperpage}{31}
+\indexentry{solar wind|hyperpage}{32}
 \indexentry{Kozai-Lidov mechanism|hyperpage}{32}
-\indexentry{pp-chain|hyperpage}{32}
-\indexentry{ZAMS|hyperpage}{32}
-\indexentry{TAMS|hyperpage}{32}
-\indexentry{red nova|hyperpage}{33}
-\indexentry{Early-Type|hyperpage}{36}
-\indexentry{Initial Mass Function|hyperpage}{36}
-\indexentry{$\beta $ Lyrae|hyperpage}{40}
-\indexentry{light-curve|hyperpage}{41}
-\indexentry{Algol|hyperpage}{41}
-\indexentry{Wilson-Devinney Code|hyperpage}{44}
-\indexentry{mass ratio, $q$|hyperpage}{44}
-\indexentry{\texttt{ROCHE} code|hyperpage}{44}
-\indexentry{$L_{2}$|hyperpage}{46}
-\indexentry{time-series|hyperpage}{48}
-\indexentry{Fourier Transform|hyperpage}{48}
-\indexentry{feature selection|hyperpage}{66}
-\indexentry{Lomb-Scargle algorithm|hyperpage}{66}
-\indexentry{photon counting|hyperpage}{71}
-\indexentry{gphoton|hyperpage}{71}
+\indexentry{pp-chain|hyperpage}{33}
+\indexentry{ZAMS|hyperpage}{33}
+\indexentry{TAMS|hyperpage}{33}
+\indexentry{Thermal Relaxation Oscillation|hyperpage}{34}
+\indexentry{fill-out factor $f$|hyperpage}{35}
+\indexentry{red nova|hyperpage}{36}
+\indexentry{black holes|hyperpage}{38}
+\indexentry{Early-Type|hyperpage}{39}
+\indexentry{Initial Mass Function|hyperpage}{39}
+\indexentry{Common Convective Envelope|hyperpage}{39}
+\indexentry{$\beta $ Lyrae|hyperpage}{43}
+\indexentry{light-curve|hyperpage}{44}
+\indexentry{Algol|hyperpage}{44}
+\indexentry{Wilson-Devinney Code|hyperpage}{47}
+\indexentry{mass ratio, $q$|hyperpage}{47}
+\indexentry{\texttt{ROCHE} code|hyperpage}{47}
+\indexentry{$L_{2}$|hyperpage}{49}
+\indexentry{time-series|hyperpage}{51}
+\indexentry{Fourier Transform|hyperpage}{51}
+\indexentry{feature selection|hyperpage}{69}
+\indexentry{Lomb-Scargle algorithm|hyperpage}{69}
+\indexentry{photon counting|hyperpage}{74}
+\indexentry{gphoton|hyperpage}{74}
