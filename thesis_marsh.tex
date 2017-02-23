@@ -171,8 +171,7 @@ Asteroids were discovered by the thousands. The rate of supernova discovery acce
 
 In the 21st century, we can study thousands of contact binary systems at once, using data from all-sky surveys. This approach presents huge advantages over taking painstaking observations of single contact binary systems. Due to the sheer number of systems studied, conclusions about contact binary behavior can be supported by robust statistics. However, there are also weaknesses to this approach. Many of the techniques that have been developed for extracting physical information out of observational data do not work well with survey data, because survey data tends to be of lower quality. We are forced to develop new techniques, and ask different questions.
 
-In \S \ref{sec: background} I provide a brief history of the discovery of the first contact binary star, and outline major leaps of understanding in the field. In \S\ref{sec: observations}, I discuss the types of observations that can be used to learn about contact systems. In \S\ref{sec: analysis_techniques}, I describe some ways that astronomers use models to convert raw observational data into measurements of physical parameters. We are introduced to survey data in \S\ref{sec: Working with Survey Data}. I then present original research that I have undertaken with Dr. Tom Prince, Dr. Ashish Mahabal, Dr. Eric Bellm, and Dr. Andrew Drake at the California Institute of Technology. In \S\ref{sec: The Future}, I provide three projects that a student can undertake right now to continue the study of contact binary stars.
-
+In \S \ref{sec: theory} I provide a brief history of the discovery of the first contact binary star, and outline major leaps of understanding in the field. In \S\ref{sec: observations}, I discuss the types of observations that can be used to learn about contact systems. In \S\ref{sec: analysis_techniques}, I describe some ways that astronomers use models to convert raw observational data into measurements of physical parameters. We are introduced to survey data in \S\ref{sec: Working with Survey Data}. I then present original research that I have undertaken with Dr. Tom Prince, Dr. Ashish Mahabal, Dr. Eric Bellm, and Dr. Andrew Drake at the California Institute of Technology. In \S\ref{sec: The Future}, I provide three projects that a student can undertake right now to continue the study of contact binary stars.
 
 In this thesis, my main objectives are: \\
 
@@ -180,11 +179,9 @@ In this thesis, my main objectives are: \\
 2. To provide an example of how we can adapt techniques developed during the age of ``data-poor" astronomy to ``data-rich" astronomy. \\
 3. To provide a roadmap that a future student can use to continue this work. \\
 
-\section[The Contact Binary Star]{\hyperlink{toc}{The Contact Binary Star}} \label{sec: background}
+\section[Theory]{\hyperlink{toc}{Theory}} \label{sec: Theory}
 
 \subsection[\emph{Discovery}]{\hyperlink{toc}{Discovery}}
-
-Q: \emph{How was the first contact binary star discovered?}
 
 To understand the history of the study of contact binaries, we must start at the source: the advent of a precise way of measuring the brightness of a celestial object.  
 
@@ -234,8 +231,6 @@ This passage marks the beginning of the study of contact binary stars. In this t
 
 %``The members of cluster and companions in wide visual pairs, plus the available spectroscopic data show that the contact systems have a total luminosity and mass that is equivalent to two equal stars of the observed colour."
 
-\subsection[Physical Characteristics]{\hyperlink{toc}{Physical Characteristics}}
-
 %\emph{Q: What are contact binaries made of? How do contact binaries generate their luminosity? Why are contact binaries shaped like peanuts? How are eclipsing binaries classified? How common are contact binaries compared to all main-sequence stars? How do contact binaries form? How do contact binaries evolve over their lifetime? What is the ultimate fate of a contact binary? What do we know about the most massive contact binaries? What are some interesting magnetic phenomena that occur on contact binaries?  }
 
 In this section, we will gain a physical understanding of contact binary systems. Contact binary stars are made up of two main-sequence stars. In \S \ref{sec: The Main-Sequence Star} we will understand what main-sequence stars are like on the inside, how energy is generated in the cores of main-sequence stars, and how this energy is transported to their surfaces.
@@ -246,7 +241,7 @@ In \S \ref{sec: Frequency and Density}, we will learn how common contact binary 
 
 In \S \ref{sec: Mechanisms of Formation}, we will learn how contact binaries are formed. We will be introduced to the concepts of angular momentum loss (AML), and Kozai-Lidov cycles. In \S\ref{sec: Evolution in the Contact State}, we will learn how contact binaries evolve during their lifetimes. We will see how this evolution can drive changes in the observable properties of contact binary systems.
 
-\subsubsection[The Main-Sequence Star]{\hyperlink{toc}{The Main-Sequence Star}} \label{sec: The Main-Sequence Star}
+\subsection[The Main-Sequence Star]{\hyperlink{toc}{The Main-Sequence Star}} \label{sec: The Main-Sequence Star}
 
 In order to understand the internal structure of contact binaries, we must first understand the structure of their two components: main-sequence stars.  The main sequence was an empirically derived group: When astronomers started recording the luminosity and color of large numbers of stars, they observed that most stars obeyed a relationship between luminosity and color. This relationship can be visualized in an \emph{Hertzprung-Russell Diagram} (or H-R \index{Hertzprung-Russell Diagram} Diagram), like Figure \ref{fig: carroll2006introduction_8_13}. They called the main cluster of points on this diagram the ``Main Sequence". The most familiar example of a main sequence star is our Sun. When a star is fusing hydrogen into helium at its core, we say that it is on the main sequence.
 
@@ -288,7 +283,7 @@ Energy is generated at the core of low-mass main sequence stars via the Proton-P
 
 At temperatures near the temperature of the solar core, the efficiency of the pp-chain $\epsilon$ is proportional to $T^{4}$, so hotter stars can get more energy out of the pp-chain. For stars with higher core temperatures than the sun, another reaction (the CNO-cycle\index{CNO-cycle}) becomes much more efficient than the pp-chain. Through the conversion of mass to energy via the pp-chain, low-mass main-sequence stars shine. For the rest of this thesis, we can treat the core of the main-sequence star as a ``black-box" which pumps energy into the outer layers of the star.
 
-\subsubsection[The Main-Sequence Homology Relations]{\hyperlink{toc}{The Main-Sequence Homology Relations}} \label{sec: The Main-Sequence Homology Relations}
+\subsection[The Main-Sequence Homology Relations]{\hyperlink{toc}{The Main-Sequence Homology Relations}} \label{sec: The Main-Sequence Homology Relations}
 
 The Main-Sequence Homology Relations (sometimes called the Main-Sequence Scaling Relations) are relationships between the Luminosity $L$, Mass $M$, Radius $R$, and temperature $T$ of Zero-age main-sequence\index{Zero-age main-sequence} (ZAMS) stars. These relationships exist because main sequence stars with the same reaction mechanism at their cores (e.g. the pp-chain) are homologous. Two stars that both produce the vast majority of their energy through the pp-chain and obey the same equations of stellar structure, have homologous structures, i.e. the smaller star is just a ``scaled-down" version of the larger star.
 
@@ -311,10 +306,10 @@ Of the three observables ($L, R, T$), luminosity $L$ has the strongest dependenc
 For example, if I told you that ``The mass of Tau Ceti is about 0.78 $M_{\odot}$", and asked you to calculate the luminosity of Tau Ceti, you would perform the following calculation:
 
 \begin{equation} \label{homology_ex}
-\Big( \frac{M_{\text{tau ceti}}}{M_{\odot}} \Big) = 0.78 \qquad \Big( \frac{L_{\text{tau ceti}}}{L_{\odot}} \Big) = \Big( \frac{M_{\text{tau ceti}}}{M_{\odot}} \Big)^{5.5} = 0.78^{5.5} \approx 9 \times 10^{-6} L_{\odot}
+\Big( \frac{M_{\text{tau ceti}}}{M_{\odot}} \Big) = 0.78 \qquad \Big( \frac{L_{\text{tau ceti}}}{L_{\odot}} \Big) = \Big( \frac{M_{\text{tau ceti}}}{M_{\odot}} \Big)^{5.5} = 0.78^{5.5} \approx 0.25 L_{\odot}
 \end{equation}
 
-\subsubsection[ZAMS to TAMS]{\hyperlink{toc}{ZAMS to TAMS}} \label{sec: ZAMS to TAMS}
+\subsection[ZAMS to TAMS]{\hyperlink{toc}{ZAMS to TAMS}} \label{sec: ZAMS to TAMS}
  
 The observable characteristics of main sequence stars change slightly throughout their time on the main sequence. When a protostar starts fusing hydrogen into helium, we say that it as reached \emph{ZAMS},\index{ZAMS, Zero-Age Main-Sequence} which stands for Zero-Age Main-Sequence. When the hydrogen in the core of the main-sequence star is depleted, it must burn other elements to remain stable. When the core of the star uses the last of its hydrogen, we say that the star has reached \emph{TAMS},\index{TAMS, Terminal-Age Main-Sequence} which stands for Terminal-Age Main-Sequence.
 
@@ -354,7 +349,7 @@ Using equations \ref{demircan1991stellar_2} and \ref{demircan1991stellar_3}, we 
 
 We can see that at TAMS, a low-mass main-sequence star's radius and luminosity have increased by a factor of over 2 , while the surface temperature drops to 75\% - 86\% of the ZAMS value. The changes in luminosity and radius that occur during the main-sequence have strong implications for the stability of contact binary systems.
 
-\subsubsection[Metallicity]{\hyperlink{toc}{Metallicity}} \label{sec: Metallicity}
+\subsection[Metallicity]{\hyperlink{toc}{Metallicity}} \label{sec: Metallicity}
 
 By far, the parameter that has the largest effect on the stellar observables is the mass. However the chemical composition of a star can also influence its observables. Astronomers will use a simplified system consisting of three numbers $[X,Y,Z]$ to refer to the chemical composition of a star:
 
@@ -367,7 +362,7 @@ When astronomers refer to ``Metallicity", they are often referring to $Z$: the f
 
 Metallicity influences the observables of main-sequence stars through affecting the opacity $\kappa$ of the stellar material. In general, stars with a higher metallicity $z$ also have a higher opacity $\kappa$. The increased opacity increases the effect of radiation pressure on the outer layers of stars, causing stars with higher metallicities to also have a larger radius.
 
-\subsubsection[The Roche Potential]{\hyperlink{toc}{The Roche Potential}} \label{sec: The Roche Potential}
+\subsection[The Roche Potential]{\hyperlink{toc}{The Roche Potential}} \label{sec: The Roche Potential}
 
 In the equations of stellar structure, there is a hidden assumption. These time-independent equations of stellar structure assume that the stellar matter exists in the potential of a point mass:
 
@@ -434,7 +429,7 @@ We can use the Cartesian Roche potential (Equations \ref{eqn: roche1} and \ref{e
 
 where $A$ is the separation between the two components
 
-\subsubsection[The Geometrical Elements of Contact Binary Systems]{\hyperlink{toc}{The Geometrical Elements of Contact Binary Systems}} \label{sec: The Geometrical Elements of Contact Binary Systems}
+\subsection[The Geometrical Elements of Contact Binary Systems]{\hyperlink{toc}{The Geometrical Elements of Contact Binary Systems}} \label{sec: The Geometrical Elements of Contact Binary Systems}
 
 In the previous section, we have learned how to differentiate contact binary systems from the other types of eclipsing binary stars. In this section, we will learn how to describe specific contact binaries in terms of their geometrical elements. When we refer to the geometry of the contact binary system, we are really referring to the geometry of its photosphere. The vast majority of what we know of contact binary systems comes from their visible light-curves, which is why there is the convention of treating the photosphere as the ``boundary" of the system. Astronomers have developed a set of geometrical elements that can describe the location of the photosphere with respect to the inner and outer Jacobi equipotentials\index{Jacobi equipotentials}\index{Roche equipotential}. 
 
@@ -470,7 +465,7 @@ The final element that is commonly reported is $i$, or the inclination of the co
 
 We will see how the shape of the contact binary light-curve can be used to estimate the system geometry as described by $[f,q,i]$ in \S\ref{sec: Physical Light-Curve Modeling} and \S\ref{sec: Nomographic Light-Curve Solutions}.
 
-\subsubsection[Thermal Equilibrium Models]{\hyperlink{toc}{Thermal Equilibrium Models}} \label{sec: Thermal Equilibrium Models}
+\subsection[Thermal Equilibrium Models]{\hyperlink{toc}{Thermal Equilibrium Models}} \label{sec: Thermal Equilibrium Models}
 
 The first thermal-equilibrium model of a contact-binary star was developed in the late 1960's \citep{lucy1968light, lucy1968structure}. The great triumph of the thermal-equilibrium model is that it adequately explained the observed shape of the contact binary light-curve. Thermal equlibirum models assume that the two components of a contact binary are in \emph{hydrostatic equilibrium}\index{hydrostatic equilibrium}. Under the condition of hydrostatic equilibrium, the gradient in the pressure $P$ is equal to the negative of the density $- \rho$ times the gradient in the potential $\nabla \Psi$. 
 
@@ -491,6 +486,13 @@ Remember that both components of the contact binary are main-sequence stars, and
 \end{equation}
 
 If we set $T_{1} = T_{2}$ in Eqn. \ref{homology_T_reprint}, we can see that for thermal equilibrium, it is necessary that $M_{1} = M_{2}$. However, spectroscopic measurements indicate that the two components of a contact binary system (almost always) do \emph{not} have equal-mass: $M_{1} \neq M_{2}$. In systems with $M_{1} \neq M_{2}$, the secondary (the currently less massive component) should have a lower temperature than the primary, if both components follow the main sequence homology relations.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{lucy1979observational_3.png}
+\caption{An early histogram of the mass-ratio distribution of contact binary stars. Even in this crude early data, it is shown that contact binaries prefer unequal component masses. Fig. 3 of \citet{lucy1979observational}.}
+\label{fig: lucy1979observational_3}
+\end{figure}
 
 This discrepancy means that energy must be exchanged between the two components of the contact binary in order to achieve hydrostatic equilibrium. This result is supported by observations: In Fig. \ref{fig: yildiz2013origin_1s}, we see the secondaries of many contact binaries plotted in the mass-luminosity plane, showing that the secondaries are significantly \emph{over-luminous}. In fact, \citet{mochnacki1981contact} has calculated that up to a third of the energy generated by the primary is transferred to the secondary.
 
@@ -1022,7 +1024,7 @@ Alternatives include \texttt{ROCHE} \index{\texttt{ROCHE} code} \citep{pribulla2
 
 As larger and larger numbers of contact binaries were discovered, astronomers saw the motivation for providing a less computationally-intensive way of determining a system's geometrical elements from light-curve data. In the nomographic method, the physical model of the contact binary is used in reverse (as compared to \S\ref{sec: Physical Light-Curve Modeling}). A grid of models is produced, covering the parameter space of system geometry $[f,q,i]$. Then, light-curves are generated for each model. The observed light-curve is then compared with a whole catalog of computed light-curves. 
 
-\citet{mochnacki1972model} was the first to propose a nomographic method. As large numbers of contact binary light-curves were being collected in the early 1990's, interest in nomographic solutions was revived. \citet{rucinski1993w} derived two methods, one based on a Fourier decomposition of the light-curve, and the other based on measuring the eclipse half-widths. It was found that for systems with a light-curve amplitude $A$ of great than 0.3 magnitudes, the fill-out factor $f$ could be calculated. Work with light-curves from the OGLE survey has determined a criterion for contact based on Fourier coefficients alone \citep{rucinski1997eclipsing}.
+\citet{mochnacki1972model} was the first to propose a nomographic method. As large numbers of contact binary light-curves were being collected in the early 1990's, interest in nomographic solutions was revived. \citet{rucinski1973w} derived two methods, one based on a Fourier decomposition of the light-curve, and the other based on measuring the eclipse half-widths. It was found that for systems with a light-curve amplitude $A$ of great than 0.3 magnitudes, the fill-out factor $f$ could be calculated. Work with light-curves from the OGLE survey has determined a criterion for contact based on Fourier coefficients alone \citep{rucinski1997eclipsing}.
 
 \citet{rucinski1993simple} calculated an array of contact binary light-curves for 1500 possible combinations of $(f,q,i)$ (Fig. \ref{fig:rucinski1993simple_6})
 
@@ -1175,6 +1177,91 @@ In the \citet{drake2014catalina} sample there are 30,743 binaries classified as 
 
 Our initial sample of contact binaries contains systems for which we both have time-series photometry (provided by CRTS), and a temperature measurement using ($g - r$) color (provided by SDSS).
 
+\subsection{Measuring Photospheric Temperature with SDSS} \label{sec: Measuring Photospheric Temperature with SDSS}
+
+In this section, we describe how we use SDSS $ugriz$ photometry to estimate the photospheric temperature of each contact binary.
+
+1. We define color cutoffs that eliminate systems with saturated SDSS $g$ and $r$ band photometry. A sizable fraction of the SDSS $g$ band photometry is saturated for $g < 15$. To remove the saturated photometry, we define colour limits based on the observed distribution of contact binary colors and remove systems outside of those limits. See Fig. 4 of \citet{marsh2016characterization}. 
+
+\begin{align} \label{color_cuts}
+\begin{split}
+(g - r) > 0.02*g - 0.4 \text{ (Red Limit)} \\ 
+(g - r) < 0.13*g - 0.9 \text{ (Blue Limit)}
+\end{split}
+\end{align} 
+
+Even though the vast majority of the systems lie far from the galactic plane ($l > 15^{\circ}$), the contact binaries in the sample are distant because this sample is fainter than the samples of most previous surveys. For this reason, we measure the photospheric temperature of each binary using extinction corrected SDSS $(g - r)$ photometry. We perform the extinction-correction process:
+
+2. We compute the Johnson $V$ magnitude of the system by using maximum $V_{CSS}$ magnitude, and the uncorrected SDSS $r$ and $i$ measurements, using calibrations from \citet{jester2005sloan} and \citet{hovatta2014connection}.
+
+\begin{equation}
+(V - R) = 0.96*(r-i) + 0.21
+\end{equation}
+
+\begin{equation}
+V = V_{CSS} + 0.91 \times(V - R)^{2} + 0.04
+\end{equation}
+
+3. We compute the distance modulus to each binary using the period-luminosity correlation calibrated by \citet{rucinski2006luminosity}. This luminosity calibration carries a $1\sigma$ uncertainty of $20\%$.
+
+\begin{equation}
+M_{V} = -1.5 - 12 \text{log } P
+\end{equation}
+
+4. We use the \citet{green2015three} three-dimensional dust map (derived from Pan-STARRS1 data) to find a distance and extinction combination such that the sum of the dimming due to distance and $V$ dimming due to extinction equals the difference between the system's absolute magnitude $M_{V}$ and computed $V$ magnitude.
+
+\begin{equation}
+A_{V} = 3.1*E(B-V)
+\end{equation}
+
+5. We take the $E(B-V)$ estimated in step 4, and convert it to extinctions the SDSS $g$ and $r$ bands using the calibrations in \citet{schlafly2011measuring}.
+
+\begin{equation}
+A_{g} = 3.303 \times E(B-V) \qquad A_{r} = 2.285 \times E(B-V)
+\end{equation}
+
+After these extinction corrections are applied, we then use the empirical calibration of SDSS $g - r$ color to temperature from \citet{fukugita2011characterization}:
+
+\begin{equation} \label{fukugita_cal}
+T_{\text{eff}}/10^{4}K = \frac{1.09}{(g-r) + 1.47}
+\end{equation}
+
+This calibration is valid for main-sequence stars with temperatures between 3850K and 8000K. This produces temperature results that have a median error of $\pm310$K
+
+\subsection{Flux Normalization and Phase Shifting} \label{sec: Flux Normalization and Phase Shifting}
+
+CRTS Photometry is reported in units of Catalina Sky Survey Magnitude $V_{CSS}$. For each contact binarysystem, we convert these magnitudes measurements into flux measurements, relative to the mean magnitude of all observations of the system. 
+
+\begin{equation} \label{css_flux}
+\text{Relative Flux }_{i} = \frac{10^{- \frac{V_{CSS,i}}{2.5}}}{10^{- \frac{\text{mean}(V_{CSS,i})}{2.5}}}
+\end{equation}
+
+\subsection{Light-Curve Harmonic Fitting} \label{sec: Light-Curve Harmonic Fitting}
+
+We perform a harmonic fit on each set of relative flux measurements (\S \ref{sec: Flux Normalization and Phase Shifting}), using the \texttt{gatspy} package \citep{vanderplas2015gatspy, vanderplas2015periodograms}. We start with six sine terms, and six cosine terms. We then count the number of local maxima and local minima on the fit. In a physical light-curve, we expect to see two local maxima, and two local minima. This has been known since the first viable physical model was used to compute light-curves \citep{lucy1968light}.
+
+If the harmonic fit does not have precisely two local maxima and two local minima, we try the fit again, this time with five sine and five cosine terms. If the fit fails yet again, we try with four sine and four cosine terms, and so on. Of the 11,138 light-curves where a fit was attempted, 8,994 were fit by six terms, 901 by five, 523 by four, 635 by three and 87 by two terms. 
+
+\subsubsection{Light-Curve Harmonic Fit Filters} \label{sec: Light-Curve Harmonic Fit Filters}
+
+Harmonic fits with at least four terms have been shown to approximate well the true shape of the contact binary light-curve \citep{rucinski1973w,rucinski1993simple}. However, it is not traditional in previous literature to approximate the shape of the contact binary light-curve with fewer than four Fourier terms.
+
+If a harmonic fit was reduced to three or fewer terms, the fit and corresponding system were discarded from the sample. From the 11,138 remaining after the filters described in \S\ref{sec: SDSS Photometry Data Cuts}, this filter removed 720 to leave 10,418. 
+
+Just because the harmonic fit has two local minima and two local maxima does not mean that it is a good approximation of the data. To separate light-curves that fit the observed data well from erroneous fits, we define a goodness-of-fit criterion:
+
+\begin{equation} \label{gof}
+\text{GOF} = \text{ standard deviation}\Bigg( \frac{\text{Residual}}{\text{Residual Error}}\Bigg)
+\end{equation}
+
+Assuming gaussian residuals, observed data that is completely described by the harmonic fit has GOF$ = 1$. We choose to exclude light-curves with GOF $ < 1.5$ from our study.  Increasing the tolerance to GOF $ < 1.5$ allows for systems with significant variation in their light-curve during the observation timespan to pass through the filter. It does not allow, however for the passage of fits with large number distant outlying observations.
+ 
+After we perform a successful harmonic fit on the phase-folded photometry, we scale the flux measurements such that the maximum value of the harmonic fit has a flux measurement of 1:
+
+\begin{equation} \label{css_normalized_flux}
+\text{Normalized Relative Flux }_{i} = \frac{\text{Relative Flux }_{i}}{\text{Max(Relative Flux }_{i})}
+\end{equation}
+
 \section[Geometrical Parameters]{\hyperlink{toc}{Geometrical Parameters}} \label{sec: Geometrical Parameters}
 
 We hope to detect systems for which the light-curve shape is not explainable by Roche-geometry. We will do this by deriving a set of measurements that describe the shape of a light-curve. We will then measure optical light-curves of contact binaries from the CRTS variable sources catalog, and then we will measure a set of theoretical models published in \citet{rucinski1993simple}. 
@@ -1219,7 +1306,7 @@ Now, armed with our two new assumptions and light-curve data, we can construct a
 
 2. Polynomial - Spline Fit.  \citep{akerlof1994application, gettel2006catalog} 
 
-3. Fourier (Harmonic) Fit. \citep{rucinski1997ogle}
+3. Fourier (Harmonic) Fit. \citep{rucinski1997eclipsing}
 
 \begin{multline} \label{eqn: harmonic_fit} 
 f(p) = \sum_{i = 0}^{n} a_{i} \cos(2 \pi i p)
@@ -1338,94 +1425,10 @@ Our methods are outlined as follows:
 
 7) Compute the $FUV - NUV$ color and $FUV - NUV$ excess of each binary, as compared to a main-sequence star of similar temperature.
 
-\subsection{Measuring Photospheric Temperature with SDSS} \label{sec: Measuring Photospheric Temperature with SDSS}
-
-In this section, we describe how we use SDSS $ugriz$ photometry to estimate the photospheric temperature of each contact binary.
-
-1. We define color cutoffs that eliminate systems with saturated SDSS $g$ and $r$ band photometry. A sizable fraction of the SDSS $g$ band photometry is saturated for $g < 15$. To remove the saturated photometry, we define colour limits based on the observed distribution of contact binary colors and remove systems outside of those limits. See Fig. 4 of \citet{marsh2016characterization}. 
-
-\begin{align} \label{color_cuts}
-\begin{split}
-(g - r) > 0.02*g - 0.4 \text{ (Red Limit)} \\ 
-(g - r) < 0.13*g - 0.9 \text{ (Blue Limit)}
-\end{split}
-\end{align} 
-
-Even though the vast majority of the systems lie far from the galactic plane ($l > 15^{\circ}$), the contact binaries in the sample are distant because this sample is fainter than the samples of most previous surveys. For this reason, we measure the photospheric temperature of each binary using extinction corrected SDSS $(g - r)$ photometry. We perform the extinction-correction process:
-
-2. We compute the Johnson $V$ magnitude of the system by using maximum $V_{CSS}$ magnitude, and the uncorrected SDSS $r$ and $i$ measurements, using calibrations from \citet{jester2005sloan} and \citet{hovatta2014connection}.
-
-\begin{equation}
-(V - R) = 0.96*(r-i) + 0.21
-\end{equation}
-
-\begin{equation}
-V = V_{CSS} + 0.91 \times(V - R)^{2} + 0.04
-\end{equation}
-
-3. We compute the distance modulus to each binary using the period-luminosity correlation calibrated by \citet{rucinski2006luminosity}. This luminosity calibration carries a $1\sigma$ uncertainty of $20\%$.
-
-\begin{equation}
-M_{V} = -1.5 - 12 \text{log } P
-\end{equation}
-
-4. We use the \citet{green2015three} three-dimensional dust map (derived from Pan-STARRS1 data) to find a distance and extinction combination such that the sum of the dimming due to distance and $V$ dimming due to extinction equals the difference between the system's absolute magnitude $M_{V}$ and computed $V$ magnitude.
-
-\begin{equation}
-A_{V} = 3.1*E(B-V)
-\end{equation}
-
-5. We take the $E(B-V)$ estimated in step 4, and convert it to extinctions the SDSS $g$ and $r$ bands using the calibrations in \citet{schlafly2011measuring}.
-
-\begin{equation}
-A_{g} = 3.303 \times E(B-V) \qquad A_{r} = 2.285 \times E(B-V)
-\end{equation}
-
-After these extinction corrections are applied, we then use the empirical calibration of SDSS $g - r$ color to temperature from \citet{fukugita2011characterization}:
-
-\begin{equation} \label{fukugita_cal}
-T_{\text{eff}}/10^{4}K = \frac{1.09}{(g-r) + 1.47}
-\end{equation}
-
-This calibration is valid for main-sequence stars with temperatures between 3850K and 8000K. This produces temperature results that have a median error of $\pm310$K
 
 \subsubsection{SDSS Photometry Data Cuts} \label{sec: SDSS Photometry Data Cuts}
 
 Of the 12,281 systems, 11,782 remained after the cuts in Eqn. \ref{color_cuts}. We restrict the $3850 < T_{\text{eff}} < 8000$. This filter restricts the binaries to the empirically verified range of Eqn. \ref{fukugita_cal}. Of the 11,782, 11,681 remain after this filter. We eliminate systems with $\delta T_{\text{eff}} \geq 500$K. Of the 11,681 remaining systems, 11,138 remain after this filter. 
-
-\subsection{Flux Normalization and Phase Shifting} \label{sec: Flux Normalization and Phase Shifting}
-
-CRTS Photometry is reported in units of Catalina Sky Survey Magnitude $V_{CSS}$. For each contact binarysystem, we convert these magnitudes measurements into flux measurements, relative to the mean magnitude of all observations of the system. 
-
-\begin{equation} \label{css_flux}
-\text{Relative Flux }_{i} = \frac{10^{- \frac{V_{CSS,i}}{2.5}}}{10^{- \frac{\text{mean}(V_{CSS,i})}{2.5}}}
-\end{equation}
-
-\subsection{Light-Curve Harmonic Fitting} \label{sec: Light-Curve Harmonic Fitting}
-
-We perform a harmonic fit on each set of relative flux measurements (\S \ref{sec: Flux Normalization and Phase Shifting}), using the \texttt{gatspy} package \citep{vanderplas2015gatspy, vanderplas2015periodograms}. We start with six sine terms, and six cosine terms. We then count the number of local maxima and local minima on the fit. In a physical light-curve, we expect to see two local maxima, and two local minima. This has been known since the first viable physical model was used to compute light-curves \citep{lucy1968light}.
-
-If the harmonic fit does not have precisely two local maxima and two local minima, we try the fit again, this time with five sine and five cosine terms. If the fit fails yet again, we try with four sine and four cosine terms, and so on. Of the 11,138 light-curves where a fit was attempted, 8,994 were fit by six terms, 901 by five, 523 by four, 635 by three and 87 by two terms. 
-
-\subsubsection{Light-Curve Harmonic Fit Filters} \label{sec: Light-Curve Harmonic Fit Filters}
-
-Harmonic fits with at least four terms have been shown to approximate well the true shape of the contact binary light-curve \citep{rucinski1973w,rucinski1993simple}. However, it is not traditional in previous literature to approximate the shape of the contact binary light-curve with fewer than four Fourier terms.
-
-If a harmonic fit was reduced to three or fewer terms, the fit and corresponding system were discarded from the sample. From the 11,138 remaining after the filters described in \S\ref{sec: SDSS Photometry Data Cuts}, this filter removed 720 to leave 10,418. 
-
-Just because the harmonic fit has two local minima and two local maxima does not mean that it is a good approximation of the data. To separate light-curves that fit the observed data well from erroneous fits, we define a goodness-of-fit criterion:
-
-\begin{equation} \label{gof}
-\text{GOF} = \text{ standard deviation}\Bigg( \frac{\text{Residual}}{\text{Residual Error}}\Bigg)
-\end{equation}
-
-Assuming gaussian residuals, observed data that is completely described by the harmonic fit has GOF$ = 1$. We choose to exclude light-curves with GOF $ < 1.5$ from our study.  Increasing the tolerance to GOF $ < 1.5$ allows for systems with significant variation in their light-curve during the observation timespan to pass through the filter. It does not allow, however for the passage of fits with large number distant outlying observations.
- 
-After we perform a successful harmonic fit on the phase-folded photometry, we scale the flux measurements such that the maximum value of the harmonic fit has a flux measurement of 1:
-
-\begin{equation} \label{css_normalized_flux}
-\text{Normalized Relative Flux }_{i} = \frac{\text{Relative Flux }_{i}}{\text{Max(Relative Flux }_{i})}
-\end{equation}
 
 We shift the light-curve in phase such that the deepest minimum has a phase of 0.25. A light-curve prepared in this way is shown in Fig. \ref{lc_label} as the line.
 
@@ -1587,7 +1590,7 @@ Examining the correlation between light-curve regions as (for the whole sample) 
 
 \begin{figure}
 \centering
-\includegraphics[scale = 0.50]{v_corr_fig.png}
+\includegraphics[scale = 0.75]{v_corr_fig.png}
 \caption{Diagonal matrix of the Pearson $R^{2}$ correlation coefficient of the $\dot{F}$ measurement for each light-curve region (Min1, Max1, Min2, Max2), computed for 8,389 contact binaries in the final sample.}
 \label{v_cor}
 \end{figure}
@@ -1604,14 +1607,14 @@ In this section, we determine which temperatures of contact binary exhibit chang
 
 \begin{figure}
 \centering
-\includegraphics[scale = 0.50]{wmean_temp.png}
+\includegraphics[scale = 0.75]{wmean_temp.png}
 \caption{The weighted mean of $|\dot{F}|$ in each light-curve region, binned as a function of photospheric temperature, represented as red points with error-bars. The light contours show a kernel-density estimate of the underlying distribution.}
 \label{wmean_temp}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[scale = 0.50]{minmax_wmean_temp.png}
+\includegraphics[scale = 0.75]{minmax_wmean_temp.png}
 \caption{ Similar to Fig. \ref{wmean_temp}, except that the weighted mean of $|\dot{F}|$ is computed separately for the maxima light-curve regions (Max1, Max2, orange circles), and the minima light-curve regions (Min1, Min2, brown stars). We observe that there is not a difference in the qualitative behavior of the weighted means.}
 \label{minmax_wmean_temp}
 \end{figure}
@@ -1620,21 +1623,21 @@ In this section, we determine which temperatures of contact binary exhibit chang
 
 \begin{figure}
 \centering
-\includegraphics[scale = 0.50]{RD_vcss.png}
+\includegraphics[scale = 0.75]{RD_vcss.png}
 \caption{The mean Region Disagreement as a function of binary magnitude $V_{CSS}$. The mean of the distribution is very close to 1. We see that this metric has the same mean value across the range of $V_{CSS}$ by observing the trend of the red points. }
 \label{RD_vcss}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[scale = 0.50]{region_disagreement.png}
+\includegraphics[scale = 0.75]{region_disagreement.png}
 \caption{The mean of the Region Disagreement (RD) metric, computed in 15 bins (bin width = 240K). The mean RD is at a constant low value for contact binaries with radiative envelopes ($T \geq 6200K$, shaded in light blue). For contact binaries with convective envelopes, mean RD decreases with increasing temperature. }
 \label{region_disagreement} 
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[scale = 0.50]{rd_amp.png}
+\includegraphics[scale = 0.75]{rd_amp.png}
 \caption{15 bins, bin width = 0.033}
 \label{rd_amp}
 \end{figure}
@@ -1666,7 +1669,8 @@ We assume the the error in the photometric temperature determination, which are 
 
 \begin{figure}
 \centering
-\includegraphics[scale = 0.75]{metallicity_period.png}
+\includegraphics[scale = 0.50]{metallicity_period.png}
+\includegraphics[scale = 0.50]{metallicity_temp.png}
 \caption{caption}
 \label{metallicity_period}
 \end{figure}

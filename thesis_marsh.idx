@@ -1,63 +1,63 @@
-\indexentry{transients|hyperpage}{5}
-\indexentry{supernova|hyperpage}{5}
-\indexentry{solar-stellar connection|hyperpage}{5}
-\indexentry{standard candle|hyperpage}{6}
-\indexentry{Z\"ollner's photometer|hyperpage}{8}
-\indexentry{Potsdam Observatory|hyperpage}{8}
-\indexentry{M\"uller, Karl Hermann Gustav|hyperpage}{8}
-\indexentry{Kempf, Paul Friedrich Ferdinand|hyperpage}{8}
-\indexentry{Hertzprung-Russell Diagram|hyperpage}{10}
-\indexentry{equations of stellar structure|hyperpage}{11}
-\indexentry{pp-chain|hyperpage}{12}
-\indexentry{CNO-cycle|hyperpage}{12}
-\indexentry{Zero-age main-sequence|hyperpage}{12}
-\indexentry{ZAMS, Zero-Age Main-Sequence|hyperpage}{13}
-\indexentry{TAMS, Terminal-Age Main-Sequence|hyperpage}{13}
-\indexentry{solar metallicity|hyperpage}{15}
-\indexentry{Inner Jacobi Equipotential|hyperpage}{17}
-\indexentry{Jacobi equipotentials|hyperpage}{18}
-\indexentry{Roche equipotential|hyperpage}{18}
-\indexentry{mass ratio|hyperpage}{18}
-\indexentry{fill-out factor|hyperpage}{19}
-\indexentry{hydrostatic equilibrium|hyperpage}{20}
-\indexentry{opacity \kappa|hyperpage}{24}
-\indexentry{radial mixing|hyperpage}{26}
-\indexentry{Late-type|hyperpage}{27}
-\indexentry{Early-type|hyperpage}{27}
-\indexentry{orbital period|hyperpage}{29}
-\indexentry{period-color relation|hyperpage}{29}
-\indexentry{ZAMS|hyperpage}{30}
-\indexentry{ZAMS, Zero-age main-sequence|hyperpage}{31}
-\indexentry{Zero-Age Main Sequence|hyperpage}{33}
-\indexentry{ZAMS|hyperpage}{33}
-\indexentry{angular momentum loss, AML|hyperpage}{33}
-\indexentry{mass transfer|hyperpage}{33}
-\indexentry{solar wind|hyperpage}{33}
-\indexentry{Kozai-Lidov mechanism|hyperpage}{34}
-\indexentry{pp-chain|hyperpage}{36}
-\indexentry{ZAMS|hyperpage}{36}
-\indexentry{TAMS|hyperpage}{36}
-\indexentry{Thermal Relaxation Oscillation|hyperpage}{37}
-\indexentry{fill-out factor $f$|hyperpage}{38}
-\indexentry{red nova|hyperpage}{39}
-\indexentry{blue straggler|hyperpage}{41}
-\indexentry{globular cluster|hyperpage}{41}
-\indexentry{frequency|hyperpage}{42}
-\indexentry{density|hyperpage}{42}
-\indexentry{black holes|hyperpage}{42}
-\indexentry{Early-Type|hyperpage}{42}
-\indexentry{Initial Mass Function|hyperpage}{43}
-\indexentry{light-curve|hyperpage}{47}
-\indexentry{Algol|hyperpage}{47}
-\indexentry{$\beta $ Lyrae|hyperpage}{47}
-\indexentry{Wilson-Devinney Code|hyperpage}{50}
-\indexentry{mass ratio, $q$|hyperpage}{50}
-\indexentry{\texttt{ROCHE} code|hyperpage}{51}
-\indexentry{$L_{2}$|hyperpage}{54}
-\indexentry{time-series|hyperpage}{56}
-\indexentry{Fourier Transform|hyperpage}{56}
-\indexentry{Lomb-Scargle algorithm|hyperpage}{56}
-\indexentry{feature selection|hyperpage}{60}
-\indexentry{Lomb-Scargle algorithm|hyperpage}{60}
-\indexentry{photon counting|hyperpage}{86}
-\indexentry{gphoton|hyperpage}{86}
+\indexentry{transients|hyperpage}{6}
+\indexentry{supernova|hyperpage}{6}
+\indexentry{solar-stellar connection|hyperpage}{6}
+\indexentry{standard candle|hyperpage}{7}
+\indexentry{Z\"ollner's photometer|hyperpage}{9}
+\indexentry{Potsdam Observatory|hyperpage}{9}
+\indexentry{M\"uller, Karl Hermann Gustav|hyperpage}{9}
+\indexentry{Kempf, Paul Friedrich Ferdinand|hyperpage}{9}
+\indexentry{Hertzprung-Russell Diagram|hyperpage}{11}
+\indexentry{equations of stellar structure|hyperpage}{12}
+\indexentry{pp-chain|hyperpage}{13}
+\indexentry{CNO-cycle|hyperpage}{13}
+\indexentry{Zero-age main-sequence|hyperpage}{13}
+\indexentry{ZAMS, Zero-Age Main-Sequence|hyperpage}{14}
+\indexentry{TAMS, Terminal-Age Main-Sequence|hyperpage}{14}
+\indexentry{solar metallicity|hyperpage}{16}
+\indexentry{Inner Jacobi Equipotential|hyperpage}{18}
+\indexentry{Jacobi equipotentials|hyperpage}{19}
+\indexentry{Roche equipotential|hyperpage}{19}
+\indexentry{mass ratio|hyperpage}{19}
+\indexentry{fill-out factor|hyperpage}{20}
+\indexentry{hydrostatic equilibrium|hyperpage}{21}
+\indexentry{opacity \kappa|hyperpage}{26}
+\indexentry{radial mixing|hyperpage}{28}
+\indexentry{Late-type|hyperpage}{29}
+\indexentry{Early-type|hyperpage}{29}
+\indexentry{orbital period|hyperpage}{31}
+\indexentry{period-color relation|hyperpage}{31}
+\indexentry{ZAMS|hyperpage}{32}
+\indexentry{ZAMS, Zero-age main-sequence|hyperpage}{33}
+\indexentry{Zero-Age Main Sequence|hyperpage}{35}
+\indexentry{ZAMS|hyperpage}{35}
+\indexentry{angular momentum loss, AML|hyperpage}{35}
+\indexentry{mass transfer|hyperpage}{35}
+\indexentry{solar wind|hyperpage}{35}
+\indexentry{Kozai-Lidov mechanism|hyperpage}{36}
+\indexentry{pp-chain|hyperpage}{38}
+\indexentry{ZAMS|hyperpage}{38}
+\indexentry{TAMS|hyperpage}{38}
+\indexentry{Thermal Relaxation Oscillation|hyperpage}{39}
+\indexentry{fill-out factor $f$|hyperpage}{40}
+\indexentry{red nova|hyperpage}{41}
+\indexentry{blue straggler|hyperpage}{43}
+\indexentry{globular cluster|hyperpage}{43}
+\indexentry{frequency|hyperpage}{44}
+\indexentry{density|hyperpage}{44}
+\indexentry{black holes|hyperpage}{45}
+\indexentry{Early-Type|hyperpage}{45}
+\indexentry{Initial Mass Function|hyperpage}{45}
+\indexentry{$\beta $ Lyrae|hyperpage}{49}
+\indexentry{light-curve|hyperpage}{50}
+\indexentry{Algol|hyperpage}{50}
+\indexentry{Wilson-Devinney Code|hyperpage}{53}
+\indexentry{mass ratio, $q$|hyperpage}{53}
+\indexentry{\texttt{ROCHE} code|hyperpage}{53}
+\indexentry{$L_{2}$|hyperpage}{57}
+\indexentry{time-series|hyperpage}{59}
+\indexentry{Fourier Transform|hyperpage}{59}
+\indexentry{Lomb-Scargle algorithm|hyperpage}{59}
+\indexentry{feature selection|hyperpage}{66}
+\indexentry{Lomb-Scargle algorithm|hyperpage}{66}
+\indexentry{photon counting|hyperpage}{90}
+\indexentry{gphoton|hyperpage}{90}

@@ -4,49 +4,53 @@ The top-level auxiliary file: thesis_marsh.aux
 The style file: plainnat.bst
 Database file #1: thesis_bib.bib
 Warning--entry type for "sluys2006roche" isn't style-file defined
---line 703 of file thesis_bib.bib
+--line 804 of file thesis_bib.bib
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "rucinski1993w"
+Warning--I didn't find a database entry for "rucinski1997ogle"
 Warning--empty journal in bradstreet1988mapping
 Warning--empty publisher in carroll2006introduction
+Warning--empty journal in molnar2017prediction
 Warning--empty journal in pringle1985interacting
-You've used 141 entries,
+You've used 152 entries,
             2773 wiz_defined-function locations,
-            1320 strings with 28016 characters,
-and the built_in function-call counts, 71573 in all, are:
-= -- 6150
-> -- 4953
-< -- 90
-+ -- 1691
-- -- 1545
-* -- 6153
-:= -- 11291
-add.period$ -- 426
-call.type$ -- 141
-change.case$ -- 916
-chr.to.int$ -- 136
-cite$ -- 285
-duplicate$ -- 2963
-empty$ -- 5354
-format.name$ -- 1750
-if$ -- 14678
+            1367 strings with 30475 characters,
+and the built_in function-call counts, 78225 in all, are:
+= -- 6669
+> -- 5588
+< -- 98
++ -- 1906
+- -- 1749
+* -- 6730
+:= -- 12373
+add.period$ -- 459
+call.type$ -- 152
+change.case$ -- 1013
+chr.to.int$ -- 147
+cite$ -- 308
+duplicate$ -- 3214
+empty$ -- 5729
+format.name$ -- 1969
+if$ -- 16032
 int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 144
-newline$ -- 712
-num.names$ -- 564
-pop$ -- 1704
+missing$ -- 154
+newline$ -- 767
+num.names$ -- 608
+pop$ -- 1900
 preamble$ -- 1
-purify$ -- 780
+purify$ -- 866
 quote$ -- 0
-skip$ -- 2362
+skip$ -- 2607
 stack$ -- 0
-substring$ -- 2553
-swap$ -- 234
-text.length$ -- 14
+substring$ -- 2610
+swap$ -- 278
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1526
-warning$ -- 3
-while$ -- 623
+type$ -- 1647
+warning$ -- 4
+while$ -- 660
 width$ -- 0
-write$ -- 1824
-(There were 4 warnings)
+write$ -- 1963
+(There were 8 warnings)
