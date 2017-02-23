@@ -240,20 +240,11 @@ This passage marks the beginning of the study of contact binary stars. In this t
 
 In this section, we will gain a physical understanding of contact binary systems. Contact binary stars are made up of two main-sequence stars. In \S \ref{sec: The Main-Sequence Star} we will understand what main-sequence stars are like on the inside, how energy is generated in the cores of main-sequence stars, and how this energy is transported to their surfaces.
 
-Once we have got a firm grasp of the properties of main-sequence stars, we will bring two of them together to form a contact binary. In \S \ref{sec: The Roche Potential}, we learn that we must change the potential that the stellar matter exists in from the point potential to the Roche potential. Also, the components of contact binary stars can transfer mass and energy, from one to the other. We must take this into account when building our model.
+Once we have got a firm grasp of the properties of main-sequence stars, we will bring two of them together to form a contact binary. In \S\ref{sec: The Roche Potential}, we learn that we must change the potential that the stellar matter exists in from the point potential to the Roche potential. Also, the components of contact binary stars can transfer mass and energy, from one to the other. We must take this into account when building our model.
 
 In \S \ref{sec: Frequency and Density}, we will learn how common contact binary stars as compared to single main-sequence stars. We will also learn how common they are in the Milky Way galaxy.
 
 In \S \ref{sec: Mechanisms of Formation}, we will learn how contact binaries are formed. We will be introduced to the concepts of angular momentum loss (AML), and Kozai-Lidov cycles. In \S\ref{sec: Evolution in the Contact State}, we will learn how contact binaries evolve during their lifetimes. We will see how this evolution can drive changes in the observable properties of contact binary systems.
-
-%\citep[p.76, ][]{webbink2003contact} excellent review of remaining problems in contact binary study. 
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.5]{lucy1968light_1+garlick.png}
-\caption{Model for a contact binary system. The hatched areas denote convection zones, and the vertical dashed line is the axis of rotation. Figure 1 from \citet{lucy1968light}.}
-\label{fig: lucy1968light_1}
-\end{figure}
 
 \subsubsection[The Main-Sequence Star]{\hyperlink{toc}{The Main-Sequence Star}} \label{sec: The Main-Sequence Star}
 
@@ -435,15 +426,13 @@ The Roche lobe, (as we have been calling it) is also referred to as the \emph{In
 \label{fig: pringle1985interacting_1_4+terrell2001eclipsing_2+3+4}
 \end{figure}
 
-We can use the Cartesian Roche potential (Equations \ref{eqn: roche1} and \ref{eqn: roche2}) to calculate the relative volume within the Roche lobe (Inner Jacobi Equipotential) of the two components. We can measure the size of a Roche lobe by using an average radius $r$, which is defined so that $\frac{4}{3} \pi r^{3}$ is equal to the volume within the Roche lobe.
-
-\citet{paczynski1971evolutionary}
+We can use the Cartesian Roche potential (Equations \ref{eqn: roche1} and \ref{eqn: roche2}) to calculate the relative volume within the Roche lobe (Inner Jacobi Equipotential) of the two components. We can measure the size of a Roche lobe by using an average radius $r$, which is defined so that $\frac{4}{3} \pi r^{3}$ is equal to the volume within the Roche lobe \citep{paczynski1971evolutionary, eggleton1983approximations}.
 
 \begin{equation} \label{paczynski1971evolutionary_4}
 \frac{r_{1}}{A} = \frac{2}{3^{\frac{4}{3}}} \Big( \frac{M_{1}}{M_{1} + M_{2}} \Big)^{\frac{1}{3}} \qquad 
 \end{equation}
 
-Analytical approximations for the effective radius $r_{L}$ of a Roche Lobe. \citet{eggleton1983approximations}
+where $A$ is the separation between the two components
 
 \subsubsection[The Geometrical Elements of Contact Binary Systems]{\hyperlink{toc}{The Geometrical Elements of Contact Binary Systems}} \label{sec: The Geometrical Elements of Contact Binary Systems}
 
@@ -459,7 +448,9 @@ The fill-out factor has a variety of definitions, but the most common is:
 f = \frac{C_{1} - C}{(C_{1} - C_{2}) + 1}
 \end{equation}
 
-When the photosphere of a contact binary is exactly filling the inner Jacobi equipotential, eqn. \ref{fill-out factor} gives $f = 0$. When the photosphere of a contact binary fills the outer Jacobi equipotential, eqn. \ref{fill-out factor} gives $f = 1$. In Fig. \ref{fig: rucinski1993realm_5}, we see the diameter of the ``neck" region (containing the $L_{1}$ point), is a sizable fraction (0.1 to 0.3) of the separation of the centers of mass of the star for $f > 0.2$.
+Here $C_{1}$ is the location of the inner Jacobi equipotential, and $C_{2}$ is the location of the outer Jacobi equipotential.
+
+When the photosphere of a contact binary is exactly filling the inner Jacobi equipotential, eqn. \ref{fill-out factor} gives $f = 0$. When the photosphere of a contact binary fills the outer Jacobi equipotential, eqn. \ref{fill-out factor} gives $f = 1$. In Fig. \ref{fig: rucinski1993realm_5}, we see the diameter $d$ of the ``neck" region (containing the $L_{1}$ point), is a sizable fraction (0.1 to 0.3) of the separation of the centers of mass of the star $a$ for $f > 0.2$.
 
 \begin{figure}[H]
 \centering
@@ -468,7 +459,7 @@ When the photosphere of a contact binary is exactly filling the inner Jacobi equ
 \label{fig: rucinski1993realm_5}
 \end{figure}
 
-The final element that is commonly reported is $i$, or the inclination of the contact binary's orbit with respect to the line of sight of the observer. This element is not intrinsic to the contact binary system, so it actually does not provide any information about the physics of the contact binary system. This element is reported because together with $f$ and $q$, it completely defines the shape of the observed contact binary light-curve. The light-curve of a contact binary with given values of $f$ and $q$ will exhibit the largest amplitude when the inclination $i = 90^{\circ}$, corresponding to a complete eclipse. When $i = 0$, the two components do not eclipse at all and the light-curve has amplitude 0. Inclinations between 0 and 90 correspond to partial eclipses, and the amplitude of the resulting light-curves increases monotonically with inclination (see Fig. \ref{fig: rucinski2001photometric_1}).
+The final element that is commonly reported is $i$, or the inclination of the contact binary's orbit with respect to the line of sight of the observer. This element is not intrinsic to the contact binary system, so it actually does not provide any information about the physics of the contact binary system. This element is reported because together with $f$ and $q$, it completely defines the shape of contact binary light-curve as calculated using a Roche model. The light-curve of a contact binary with given values of $f$ and $q$ will exhibit the largest amplitude when the inclination $i = 90^{\circ}$, corresponding to a complete eclipse. When $i = 0$, the two components do not eclipse at all and the light-curve has amplitude 0. Inclinations between 0 and 90 correspond to partial eclipses, and the amplitude of the resulting light-curves increases monotonically with inclination (see Fig. \ref{fig: rucinski2001photometric_1}).
 
 \begin{figure}[H] 
 \centering
@@ -481,9 +472,7 @@ We will see how the shape of the contact binary light-curve can be used to estim
 
 \subsubsection[Thermal Equilibrium Models]{\hyperlink{toc}{Thermal Equilibrium Models}} \label{sec: Thermal Equilibrium Models}
 
-This class of models that we will explore in this section was first developed in the late 1960's. The great triumph of the thermal-equilibrium model is that it adequately explained the observed shape of the contact binary light-curve. 
-
-Under the condition of hydrostatic equilibrium, the gradient in the pressure $P$ is equal to the negative of the density $- \rho$ times the gradient in the potential $\nabla \Psi$. 
+The first thermal-equilibrium model of a contact-binary star was developed in the late 1960's \citep{lucy1968light, lucy1968structure}. The great triumph of the thermal-equilibrium model is that it adequately explained the observed shape of the contact binary light-curve. Thermal equlibirum models assume that the two components of a contact binary are in \emph{hydrostatic equilibrium}\index{hydrostatic equilibrium}. Under the condition of hydrostatic equilibrium, the gradient in the pressure $P$ is equal to the negative of the density $- \rho$ times the gradient in the potential $\nabla \Psi$. 
 
 \begin{equation} \label{eqn: equilibrium1}
 \nabla P = - \rho \nabla \Psi
@@ -493,71 +482,77 @@ Under the condition of hydrostatic equilibrium, the gradient in the pressure $P$
 \nabla \rho = \frac{dP(\Psi)}{d\Psi} = \rho(\Psi)
 \end{equation}
 
-If we assume a homogenous composition on equipotential surfaces, then all state variables (pressure, density, temperature, surface gravity) are functions of $\Psi$ alone. Since the temperature $T$ is constant across the surface, we can say that the shared photosphere is in thermal equilibrium. According to observations of contact binaries, this is true: the temperature of the shared photosphere does not vary by much across its surface. 
+If we assume a homogenous composition on equipotential surfaces, then all state variables (pressure, density, temperature, surface gravity) are functions of $\Psi$ alone \citep{webbink2003contact}. Because the photosphere of a contact binary is an equipotential surface, the temperature $T$ should be constant across the photosphere. According to observations of contact binaries, this is true: the temperature of the shared photosphere does not vary by much across its surface. 
 
-This is troubling in light of the Main-Sequence Homology Relations discussed in \ref{sec: Main-Sequence Homology Relations}. Recall that, for a single main-sequence star:
+Remember that both components of the contact binary are main-sequence stars, and so should follow the main-sequence homology relation for temperature:
 
 \begin{equation} \label{homology_T_reprint}
-\frac{T_{ZAMS}}{T_{\odot}} \approx 1.07 \Big(\frac{M}{M_{\odot}}\Big)^{0.41}
+\frac{T_{ZAMS}}{T_{\odot}} \approx 1.07 \Big(\frac{M}{M_{\odot}}\Big)^{0.41} \Rightarrow \qquad \frac{T_{1}}{T_{2}} = \Big( \frac{M_{1}}{M_{2}} \Big)^{0.41}
 \end{equation}
 
-However, observations indicate that the two components of a contact binary system (almost always) do \emph{not} have equal-mass. This means that, in order to achieve hydrostatic equilibrium, energy must be exchanged between the two components of the contact binary. In fact, up to a third of the energy generated by the primary is transferred to the secondary \citep{mochnacki1981contact}.
+If we set $T_{1} = T_{2}$ in Eqn. \ref{homology_T_reprint}, we can see that for thermal equilibrium, it is necessary that $M_{1} = M_{2}$. However, spectroscopic measurements indicate that the two components of a contact binary system (almost always) do \emph{not} have equal-mass: $M_{1} \neq M_{2}$. In systems with $M_{1} \neq M_{2}$, the secondary (the currently less massive component) should have a lower temperature than the primary, if both components follow the main sequence homology relations.
+
+This discrepancy means that energy must be exchanged between the two components of the contact binary in order to achieve hydrostatic equilibrium. This result is supported by observations: In Fig. \ref{fig: yildiz2013origin_1s}, we see the secondaries of many contact binaries plotted in the mass-luminosity plane, showing that the secondaries are significantly \emph{over-luminous}. In fact, \citet{mochnacki1981contact} has calculated that up to a third of the energy generated by the primary is transferred to the secondary.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale = 0.5]{yildiz2013origin_1s}
+\includegraphics[scale = 0.5]{yildiz2013origin_1s.png}
 \caption{The mass $M$ and luminosity $L$ of secondaries of contact binaries ($\circ$) and secondaries of detached eclipsing binaries (+). The solid line indicates the ZAMS parameters. Notice how the secondaries of detached eclipsing binaries (+) fit the ZAMS line well, while the contact binaries ($\circ$) are \emph{overluminous} for their mass. Panel (c) of Fig. 1 of \citet{yildiz2013origin}.}
 \label{fig: yildiz2013origin_1s}
 \end{figure}
 
+In comparison, the primary components of contact binaries have luminosities typical of main-sequence stars (Fig. \ref{fig: yildiz2013origin_1p}).
 
-\citep{shu1976structure} contact discontinuity model
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.5]{yildiz2013origin_1p.png}
+\caption{The mass $M$ and luminosity $L$ of primaries of contact binaries ($\circ$) and primaries of detached eclipsing binaries (+). The solid line indicates the ZAMS parameters, which are in agreement with the observed properties of the primaries. Panel (a) of Fig. 1 of \citet{yildiz2013origin}.}
+\label{fig: yildiz2013origin_1p}
+\end{figure}
 
-\citep{lubow1977structure}
+Energy is transferred through the neck of the contact binary. \citet{kahler2004structure} describes this energy transport by choosing a set of circulation functions $[c_{1}, c_{2}]$ which describe the transfer of energy through the neck of the system. In the model of \citet{kahler2002structure}, the interaction of the two components only occur in the outer layers of the secondary and primary.
 
-\citet{gazeas2008angular} have shown that orbital parameters of contact binary systems obey certain relationships.
+In order to maintain this energy flow, the two components of a contact binary must be at different stages in their evolution. This means that one of the components has to be closer to TAMS than the other.
 
-\begin{equation} \label{gazeas2008angular_6}
-P = 0.1159 * a^{\frac{3}{2}} M^{\frac{1}{2}}
-\end{equation}
+If the energy transfer between the components is efficient enough, the stars can maintain contact throughout their life times. However, if the energy transfer between the components is not efficient enough, the system cycle through phases of contact and detached phases. 
 
-Where $P$ is the orbital period in days, $M = M_{1} + M_{2}$ is the total mass of the binary system, and $a$ is the semi major axis of the system in meters.
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.50]{kahler2004structure_23.png}
+\caption{}
+\label{fig: kahler2004structure_23}
+\end{figure}
 
-We can also calculate the orbital angular momentum $H_{\text{orb}}$ 
-
-\begin{equation} \label{gazeas2008angular_7}
-H_{\text{orb}} = 1.25 \times 10^{52} * M^{\frac{5}{3}} P^{\frac{1}{3}} q(1 + q)^{-2}
-\end{equation}
-
-where $q = \frac{M_{1}}{M_{2}}$ is the mass ratio of the components.
-
-\subsubsection[Surface Brightness]{\hyperlink{toc}{Surface Brightness}} \label{sec: Surface Brightness}
-
-In this subsection, we will be introduced to Von Zeipel's theorem. Von Zeipel's theorem relates the flux being emitted from a certain location on the star to the local gravity at the location. This is useful because it allows for light-curves to be created from physical models (see \S\ref{sec: Physical Light-Curve Modeling}). 
-
-Von Zeipel's theorem states that the radiative flux $F$ in a uniformly rotating star is proportional to the local effective gravity $g_{eff}$:
-
-\begin{equation} \label{von_zeipel}
-F = - \frac{L(P)}{4\pi G M_{*}(P)}g_{eff}
-\end{equation}
-
-\begin{equation} \label{von_zeipel_2}
-T_{eff}(\theta) \approx g_{eff}^{0.25}(\theta)
-\end{equation}
-
-\citep{von1924radiative}
-
-\citep{gazeas2006masses}
+%\subsubsection[Surface Brightness]{\hyperlink{toc}{Surface Brightness}} \label{sec: Surface Brightness}
+%
+%In this subsection, we will be introduced to Von Zeipel's theorem. Von Zeipel's theorem relates the flux being emitted from a certain location on the star to the local gravity at the location. This is useful because it allows for light-curves to be created from physical models (see \S\ref{sec: Physical Light-Curve Modeling}). 
+%
+%Von Zeipel's theorem states that the radiative flux $F$ in a uniformly rotating star is proportional to the local effective gravity $g_{eff}$:
+%
+%\begin{equation} \label{von_zeipel}
+%F = - \frac{L(P)}{4\pi G M_{*}(P)}g_{eff}
+%\end{equation}
+%
+%\begin{equation} \label{von_zeipel_2}
+%T_{eff}(\theta) \approx g_{eff}^{0.25}(\theta)
+%\end{equation}
+%
+%\citep{von1924radiative}
+%\citep{gazeas2006masses}
 
 \subsection[Interior Structure]{\hyperlink{toc}{Interior Structure}} \label{sec: Interior Structure}
 
-In this section, we will learn what types of interior structures that contact binaries can have. We will discuss the different energy transport mechanisms which operate inside contact binary systems.
+In stars, there are two primary mechanisms of energy transport: In Radiative Transport, energy is able to leave the star through the dispersion of photons (electromagnetic energy) through the stellar medium (which is mostly Hydrogen gas). In convection, energy is transferred through the physical motion of the stellar medium. Convective Transport occurs when Radiative Transport is not efficient enough to transport the energy out of the star. In radiation, the stellar material is in hydrostatic equilibrium, and energy is transported through it via electromagnetic waves. If conditions are such that radiation cannot transport energy away from the core efficiently enough, the stellar material itself will have to move to transport this energy, disrupting hydrostatic equilibrium.  
+ 
+Convection occurs in the stellar medium when the condition
+ 
+\begin{equation} \label{convection_criterion}
+\frac{d \ln P}{d \ln T} < \frac{\gamma}{\gamma - 1}
+\end{equation}
 
-In stars, there are two primary mechanisms of energy transport: In Radiative Transport, energy is able to leave the star through the dispersion of photons (electromagnetic energy) through the stellar medium (which is mostly Hydrogen gas). Convective Transport occurs when Radiative Transport is not efficient enough to transport the energy out of the star. In convection, energy is transferred through the physical motion of the stellar medium. 
+is satisfied \citep[325,][]{carroll2006introduction}. In words, this equations states that when the pressure gradient is smaller than the temperature gradient, convection is likely to occur. Convection is more likely to occur when the stellar opacity $\kappa$\index{opacity \kappa} is large. 
 
-Convection has several important effects. It causes the \emph{radial mixing}\index{radial mixing} of elements in the stellar interior. The motion generated by convection can cause strong magnetic fields. 
-
-The fractional extent of radiative regions is larger in the secondary than in the primary \citep{kahler2004structure}.
+In a main-sequence star, the primary determinant of the temperature and pressure gradients are the mass of the star $M$, and the radial coordinate $r$ of the stellar medium in question. In some main-sequence stars, the criterion for convection is not satisfied at any point in the interior. We call these stars ``completely radiative".  In some main-sequence stars, the criterion for convection is satisfied at every point in the interior. We call these stars ``completely convective". For a star like our sun, however, the criterion for convection is satisfied in some parts of the interior, and not satisfied in other parts. Main-sequence stars with a solar temperature have radiative interiors, and a thin convective envelope on the exterior. Fig. \ref{fig: kippenhahn1990stellar_22_7} shows the extent of convective and radiative regions in main-sequence stars of a variety of masses. We can see that stars of solar mass or less have a convective envelope at the exterior. We can see that stars of greater than solar mass have radiative exteriors and convective cores. 
 
 \begin{figure}[H]
 \centering
@@ -566,6 +561,7 @@ The fractional extent of radiative regions is larger in the secondary than in th
 \label{fig: kippenhahn1990stellar_22_7}
 \end{figure}
 
+In Fig. \ref{fig: lubow1977structure_2}, we see a typical \emph{late-type} contact binary system. Each component has a radiative interior, and both components have a large convective envelope.
 
 \begin{figure}[H]
 \centering
@@ -574,6 +570,8 @@ The fractional extent of radiative regions is larger in the secondary than in th
 \label{fig: lubow1977structure_2}
 \end{figure}
 
+In Fig. \ref{fig: lubow1977structure_3}, we see a typical \emph{early-type} contact binary system. The primary has a small convective core, and a large radiative envelope, while the secondary has a radiative core and a convective outer envelope.
+
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.25]{lubow1977structure_3.png}
@@ -581,17 +579,16 @@ The fractional extent of radiative regions is larger in the secondary than in th
 \label{fig: lubow1977structure_3}
 \end{figure}
 
- \citet[325,][]{carroll2006introduction} gives the criterion for stellar convection. For convection to occur,
- 
-\begin{equation} \label{convection_criterion}
-\frac{d \ln P}{d \ln T} < \frac{\gamma}{\gamma - 1}
-\end{equation}
+Convection has several important effects. It causes the \emph{radial mixing}\index{radial mixing} of elements in the stellar interior. The motion generated by convection can cause strong magnetic fields, which (as we will see in \S\ref{sec: Magnetic Activity}) can cause starspots, flares, and changes in the mass-distribution of the system. There is also evidence that contact binaries with convective envelopes have smaller mass-ratios $q$ than contact binaries with radiative envelopes. 
 
-In words, this equations states that when the pressure gradient is smaller than the temperature gradient, convection is likely to occur. Convection occurs when the stellar opacity $\kappa$\index{opacity \kappa} is large. 
+If a main-sequence star of solar composition has a photospheric temperature of less than 6200K, it will exhibit a convective envelope. The sun has a temperature of 5800K and has a thin convective envelope. If a star has a photospheric temperature of greater than 6200K, radiative energy transport is the dominant mode at the surface. Astronomers call contact binary with convective envelopes ``Late-type"\index{Late-type}, and stars with radiative envelopes ``Early-type"\index{Early-type}.
 
-The two primary methods of energy transport in main-sequence stars are convection, and radiation. In radiation, the stellar material is in hydrostatic equilibrium, and energy is transported through it via electromagnetic waves. If conditions are such that radiation cannot transport energy away from the core efficiently enough, the stellar material itself will have to move to transport this energy, disrupting hydrostatic equilibrium. We call this disruption convection. 
-
-\citep{ivanova2013common}
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.5]{lucy1968light_1+garlick.png}
+\caption{Model for a contact binary system. The hatched areas denote convection zones, and the vertical dashed line is the axis of rotation. Figure 1 from \citet{lucy1968light}.}
+\label{fig: lucy1968light_1}
+\end{figure}
 
 \subsection[The Period-Color Relation]{\hyperlink{toc}{The Period-Color Relation}} \label{sec: The Period-Color Relation}
 
@@ -606,7 +603,7 @@ Two of the parameters that are the easiest to observe for contact binaries are t
 
 In this section, we will perform a derivation of this relation to understand why there is a relation between the orbital period ($P$) and effective temperature ($T$) of a contact binary system. We start with the fact that contact binaries are composed of two main-sequence stars. Remember that main-sequence stars have well defined relationships between mass and radius:
 
-\begin{equation} \label{homology_R}
+\begin{equation} \label{homology_R_reprint}
 \frac{R_{ZAMS}}{R_{\odot}} \approx 0.89 \Big(\frac{M}{M_{\odot}}\Big)^{0.89} \qquad \text{ for } M < 1.66 M_{\odot}
 \end{equation}
 
@@ -684,33 +681,21 @@ There is considerable scatter in the observed period-temperature diagram because
 \label{fig: rubenstein2001effect_1}
 \end{figure}
 
-\subsection[Frequency and Density]{\hyperlink{toc}{Frequency and Density}}
-
-In order to understand how long contact binary systems live, we need to know how common they are among main-sequence stars. The fraction of mains-sequence stars that are a contact binary system is called the \emph{frequency}\index{frequency}. We would also like to know how many contact binary systems there are, per volume in galactic space. The number of contact binary systems per cubic parsec is called the \emph{density}\index{density}.
-
-Contact binaries are the most frequently observed type of eclipsing binary star, because their eclipses can be detected at a wide range of orbital inclinations. In recent searches for eclipsing binary stars in survey data \citep{drake2014catalina} contact binary stars comprised 50\% of the new variable stars discovered.\footnote{To find suitable contact binary targets for observation by a small observatory, reference \citet{pribulla2003catalogue}, an excellent catalog of contact binaries in the field.}
-
-Studies using OGLE data on the galactic bulge (Baade's Window) indicates that the frequency of contact binaries relative to main sequence stars (or spatial frequency) is approximately $\frac{1}{130} = 0.7\%$, in the absolute magnitude range of $2.5 < M_{v} < 7.5$  \citep{rucinski1998contact}. A later study using ASAS data shows that the spatial frequency is 0.2\% in the solar neighborhood \citep{rucinski2006luminosity} in the absolute magnitude range of $3.5 < M_{v} < 5.5$. A catalog of 1022 contact binary systems in ROTSE - 1 data placed the the space density of contact binaries at $1.7 \pm 10^{-5} \text{pc}^{-3}$\citep{gettel2006catalog}.
-
-There is a high level of consistency between frequency measurements, suggesting that the true frequency is in the range of $0.002 - 0.008$. This is very similar to the frequency of short-period detached binaries, which is $0.003 - 0.007$ \citep{duquennoy1991multiplicity}. The similarity indicates that the lifetime of a binary in the contact phase is of the same order of magnitude as the lifetime in the detached phase\citep{stepien2006evolutionary}.
- 
 \subsection[Mechanisms of Formation]{\hyperlink{toc}{Mechanisms of Formation}}
 
 Like any astronomical object made up of stars, the starting point in the life of contact binaries is a cold cloud of interstellar gas (which is primarily hydrogen). The gas cloud would like to contract upon itself because of its own gravity, but cannot, because it is supported by its own gas pressure. As the cloud cools (by radiating its energy into the surrounding space), its internal gas pressure decreases and the cloud is allowed to contract. Eventually, the cloud collapses into a small enough space that the temperature and pressure start to increase at the cloud's center. When temperatures get high enough for nuclear fusion to occur, the protostar can support itself against further collapse. At the onset of nuclear fusion, we say that the protostar has become a star, at Zero Age Main Sequence\index{Zero-Age Main Sequence} or (ZAMS)\index{ZAMS}.  
 
-Early theories of contact binary formation posited that contact systems could form in contact \citet{lucy1968structure}. However, the symmetry and precise amount of required angular momentum rendered this formation path unlikely. Instead, it is much more likely that contact binaries start as two separate main-sequence stars which gradually fall into a contact configuration.
+Early theories of contact binary formation posited that contact systems could form in contact \citet{lucy1968structure}. However, the symmetry and precise amount of required angular momentum rendered this formation path unlikely: unless exceptional orbital angular momentum loss takes place, the shortest period zero-age binaries with solar type components should have orbital periods of 2 days or more \citep{stepien2006evolutionary}. It is likely that contact binaries start as two separate main-sequence stars which gradually fall into a contact configuration.
 
 Indeed, binary stars are abundant in our galaxy, with over half of all stars being part of a binary or multiple system \citep{carroll2006introduction}. What causes a binary star to become a contact binary? The answer is always angular momentum loss, or AML\index{angular momentum loss, AML}. The system of two stars in orbit loses angular momentum, resulting in an orbit with a decreasing semi-major axis. When the orbit of the binary gets small enough, mass transfer\index{mass transfer} between the two components will force the them into a contact configuration. 
 
-A binary star can lose angular momentum through two mechanisms:
-
-1) All stars slowly lose mass by shedding charged particles in a \emph{solar wind}\index{solar wind}. For examplee, the mass loss rate for the sun is $\dot{M}_{\odot} \approx 3 \times 10^{-14} M_{\odot} \text{yr}^{-1}$ \citep[p.374:][]{carroll2006introduction}, which is very small compared to the sun's mass. The most active single stars lose approximately $10^{-11} M_{\odot} \text{yr}^{-1}$ \citep{stepien2006evolutionary}. However, significant amounts of angular momentum can be lost to this wind. As a star rotates, its magnetic field rotates along with it. This rotating magnetic fields accelerates the charged solar wind particles that are moving away from the sun, thereby transferring angular momentum from the sun to the magnetized solar wind. In this way, the rotation of the sun slows, and it loses angular momentum. A interaction between rotating stars and stellar wind occurs in binary systems, causing them to lose angular momentum. This interaction between a rotating star and a magnetized solar wind creates a pattern in the stellar magnetic field called a Parker spiral \citep[p.380:][]{carroll2006introduction}. This loss of angular momentum changes decreases the separation between the components $a$, and orbital period $P$ of the binary. In Eqn. \ref{eqn: stepien2006evolutionary_1}, we see a semi-empirical formula for the orbital period decrease of a close, cool binary, based on the rotation evolution of solar type stars, derived by \citet{stepien2006evolutionary}. $P_{\text{orb}}$ is in days, and $t$ is in years. We can see that the rate of period decrease increases as the period decreases.
+All stars slowly lose mass by shedding charged particles in a \emph{solar wind}\index{solar wind}. For examplee, the mass loss rate for the sun is $\dot{M}_{\odot} \approx 3 \times 10^{-14} M_{\odot} \text{yr}^{-1}$ \citep[p.374:][]{carroll2006introduction}, which is very small compared to the sun's mass. The most active single stars lose approximately $10^{-11} M_{\odot} \text{yr}^{-1}$ \citep{stepien2006evolutionary}. However, significant amounts of angular momentum can be lost to this wind. As a star rotates, its magnetic field rotates along with it. This rotating magnetic fields accelerates the charged solar wind particles that are moving away from the sun, thereby transferring angular momentum from the sun to the magnetized solar wind. In this way, the rotation of the sun slows, and it loses angular momentum. A interaction between rotating stars and stellar wind occurs in binary systems, causing them to lose angular momentum. This interaction between a rotating star and a magnetized solar wind creates a pattern in the stellar magnetic field called a Parker spiral \citep[p.380:][]{carroll2006introduction}. This loss of angular momentum changes decreases the separation between the components $a$, and orbital period $P$ of the binary. In Eqn. \ref{eqn: stepien2006evolutionary_1}, we see a semi-empirical formula for the orbital period decrease of a close, cool binary, based on the rotation evolution of solar type stars, derived by \citet{stepien2006evolutionary}. $P_{\text{orb}}$ is in days, and $t$ is in years. We can see that the rate of period decrease increases as the period decreases.
 
 \begin{equation} \label{eqn: stepien2006evolutionary_1}
 \frac{dP_{\text{orb}}}{dt} = (-2.6 \pm 1.3) \times 10^{-10} P_{\text{orb}}^{-\frac{1}{3}} e^{-0.2 P_{\text{orb}}}
 \end{equation}
 
-2) A binary star system can lose angular momentum through an interaction with a third (or tertiary) star. In recent years, evidence has been amassing for the formation through this pathway. In this pathway, two stars begin in a stable orbit. When a third star is introduced into the system, it steals angular momentum from the first two stars, resulting in a closer orbit. There is evidence that this companion stays in orbit around the contact binary. A study by \citet{pribulla2006contact} has established a lower limit on the number of triple systems.  In a search of 13,927 eclipsing binaries in the SuperWASP catalog, 24\% had period-changes indicating a closely orbiting companion \citep{lohr2015orbital}. The presence of tertiary components around specific components has also been detected via spectral imaging \citep{hendry1998detection}. 
+A binary star system can also lose angular momentum through an interaction with a third (or tertiary) star. In recent years, evidence has been amassing for the formation through this pathway. In this pathway, two stars begin in a stable orbit. When a third star is introduced into the system, it steals angular momentum from the first two stars, resulting in a closer orbit. There is evidence that this companion stays in orbit around the contact binary. A study by \citet{pribulla2006contact} has established a lower limit on the number of triple systems.  In a search of 13,927 eclipsing binaries in the SuperWASP catalog, 24\% had period-changes indicating a closely orbiting companion \citep{lohr2015orbital}. The presence of tertiary components around specific components has also been detected via spectral imaging \citep{hendry1998detection}. 
 
 In these three-body situations, the inner two bodies (in our case, the two components of the contact binary) lose angular momentum, through a mechanism called the Kozai-Lidov mechanism. In the Kozai-Lidov mechanism \index{Kozai-Lidov mechanism}, the orbit of two inner bodies is perturbed by a third body orbiting farther out. In the equations of motion for the three-body system, a specific angular momentum is conserved:
 
@@ -718,19 +703,34 @@ In these three-body situations, the inner two bodies (in our case, the two compo
 L_{z} = \sqrt{1- e^{2}} \cos i
 \end{equation}
 
-Because the quantity $L_{z}$ is conserved, orbital eccentricity $e$ can be traded for orbital inclination $i$. Three body systems with undergo Kozai-Lidov cycles, with a certain period:
+Because the quantity $L_{z}$ is conserved, orbital eccentricity $e$ can be traded for orbital inclination $i$. Three body systems with undergo Kozai-Lidov cycles, with a certain characteristic period:
 
 \begin{equation} \label{kozai_2}
 T_{\text{Kozai}} = 2 \pi \frac{\sqrt{GM}}{G m_{2}} \frac{a_{2}^{3}}{a^{\frac{3}{2}}} (1 - e^{2}_{2})^{\frac{3}{2}}
 \end{equation}
 
-\citep{yildiz2013origin}
+During these Kozai-Lidov cycles, the inner two bodies can tidally interact, resulting in a decrease of their separation. 
 
-\citep{bilir2005kinematics}
+Whether the binary system has lost angular momentum via a tertiary component or a magnetized wind, the contact stage begins when there is mass transfer from the primary to the secondary, resulting in a system with an isothermal common envelope.
 
 \citep{li2007formation}
 
 \subsection[Evolution in the Contact State]{\hyperlink{toc}{Evolution in the Contact State}}
+
+However, mass transfer cannot occur for all stars that come into close proximity. The typical contact binary enters the contact stage when it is at least 4-5 Gyr old \citep{stepien2006evolutionary}. Only a certain combination of stars can fulfill the mass-radius relationship for contact binaries, while simultaneously being in thermal equilibrium.
+
+Another clue that one component is more evolved than the other is the dissimilarity in the mass-radius example for each component.In Fig. \ref{fig: stepien2006evolution_1}, note how the secondaries (diamonds) have a mass-radius relation that is characteristic of TAMS stars, and the primaries (asterisks) have a mass-radius relation that is characteristic of ZAMS stars.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.40]{stepien2006evolutionary_1.png}
+\caption{Radii and masses of 100 well-observed contact binaries. Asterisks (*) denote the primaries, and diamonds denote the secondaries. Notice the dotted lines: the ZAMS mass-radius relation is plotted as the lower dotted line, and the TAMS mass-radius is plotted as the upper dotted line. Fig. 1 from \citep{stepien2006evolutionary}.}
+\label{fig: stepien2006evolutionary_1}
+\end{figure}
+
+As soon as the two components enter contact, the component that is closer to TAMS starts transferring mass onto ZAMS
+
+Calculations shows that the initial masses of the secondary components (currently less massive) of contact binaries range from 1 to 2.5 $M_{\odot}$ \citep{yildiz2013origin}.
 
 The story of the evolution of a contact binary is the story of the evolution of its orbital angular momentum, or $H_{\text{orb}}$. For a binary system, the orbital angular momentum can be computed:
 
@@ -738,45 +738,50 @@ The story of the evolution of a contact binary is the story of the evolution of 
 H_{\text{orb}} = \sqrt{GM_{\text{tot}}^{3} \frac{aq^{2}}{(1 + q)^{4}}}
 \end{equation}
 
-\ref{eqn: stepien2006evolutionary_6}
+As we can see in Eqn. \ref{eqn: stepien2006evolutionary_6}, a decrease in $H_{\text{orb}}$ can be caused by in decrease in the separation $a$ between the two components (with all other variables held constant). With all other variables held constant, an increase in the mass ratio $q$ also has the effect of decreasing $H_{\text{orb}}$.
 
-In the late 1960s, it was thought that contact binaries formed out of unevolved components (i.e. components that are close to ZAMS)\citep{lucy1968structure, lucy1968light}
+In the late 1960s, it was thought that contact binaries formed out of unevolved components (i.e. components that are close to ZAMS)\citep{lucy1968structure, lucy1968light}. However, we now know that the two components of a contact binary must be at different stages in their main-sequence lifetimes, with one component being closer to $ZAMS$, and the other component being closer to $TAMS$.
 
 As we learned in \S\ref{sec: ZAMS to TAMS}, the characteristics of a main-sequence star change as it progresses through its main-sequence lifetime. As a star fuses the hydrogen in its core via the pp-chain\index{pp-chain}, the resulting helium builds up at the center of the star. This causes the hydrogen burning to occur in a ``shell'' of increasing radius around the helium core. Thus, as a main-sequence star progresses from ZAMS to TAMS\index{ZAMS}\index{TAMS}, its radius increases slightly, and its photosphere becomes slightly cooler. Thus, the age of the two components of a contact binary affects the radius and density of the star.  
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.50]{stepien2008evolutionary_1.png}
-\caption{Fig. 1 from \citet{stepien2008evolutionary}}
+\caption{The period (left panel) and angular momentum evolution (right panel) of six contact binary models. All of the models start as detached binaries with an initial orbital period $P_{0} = 2.0\text{d}$, but lose angular momentum through a magnetized wind. This path is denoted by the dotted lines. Then the binaries come into contact and change their period through mass-transfer. This path is denoted by the solid lines. The orbital angular momenta of known systems are plotted as crosses ($\times$) in the right panel. Fig. 1 from \citet{stepien2008evolutionary}}
 \label{fig: stepien2008evolutionary_1}
 \end{figure}
 
-\ref{fig: stepien2008evolutionary_1}
+Fig. \ref{fig: stepien2008evolutionary_1}
 
-During evolution in the contact state, a self-regulating mechanism develops. Angular momentum loss due to a magnetized wind causes the separation of the two components to decrease. Mass transfer from the secondary onto the primary component causes the separation of the two components to increase. These two effects balance to keep contact systems in shallow contact ($0.15 \leq f \leq 0.5$) throughout their lifetimes. 
+During evolution in the contact state, angular momentum loss due to a magnetized wind causes the separation of the two components to decrease. Mass transfer from the secondary onto the primary component causes the separation of the two components to increase. These two effects balance to keep contact systems in shallow contact ($0.15 \leq f \leq 0.5$) throughout their lifetimes. The net effect is that in the course of evolution, the period increases and the mass-ratio decreases \citep{kahler2004structure}.
 
-The net effect is that in the course of evolution, the period increases and the mass-ratio decreases \citep{kahler2004structure}.
+has observed that the time-scale of orbital angular momentum loss of a cool close binary with an initial period of 2-3 days is the same as the evolutionary timescale of its primary.
 
- has observed that the time-scale of orbital angular momentum loss of a cool close binary with an initial period of 2-3 days is the same as the evolutionary timescale of its primary.
+ \citet{lucy1979observational} TRO theory.
 
 A model for contact stability is called Thermal Relaxation Oscillation, or TRO\index{Thermal Relaxation Oscillation}. In the TRO model, contact binaries oscillate in and out of contact, maintaining thermal equilibrium in the contact state. However, we have significant evidence 
-Thermal Relaxation Oscillations \citep{wang1994thermal}. These oscillations of of the semi-major axis $a$ cause the contact binary to change its period $P$\citet{qian2001orbital}. However, the observed orbital period-distribution does not support TRO theory.
+Thermal Relaxation Oscillations \citep{wang1994thermal}. These oscillations of of the semi-major axis $a$ cause the contact binary to change its period $P$ \citet{qian2001orbital}. However, the observed orbital period-distribution does not support TRO theory.
 
-Kahler's first paper on the structure of contact binaries \citep{kahler2002structure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{kahler2002structure_4.png}
+\caption{Plot of orbital period $P_{\text{orb}}$ in days (on the y-axis), in comparison to thermal time $t$ (on the x-axis). This shows the system oscillating between states of close contact, and detached contact.}
+\label{fig: kahler2002structure_4}
+\end{figure}
 
-the surface of the contact system does not obey a simple gravity brightening law \citep{kahler2004structure}, \citep{hilditch1988evolutionary}.
-
-\citep{gazeas2006masses}
-
-Angular momentum and mass evolution. Some of the most recent modeling work indicates that the typical duration of the contact state is 1 to 1.5 Gyr \citep{gazeas2008angular}.
+Some of the most recent modeling work indicates that the typical duration of the contact state is 1 to 1.5 Gyr, but the orbital period distribution shows that the lifetime of the contact state is certainly not greater than 3 Gyr \citep{li2007formation, gazeas2008angular}. This enables them to be used as distance tracers: by observing a contact binary's period, we can calculate its luminosity \citep{chen2016contact}.
 
 masses and angular momenta \citep{gazeas2006masses} angular momentum loss \citep{vilhu1981contact}
 
-contact binaries occupy a very narrow range of parameter space \citep{gazeas2009physical} \citep{awadalla2005absolute}
+Because of self-regulating mechanisms in the contact state, and the homogeneity of main sequence stars, there are well defined relationships between the mass $M$, luminosity $L$, mass-ratio $q$, and orbital period $P$ of contact binary stars.  \citep{gazeas2009physical, awadalla2005absolute}.
 
  2016 review of close binary evolution \citep{tutukov2016evolution}
+ 
+One of the most striking features of contact binary stars as a population is the existence of the ``short-period" limit.
 
 Short period limit \citep{rucinski2007short} \citep{drake2014ultra} \cite{lohr2012period} \citep{rucinski1992can}
+
+the surface of the contact system does not obey a simple gravity brightening law \citep{kahler2004structure}, \citep{hilditch1988evolutionary}.
 
 \subsection[Evolution out of the Contact State]{\hyperlink{toc}{Evolution out of the Contact State}}
 
@@ -794,7 +799,7 @@ We can find the instability condition by setting $\frac{dH_{\text{tot}}}{da} = 0
 \frac{a_{\text{inst}}}{R_{1}} = k_{1} \sqrt{\frac{3(1 + q)}{q}} \qquad \text{or, } H_{\text{orb}} = 3H_{\text{spin}}
 \end{equation}
 
-Notice how the the mass-ratio $q$ figures into this equation. We can use the equations of stellar structure, in conjunction with \ref{eqn: arbutina2009minimum_2} to express the limit of stability as a minimum \emph{mass-ratio} $q$, as a function of fill-out factor $f$\index{fill-out factor $f$}. Using this method, the minimum mass-ratio for contact-binaries is calculated to be $q_{\text{min}} = 0.070 -- 0.074$, depending on fill-out factor $f$ (see \ref{fig: arbutina2009possible_1}).
+Notice how the the mass-ratio $q$ figures into this equation. We can use the equations of stellar structure, in conjunction with \ref{eqn: arbutina2009minimum_2} to express the limit of stability as a minimum \emph{mass-ratio} $q$, as a function of fill-out factor $f$\index{fill-out factor $f$}. Using this method, the minimum mass-ratio for contact-binaries is calculated to be $q_{\text{min}} = 0.070 -- 0.074$, depending on fill-out factor $f$ (see Fig. \ref{fig: arbutina2009possible_1}).
 
 \begin{figure}[H]
 \centering
@@ -805,7 +810,7 @@ Notice how the the mass-ratio $q$ figures into this equation. We can use the equ
 
 As we learned in \S\ref{sec: Evolution in the Contact State}, after contact begins, the secondary of the contact binary transfers mass onto the primary. When the secondary transfers enough mass such that $q = \frac{M_{1}}{M_{2}} \leq 0.070 -- 0.074$, then a tidal instability develops, and the system merges into a single, rapidly rotating star on the timescale of $10^{3} \text{ to } 10^{4}$ years \citep{rasio1995minimum}.
 
-The merger of a contact binary star was observed in 2008 \citet{tylenda2011v1309}. A  ``red nova" \index{red nova} event was observed in the constellation of Scorpius in late 2008. When archival data was examined, it was revealed that a contact binary system had existed at the nova's precise location. 
+This theory is supported by the fact that the merger of a contact binary star was observed in 2008 \citet{tylenda2011v1309}. A  ``red nova" \index{red nova} event was observed in the constellation of Scorpius in late 2008. When archival data was examined, it was revealed that a contact binary system had existed at the nova's precise location (see Fig. \ref{fig: tylenda2011v1309_1}). In the years preceding the red nova event, it was discovered that the period of the contact binary (called V1309 Sco) was decreasing (see Fig.  \ref{fig: tylenda2011v1309_2}). This period decrease was the onset of the instability that caused the two components to merge. As the components merge in dynamical time, the hydrogen reaction rate increases by orders of magnitude, resulting in a dramatic increase in brightness seen as the peak in Fig. \ref{fig: tylenda2011v1309_1}.
 
 \begin{figure}[H]
 \centering
@@ -817,23 +822,19 @@ The merger of a contact binary star was observed in 2008 \citet{tylenda2011v1309
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.25]{tylenda2011v1309_2.png}
-\caption{The evolution of the period .Figure 2 from \citet{tylenda2011v1309}}
+\caption{The evolution of the orbital period of V1309 Sco in the years before the merger event. Note the exponential decrease of the solid curve fitted to the data. Figure 2 from \citet{tylenda2011v1309}}
 \label{fig: tylenda2011v1309_2}
 \end{figure}
 
-A merger of a contact binary has been predicted in the year of $2022.2 \pm 0.6$ \citep{molnar2017prediction}. Period decay has been detected in the Kepler data of the contact binary KIC9832227 that is very similar to the period decay observed by \citet{tylenda2011v1309}.
+By looking for contact binary systems with rapidly decreasing periods, we can find systems that are likely to merge. In this manner, a merger of a contact binary has been predicted in the year of $2022.2 \pm 0.6$ \citep{molnar2017prediction}. Period decay has been detected in the Kepler data of the contact binary KIC9832227 that is very similar to the period decay observed by \citet{tylenda2011v1309}.
 
-The contact binary in the OGLE merger had a period of approximately 1.4 days, which is atypical for contact binaries. Long-period contact binaries \citep{rucinski1998eclipsing}.
+Another piece of evidence which supports the hypothesis of the contact binary state ending in a merger event is the presence of a special type of star called a \emph{blue straggler}\index{blue straggler} \citep{andronov2006mergers}. A blue straggler is a star that appears to have a main-sequence lifetime that is longer than it should be, given the star's mass. Blue stragglers are frequently discovered in globular clusters\index{globular cluster}. In a Hertsprung-Russell diagram of a globular cluster, blue stragglers appear as outliers: they are the stars that remain after stars of similar mass have ``turned-off" the main sequence moving upwards. The location of blue stragglers in a HR diagram is denoted by the dotted lines in \ref{fig: mateo1990blue_1}.
 
 In the early 1990s, large numbers of new contact binaries were discovered among blue stragglers, in open and globular clusters Short period eclipsing binaries have been found among blue stragglers in the globular cluster NGC5466 \citep{mateo1990blue}.
  
-Blue straggler \citet{andronov2006mergers}
+In the globular cluster M71, four contact binaries discovered by \citet{}, placing a lower limit of $1.3\%$ on the frequency of primordial binaries in M71 with initial orbital periods in the range of 2.5 to 5 days. 
 
-In the globular cluster M71, four contact binaries discovered by \citet{yan1994primordial}, placing a lower limit of $1.3\%$ on the frequency of primordial binaries in M71 with initial orbital periods in the range of 2.5 to 5 days. 
-
-Review of binaries in globular clusters \citep{hut1992binaries}
-
-modern work on contact binaries in globular clusters \citep{chen2016physical}
+Because precise ages can be determined for stars in globular clusters, the presence of contact binaries in globular clusters allow us to test theories of contact binary formation, and evolution in the contact state\citep{hut1992binaries,yan1994primordial,chen2016physical}.
 
 \begin{figure}[H]
 \centering
@@ -842,24 +843,43 @@ modern work on contact binaries in globular clusters \citep{chen2016physical}
 \label{fig: mateo1990blue_1}
 \end{figure}
 
+\subsection[Frequency and Density]{\hyperlink{toc}{Frequency and Density}}
+
+In order to understand how long contact binary systems live, we need to know how common they are among main-sequence stars. The fraction of mains-sequence stars that are a contact binary system is called the \emph{frequency}\index{frequency}. We would also like to know how many contact binary systems there are, per volume in galactic space. The number of contact binary systems per cubic parsec is called the \emph{density}\index{density}.
+
+Contact binaries are the most frequently observed type of eclipsing binary star, because their eclipses can be detected at a wide range of orbital inclinations. In recent searches for eclipsing binary stars in survey data \citep{drake2014catalina} contact binary stars comprised 50\% of the new variable stars discovered.\footnote{To find suitable contact binary targets for observation by a small observatory, reference \citet{pribulla2003catalogue}, an excellent catalog of contact binaries in the field.}
+
+Studies using OGLE data on the galactic bulge (Baade's Window) indicates that the frequency of contact binaries relative to main sequence stars (or spatial frequency) is approximately $\frac{1}{130} = 0.7\%$, in the absolute magnitude range of $2.5 < M_{v} < 7.5$  \citep{rucinski1998contact}. A later study using ASAS data shows that the spatial frequency is 0.2\% in the solar neighborhood \citep{rucinski2006luminosity} in the absolute magnitude range of $3.5 < M_{v} < 5.5$. A catalog of 1022 contact binary systems in ROTSE - 1 data placed the the space density of contact binaries at $1.7 \pm 10^{-5} \text{pc}^{-3}$\citep{gettel2006catalog}.
+
+There is a high level of consistency between frequency measurements, suggesting that the true frequency is in the range of $0.002 - 0.008$. This is very similar to the frequency of short-period detached binaries, which is $0.003 - 0.007$ \citep{duquennoy1991multiplicity}. The similarity indicates that the lifetime of a binary in the contact phase is of the same order of magnitude as the lifetime in the detached phase\citep{stepien2006evolutionary}.
+ 
 \subsection[Early-Type Contact Binaries]{\hyperlink{to}{Early-Type Contact Binaries}}
 
-There is a type of contact binary that is so special that it merits its own section. The contact binaries that we have been talking about in the previous section have been low-mass, meaning that each of the components has a mass of less than $10M_{\odot}$. However, astronomers have recently found several massive O-type contact binaries, with component masses of close to $40M_{\odot}$. These massive contact binaries are significantly different from their solar-mass counterparts, and are particularly exciting because they provide a mechanism for placing two black holes\index{black holes} in close proximity.
+There is a type of contact binary that is so special that it merits its own section. The contact binaries that we have been talking about in the previous section have been low-mass, meaning that each of the components has a mass of less than $10M_{\odot}$. However, astronomers have recently found several massive O-type contact binaries, with component masses of close to $40M_{\odot}$.  Early-Type contact binaries deserve a special section due to their extreme mass, luminosity, rarity, and short lifetime. These massive contact binaries are significantly different from their solar-mass counterparts, and are particularly exciting because they provide a mechanism for placing two black holes\index{black holes} in close proximity.
 
-
-When astronomers say that a star is ``Early-Type" \index{Early-Type}, they mean that it is ``early" on the spectral classification sequence (OBAFGKM). O and B stars are more massive, more luminous and hotter than our sun. Early-Type contact binaries deserve a special section due to their extreme mass, luminosity, rarity, and short lifetime. There are only a handful of O and B Type contact binary systems known. The four best studied systems are TU Muscae \citep{penny2008tomographic}, MY Cam \citep{lorenzo2014my}, UW CMa \citep{antokhina2011light}, V382 Cygni \citep{popper1978masses}. 
+When astronomers say that a star is ``Early-Type" \index{Early-Type}, they mean that it is ``early" on the spectral classification sequence (OBAFGKM). O and B stars are more massive, more luminous and hotter than our sun. There are only a handful of O and B Type contact binary systems known. The four best studied systems are TU Muscae \citep{penny2008tomographic}, MY Cam \citep{lorenzo2014my}, UW CMa \citep{antokhina2011light}, V382 Cygni \citep{popper1978masses}. 
 
 These massive O and B type contact binaries are very different from less massive (F,G,K,M) type contact binaries. Because O and B type stars have such short life-times, O and B type contact binaries are especially short-lived. Also, very few O and B type contact binaries are formed, because the stellar initial mass function (IMF) \index{Initial Mass Function}, is heavily skewed towards low-mass $M$ stars. The combination of these two effects makes massive O and B type contact binaries exceedingly rare. In fact, less than 10 systems have been discovered so far.
 
 Early-Type Contact binaries are some of the most luminous stellar objects. This means that they can be seen at extragalactic distances. Over forty intermediate mass systemshave been found in the Small Magellanic Cloud \citep{hilditch2005forty, priya2013photometric}. Even at the distance of M31, some eclipsing binaries can be seen. \citep{lee2014properties, vilardell2006eclipsing}
 
-\subsection[Magnetic Activity]{\hyperlink{toc}{Magnetic Activity}}
+\subsection[Magnetic Activity]{\hyperlink{toc}{Magnetic Activity}} \label{sec: Magnetic Activity}
 
 In the solar atmosphere, the movement of plasma in the convective region creates magnetic fields, which in turn affect the motion of that same plasma. Contact binaries are rapidly rotating systems, with orbital periods of 0.2 to 0.8 days (compare this rate with the approximately 30 day solar rotational period), so they have the potential to form much stronger magnetic fields.
 
-There is a lot of evidence that contact binary stars have strong magnetic fields. Astronomers observe changes in their light-curves, indicating that starspots may be appearing and disappearing on their photospheres. Doppler imaging of contact binaries can reveal the shapes and locations of the starspots on the photosphere (Fig. \ref{fig: barnes2004high_5}).
+There is a lot of evidence that contact binary stars have strong magnetic fields. Astronomers observe changes in their light-curves, indicating that starspots may be appearing and disappearing on their photospheres\citep{borkovits2005indirect,qian2000possible,kaszas1998period,qian2007ad,lee2004period,yang2012deep,zhang2004long, gazeas2006modeling}. Doppler imaging of contact binaries can reveal the shapes and locations of the starspots on the photosphere (see Fig. \ref{fig: barnes2004high_5}) \citep{barnes2004high}. The evolution and migration of starspots on contact binaries has been tracked with doppler imaging \citep{hendry2000doppler} and more recently, in Kepler data \citep{tran2013anticorrelated, balaji2015tracking}. Starspots are magnetic phenomenon, and so their occurrence is related to the magnetic activity of their host star \citep{berdyugina2005starspots}.  
 
-The components of late-type contact binaries share a Common Convective Envelope (or CCE)\index{Common Convective Envelope}. Some scientists believe that the existence of the CCE buries the very strong surface magnetic field, which could prevent the production of flares. However, many flares have been observed\citep{qian2014optical}. 
+Contact binaries undergo orbital period and luminosity changes that might be due to redistributions of matter caused by oscillations in the magnetic field strength. The first comprehensive theory for this modulation in close binary systems was formulated in the early 1990's by John Applegate \citep{applegate1992mechanism,lanza2006internal}.
+
+Astronomers have observed flares emanating from contact binary stars. Observations in visible light \citep{qian2014optical}. (see Fig. \ref{fig: qian2014optical_5}), and in ultraviolet bands \citep{kuhi1964possible}, and in radio wavelengths \citep{hughes1984radio, vilhu1988simultaneous}.
+
+During a continuous monitoring campaign in the winters of 2008 and 2010, \citet{qian2014optical} observed a contact binary system CSTAR 038663 ($P = 0.27$ days, $T_{1}, T_{2} =$ 4616K, 4352K) for a total of 4167 hours (174 days) in the SDSS $i$ band using the CSTAR telescope array in the Antarctic. In this time, \citet{qian2014optical} discovered 15 $i$ band flares, revealing a flare rate of $0.0036$ flares per hour. These 15 flares had durations ranging from 0.006 to 0.014 days (9 to 20 minutes), and amplitudes ranging from 0.14 - 0.27 magnitudes above the quiescent magnitude.
+
+In 1049 close binaries observed by Kepler, \citet{gao2016white} have identified 234 ``flare binaries", on which a total of 6818 flares were detected. Kepler's continuous monitoring capability and precise photometry make it extremely well suited to the detection of white-light flares \citep{walkowicz2011white}. 
+
+Contact binaries are known X-ray sources \citep{chen2006w}. Flares have been observed in X-ray bands using ROSAT \citep{mcgale1996rosat}.
+
+EXOSAT has been used to observe a flare in X-ray and Microwave data on VW Cephei (P =  0.28 days, $T_{1}, T_{2}$ = 5500K, 5000K) \citep{vilhu1988simultaneous}. Extreme UV observations have identified coronal characteristics \citep{brickhouse1998extreme}. 
 
 \begin{figure}[H]
 \centering
@@ -868,19 +888,11 @@ The components of late-type contact binaries share a Common Convective Envelope 
 \label{fig: qian2014optical_15}
 \end{figure}
 
-\citep{balogh2015solar} book review of solar magnetic activity cycles.
-
-The applegate mechanism \citep{applegate1992mechanism} \citep{lanza2006internal}
+The sun goes through cycles of magnetic activity, with a period of 11 years \citep{balogh2015solar}.
 
 W UMa as X-ray sources \citep{stepien2001rosat}
 
-\citep{rucinski1998extreme} EUV results.
-
-Observational starspots and magnetic activity cycles.  \citep{borkovits2005indirect,qian2000possible,kaszas1998period,qian2007ad,lee2004period,yang2012deep,zhang2004long}.
-
-It is possible that starspots are responsible for the variation in brightness observed by CRTS. Doppler imaging techniques have confirmed the presence of large starspots on the surface of some contact binaries \citep{barnes2004high}.  An example of a well observed change in the contact binary light-curve \citep{gazeas2006modeling}.
-
-\citet{barnes2004high} has used an Echelle spectrograph on the 3.9-meter Anglo-Australian Telescope to perform doppler imaging of the AE Phe system (P = 0.362 d), revealing that the photosphere of the system is heavily spotted (Fig. \ref{fig: barnes2004high_5}).
+Stellar activity \citep{rucinski1998extreme} EUV results.
 
 \begin{figure}[H]
 \centering
@@ -888,15 +900,6 @@ It is possible that starspots are responsible for the variation in brightness ob
 \caption{Fig. 5 from \citet{barnes2004high}}
 \label{fig: barnes2004high_5}
 \end{figure}
-
-Contact binaries are known X-ray sources \citep{chen2006w}. Flares have been observed in X-ray bands using ROSAT \citep{mcgale1996rosat}.
-EXOSAT has been used to observe a flare in X-ray and Microwave data on VW Cephei (P =  0.28 days, $T_{1}, T_{2}$ = 5500K, 5000K) \citep{vilhu1988simultaneous}. Extreme UV observations have identified coronal characteristics \citep{brickhouse1998extreme}. Long time series observations of single m-dwarfs  \citep{lacy1976uv}
-
-During a continuous monitoring campaign in the winters of 2008 and 2010, \citet{qian2014optical} observed a contact binary system CSTAR 038663 ($P = 0.27$ days, $T_{1}, T_{2} =$ 4616K, 4352K) for a total of 4167 hours (174 days) in the SDSS $i$ band using the CSTAR telescope array in the Antarctic. In this time, \citet{qian2014optical} discovered 15 $i$ band flares, revealing a flare rate of $0.0036$ flares per hour. These 15 flares had durations ranging from 0.006 to 0.014 days (9 to 20 minutes), and amplitudes ranging from 0.14 - 0.27 magnitudes above the quiescent magnitude.
-
-In 1049 close binaries observed by Kepler, \citet{gao2016white} have identified 234 ``flare binaries", on which a total of 6818 flares were detected. Kepler's continuous monitoring capability and precise photometry make it extremely well suited to the detection of white-light flares \citep{walkowicz2011white}. While CRTS does not match Kepler's observing cadence, photometric precision, or ability to observe a given target continuously, it observes 33,000 square degrees a much larger area of the sky than Kepler does (100 square degrees) \citep{drake2009first, basri2005kepler}.
-
-The evolution and migration of starspots on contact binaries has been tracked with doppler imaging \citep{hendry2000doppler} and more recently, in Kepler data \citep{tran2013anticorrelated, balaji2015tracking}. Starspots are magnetic phenomenon, and so their occurrence is related to the magnetic activity of their host star \citep{berdyugina2005starspots}.  
 
 \section[Observations]{\hyperlink{toc}{Observations}} \label{sec: observations}
 
@@ -966,9 +969,7 @@ They knew that the period of the light variation in W UMa was very stable (``The
 \label{fig: lc_anatomy}
 \end{figure}
 
-The shape of a contact binary's light-curve can tell us a lot about it. Indeed, the aim of much of the original work in this thesis is to determine how the shape of the contact binary light-curve correlates with physical parameters. I'll now go through a few light-curve features 
-
-Not all contact binary light-curves look the same, so why is that? What information does can be learned about a contact binary system based only on it's light-curve?
+The shape of a contact binary's light-curve can tell us a lot about it. Indeed, the aim of much of the original work in this thesis is to determine how the shape of the contact binary light-curve correlates with physical parameters.
 
 This means that the light-curve of a system with two (relatively) small and cool $M$ type components should be qualitatively and quantitatively identical to the light-curve of a system with two massive and hot $G$ type components, given the systems have the same geometry $[f,q,i]$.
 
@@ -997,17 +998,13 @@ Contact binaries are much brighter than main-sequence stars in the ultraviolet, 
 
 \section[Analysis Techniques]{\hyperlink{toc}{Analysis Techniques}} \label{sec: analysis_techniques}
 
-Observational tests of theories of contact binaries \citet{lucy1979observational}
+In this section, we will learn how astronomers convert observations of contact binaries into measurements of physical parameters of the systems. 
 
 \subsection[Physical Light-Curve Modeling]{\hyperlink{toc}{Physical Light-Curve Modeling}} \label{sec: Physical Light-Curve Modeling}
 
-In \S\ref{sec: Photometry of Contact Binaries}, we learned about how contact binary light-curves contain information about the physical nature of the system. Since the majority of data on contact binaries is in the form of photometric light-curve measurements, there has been much effort spent on refining the process of light-curve analysis.
+In \S\ref{sec: Photometry of Contact Binaries}, we learned about how contact binary light-curves contain information about the physical nature of the system. Since the majority of data on contact binaries is in the form of photometric light-curve measurements, there has been much effort spent on refining the process of light-curve analysis. In this section, we will learn how light-curves can be synthesized from physical models like those of \citet{lucy1968light}. We also will learn how these synthesized light-curves can be fit to observations. 
 
-In this section, we will learn how light-curves can be synthesized from physical models like those of \citet{lucy1968light}. We also will learn how these synthesized light-curves can be fit to observations. It is important to know about the degeneracies present in this type of analysis. 
-
-A large number of papers 
-
-The Wilson-Devinney Code (hereafter WD code) \index{Wilson-Devinney Code} was the first code that could produce contact binary light-curves in large quantities. 
+The Wilson-Devinney Code (hereafter WD code) \index{Wilson-Devinney Code} was the first code that could produce contact binary light-curves in large quantities, for a variety of system parameters. 
 
 Fully automated approaches \citep{prsa2009fully} \citep{prsa2008artificial}
 
@@ -1015,75 +1012,60 @@ recent advances in modeling code \citep{prvsa2013physics}
 
 useful review \citep{gimenez2006close}
 
-\texttt{phoebe} is a user friendly implementation of the WD code in \texttt{python} developed by an international team of researchers. A researcher can feed a light-curve into \texttt{phoebe}. Assumptions about the model atmospheres and other aspects of stellar physics allow for a physical model to be fit to the data.
+The Python package \texttt{phoebe} is a user friendly implementation of the WD code in \texttt{python} developed by an international team of researchers. A researcher can feed a light-curve into \texttt{phoebe}. Assumptions about the model atmospheres and other aspects of stellar physics allow for a physical model to be fit to the data.
 
-Almost always, \texttt{phoebe} models based on observational data are underdetermined. There are so many free parameters in the models (which allow the user to fit for starspots of various shapes and sizes, and include the light of an unresolved tertiary component), many degenerate perfect fits to observed data can always be found. Unfortunately, the WD code is frequently treated as a black box, and single-band photometry is used, parameters for spots and third light are fit. The degeneracy of these solutions is rarely if ever mentioned. 
-
-However, radial velocity data can can be used to break degeneracies by providing an independent measurement of the system's total mass and mass-ratio \index{mass ratio, $q$}
+The \texttt{phoebe} models based on observational data are almost always underdetermined. There are so many free parameters in the models (which allow the user to fit for starspots of various shapes and sizes, and include the light of an unresolved tertiary component), many degenerate perfect fits to observed data can always be found. Unfortunately, in much literature, the WD code is frequently treated as a black box, and single-band photometry is used, parameters for spots and third light are fit. The degeneracy of these solutions is rarely if ever mentioned. For a complete solution of a contact-binary system, radial velocity data needs to be used break degeneracies by providing an independent measurement of the system's total mass and mass-ratio \index{mass ratio, $q$}. Simultaneous fitting of physical models of the contact binary light-curve and radial velocity data can provide almost totally determined solutions. 
 
 Alternatives include \texttt{ROCHE} \index{\texttt{ROCHE} code} \citep{pribulla2011roche}
 
-Simultaneous fitting of physical models of the contact binary light-curve and radial velocity data can provide almost totally determined solutions. 
-
 \subsection[Nomographic Light-Curve Solutions]{\hyperlink{toc}{Nomographic Light-Curve Solutions}} \label{sec: Nomographic Light-Curve Solutions}
 
-As larger and larger numbers of contact binaries were discovered, astronomers saw the motivation for providing a less computationally-intensive way of determining a system's geometrical elements from light-curve data.
+As larger and larger numbers of contact binaries were discovered, astronomers saw the motivation for providing a less computationally-intensive way of determining a system's geometrical elements from light-curve data. In the nomographic method, the physical model of the contact binary is used in reverse (as compared to \S\ref{sec: Physical Light-Curve Modeling}). A grid of models is produced, covering the parameter space of system geometry $[f,q,i]$. Then, light-curves are generated for each model. The observed light-curve is then compared with a whole catalog of computed light-curves. 
 
-\citet{mochnacki1972model} First nomographic solution, inspired work by Rucinski. \citep{rucinski1973w}
+\citet{mochnacki1972model} was the first to propose a nomographic method. As large numbers of contact binary light-curves were being collected in the early 1990's, interest in nomographic solutions was revived. \citet{rucinski1993w} derived two methods, one based on a Fourier decomposition of the light-curve, and the other based on measuring the eclipse half-widths. It was found that for systems with a light-curve amplitude $A$ of great than 0.3 magnitudes, the fill-out factor $f$ could be calculated. Work with light-curves from the OGLE survey has determined a criterion for contact based on Fourier coefficients alone \citep{rucinski1997eclipsing}.
 
-In this method, the physical model of the contact binary is used in reverse (as compared to \S\ref{sec: Physical Light-Curve Modeling}). A grid of models is produced, covering the parameter space of system geometry $[f,q,i]$. Then, light-curves are generated for each model. The observed light-curve is then compared with a whole catalog of computed light-curves. 
+\citet{rucinski1993simple} calculated an array of contact binary light-curves for 1500 possible combinations of $(f,q,i)$ (Fig. \ref{fig:rucinski1993simple_6})
 
-The main advantage of this method is that the model degeneracy can be estimated. Often, (especially for systems with a low orbital inclination) many models will be supported by the observed data.
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.5]{rucinski1993simple_6.png}
+\caption{Relations between the two largest cosine coefficients $a_{2}$ and $a_{4}$, for three values of the fill-out factor $f$.}
+\label{fig: rucinski1993simple_6}
+\end{figure}
 
-OGLE work has determined a criterion for overcontact based on Fourier coefficients \citep{rucinski1997eclipsing}. \citep{rucinski1993simple}
-
-Rucinski has used eclipse half-widths and Fourier components to estimate geometrical properties of the system:
-
-the reliability of the mass-ratio determination from light-curve only data \citep{hambalek2013reliability}
+An advantage of this method is that the model degeneracy can be estimated. Often, (especially for systems with a low orbital inclination) many models will be supported by the observed data. 
 
 ROTSE study using fourier methods \citep{coker2013study}
-
 phenomenological study \citep{andronov2012phenomenological}
+In recent work, neural networks have been used to find the parameters $(f, q, i)$ \citep{zeraatgari2015neural}.
 
-employing neural networks to find true binary parameters \citep{zeraatgari2015neural}
+\citep{senavci2016precise}
 
-Difference between $q_{sp}$ and $q_{ph}$ \citep{van1985contribution}
+The mass-ratio as determined from the light-curve $q_{ph}$ has been shown in recent years to be unreliable.
 
-\citep{rucinski1973w} \citep{rucinski1993simple} \citep{terrell2005photometric} 
+Difference between $q_{sp}$ and $q_{ph}$ \citep{van1985contribution} \citep{terrell2005photometric} 
+
+the reliability of the mass-ratio determination from light-curve only data \citep{hambalek2013reliability}
 
 \subsection[O-C Analysis]{\hyperlink{toc}{O-C Analysis}} \label{sec: O-C Analysis}
 
 O - C Analysis is one of the oldest analysis techniques for analyzing eclipsing binary stars. Historically, great effort has been spent on compiling ``times of periastron", for the bright eclipsing binary stars. Simply, the time when the eclipsing binary is at its minimum brightness is noted, over a large number of orbital periods.
 
-O-C Analysis is short for ``observed minus computed", referring to the fact that a measurement is the observed time of minimum light as compared to the computed time of minimum light. The process can be described as follows:
-
-1. A full light curve is obtained for the system in question. \\
-2. Based on this light curve, the period is calculated, and an epheremis is computed, listing all of the future times of minimum light. \\
-3. Then, light curves are obtained at future epochs. The observed times of minimum light (O) are compared to previous times of minimum light as computed by the epheremis (C). The difference $(O-C)$ is plotted as a function of epoch. \\
-
-On an O-C diagram, a linear change in period (of the form $P = a \times t + b$, for $c \neq 0$) appears as a parabola.
+O-C Analysis is short for ``observed minus computed", referring to the fact that a measurement is the observed time of minimum light as compared to the computed time of minimum light. First, A full light curve is obtained for the system in question. Then, based on this light curve, the period is calculated, and an epheremis is computed, listing all of the future times of minimum light. Finally, light curves are obtained at future epochs. The observed times of minimum light (O) are compared to previous times of minimum light as computed by the epheremis (C). The difference $(O-C)$ is plotted as a function of epoch. On an O-C diagram, a linear change in period (of the form $P = a \times t + b$) appears as a parabola (see Fig. \ref{fig: kalimeris1994orbital_4a}).
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.25]{kalimeris1994orbital_4a.png}
-\caption{ The O - C diagram of V566 Oph, fit by a least squares polynomial. Fig. 4a from \citet{kalimeris1994orbital}}
+\caption{The O - C diagram of V566 Oph, fit by a least squares polynomial. Fig. 4a from \citet{kalimeris1994orbital}}
 \label{fig: kalimeris1994orbital_4a}
 \end{figure}
 
-The orbital period of a contact binary can change for a variety of reasons, but an observed period change always implies underlying geometrical and structural changes \citep{kalimeris1994orbital}.
+By fitting polynomial models to observed $(O - C)$ data, we can calculate the rate of period chance $\frac{dP}{dT}$, which is represented as $\dot{P}$. The orbital period of a contact binary can change for a variety of reasons, but an observed period change always implies underlying geometrical and structural changes \citep{kalimeris1994orbital}.
 
-In contact systems, orbital period changes can generally be divided into (1) short-term variations, which happen on decadal (10 year) timescales, and (2) long-term variations, which happen on a thermal timescale.
+In contact systems, orbital period changes can generally be divided into short-term variations (which happen on decadal 10 year timescales) and long-term variations, (which happen on a thermal timescale, typically millions of years).
 
-The long-term variations are caused by
+The long-term variations could be cause by caused by angular momentum loss due to magnetic braking, mass loss through the $L_{2}$ point\index{$L_{2}$} and/or  the chemical evolution of the primary. The short-term variations are caused by the orbit of a third body or the redistribution of the angular momentum due to magnetic activity.
 
-1) Angular momentum loss due to magnetic braking.
-2) mass loss through the $L_{2}$ point \index{$L_{2}$}
-3) chemical evolution of the primary.
-
-The short-term variations are caused by
-1) The orbit of a third body
-2) Redistribution of the angular momentum due to magnetic activity.
-3) 
 Is O-C Analysis stable against the appearance and disappearance of starspots and photometric noise? \citep{kalimeris2002starspots}
 
 \begin{figure}[H]
@@ -1093,9 +1075,7 @@ Is O-C Analysis stable against the appearance and disappearance of starspots and
 \label{fig: kalimeris2002starspots_7}
 \end{figure}
 
-automated approach with SuperWASP \citep{lohr2015orbital}
-
-In data from surveys, the data may be too sparse to estimate times of minimum light from multiple epochs within the survey. A Lomb-Scargle (or LS) \citep{scargle1982studies}
+To adapt the $(O - C)$ analysis to survey-data, automated approaches have been developed with SuperWASP \citep{lohr2015orbital}. In data from some surveys, the photometric measurements may be too sparse to estimate times of minimum light from multiple epochs within the survey. A Lomb-Scargle (or LS) \citep{scargle1982studies}
 
 \citep{horne1986prescription} 
 
@@ -1103,10 +1083,22 @@ In data from surveys, the data may be too sparse to estimate times of minimum li
 |\delta P| = (0.01728\text{ s}) \times (\frac{N_{0}}{100})^{-\frac{1}{2}} \times (\frac{T_{eff}}{5\text{yr}})^{-1} \\  \times (\frac{A/ \sigma_{N}}{10})^{-1} \times (\frac{P}{0.2\text{d}})^{2}
 \end{equation}
 
+Measurements of $\dot{P}$ provide an important constraint models of contact binary evolution.
 
-\citet{qian2001orbital} has observed orbital period changes which indicate TRO. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{kubiak2006period_3.png}
+\caption{ Fig. 3 from \citet{kubiak2006period}}
+\label{fig: kubiak2006period_3}
+\end{figure}
+
+It is measurements of $\dot{p}$ that allow us to find contact binaries that may be close to merger \citep{tylenda2011v1309, molnar2017prediction}.
+
+\citet{qian2001orbital} 
 
 \section[Working with Survey Data]{\hyperlink{toc}{Working with Survey Data}} \label{sec: Working with Survey Data}
+
+Why work with Survey Data?
 
 Data from large All-Sky surveys is very different in nature compared with data taken on a single night with a single telescope. Working with all-sky surveys presents huge advantages to working with traditional light-curve data, but it also has major drawbacks.
 
@@ -1123,18 +1115,13 @@ When we look in a survey database for photometric measurements of a known contac
 \label{fig: lc_unfolded}
 \end{figure}
 
-We know that the data in Figure \ref{fig: lc_unfolded} is not data from a source with constant brightness. Look at the size of the error bar on each point. The error bar on each point is much smaller than the scatter in the distribution. We would call this source a variable source.
+We know that the data in Figure \ref{fig: lc_unfolded} is not data from a source with constant brightness. Look at the size of the error bar on each point. The error bar on each point is much smaller than the scatter in the distribution. We would call this source a \emph{variable source}.
 
-
-Hidden in this data is an underlying periodic function - the light-curve caused by the rotation of the contact binary. The period is hidden in this data, we just need to find it.
-
-The data that we have here is a \emph{time-series}\index{time-series}: a number of measurements of of the flux of a source at many different times. The problem of finding a period in time-series data is usually handled with a \emph{Fourier Transform} \index{Fourier Transform}.
+Hidden in this data is an underlying periodic function - the light-curve caused by the rotation of the contact binary. The period is hidden in this data, we just need to find it. The data that we have here is a \emph{time-series}\index{time-series}: a number of measurements of of the flux of a source at many different times. The problem of finding a period in time-series data is usually handled with a \emph{Fourier Transform} \index{Fourier Transform}.
 
 In the Fourier Transform, 
 
-The CRTS telescope does not return to this source at regular times.
-
-The algorithm that is most widely used to find periods in unevenly sampled time-series \citet{scargle1982studies}
+However, a Fourier Transform cannot be applied to this CRTS data, because the observations are unevenly spaced in time. Instead, we must use the Lomb-Scargle algorithm\index{Lomb-Scargle algorithm} \citet{scargle1982studies}.
 
 We calculate the phase of each observation, by dividing by the period found in the signal.
 
@@ -1153,7 +1140,9 @@ where (\%) is the ``modulo" (or remainder operator)
 
 In Figure \ref{fig: lc_folded}, we see survey data of a contact binary, after it has been folded by the orbital period. We see a coherent light-curve with a beautiful shape.This phase-folded light-curve is similar to what would be obtained in a night of observation by a single observer. A phase-folded light-curve constructed in way can be analyzed in the same manner as a light-curve taken in a single night of continuous observing.
 
-Examples of such surveys are the All-Sky Automated Survey \citep[ASAS,][]{pojmanski2000all}, Robotic Optical Transient Search Experiment \citep[ROTSE,][]{akerlof2000rotse}, Trans-Atlantic Exoplanet Survey \citep[TrES,][]{devor2008identification}, Lincoln Near-Earth Asteroid Research program \citep[LINEAR,][]{palaversa2013exploring}, and Catalina Real-Time Transient Survey \citep[CRTS,][]{drake2014catalina}. Researchers have also selected pure samples of contact binary systems from large survey data sets for study. Researchers have previously used data from the Optical Gravitational Lensing Experiment \citep[OGLE,][]{rucinski1996eclipsing}, Super Wide Angle Search for Planets \citep[SuperWASP,][]{norton2011short}, and CRTS \citep{drake2014ultra} to construct pure contact binary samples for study. \citet{lee2015properties} have used this approach to study a pure sample detached eclipsing binaries from the CRTS variable catalog. 
+%Arrange chronologically?
+
+\subsection[Modern Sources of Survey Data]{\hyperlink{toc}{Modern Sources of Survey Data}}
 
 \begin{figure}[H]
 \centering
@@ -1162,27 +1151,31 @@ Examples of such surveys are the All-Sky Automated Survey \citep[ASAS,][]{pojman
 \label{fig: modern_surveys}
 \end{figure}
 
-%Arrange chronologically?
+SuperWASP follow-up on 1-meter telescopes in South Africa \citep{koen2016multi} more follow up \citep{darwish2016orbital}
 
-\subsection[Modern Sources of Survey Data]{\hyperlink{toc}{Modern Sources of Survey Data}}
+Examples of such surveys are the All-Sky Automated Survey \citep[ASAS,][]{pojmanski2000all}, Robotic Optical Transient Search Experiment \citep[ROTSE,][]{akerlof2000rotse}, Trans-Atlantic Exoplanet Survey \citep[TrES,][]{devor2008identification}, Lincoln Near-Earth Asteroid Research program \citep[LINEAR,][]{palaversa2013exploring}, and Catalina Real-Time Transient Survey \citep[CRTS,][]{drake2014catalina}. Researchers have also selected pure samples of contact binary systems from large survey data sets for study. Researchers have previously used data from the Optical Gravitational Lensing Experiment \citep[OGLE,][]{rucinski1996eclipsing}, Super Wide Angle Search for Planets \citep[SuperWASP,][]{norton2011short}, and CRTS \citep{drake2014ultra} to construct pure contact binary samples for study. \citet{lee2015properties} have used this approach to study a pure sample detached eclipsing binaries from the CRTS variable catalog. 
 
-SDSS \citep{york2000sloan} \citep{ivezic2007sloan} 
+\subsection[Our Sample]{\hyperlink{toc}{Our Sample}} \label{sec: Our Sample}
 
-SDSS calibrations allow for stellar temperatures to be derived \cite{fukugita2011characterization}
+In our study, we use data from two separate surveys: (1) We use CRTS data spanning eight years, which allows for the variation in the luminosity of each system on a decadal timescale to be measured, and (2) We use SDSS data which provides multiband photometric measurements taken within the timespan of a few minutes, allowing the temperature of each binary to be measured. 
 
-SEGUE is a program that collects stellar spectra.
+The Catalina Sky Survey (CSS) uses three telescopes to survey the sky between declinations of -75 and +65 degrees. Although the CSS was originally designed for the detection of Near Earth Asteroids, the CRTS project aggregates time-series photometry for over 500 million stationary ``background" sources \citep{drake2009first, mahabal2011discovery, djorgovski2012catalina}. CRTS observations are taken in ``white light", i.e. without filters, to maximize survey depth. CRTS can perform photometric measurements on sources with visual magnitudes in the range of $\sim13$ to $20$. Though we only used eight years of data, CRTS continues collecting data to this day. The CRTS photometry used in this work is publicly accessible through the Catalina Surveys Data Release 2 at \texttt{crts.caltech.edu}. 
 
-\subsubsection[The SuperWASP Survey]{\hyperlink{toc}{The SuperWASP Survey}}
+The number of observations that CSS has collected for the candidate systems that we study ranges from 90 (for the least observed systems) to 540 (for the most observed systems). The median number of CSS observations per candidate system is $336$, with a standard deviation of $86$ observations.  The mean photometric error varies from 0.05 magnitudes to 0.10 magnitudes for most systems, increasing as a function of CRTS magnitude. 
 
-follow-up on 1-meter telescopes in South Africa \citep{koen2016multi} more follow up \citep{darwish2016orbital}
+The Sloan Digital Sky Survey provides multiband photometry in the \emph{u},\emph{g},\emph{r},\emph{i}, and \emph{z} bands. Because of its drift-scanning configuration, SDSS is well suited to performing photometry on short-period variable stars ($P < 1$ day), because all of the bands are exposed within a short time of each other: there is a delay of roughly 5 minutes between the exposure of the $g$ and $r$ images \citep{york2000sloan}. We use the SDSS DR10 $(g - r)$ colour to calculate the temperature of the binary systems in this study \citep{ahn2014tenth}. 
 
-\section[Paper I: Characterization of 9,380 Contact Binaries from the CRTS Variable Sources Catalogue]{\hyperlink{toc}{Paper I: Characterization of 9,380 Contact Binaries from the CRTS Variable Sources Catalogue}} \label{sec: Paper I: Introduction to the CRTS Data}
+The initial set of contact binaries from which we derived our sample was selected as described in \citet{drake2014catalina}. The CRTS photometry for this sample can be accessed publicly at \url{http://nesssi.cacr.caltech.edu/DataRelease/Varcat.html}. 
 
-This work was submitted to the Monthly Notices of the Royal Astronomical Society (MNRAS) on June 20th, 2016, and was accepted on August 19th, 2016.
+The \citet{drake2014catalina} sample was created by selecting data from the Catalina Surveys Data Release 1 (CSDR1), based on the criteria of high Stetson variability index $(J_{WS})$ and large standard deviation of brightness measurements ($\sigma$).  Drake performed Lomb-Scargle periodogram analysis \citep[LS,][]{scargle1982studies} on these variables, testing for significant periods. Candidates that passed a LS significance cutoff along with additional data quality cuts were further processed to determine the best period and were then visually inspected. Approximately half of the inspected candidates passed selection and were classified by type (e.g. EW: contact binary, EA: Algol type, RRab: RR Lyrae, etc.) based on period, light-curve morphology, and colour information.
 
-\includepdf[pages = -]{Marshetal2016.pdf}
+In the \citet{drake2014catalina} sample there are 30,743 binaries classified as EW, corresponding to W UMa (contact) binaries. The SDSS photometry was crossmatched to the CRTS photometry by using the Large Survey Database framework \citep[LSD,][]{juric2012lsd}. We searched for SDSS point sources within 3" of the coordinates of the CRTS candidates, and when a one-to-one match existed, we correlated the photometry and added the candidate to our sample. When a unique match did not exist between the SDSS and CRTS photometry, we did not add the candidate to our sample. We chose the 3" search radius because CSS pixels subtend 2.5". Out of the 30,743 sources queried, there were 13,551 sources with matching CRTS and SDSS photometry. We will describe the parameters derived for each of these 13,551 binary candidates in Sections \ref{lcstats_section} and \ref{dec_search}.
 
-\section[Paper II: Geometrical Parameters]{\hyperlink{toc}{Paper II: Geometrical Parameters}} \label{sec: Paper II: Geometrical Parameters}
+\citet{drake2014catalina} have shown that 98.3\% of the sources classified as contact binaries in CRTS data are also classified as contact binaries in the analysis of LINEAR data in \citet{palaversa2013exploring}. They have also shown that many of the candidates have SDSS DR10 spectra consistent with known spectral characteristics of contact binaries. Because our contact binary sample is selected from the Drake subset, we expect that it will also have greater than 98\% purity. 
+
+Our initial sample of contact binaries contains systems for which we both have time-series photometry (provided by CRTS), and a temperature measurement using ($g - r$) color (provided by SDSS).
+
+\section[Geometrical Parameters]{\hyperlink{toc}{Geometrical Parameters}} \label{sec: Geometrical Parameters}
 
 We hope to detect systems for which the light-curve shape is not explainable by Roche-geometry. We will do this by deriving a set of measurements that describe the shape of a light-curve. We will then measure optical light-curves of contact binaries from the CRTS variable sources catalog, and then we will measure a set of theoretical models published in \citet{rucinski1993simple}. 
 
@@ -1222,37 +1215,19 @@ In the eight years between 2005 and 2013, CRTS observes a given source roughly 3
 
 Thankfully, we can introduce some assumptions that will make the task of succinctly describing our light-curves easier. First, we assume that our light-curve is a \emph{continuous function}. This means that there are not jumps or breaks in the true variation of light. The light-curve has a value at every point in phase, and is differentiable at every point in phase. Second, we assume that \emph{the light-curve is periodic}: that the pattern of light variation will exactly repeat itself after some amount of time. In \S\ref{sec: dec_var}, we learn that this is not exactly true for contact binaries when we observe them over many years. But for now, this assumption will serve us well.
 
-Now, armed with our two new assumptions and light-curve data, we can construct a light-curve function. There are many ways to construct a continuous, periodic function from a set of data. \\
+Now, armed with our two new assumptions and light-curve data, we can construct a light-curve function. There are many ways to construct a continuous, periodic function from a set of data. 
 
-1. Polynomial Fit. \\
+2. Polynomial - Spline Fit.  \citep{akerlof1994application, gettel2006catalog} 
 
-\begin{multline} \label{eqn: polynomial_fit}
-f(\theta) = a_{0} + a_{1}\theta + a_{1}\theta^{2} + a_{2}\theta^{3} + ... (0 \leq p < 1) \\
-f(\theta) = \sum_{i = 0}^{n} a_{i}\theta^{i}  (0 \leq \theta < 1)
-\end{multline}
-
-2. Polynomial - Spline Fit. \\
-
-\begin{multline} \label{eqn: spline_fit} 
-f(p) = 
-\end{multline}
-
-\citep{gettel2006catalog} a spline fit is employed. \citep{akerlof1994application} explanation of spline fit.
-
-3. Fourier (Harmonic) Fit. \\
+3. Fourier (Harmonic) Fit. \citep{rucinski1997ogle}
 
 \begin{multline} \label{eqn: harmonic_fit} 
-f(p) =  \\
 f(p) = \sum_{i = 0}^{n} a_{i} \cos(2 \pi i p)
 \end{multline}
 
 There are many other forms that can be used to represent a continuous periodic function - but these are the most obvious choices. Each has advantages and disadvantages. For example, if the light-curve has large derivatives at some points in the phase (it has ``sharp turns"), a polynomial spline fit may be the best choice.
 
-We have elected to use the harmonic fit, because it has a history of use in the description contact binary light-curves. It is easy to implement and can fit the data accurately, provided that there are not sharp turns.
-
-By choosing a fitting function, we have turned our raw data from CRTS (which was 1000 numbers) into a continuous, periodic function which we can use to derive other, physically meaningful features.
-
-Recall (as in Eqn. \ref{eqn: light_curve}) 
+We have elected to use the harmonic fit, because it has a history of use in the description contact binary light-curves \citep{rucinski1993simple}. It is easy to implement and can fit the data accurately, provided that there are not sharp turns. By choosing a fitting function, we have turned our raw data from CRTS (which was 1000 numbers) into a continuous, periodic function which we can use to derive other, physically meaningful features (see Fig. \ref{fig: lc_features}).   
 
 \begin{figure}[H]
 \centering
@@ -1263,7 +1238,7 @@ Recall (as in Eqn. \ref{eqn: light_curve})
 
 For each light-curve, we have derived the following geometrical features:
 
-Areas (a1, a2, a3, a4). The features have units of energy, being products of phase (which is time), and flux ( which is rate at which energy is received by the telescope.) \\
+Areas (a1, a2, a3, a4). The features have units of energy, being products of phase (which is time), and flux (which is rate at which energy is received by the telescope.) \\
 Flux Differences (Amp, $\Delta$Min $\Delta$Max). These features have units of flux, because they are differences of fluxes.
 Eclipse Width and Half Minimum. (h1width, h2width). These features have units of time, because they are differences of phases.
 
@@ -1300,7 +1275,36 @@ The following light-curve features have units of time. $P_{\text{h1}}$ and $P_{\
 \text{h2width} = P_{\text{h2}} - P_{\text{h2}}  \\
 \end{multline}
 
-\section[Paper III: Optical and UV Variability]{\hyperlink{toc}{Paper III: Optical and UV Variability}} \label{sec: Paper III: Optical and UV Variability}
+We can learn about the relationships between these light-curve features by plotting the feature space.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{features_pairplot.png}
+\caption{The light-curve features as measured in our analysis}
+\label{fig: features_pairplot}
+\end{figure}
+
+We can compute the same light-curve features for the set of models that were computed by \citet{rucinski1993simple}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{model_features_pairplot.png}
+\caption{The light-curve features as measured in our analysis}
+\label{fig: model_features_pairplot}
+\end{figure}
+
+We notice that, for both the observed systems, and the models, many of the light-curve features are strongly dependent on each-other.
+
+We might find a way to consolidate these features into a smaller set.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{atot_hwidth_kde.png}
+\caption{caption}
+\label{fig: atot_hwidth_kde}
+\end{figure}
+
+\section[Optical and UV Variability]{\hyperlink{toc}{Optical and UV Variability}} \label{sec: Optical and UV Variability}
 
 In our study, we aim to learn how the luminosity of contact binary systems vary on decadal timescales. We hope to learn the relationship between the UV-color of a contact binary, and its optical variability. 
 
@@ -1316,8 +1320,363 @@ We detect deviations of the light-curve with respect to the harmonic fit perform
 
 We can measure the difference between observations and the harmonic fit as a function of time. If this difference becomes too large to attribute to photometric noise, we know that the contact binary is changing its brightness over a timespan of many years.
 
-
 \citep{bradstreet1988mapping}
+
+Our methods are outlined as follows:
+
+1) Calculate the photospheric temperature of each binary using SDSS $ugriz$ photometry \S\ref{sec: Measuring Photospheric Temperature with SDSS}.
+
+2) Convert each CRTS light-curve to flux units (equivalently, light units) \S\ref{sec: Flux Normalization and Phase Shifting}
+
+3) Perform a 4, 5, or 6 term harmonic fit on the phase folded flux curve. \S\ref{sec: Light-Curve Harmonic Fitting}
+
+4) Divide the flux curve into four distinct regions based on eclipse full-width at half-minimum.  \S\ref{sec: Light-Curve Harmonic Fit Filters}
+
+5) Perform a linear fit on the harmonic fit residuals as a function of time in each light-curve region. \S\ref{sec: Regression of the Residuals}
+
+6) Compute a uniformity metric (named Region Disagreement) for the set of four brightness trends measured for each binary. \S\ref{sec: Computation of a Uniformity Metric}
+
+7) Compute the $FUV - NUV$ color and $FUV - NUV$ excess of each binary, as compared to a main-sequence star of similar temperature.
+
+\subsection{Measuring Photospheric Temperature with SDSS} \label{sec: Measuring Photospheric Temperature with SDSS}
+
+In this section, we describe how we use SDSS $ugriz$ photometry to estimate the photospheric temperature of each contact binary.
+
+1. We define color cutoffs that eliminate systems with saturated SDSS $g$ and $r$ band photometry. A sizable fraction of the SDSS $g$ band photometry is saturated for $g < 15$. To remove the saturated photometry, we define colour limits based on the observed distribution of contact binary colors and remove systems outside of those limits. See Fig. 4 of \citet{marsh2016characterization}. 
+
+\begin{align} \label{color_cuts}
+\begin{split}
+(g - r) > 0.02*g - 0.4 \text{ (Red Limit)} \\ 
+(g - r) < 0.13*g - 0.9 \text{ (Blue Limit)}
+\end{split}
+\end{align} 
+
+Even though the vast majority of the systems lie far from the galactic plane ($l > 15^{\circ}$), the contact binaries in the sample are distant because this sample is fainter than the samples of most previous surveys. For this reason, we measure the photospheric temperature of each binary using extinction corrected SDSS $(g - r)$ photometry. We perform the extinction-correction process:
+
+2. We compute the Johnson $V$ magnitude of the system by using maximum $V_{CSS}$ magnitude, and the uncorrected SDSS $r$ and $i$ measurements, using calibrations from \citet{jester2005sloan} and \citet{hovatta2014connection}.
+
+\begin{equation}
+(V - R) = 0.96*(r-i) + 0.21
+\end{equation}
+
+\begin{equation}
+V = V_{CSS} + 0.91 \times(V - R)^{2} + 0.04
+\end{equation}
+
+3. We compute the distance modulus to each binary using the period-luminosity correlation calibrated by \citet{rucinski2006luminosity}. This luminosity calibration carries a $1\sigma$ uncertainty of $20\%$.
+
+\begin{equation}
+M_{V} = -1.5 - 12 \text{log } P
+\end{equation}
+
+4. We use the \citet{green2015three} three-dimensional dust map (derived from Pan-STARRS1 data) to find a distance and extinction combination such that the sum of the dimming due to distance and $V$ dimming due to extinction equals the difference between the system's absolute magnitude $M_{V}$ and computed $V$ magnitude.
+
+\begin{equation}
+A_{V} = 3.1*E(B-V)
+\end{equation}
+
+5. We take the $E(B-V)$ estimated in step 4, and convert it to extinctions the SDSS $g$ and $r$ bands using the calibrations in \citet{schlafly2011measuring}.
+
+\begin{equation}
+A_{g} = 3.303 \times E(B-V) \qquad A_{r} = 2.285 \times E(B-V)
+\end{equation}
+
+After these extinction corrections are applied, we then use the empirical calibration of SDSS $g - r$ color to temperature from \citet{fukugita2011characterization}:
+
+\begin{equation} \label{fukugita_cal}
+T_{\text{eff}}/10^{4}K = \frac{1.09}{(g-r) + 1.47}
+\end{equation}
+
+This calibration is valid for main-sequence stars with temperatures between 3850K and 8000K. This produces temperature results that have a median error of $\pm310$K
+
+\subsubsection{SDSS Photometry Data Cuts} \label{sec: SDSS Photometry Data Cuts}
+
+Of the 12,281 systems, 11,782 remained after the cuts in Eqn. \ref{color_cuts}. We restrict the $3850 < T_{\text{eff}} < 8000$. This filter restricts the binaries to the empirically verified range of Eqn. \ref{fukugita_cal}. Of the 11,782, 11,681 remain after this filter. We eliminate systems with $\delta T_{\text{eff}} \geq 500$K. Of the 11,681 remaining systems, 11,138 remain after this filter. 
+
+\subsection{Flux Normalization and Phase Shifting} \label{sec: Flux Normalization and Phase Shifting}
+
+CRTS Photometry is reported in units of Catalina Sky Survey Magnitude $V_{CSS}$. For each contact binarysystem, we convert these magnitudes measurements into flux measurements, relative to the mean magnitude of all observations of the system. 
+
+\begin{equation} \label{css_flux}
+\text{Relative Flux }_{i} = \frac{10^{- \frac{V_{CSS,i}}{2.5}}}{10^{- \frac{\text{mean}(V_{CSS,i})}{2.5}}}
+\end{equation}
+
+\subsection{Light-Curve Harmonic Fitting} \label{sec: Light-Curve Harmonic Fitting}
+
+We perform a harmonic fit on each set of relative flux measurements (\S \ref{sec: Flux Normalization and Phase Shifting}), using the \texttt{gatspy} package \citep{vanderplas2015gatspy, vanderplas2015periodograms}. We start with six sine terms, and six cosine terms. We then count the number of local maxima and local minima on the fit. In a physical light-curve, we expect to see two local maxima, and two local minima. This has been known since the first viable physical model was used to compute light-curves \citep{lucy1968light}.
+
+If the harmonic fit does not have precisely two local maxima and two local minima, we try the fit again, this time with five sine and five cosine terms. If the fit fails yet again, we try with four sine and four cosine terms, and so on. Of the 11,138 light-curves where a fit was attempted, 8,994 were fit by six terms, 901 by five, 523 by four, 635 by three and 87 by two terms. 
+
+\subsubsection{Light-Curve Harmonic Fit Filters} \label{sec: Light-Curve Harmonic Fit Filters}
+
+Harmonic fits with at least four terms have been shown to approximate well the true shape of the contact binary light-curve \citep{rucinski1973w,rucinski1993simple}. However, it is not traditional in previous literature to approximate the shape of the contact binary light-curve with fewer than four Fourier terms.
+
+If a harmonic fit was reduced to three or fewer terms, the fit and corresponding system were discarded from the sample. From the 11,138 remaining after the filters described in \S\ref{sec: SDSS Photometry Data Cuts}, this filter removed 720 to leave 10,418. 
+
+Just because the harmonic fit has two local minima and two local maxima does not mean that it is a good approximation of the data. To separate light-curves that fit the observed data well from erroneous fits, we define a goodness-of-fit criterion:
+
+\begin{equation} \label{gof}
+\text{GOF} = \text{ standard deviation}\Bigg( \frac{\text{Residual}}{\text{Residual Error}}\Bigg)
+\end{equation}
+
+Assuming gaussian residuals, observed data that is completely described by the harmonic fit has GOF$ = 1$. We choose to exclude light-curves with GOF $ < 1.5$ from our study.  Increasing the tolerance to GOF $ < 1.5$ allows for systems with significant variation in their light-curve during the observation timespan to pass through the filter. It does not allow, however for the passage of fits with large number distant outlying observations.
+ 
+After we perform a successful harmonic fit on the phase-folded photometry, we scale the flux measurements such that the maximum value of the harmonic fit has a flux measurement of 1:
+
+\begin{equation} \label{css_normalized_flux}
+\text{Normalized Relative Flux }_{i} = \frac{\text{Relative Flux }_{i}}{\text{Max(Relative Flux }_{i})}
+\end{equation}
+
+We shift the light-curve in phase such that the deepest minimum has a phase of 0.25. A light-curve prepared in this way is shown in Fig. \ref{lc_label} as the line.
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.25]{example_lc_phase.png}
+\includegraphics[scale = 0.25]{example_lc_resi.png}
+\caption{The light-curve of a contact binary as observed by CRTS. In the top panel, we see that the light-curve is normalized in flux such that the maximum value of the harmonic fit (in black) is 1.0. We see that the light-curve has been divided into four distinct regions by phase. In the bottom panel, we see the harmonic fit residuals as a function of observation time. Observations from each one of the four bins have been separated. The light-curve of this contact binary does not change over the eight-year observation timespan, the residuals are centered around 0 for observations in each phase bin. The orbital period of this binary is 0.323716 days. The variability amplitude of this object binary is 0.57.}
+\label{lc_label}
+\end{figure}
+
+\subsection{Division of the Light-Curve} \label{sec: Division of the Light-Curve}
+
+In order to determine if the behavior of the light-curve variation is dependent on orbital phase, we divide the light-curve into four bins in orbital phase. We will check each light-curve for variation in these four regions separately. We elect to use four regions because the regions that correspond distinct orientations of the contact binary with respect to the line of sight (see the bottom panel of Fig. \ref{lc_label}). We elect to divide the light-curve at the eclipse full-width at half-minimum. The most important feature of this division is that for most contact binaries, it divides the phase into four bins of approximately equal phase-width. The regions of phase that include the eclipse minima (the regions including phase 0.25 and phase 0.75 in Fig. \ref{lc_label}) are slightly smaller in phase. We describe each light-curve region:
+
+Min1: At the first minimum, the hotter, brighter component is partially (or completely) blocked by the cooler, dimmer component. If the light-curve is most variable at Min1, the cooler component is the most variable physical component of the contact binary. 
+
+Max1: At the first maximum, the longest axis of the binary is perpendicular to the line of sight. One half of the hotter component and one half of the cooler component are facing the observer.
+
+Min2:  At the second minimum, the cooler, dimmer component is partially (or completely) blocked the the hotter, brighter component. If the light-curve is most variable at Min2, the hotter, brighter component is the most variable physical component of the contact binary. 
+
+Max2: At the second maximum, the longest axis of the binary is perpendicular to the line of sight.  One half of the hotter component and one half of the cooler component are facing the observer, but these are the opposite halves that are visible during Max1.
+
+The boundaries between the light-curve regions are defined to be the eclipse full-width at half-minima (FWHM). This width is calculated independently for each of the two eclipses. The light-curve region boundaries are not necessarily symmetrical about the phases 0.25 and 0.75. The half max fluxes are calculated, and then the phase coordinates of the light-curve intersections with that value are recorded.
+
+Given precision and amount of the CRTS data, we find that these four bins are the most appropriate choice for dividing the light-curve. We could divide the light-curve into more than four bins, however, as the bin size decreases, so will the number of observations in each bin. In order to ascertain trends in the harmonic fit residuals, there must be a large number of observations in each individual bin. Additionally, the choice of these four bins is understandable from a physical standpoint, and the bins are of approximately equal width in phase, so they have an approximately equal number of observations, yielding an approximately equal uncertainty in the trend.
+
+\subsubsection{Light-Curve Division Data Quality Cuts} \label{sec: Light-Curve Division Data Quality Cuts}
+
+In order to ensure a uniform analysis, we must place constraints on light-curves. We must ensure that there are enough photometric measurements in each bin to describe a brightness trend. We impose the following data quality cuts:
+
+We take the 10,418 contact binaries remaining after the cuts in \S\ref{sec: Light-Curve Harmonic Fitting}:
+
+1) We require that the smallest light-curve region be greater than 0.1 phases wide. We know from physical models that contact binaries are not expected to have eclipse FWHM smaller than 0.1 phases (see the light-curves in \citet{rucinski1993simple}). From the 10,418, this filter removes 94, to reduce the sample to 10,324.
+
+2) We require that all systems have at least 20 observations in each phase bin. This is to ensure that $\dot{F}$ can be determined robustly by fitting a line to the data. From the 10,324 remaining after filter 1, this filter removes 445, leaving 9,879. Fig. \ref{nobs_filter} contains a visual depiction of this filter.
+
+3) We require that the time difference between the first observation and the last observation is at least 2000 days (5.5 years), in each bin. This is to ensure that the observed $\dot{F}$ is representative of the behavior over the majority of the eight year observation time baseline, and is not an extrapolation of the flux trend in a very small time window. From the 9,879 remaining after filter 2, this filter removes 228, leaving 9,651. Fig. \ref{trange_filter} contains a visual depiction of this filter.
+
+If any one of the light-curve regions fails any one of these tests, the binary must be removed from the sample, to ensure for uniform analysis.
+
+\begin{table}
+
+\begin{center}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+Filter Name & Input & Removed & Removed (\%) & Output & Section \\ \hline
+SDSS Match (3") & 30,743 & 17,353 & 56.4\% & 13,390 & \ref{sec: Catalogue Filtration} \\
+Period $< 2.0$ d & 13,390 & 161 & 1.2\% & 13,229 &  \ref{sec: Catalogue Filtration} \\
+Mean $V_{CSS} > 13.5$  & 13,229 & 948  & 7.1\%  & 12,281 & \ref{sec: Catalogue Filtration}  \\
+SDSS Photometry & 12,281 & 1,143 & 9.3\% & 11,138 & \ref{sec: SDSS Photometry Data Cuts} \\
+Harmonic Fit Filters & 11,138 & 720 &  6.4\% & 10,418 & \ref{sec: Light-Curve Harmonic Fit Filters} \\
+Light-Curve Division & 10,418 & 767 & 7.3\% & 9,651 & \ref{sec: Light-Curve Division Data Quality Cuts} \\
+Residual Regression & 9,651 & 1,262 & 13.1\% & 8,389 & \ref{sec: Regression of the Residuals Data Quality Cuts} \\ \hline
+\end{tabular}
+}
+\end{center}
+\caption{A summary of the filters applied to the initial sample of 30,743 EW variables. The number of systems input into the filter, the number of systems removed by the filter, and the percentage of the input systems removed by the filter are reported.}
+\label{filter_table}
+\end{table}%
+
+
+\begin{figure}
+\includegraphics[width = \columnwidth]{nobs_filter.png}
+\caption{A histogram of the number of observations in each light-curve region. We can see that the maxima regions (Max1, Max2) have a higher median number of observations ($\approx 100$) than the minima regions (Min1, Min2) ($\approx 60$). This is because maxima regions are wider in phase than the minima regions.}
+\label{nobs_filter}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width = \columnwidth]{trange_filter.png}
+\caption{A histogram of the time difference (in days) between the first and last observation of a given light-curve region (Max1, Min1, Max2, Min2). We can see that the distribution of observation timespans is similar across the four light-curve regions, with the median}
+\label{trange_filter}
+\end{figure}
+
+\subsection{Regression of the Residuals} \label{sec: Regression of the Residuals}
+
+We measure the deviations of the observations with respect to the harmonic fit performed on all CRTS observations. We can consider the harmonic the ``average" light-curve of the contact binary during the eight-year CRTS observation timespan. This is because the CRTS measurements are randomly, (but relatively uniformly) sampled in time, and the harmonic fit does not preferentially weight observations by their time of observation.
+
+We subtract the harmonic fit from each observation, propagating the errors by adding in quadrature:
+
+\begin{multline} \label{residual}
+\text{ Residual } = \text{ Flux }_{i} - \text{ Harmonic Fit } \\
+\text{ Residual Error } = \sqrt{\text{ Flux Error }_{i}^{2} + \text{ Harmonic Fit Error }^{2}} \\
+\end{multline}
+
+We add the individual measurement flux error and the error on the harmonic fit in quadrature, because we assume that they are uncorrelated. The number of measurements used to form the harmonic fit varies from binary to binary, with a median of 348. We assume that an individual measurement has so little influence on the harmonic fit, such that the errors are uncorrelated.
+
+We then perform a linear regression on the fit residuals as a function of observation time. For each each light-curve region in every binary, we perform a linear fit of 500 Monte Carlo simulated datasets. The standard deviation of the distribution of the 500 measured slopes is taken to be the 1$\sigma$ uncertainty in $\dot{F}$ for that light-curve region.
+
+In this work we define to $\dot{F}$ to be the rate of change in flux received in units of the contact binary's maximum flux per year. To aid intuition, we report $\delta{F}$ as a \emph{percentage} of the contact binary's maximum flux. A $\dot{F} = 1$ measurement for a particular light-curve region indicates that the region is brightening by 1\% of the contact binary's maximum flux per year.
+
+\subsubsection{Regression of the Residuals Data Quality Cuts} \label{sec: Regression of the Residuals Data Quality Cuts}
+
+We require that the maximum 1$\sigma$ error in the $\dot{F}$ is less than 0.5. This means that $\dot{F}$ must be known to less than 0.5\% of the maximum flux per year. Of the 9,651 remaining after the cuts described in \ref{sec: Light-Curve Division Data Quality Cuts}, this filter removes 1,262 leaving 8,389. This filter is 
+represented visually in Fig. \ref{fdot_filter}. 
+
+\begin{figure}
+\includegraphics[width = \columnwidth]{fdot_filter.png}
+\caption{A histogram of the $\delta \dot{F}$ distribution of a given light-curve region (Max1, Min1, Max2, Min2). We have elected to filter remove from the sample systems with uncertainty in $\dot{F}$ of greater than 0.5.}
+\label{fdot_filter}
+\end{figure}
+
+Again, if any one of the light-curve regions fail this test, the binary must be removed from the sample.
+
+\subsection{Computation of a Uniformity Metric}
+
+We would like to establish a metric that determines to what extent the measurements of brightness change in each of the four regions agree. We take the four measurements of [($\dot{F}$(Max1), $\dot{F}$(Min1), $\dot{F}$(Max2), $\dot{F}$(Min2)] and compute the weighted mean of their values. The weights, in this case are the reciprocal of the measurement uncertainties, $\frac{1}{\delta \dot{F} (\text{Reg.})}$.
+
+\begin{equation} \label{weighted_mean}
+\mu = \sum_{\text{Reg.} = 1}^{4} \delta \dot{F} (\text{Reg.})^{-1} \Bigg(\frac{\dot{F}(\text{Max1})}{\delta \dot{F} (\text{Max1})} + \frac{\dot{F}(\text{Min1})}{\delta \dot{F} (\text{Min1})} + \frac{\dot{F}(\text{Max2})}{\delta \dot{F} (\text{Max2})} + \frac{\dot{F}(\text{Min2})}{\delta \dot{F} (\text{Min2})} \Bigg)
+\end{equation} 
+
+The weighted mean $\mu$ is similar to the $\dot{F}$ that would be measured had observations from all four light-curve regions been fit simultaneously.
+
+We use $\mu$ to compute a uniformity metric which we will name the Region Disagreement, or RD for short. This metric allows for the comparison of the level of disagreement between the four slopes supported by the data. The larger the value of RD metric, the more evidence exists for disparity between the four slopes measured for each light curve. A light-curve where all four slopes were identical would have a uniformity metric of zero.
+
+\begin{equation} \label{uniformity_metric}
+\text{RD} = \frac{|\dot{F}(\text{Max1}) - \mu|}{\delta \dot{F} \text{Max1}} + \frac{|\dot{F}(\text{Min1}) - \mu|}{\delta \dot{F} \text{Min1}} + \frac{|\dot{F}(\text{Max2}) - \mu|}{\delta \dot{F} \text{Max2}} + \frac{|\dot{F}(\text{Min2}) - \mu|}{\delta \dot{F} \text{Min2}}
+\end{equation} 
+
+The RD can be described as the sum of the distances of the individual $\dot{F}$ measurements from the weighted mean $\mu$, in units of the $1\sigma$ uncertainty $\delta \dot{F}$. While there are not statistical significances associated with specific values of the Region Disagreement, it does provide us a way to rank systems according to the evidence for light-curve changes that are not uniform across all phases.
+
+\subsection{GALEX Photometry} \label{GALEX Photometry}
+
+We queried the CASJobs server for all GALEX photometry within 3" of the 8,389 contact binaries remaining after the filters described in \S\ref{sec: Regression of the Residuals Data Quality Cuts}. When there was a one-to-one match between the catalogs with a source having both FUV and NUV mcat magnitudes, we included the contact binary in the GALEX subsample.
+
+\citet{smith2014interesting} has determined a locus of UV-normality has been determined for main-sequence stars, using GALEX data. The FUV - NUV color of typical main-sequence stars can be fit with the following function.
+
+\begin{equation} \label{uv_relation}
+FUV - NUV = \frac{1}{A(T_{\text{eff}} - B) + C}
+\end{equation}
+
+where $[A,B,C] = [2.254 \times 10^{-6},-7,782, -25.77]$
+
+\citet{smith2014interesting} has also determined a condition for UV-abnormality. All objects satisfying the condition in Eqn. \ref{uv_normality} are considered to be ``UV Bright".
+
+\begin{equation} \label{uv_normality}
+FUV - NUV \geq \frac{T_{\text{eff}} - D}{E}
+\end{equation}
+
+where $[D,E] = [8550, -584]$
+
+For each binary in the GALEX subsample, we compute both the $FUV - NUV$ color and $FUV - NUV$ excess with respect to Eqn. \ref{uv_relation}.
+
+It has been shown that (for galactic model dust) there is little differential reddening between the GALEX FUV and NUV bands. This means that $FUV - NUV$ color does not depend on the amount of extinction due to interstellar dust. Because the vast majority of the contact binaries are not appreciably dust-reddened, and that $FUV - NUV$ color is largely independent of the amount of dust, we do not apply an extinction correction to the $FUV - NUV$ color.
+
+\subsection{Results}
+
+\subsection{Correlation of Changes between Light-Curve Regions}
+
+Examining the correlation between light-curve regions as (for the whole sample) can reveal if the starspot formation occurs on both components, or just one.
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.50]{vgrid.png}
+\caption{A scatterplot matrix of the $\dot{F}$ measurements for each light-curve region, computed for 8,389 contact binaries in the final sample. The diagonal subplots are histograms of the univariate distributions. The plots below the diagonal are plots of the gaussian kernel-density estimate. The plots above the diagonal scatterplots, with the line of best fit overplotted. The Pearson $R^{2}$ coefficients for this matrix can be seen in Fig. \ref{v_cor}.}
+\label{vgrid}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.50]{v_corr_fig.png}
+\caption{Diagonal matrix of the Pearson $R^{2}$ correlation coefficient of the $\dot{F}$ measurement for each light-curve region (Min1, Max1, Min2, Max2), computed for 8,389 contact binaries in the final sample.}
+\label{v_cor}
+\end{figure}
+
+In Fig. \ref{vgrid}, we see the scatterplot matrix of the $\dot{F}$ trend. The resulting Pearson $R^{2}$ correlation coefficients can be seen in Fig. \ref{v_cor}. Examine the correlation matrix, we see that for the whole sample the two maxima (Max1, Max2) exhibit the strongest correlation in $\dot{F}$ ($R^{2} = 0.35$). For the whole sample, the two minima (Min1, Min2) regions exhibit the weakest correlation in $\dot{F}$ ($R^{2} = 0.20$). All of the regions containing one minima region and one maxima region had a similar $R^{2}$ correlation coefficient of $\approx 0.3$. The fact that the $\dot{F}$ correlation is the strongest between the two maxima light-curve regions and the weakest between the two minima light-curve regions supports the hypothesis that for all photospheric temperature, starspot activity is 
+
+If both components of the contact binary maintained equal spot-coverage for the entirety of the system's magnetic activity cycle, all light-curve regions would be equally correlated. During the maxima, one half of the primary, and one half of the secondary are visible. 
+
+During the minima, however, one component occults at least part of the other component. Again, if the same quantity of starspots were forming on each component, then the correlation of (Min1, Min2) should be the same as all of the other possible combinations of light-curve regions. However, if one component harbors the majority of the spots, the correlation between these regions should be less than all of the other possible combinations of light-curve regions.
+
+\subsection{$\dot{F}$ and Photospheric Temperature}
+
+In this section, we determine which temperatures of contact binary exhibit changes in their luminosity. For each binary, we take the weighted mean of the $\dot{F}$ measurements in the four light-curve regions: $\mu$. We then bin the binaries by photospheric temperature, calculated by SDSS as described in \S\ref{sec: Measuring Photospheric Temperature with SDSS}. We compute the mean of the $\mu$ values in bins and plot the mean and $1\sigma$ standard error of the mean as a function of bin center temperature. In Fig. \ref{wmean_temp} we see a coherent pattern in mean $\mu$ as a function of photospheric temperature. Contact binaries with $T_{\text{eff}} > 6200$K show a small mean $\dot{F}$, typically around 0.15.
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.50]{wmean_temp.png}
+\caption{The weighted mean of $|\dot{F}|$ in each light-curve region, binned as a function of photospheric temperature, represented as red points with error-bars. The light contours show a kernel-density estimate of the underlying distribution.}
+\label{wmean_temp}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.50]{minmax_wmean_temp.png}
+\caption{ Similar to Fig. \ref{wmean_temp}, except that the weighted mean of $|\dot{F}|$ is computed separately for the maxima light-curve regions (Max1, Max2, orange circles), and the minima light-curve regions (Min1, Min2, brown stars). We observe that there is not a difference in the qualitative behavior of the weighted means.}
+\label{minmax_wmean_temp}
+\end{figure}
+
+\subsection{Region Disagreement and Photospheric Temperature}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.50]{RD_vcss.png}
+\caption{The mean Region Disagreement as a function of binary magnitude $V_{CSS}$. The mean of the distribution is very close to 1. We see that this metric has the same mean value across the range of $V_{CSS}$ by observing the trend of the red points. }
+\label{RD_vcss}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.50]{region_disagreement.png}
+\caption{The mean of the Region Disagreement (RD) metric, computed in 15 bins (bin width = 240K). The mean RD is at a constant low value for contact binaries with radiative envelopes ($T \geq 6200K$, shaded in light blue). For contact binaries with convective envelopes, mean RD decreases with increasing temperature. }
+\label{region_disagreement} 
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.50]{rd_amp.png}
+\caption{15 bins, bin width = 0.033}
+\label{rd_amp}
+\end{figure}
+
+We must first test the RD metric against instrumental effects. In the magnitude range of this study $13.5 < V_{CSS} < 19.0$, mean photometric uncertainty increases monotonically with $V_{CSS}$. If photometric uncertainties are measured and propagated incorrectly, the distribution of the Region Disagreement will change as a function of $V_{CSS}$. In Fig. \ref{RD_vcss}, we observe that the mean RD metric is stable across the range of $V_{CSS}$, indicating that photometric errors and saturation effects do not strongly influence this metric. The mean for each of the 
+
+In Fig. \ref{region_disagreement}, we see how the mean RD changes as a function of photospheric temperature.
+
+\section[Metallicity-Period Color Relation with SEGUE]{\hyperlink{toc}{Metallicity-Period Color Relation with SEGUE}} \label{sec: Metallicity-Period Color Relation with SEGUE}
+
+Using the SDSS DR12 CrossID tool \url{http://skyserver.sdss.org/dr12/en/tools/crossid/crossid.aspx} we searched for matching primary spectra within 5" of the contact binaries as identified in CRTS. Catalina Sky Survey Pixels subtend 2.5" on the sky.
+
+Of the 9,227 contact binaries that have SDSS $ugriz$ photometry (and have passed the CRTS light-curve quality cuts), 388 have a SEGUE spectra within 5". We compare the temperature as derived from the SDSS $(g - r)$ color (the photometric temperature) with the temperature as reported by the SEGUE stellar parameters pipeline (\texttt{TEFF\_ADOP}).
+
+We assume the the error in the photometric temperature determination, which are caused by photometric, extinction-subtraction, and temperature-calibration errors, are uncorrelated with the reported SEGUE error (which is estimated by a model-fitting and voting procedure). Thus, we may add the two errors in quadrature.
+
+\begin{figure}
+\includegraphics[width = \columnwidth]{segue_phot_agree.png}
+\caption{Agreement between the SDSS Photometric and SDSS SEGUE temperature measurements. The blue points are the 314 sources where there was agreement within 2$\sigma$ between the two measurements. The red stars are the 74 sources where there was disagreement significant at the 2$\sigma$ level. We interpret this as being due to source confusion, and so we remove these 74 candidates from our sample.}
+\label{segue_phot_agree}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale = 0.50]{gr_period_color.png}
+\includegraphics[scale = 0.50]{SEGUE_period_color.png}
+\caption{A comparison of the temperature derived via SDSS $g-r$ color, and }
+\label{period_color_comparison}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.75]{metallicity_period.png}
+\caption{caption}
+\label{metallicity_period}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{fn_teff.png}
+\caption{caption}
+\label{fig: fn_teff}
+\end{figure}
 
 
 \section[The Future]{\hyperlink{toc}{The Future}} \label{sec: The Future}
@@ -1351,11 +1710,6 @@ The Palomar Transient Facility
 \label{fig: future_missions}
 \end{figure}
 
-
-%------------------------------------------------
-
-%------------------------------------------------
-
 %----------------------------------------------------------------------------------------
 % Conclusion
 %----------------------------------------------------------------------------------------
@@ -1367,6 +1721,8 @@ The Palomar Transient Facility
 %----------------------------------------------------------------------------------------
 
 \appendix
+
+\includepdf[pages = -]{Marsh2017etal.pdf}
 
 %----------------------------------------------------------------------------------------
 % BIBLIOGRAPHY
