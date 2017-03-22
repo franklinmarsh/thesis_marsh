@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis_marsh_v2.aux
+The style file: plainnat.bst
+Database file #1: thesis_bib.bib
+Warning--entry type for "sluys2006roche" isn't style-file defined
+--line 814 of file thesis_bib.bib
+Warning--I didn't find a database entry for "wilson1971realization"
+Warning--I didn't find a database entry for "kallrath1998recent"
+Warning--I didn't find a database entry for "djorgovski2011catalina"
+Warning--empty journal in bradstreet1988mapping
+Warning--empty publisher in carroll2006introduction
+Warning--empty journal in molnar2017prediction
+Warning--empty journal in pringle1985interacting
+You've used 136 entries,
+            2773 wiz_defined-function locations,
+            1292 strings with 28048 characters,
+and the built_in function-call counts, 70220 in all, are:
+= -- 5978
+> -- 5054
+< -- 85
++ -- 1724
+- -- 1584
+* -- 6061
+:= -- 11126
+add.period$ -- 410
+call.type$ -- 136
+change.case$ -- 911
+chr.to.int$ -- 132
+cite$ -- 276
+duplicate$ -- 2861
+empty$ -- 5118
+format.name$ -- 1778
+if$ -- 14365
+int.to.chr$ -- 5
+int.to.str$ -- 1
+missing$ -- 138
+newline$ -- 687
+num.names$ -- 544
+pop$ -- 1708
+preamble$ -- 1
+purify$ -- 780
+quote$ -- 0
+skip$ -- 2326
+stack$ -- 0
+substring$ -- 2361
+swap$ -- 237
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1471
+warning$ -- 4
+while$ -- 590
+width$ -- 0
+write$ -- 1755
+(There were 8 warnings)
