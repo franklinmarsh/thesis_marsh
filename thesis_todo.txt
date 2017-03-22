@@ -1,21 +1,6 @@
 SECTIONS TO FINISH:
-o Acknowledgments
-o Introduction
-	- be more specific about what this thesis contributes.
-o 2.2.1 The Main-Sequence Star
-	-clean sentence order, reconsider including all the equations of stellar structure.
-
-o 2.2.3 ZAMS to TAMS
-	-proofread and spell-check
-o 2.2.4 Metallicity
-	-Clean writing and check for typos, otherwise good.
 o 2.2.5 The Roche Potential 
 	-add conclusion and fix first formula.
-o 2.2.6 The Geometrical Elements of Contact Binary Systems
-o 2.2.7 Thermal Equilibrium Models 
-	-rewrite the majority of this section.
-	-discuss lucy model
-	-some scientists no longer believe the roche model is adequate.
 o 4.3 O-C Analysis
 	-Relate period change to M dot using equations from existing literature.
 o 5 Working with Survey Data
@@ -30,6 +15,22 @@ o 2.8 Early-Type Contact Binaries
 	-worth providing some context on why this section is included.
 o 2.2.2 The Main-Sequence Homology Relations
 	-fix example, because proxima centauri is a bad example. Use Tau Ceti, instead. 0.55L_sun
+o 2.2.6 The Geometrical Elements of Contact Binary Systems
+o 2.2.7 Thermal Equilibrium Models 
+	-rewrite the majority of this section.
+	-discuss lucy model
+	-some scientists no longer believe the roche model is adequate.
+o Introduction
+	- be more specific about what this thesis contributes.
+o Acknowledgments
+
+o 2.2.1 The Main-Sequence Star
+	-clean sentence order, reconsider including all the equations of stellar structure.
+
+o 2.2.3 ZAMS to TAMS
+	-proofread and spell-check
+o 2.2.4 Metallicity
+	-Clean writing and check for typos, otherwise good.
 
 By Thurs, Mar. 9th
 o Finish all of Section 2
