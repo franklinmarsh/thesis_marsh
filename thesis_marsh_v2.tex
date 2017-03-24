@@ -1121,7 +1121,11 @@ In Figure \ref{fig: lc_folded}, we see survey data of a contact binary, after it
 
 \section[Starspots in Visible Light]{\hyperlink{toc}{Starspots in Visible Light}} \label{sec: Starspots in Visible Light}
 
-In our study, we aim to learn how the luminosity of contact binary systems vary on decadal timescales. We hope to learn the relationship between the UV-color of a contact binary, and its optical variability. 
+In our study, we aim to learn how the luminosity of contact binary systems vary on decadal timescales. We hope to learn the relationship between the UV-color of a contact binary, and its optical variability. The best model that researchers have for why contact binary light-curves change shapes is the appearance and disappearance of starspots on their photospheres \citep{bradstreet1988mapping}. 
+
+Starspots affect the way energy flows out of the star. As starspots appear and disappear, the shape of the light-curve changes. If starspots appear and disappear uniformly across the shared photosphere. All parts of the light-curve will change in the same way, the light-curve will shift ``up" and ``down", but the light-curve will not change shape. If the starspot coverage changes on one component, but does not change on the other, then the light-curve will change shape.
+
+We can detect light-curve changes with a survey that observes the same set of contact binaries over a timespan of several years, in order to learn about the nature of the spotting that occurs on contact binaries. Is starspot formation left-right asymmetric? Is are the starspots more variable on one component, or is the process uniform across the shared photosphere? We also want to know if the answers to these questions depend on the temperature of the shared photosphere.
 
 In \S\ref{lc_morph} we talked about the light-curve as if it was one single function. In actuality, the shape of contact binary light-curves change over time (Eqn. \ref{light_curve_redux}). 
 
@@ -1129,11 +1133,7 @@ In \S\ref{lc_morph} we talked about the light-curve as if it was one single func
 f(\text{Phase, Time}) = \text{ Flux Received at Telescope}
 \end{equation}
 
-The best model that researchers have for why contact binary light-curves change shapes is the appearance and disappearance of starspots on their photospheres \citep{bradstreet1988mapping}. We can detect light-curve changes with a survey that observes the same set of contact binaries over a timespan of several years, in order to learn about the nature of the spotting that occurs on contact binaries.
-
- In order to detect changes in the contact binary light-curve in CRTS data, we will re-use much of the machinery that we have developed in \S\ref{lc_morph}.
-
-We detect deviations of the light-curve with respect to the harmonic fit performed on all CRTS observations. We can consider the harmonic the ``average" light-curve of the contact binary during the eight-year CRTS observation timespan. This is because the CRTS measurements are randomly, (but uniformly) sampled in time, and the harmonic fit assigns equal weight to every measurement. 
+We detect deviations of the light-curve with respect to the harmonic fit performed on the light-curve. We can consider the harmonic the ``average" light-curve of the contact binary during the eight-year CRTS observation timespan. This is because the CRTS measurements are randomly, (but uniformly) sampled in time, and the harmonic fit assigns equal weight to every measurement. 
 
 We can measure the difference between observations and the harmonic fit as a function of time. If this difference becomes too large to attribute to photometric noise, we know that the contact binary is changing its brightness over a timespan of many years.
 
@@ -1146,19 +1146,9 @@ We can measure the difference between observations and the harmonic fit as a fun
 
 \section[Methods]{\hyperlink{toc}{Methods}} \label{sec: Methods}
 
-Our methods are outlined as follows:
+First, we will describe the data that we will use in this study (\S\ref{sec: Sample Description}). Then, we will calculate the photospheric temperature of each binary using SDSS $ugriz$ photometry (\S\ref{sec: Measuring Photospheric Temperature with SDSS}). Then, we will perform a 4, 5, or 6 term harmonic fit on the phase folded light-curve, and convert the light-curve into units of flux (\S\ref{sec: Light-Curve Harmonic Fitting}). We will divide the flux curve into four distinct regions based on eclipse full-width at half-minimum (\S\ref{sec: Light-Curve Harmonic Fit Filters}), and perform a linear fit on the harmonic fit residuals as a function of time in each light-curve region (\S\ref{sec: Regression of the Residuals}). We will then compute a uniformity metric (named Region Disagreement) for the set of four brightness trends measured for each binary (\S\ref{sec: Computation of a Uniformity Metric}). We will compare this optical variability to UV data by computing the $FUV - NUV$ color and $FUV - NUV$ excess of each binary, as compared to a main-sequence star of similar temperature. After each one of the previous steps, we will remove systems with low-quality data from our sample, to ensure that the final sample is clean.
 
-1) Calculate the photospheric temperature of each binary using SDSS $ugriz$ photometry \S\ref{sec: Measuring Photospheric Temperature with SDSS}.
-
-2) Perform a 4, 5, or 6 term harmonic fit on the phase folded light-curve, and convert the light-curve into units of flux. \S\ref{sec: Light-Curve Harmonic Fitting}
-
-3) Divide the flux curve into four distinct regions based on eclipse full-width at half-minimum.  \S\ref{sec: Light-Curve Harmonic Fit Filters}
-
-4) Perform a linear fit on the harmonic fit residuals as a function of time in each light-curve region. \S\ref{sec: Regression of the Residuals}
-
-5) Compute a uniformity metric (named Region Disagreement) for the set of four brightness trends measured for each binary. \S\ref{sec: Computation of a Uniformity Metric}
-
-6) Compute the $FUV - NUV$ color and $FUV - NUV$ excess of each binary, as compared to a main-sequence star of similar temperature.
+\subsection[Sample Description]{\hyperlink{toc}{Sample Description}} \label{sec: Sample Description}
 
 In our study, we use data from two separate surveys: (1) We use CRTS data spanning eight years, which allows for the variation in the luminosity of each system on a decadal timescale to be measured, and (2) We use SDSS data which provides multiband photometric measurements taken within the timespan of a few minutes, allowing the temperature of each binary to be measured. 
 
@@ -1170,13 +1160,15 @@ The Sloan Digital Sky Survey provides multiband photometry in the \emph{u},\emph
 
 The initial set of contact binaries from which we derived our sample was selected as described in \citet{drake2014catalina}. The CRTS photometry for this sample can be accessed publicly at \url{http://nesssi.cacr.caltech.edu/DataRelease/Varcat.html}. 
 
+GALEX is a NASA Small Explorer class Ultraviolet survey instrument launched in April 2003. The optical system (a 50cm diameter modified Ritchey-Chretien telescope) focuses starlight onto two photon-counting microchannel-plate (MCP) detectors that can image the sky in Far Ultraviolet (FUV) and Near Ultraviolet (NUV) bands simultaneously. The FUV band spans 134.4nm to 178.6nm with an effective wavelength of 152.8nm. The NUV band spans 177.1nm to 283.1nm with an effective wavelength of 227.1nm. The two detectors produce a point-spread-function with a full-width at half-maximum smaller than 4.5" (FUV) and 6.0" (NUV) in diameter. GALEX operates in three survey modes: Approximate All-sky (AIS), Medium Imaging (MIS), and Deep Imaging (DIS). The AIS has a 5 $\sigma$ limiting magnitude of 19.9 in the FUV Band and 20.8 in the NUV band\citep{morrissey2005orbit}. \citet{morrissey2007calibration} provides a description of the GALEX data products. We accessed the GALEX catalog photometry via the CASJobs framework \citep{o2005batch} at \url{https://galex.stsci.edu/casjobs/}.
+
 The \citet{drake2014catalina} sample was created by selecting data from the Catalina Surveys Data Release 1 (CSDR1), based on the criteria of high Stetson variability index $(J_{WS})$ and large standard deviation of brightness measurements ($\sigma$).  Drake performed Lomb-Scargle periodogram analysis \citep[LS,][]{scargle1982studies} on these variables, testing for significant periods. Candidates that passed a LS significance cutoff along with additional data quality cuts were further processed to determine the best period and were then visually inspected. Approximately half of the inspected candidates passed selection and were classified by type (e.g. EW: contact binary, EA: Algol type, RRab: RR Lyrae, etc.) based on period, light-curve morphology, and colour information.
 
 In the \citet{drake2014catalina} sample there are 30,743 binaries classified as EW, corresponding to W UMa (contact) binaries. The SDSS photometry was crossmatched to the CRTS photometry by using the Large Survey Database framework \citep[LSD,][]{juric2012lsd}. We searched for SDSS point sources within 3" of the coordinates of the CRTS candidates, and when a one-to-one match existed, we correlated the photometry and added the candidate to our sample. When a unique match did not exist between the SDSS and CRTS photometry, we did not add the candidate to our sample. We chose the 3" search radius because CSS pixels subtend 2.5". Out of the 30,743 sources queried, there were 13,551 sources with matching CRTS and SDSS photometry. 
 
 \citet{drake2014catalina} have shown that 98.3\% of the sources classified as contact binaries in CRTS data are also classified as contact binaries in the analysis of LINEAR data in \citet{palaversa2013exploring}. They have also shown that many of the candidates have SDSS DR10 spectra consistent with known spectral characteristics of contact binaries. Because our contact binary sample is selected from the Drake subset, we expect that it will also have greater than 98\% purity. 
 
-Our initial sample of contact binaries contains systems for which we both have time-series photometry (provided by CRTS), and a temperature measurement using ($g - r$) color (provided by SDSS).
+Our initial sample of contact binaries contains systems for which we both have time-series photometry (provided by CRTS), and a temperature measurement using ($g - r$) color (provided by SDSS). From the 30,743 EW variables (corresponding to Contact Binaries), we find that 13,390 contain matching SDSS photometry. We elect to further filter these 13,390 systems, including only systems with orbital periods of less than two days $(P < 2.0 d)$, because orbital periods of longer than two days are not observed for true contact systems. This filter eliminates 161 systems to leave 13,229. We also elect to filter out systems with a reported mean $V_{CSS} < 13.5$, because \citet{marsh2016characterization} found that inconsistencies in the photometric aperture size chosen for bright sources renders the photometry of these bright sources unreliable. This filter eliminates 948 to leave 12,281.
 
 \subsection{Measuring Photospheric Temperature with SDSS} \label{sec: Measuring Photospheric Temperature with SDSS}
 
@@ -1229,6 +1221,10 @@ T_{\text{eff}}/10^{4}K = \frac{1.09}{(g-r) + 1.47}
 
 This calibration is valid for main-sequence stars with temperatures between 3850K and 8000K. This produces temperature results that have a median error of $\pm310$K
 
+\subsubsection{SDSS Photometry Data Cuts} \label{sec: SDSS Photometry Data Cuts}
+
+Of the 12,281 systems, 11,782 remained after the cuts in Eqn. \ref{color_cuts}. We restrict the $3850 < T_{\text{eff}} < 8000$. This filter restricts the binaries to the empirically verified range of Eqn. \ref{fukugita_cal}. Of the 11,782, 11,681 remain after this filter. We eliminate systems with $\delta T_{\text{eff}} \geq 500$K. Of the 11,681 remaining systems, 11,138 remain after this filter. 
+
 \subsection{Light-Curve Harmonic Fitting} \label{sec: Light-Curve Harmonic Fitting}
 
 We perform a harmonic fit on each set of relative flux measurements (\S \ref{sec: Flux Normalization and Phase Shifting}), using the \texttt{gatspy} package \citep{vanderplas2015gatspy, vanderplas2015periodograms}. We start with six sine terms, and six cosine terms. We then count the number of local maxima and local minima on the fit. In a physical light-curve, we expect to see two local maxima, and two local minima. This has been known since the first viable physical model was used to compute light-curves \citep{lucy1968light}.
@@ -1241,7 +1237,7 @@ CRTS photometry is reported in units of Catalina Sky Survey Magnitude $V_{CSS}$.
 \text{Relative Flux }_{i} = \frac{10^{- \frac{V_{CSS,i}}{2.5}}}{10^{- \frac{\text{mean}(V_{CSS,i})}{2.5}}}
 \end{equation}
 
-We then shift the contact binary light-curve in phase such that the deepest minimum of the flux (Min1) is located at $\theta = 0.25$
+We then shift the contact binary light-curve in phase such that the deepest minimum of the flux (Min1) is located at $\theta = 0.25$. A light-curve prepared in this way is shown in Fig. \ref{lc_label} as the black line.
 
 \subsubsection{Light-Curve Harmonic Fit Filters} \label{sec: Light-Curve Harmonic Fit Filters}
 
@@ -1263,11 +1259,7 @@ After we perform a successful harmonic fit on the phase-folded photometry, we sc
 \text{Normalized Relative Flux }_{i} = \frac{\text{Relative Flux }_{i}}{\text{Max(Relative Flux }_{i})}
 \end{equation}
 
-\subsubsection{SDSS Photometry Data Cuts} \label{sec: SDSS Photometry Data Cuts}
 
-Of the 12,281 systems, 11,782 remained after the cuts in Eqn. \ref{color_cuts}. We restrict the $3850 < T_{\text{eff}} < 8000$. This filter restricts the binaries to the empirically verified range of Eqn. \ref{fukugita_cal}. Of the 11,782, 11,681 remain after this filter. We eliminate systems with $\delta T_{\text{eff}} \geq 500$K. Of the 11,681 remaining systems, 11,138 remain after this filter. 
-
-We shift the light-curve in phase such that the deepest minimum has a phase of 0.25. A light-curve prepared in this way is shown in Fig. \ref{lc_label} as the line.
 
 \begin{figure}
 \centering
@@ -1307,15 +1299,14 @@ We take the 10,418 contact binaries remaining after the cuts in \S\ref{sec: Ligh
 
 If any one of the light-curve regions fails any one of these tests, the binary must be removed from the sample, to ensure for uniform analysis.
 
-\begin{table}
-
+\begin{table}[H]
 \begin{center}
 \resizebox{\columnwidth}{!}{
 \begin{tabular}{|c|c|c|c|c|c|} \hline
 Filter Name & Input & Removed & Removed (\%) & Output & Section \\ \hline
-SDSS Match (3") & 30,743 & 17,353 & 56.4\% & 13,390 & \ref{sec: Catalogue Filtration} \\
-Period $< 2.0$ d & 13,390 & 161 & 1.2\% & 13,229 &  \ref{sec: Catalogue Filtration} \\
-Mean $V_{CSS} > 13.5$  & 13,229 & 948  & 7.1\%  & 12,281 & \ref{sec: Catalogue Filtration}  \\
+SDSS Match (3") & 30,743 & 17,353 & 56.4\% & 13,390 & \ref{sec: Sample Description} \\
+Period $< 2.0$ d & 13,390 & 161 & 1.2\% & 13,229 &  \ref{sec: sec: Sample Description} \\
+Mean $V_{CSS} > 13.5$  & 13,229 & 948  & 7.1\%  & 12,281 & \ref{sec: sec: Sample Description} \\
 SDSS Photometry & 12,281 & 1,143 & 9.3\% & 11,138 & \ref{sec: SDSS Photometry Data Cuts} \\
 Harmonic Fit Filters & 11,138 & 720 &  6.4\% & 10,418 & \ref{sec: Light-Curve Harmonic Fit Filters} \\
 Light-Curve Division & 10,418 & 767 & 7.3\% & 9,651 & \ref{sec: Light-Curve Division Data Quality Cuts} \\
@@ -1327,15 +1318,14 @@ Residual Regression & 9,651 & 1,262 & 13.1\% & 8,389 & \ref{sec: Regression of t
 \label{filter_table}
 \end{table}%
 
-
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[scale = 0.75]{nobs_filter.png}
 \caption{A histogram of the number of observations in each light-curve region. We can see that the maxima regions (Max1, Max2) have a higher median number of observations ($\approx 100$) than the minima regions (Min1, Min2) ($\approx 60$). This is because maxima regions are wider in phase than the minima regions.}
 \label{nobs_filter}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[scale = 0.75]{trange_filter.png}
 \caption{A histogram of the time difference (in days) between the first and last observation of a given light-curve region (Max1, Min1, Max2, Min2). We can see that the distribution of observation timespans is similar across the four light-curve regions, with the median}
@@ -1363,7 +1353,7 @@ In this work we define to $\dot{F}$ to be the rate of change in flux received in
 
 We require that the maximum 1$\sigma$ error in the $\dot{F}$ is less than 0.5. This means that $\dot{F}$ must be known with an uncertainty of less than 0.5\% of the maximum flux per year. Of the 9,651 remaining after the cuts described in \ref{sec: Light-Curve Division Data Quality Cuts}, this filter removes 1,262, leaving 8,389. This filter is represented visually in Fig. \ref{fdot_filter}. 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[scale = 0.75]{fdot_filter.png}
 \caption{A histogram of the $\delta \dot{F}$ distribution of a given light-curve region (Max1, Min1, Max2, Min2). We have elected to filter remove from the sample systems with uncertainty in $\dot{F}$ of greater than 0.5.}
@@ -1372,7 +1362,7 @@ We require that the maximum 1$\sigma$ error in the $\dot{F}$ is less than 0.5. T
 
 Again, if any one of the light-curve regions fail this test, the binary must be removed from the sample.
 
-\subsection{Computation of a Uniformity Metric}
+\subsection{Computation of a Uniformity Metric} \label{sec: Computation of a Uniformity Metric}
 
 We would like to establish a metric that determines to what extent the measurements of brightness change in each of the four regions agree. We take the four measurements of [($\dot{F}$(Max1), $\dot{F}$(Min1), $\dot{F}$(Max2), $\dot{F}$(Min2)] and compute the weighted mean of their values. The weights, in this case are the reciprocal of the measurement uncertainties, $\frac{1}{\delta \dot{F} (\text{Reg.})}$.
 
@@ -1414,13 +1404,27 @@ For each binary in the GALEX subsample, we compute both the $FUV - NUV$ color an
 
 It has been shown that (for galactic model dust) there is little differential reddening between the GALEX FUV and NUV bands. This means that $FUV - NUV$ color does not depend on the amount of extinction due to interstellar dust. Because the vast majority of the contact binaries are not appreciably dust-reddened, and that $FUV - NUV$ color is largely independent of the amount of dust, we do not apply an extinction correction to the $FUV - NUV$ color.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.75]{galex_err_filter.png}
+\caption{Illustration of the filter applied to the GALEX subsample. Systems are only allowed $\sigma (FUV - NUV) \leq 1.0$}
+\label{fig: galex_err_filter}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.75]{uv_excess_fig.png}
+\caption{}
+\label{fig: uv_excess_fig}
+\end{figure}
+
 \section[Results]{\hyperlink{toc}{Results}} \label{sec: Results}
 
 \subsection{Correlation of Changes between Light-Curve Regions}
 
 Examining the correlation between light-curve regions as (for the whole sample) can reveal if the starspot formation occurs on both components, or just one.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[scale = 0.50]{vgrid.png}
 \caption{A scatterplot matrix of the $\dot{F}$ measurements for each light-curve region, computed for 8,389 contact binaries in the final sample. The diagonal subplots are histograms of the univariate distributions. The plots below the diagonal are plots of the gaussian kernel-density estimate. The plots above the diagonal scatterplots, with the line of best fit overplotted. The Pearson $R^{2}$ coefficients for this matrix can be seen in Fig. \ref{v_cor}.}
@@ -1443,14 +1447,14 @@ During the minima, however, one component occults at least part of the other com
 
 In this section, we determine which temperatures of contact binary exhibit changes in their luminosity. For each binary, we take the weighted mean of the $\dot{F}$ measurements in the four light-curve regions: $\mu$. We then bin the binaries by photospheric temperature, calculated by SDSS as described in \S\ref{sec: Measuring Photospheric Temperature with SDSS}. We compute the mean of the $\mu$ values in bins and plot the mean and $1\sigma$ standard error of the mean as a function of bin center temperature. In Fig. \ref{wmean_temp} we see a coherent pattern in mean $\mu$ as a function of photospheric temperature. Contact binaries with $T_{\text{eff}} > 6200$K show a small mean $\dot{F}$, typically around 0.15. The data show that contact binaries with temperatures of 5500 to 6200K are the most variable on decadal timescales
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[scale = 0.75]{wmean_temp.png}
 \caption{The weighted mean of $|\dot{F}|$ in each light-curve region, binned as a function of photospheric temperature, represented as red points with error-bars. The light contours show a kernel-density estimate of the underlying distribution.}
 \label{wmean_temp}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[scale = 0.75]{minmax_wmean_temp.png}
 \caption{ Similar to Fig. \ref{wmean_temp}, except that the weighted mean of $|\dot{F}|$ is computed separately for the maxima light-curve regions (Max1, Max2, orange circles), and the minima light-curve regions (Min1, Min2, brown stars). We observe that there is not a difference in the qualitative behavior of the weighted means.}
@@ -1459,23 +1463,30 @@ In this section, we determine which temperatures of contact binary exhibit chang
 
 \subsection{Region Disagreement and Photospheric Temperature}
 
-\begin{figure}
+We must first test the RD metric against instrumental effects. In the magnitude range of this study $13.5 < V_{CSS} < 19.0$, mean photometric uncertainty increases monotonically with $V_{CSS}$. If photometric uncertainties are measured and propagated incorrectly, the distribution of the Region Disagreement will change as a function of $V_{CSS}$. In Fig. \ref{RD_vcss}, we observe that the mean RD metric is stable across the range of $V_{CSS}$, indicating that photometric errors and saturation effects do not strongly influence this metric.
+
+In Fig. \ref{region_disagreement}, we see how the mean RD changes as a function of photospheric temperature.
+
+\begin{figure}[H]
 \centering
 \includegraphics[scale = 0.75]{RD_vcss.png}
 \caption{The mean Region Disagreement as a function of binary magnitude $V_{CSS}$. The mean of the distribution is very close to 1. We see that this metric has the same mean value across the range of $V_{CSS}$ by observing the trend of the red points. }
 \label{RD_vcss}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[scale = 0.75]{region_disagreement.png}
 \caption{The mean of the Region Disagreement (RD) metric, computed in 15 bins (bin width = 240K). The mean RD is at a constant low value for contact binaries with radiative envelopes ($T \geq 6200K$, shaded in light blue). For contact binaries with convective envelopes, mean RD decreases with increasing temperature. }
 \label{region_disagreement} 
 \end{figure}
 
-We must first test the RD metric against instrumental effects. In the magnitude range of this study $13.5 < V_{CSS} < 19.0$, mean photometric uncertainty increases monotonically with $V_{CSS}$. If photometric uncertainties are measured and propagated incorrectly, the distribution of the Region Disagreement will change as a function of $V_{CSS}$. In Fig. \ref{RD_vcss}, we observe that the mean RD metric is stable across the range of $V_{CSS}$, indicating that photometric errors and saturation effects do not strongly influence this metric. The mean for each of the 
-
-In Fig. \ref{region_disagreement}, we see how the mean RD changes as a function of photospheric temperature.
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.75]{minmax_corr.png}
+\caption{}
+\label{minmax_corr} 
+\end{figure}
 
 \begin{figure}[H]
 \centering
