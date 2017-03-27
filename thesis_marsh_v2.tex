@@ -972,7 +972,6 @@ The first X-ray survey of contact binaries was conducted by the \emph{Einstein} 
 %\label{fig: cruddace1984contact_2}
 %\end{figure}
 
-
 \section[Analysis Techniques]{\hyperlink{toc}{Analysis Techniques}} \label{sec: analysis_techniques}
 
 In this section, we will learn how astronomers convert observations of contact binaries into measurements of physical parameters of the systems. Some parameters that can be measured for contact binary stars are the component masses $M_{1}, M_{2}$, the component luminosities and temperatures $L_{1}, L_{2}$, the system inclination $i$, and the fill-out factor $f$ \index{fill-out factor $f$}.
@@ -1011,7 +1010,7 @@ In summary, physical light-curve modeling is a powerful tool in the study of con
 
 As larger and larger numbers of contact binaries were discovered, astronomers saw the need for a less computationally intensive way of determining a system's geometrical elements from light-curve data. The nomographic method does not seek to produce a large number of system parameters, but rather seeks only to constrain the system geometry $[f,q,i]$. In the nomographic method, the physical model of the contact binary is used in reverse (as compared to \S\ref{sec: Physical Light-Curve Modeling}). A catalog of models is produced, covering the parameter space of system geometry $[0 \leq f \leq 1, 0 \leq q \leq 1, 0 \leq i \leq 90]$. In the physical models used to compute the catalog of light-curves, isothermal envelopes are assumed, along with a simple gravity-darkening law. The light-curve that is observed by the telescope is then compared with the whole catalog of computed light-curves, and the closest match is interpreted as corresponding to the actual system parameters. 
 
-\citet{mochnacki1972model} was the first to propose a nomographic method. As large numbers of contact binary light-curves were being collected in the early 1990's, interest in nomographic solutions was revived. \citet{rucinski1973w} derived two methods, one based on a Fourier decomposition of the light-curve, and the other based on measuring the eclipse half-widths. It was found that for systems with a light-curve amplitude $A$ of great than 0.3 magnitudes, the fill-out factor $f$ could be calculated. Work with light-curves from the OGLE survey has determined a criterion for contact based on Fourier coefficients alone \citep{rucinski1997eclipsing}. \citet{rucinski1993simple} calculated an array of contact binary light-curves for 1500 possible combinations of $[f,q,i]$, which we will make use of in \S\ref{sec: Light-curve Features} (Fig. \ref{fig:rucinski1993simple_6}). Fourier analysis has been used to find and characterize contact binaries in all-sky surveys \citep{coker2013study}.
+\citet{mochnacki1972model} was the first to propose a nomographic method. As large numbers of contact binary light-curves were being collected in the early 1990's, interest in nomographic solutions was revived. \citet{rucinski1973w} derived two methods, one based on a Fourier decomposition of the light-curve, and the other based on measuring the eclipse half-widths. It was found that for systems with a light-curve amplitude $A$ of great than 0.3 magnitudes, the fill-out factor $f$ could be calculated. Work with light-curves from the OGLE survey has determined a criterion for contact based on Fourier coefficients alone \citep{rucinski1997eclipsing}. \citet{rucinski1993simple} calculated an array of contact binary light-curves for 1500 possible combinations of $[f,q,i]$ (Fig. \ref{fig:rucinski1993simple_6}). Fourier analysis has been used to find and characterize contact binaries in all-sky surveys \citep{coker2013study}.
 
 \begin{figure}[H]
 \centering
@@ -1113,40 +1112,76 @@ where (\%) is the ``modulo" (or remainder operator). We plot the relative flux o
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{lc_folded.png}
-\caption{Observations of a contact binary by CRTS, folded by the period as detected by the lomb-scargle algorithm.}
+\caption{Observations of a contact binary by CRTS, folded by the period as detected by the Lomb-Scargle algorithm. This phase-folded data is similar to what would be produced in a night of single-target observing.}
 \label{fig: lc_folded}
 \end{figure}
 
-In Figure \ref{fig: lc_folded}, we see survey data of a contact binary, after it has been folded by the orbital period. We see a coherent light-curve with a beautiful shape. This phase-folded light-curve is similar to what would be obtained in a night of observation by a single observer. A phase-folded light-curve constructed in this way can be analyzed in the same manner as a light-curve taken in a single night of continuous observing.
+In Figure \ref{fig: lc_folded}, we see survey data of a contact binary, after it has been folded by the orbital period that was returned by the LS algorithm. We see a coherent light-curve with a beautiful shape. This phase-folded light-curve is similar to what would be obtained in a night of observation by a single observer. A phase-folded light-curve constructed in this way can be analyzed in the same manner as a light-curve taken in a single night of continuous observing.
 
-\section[Starspots in Visible Light]{\hyperlink{toc}{Starspots in Visible Light}} \label{sec: Starspots in Visible Light}
+Once we have phase-folded observations, we can fit these observations with a function in phase. This allows us to describe a light-curve in a way that makes sense, both to humans and computers. Let's consider what our light curve data actually is: a set of measurements of the flux of a contact binary. These measurements are taken at a certain time ($t$), have a certain value, in our case a measurement of flux ($f$), and this measured value has an associated error ($e$). From CRTS, we obtain lots of these measurements. Our light curve looks like this:
 
-In our study, we aim to learn how the luminosity of contact binary systems vary on decadal timescales. We hope to learn the relationship between the UV-color of a contact binary, and its optical variability. The best model that researchers have for why contact binary light-curves change shapes is the appearance and disappearance of starspots on their photospheres \citep{bradstreet1988mapping}. 
+\begin{table}[htdp]
+\caption{Format of Phase-folded Data from CRTS}
+\begin{center}
+\begin{tabular}{|c|c|c|} \hline
+\textbf{phase} ($\theta$) & \textbf{flux} ($f$) & \textbf{error} ($e$) \\ \hline
+value & value & value \\ \hline
+value & value & value \\ \hline
+... & ... & ... \\
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}%
 
-Starspots affect the way energy flows out of the star. As starspots appear and disappear, the shape of the light-curve changes. If starspots appear and disappear uniformly across the shared photosphere. All parts of the light-curve will change in the same way, the light-curve will shift ``up" and ``down", but the light-curve will not change shape. If the starspot coverage changes on one component, but does not change on the other, then the light-curve will change shape.
+In the eight years between 2005 and 2013, CRTS observes a given source roughly 350 times. In other words, it reports about 350 phases ($\theta$), 350 fluxes ($f$), and 350 errors ($e$) on those fluxes. So, the raw data comes to us as $\approx 350 \times 3 = 1050$ individual numbers. These numbers are perfectly valid descriptors of the light-curve, but they are not easily understandable, neither by a human nor a computer.
 
-We can detect light-curve changes with a survey that observes the same set of contact binaries over a timespan of several years, in order to learn about the nature of the spotting that occurs on contact binaries. Is starspot formation left-right asymmetric? Is are the starspots more variable on one component, or is the process uniform across the shared photosphere? We also want to know if the answers to these questions depend on the temperature of the shared photosphere.
+Thankfully, we can introduce some assumptions that will make the task of succinctly describing our light-curves easier. First, we assume that our light-curve is a \emph{continuous function}. This means that there are not jumps or breaks in the true variation of light. The light-curve has a value at every point in phase, and is differentiable at every point in phase. Second, we assume that \emph{the light-curve is periodic}: that the pattern of light variation will exactly repeat itself after some amount of time. In \S\ref{sec: dec_var}, we learn that this is not exactly true for contact binaries when we observe them over many years. But for now, this assumption will serve us well.
 
-In \S\ref{lc_morph} we talked about the light-curve as if it was one single function. In actuality, the shape of contact binary light-curves change over time (Eqn. \ref{light_curve_redux}). 
+Now, armed with our two new assumptions and light-curve data, we can construct a light-curve function. There are many ways to construct a continuous, periodic function from a set of discrete measurements. The two most popular methods are the polynomial spline fit \citep{akerlof1994application, gettel2006catalog}, and the Fourier (or Harmonic) fit \citep{rucinski1997eclipsing}. There are many other forms that can be used to represent a continuous periodic function - but these are the most obvious choices. Each has its advantages and disadvantages. For example, if the light-curve has large derivatives at some points in the phase (it has ``sharp turns"), a polynomial spline fit may be the best choice. For a review of the types of fitting functions, see \citet{andronov2012phenomenological}. 
 
-\begin{equation} \label{eqn: light_curve_redux}
-f(\text{Phase, Time}) = \text{ Flux Received at Telescope}
-\end{equation}
+We have elected to use the harmonic fit, because it has a history of use in the description contact binary light-curves \citep{rucinski1993simple}. It is easy to implement and can fit the data accurately, provided that there are not sharp turns in the light-curve. By choosing a fitting function, we have turned our raw data from CRTS (which was 1000 numbers) into a continuous, periodic function which we can use to derive other, physically meaningful features (see Fig. \ref{fig: lc_features}).   
 
-We detect deviations of the light-curve with respect to the harmonic fit performed on the light-curve. We can consider the harmonic the ``average" light-curve of the contact binary during the eight-year CRTS observation timespan. This is because the CRTS measurements are randomly, (but uniformly) sampled in time, and the harmonic fit assigns equal weight to every measurement. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{lc_features.png}
+\caption{Perfoming a harmonic fit on light-curve observations allows the light-curve to be measured.}
+\label{fig: lc_features}
+\end{figure}
 
-We can measure the difference between observations and the harmonic fit as a function of time. If this difference becomes too large to attribute to photometric noise, we know that the contact binary is changing its brightness over a timespan of many years.
+\section[Motivation]{\hyperlink{toc}{Motivation}} \label{sec: Motivation}
+
+Contact Binaries consist of two main-sequence stars in close physical proximity. The vast majority of contact binary systems have orbital periods ranging from 0.22 to 1.0 days, giving them the shortest orbital periods of two non-degenerate objects. Analysis of the radial velocity curves and light-curves of contact binaries reveals that the even though the two components of a contact binary have unequal masses (and in fact prefer to), they share a common photospheric envelope with a temperature that differs by less than $\approx 100$K across its surface \citep{webbink2003contact}. The isothermal nature of the envelope, (despite differing component masses) can only be maintained via energy transport from the more massive primary to the secondary, through the neck ($L_{1}$ point) of the binary.
+
+Since the early 1960's observers have separated contact binaries into two types: A-type and W-type. The Roche geometry of the contact binary systems dictates that the primary (more massive) component of the contact binary has a slightly larger mean gravity. If contact systems obey a normal gravity-brightening law of the form $T_{\text{eff}} \propto g^{\beta}$, this would mean that the primary component should have a higher photospheric temperature \citep{rucinski1993realm}. The eclipse of the primary component by the cooler, dimmer, secondary should be the deepest eclipse. Contact binaries that conform to this model are called ``A-type" systems by observers.
+
+However, binaries are frequently observed that do not fit this model. In ``W-type" systems, the eclipse of the primary is the \emph{shallower} of the two eclipses. ``W-type" systems are all of late spectral type (F,G,K,M). There have been many models proposed to explain the so-called ``W-type syndrome", which include having a hotter secondary component, the presence of large starspots, dark belts in equatorial regions and bright faculae \citep{rucinski1985activity}. 
+
+An important feature of contact binary spots is that they are transient. Dramatic changes in contact binary light-curves have been observed \citep{rucinski2002contact, lee2004period}. The best model for contact binary light-curve changes is the appearance and disappearance of starspots on the photosphere \citep{bradstreet1988mapping}. There is evidence for magnetic activity cycles with periods ranging from 8 to 11 years on contact binary systems of the solar type \citep{borkovits2005indirect, marsh2016characterization}. During these activity cycles, the mean starspot coverage of the photosphere increases and decreases. This behavior should manifest itself as changes in the contact binary light-curve.
+
+Data from Doppler imaging of bright contact binaries provides detailed maps of spot coverage (see Fig. \ref{fig: hendry2000doppler_12_mod}). However we cannot obtain these maps for very many contact binaries, making it hard understand the behavior of the starspots.
+
+The spot model can be tested by repeatedly measuring the luminosity of a given contact binary, checking for variability associated with the appearance and disappearance of spots. The area of the contact binary that is presented to the observer changes as a function of orbital phase. By monitoring light-curves for changes at certain phases, we can determine where spots are forming on the binaries. If the starspot coverage changes on one component, but does not change on the other, then the light-curve will change shape (see Fig. \ref{fig: lc_change_schematic}). Is starspot formation left-right asymmetric? Is are the starspots more variable on one component, or is the process uniform across the shared photosphere? We want to know if the answers to these questions depend on the temperature of the shared photosphere.
+
+When compared with main-sequence stars of the same spectral type, contact binaries are bright UV and X-ray sources \citep{cruddace1984contact, rucinski1998extreme}. Due to their rapid rotation, contact binaries exhibit strong magnetic fields, which are responsible for the large starspots and also for strong UV and X-ray fluxes. Starspots are formed by the presence of strong magnetic fields in the photosphere, which also extend into the corona. The high degree of ionization in the corona causes energetic electron transitions in turn which cause the emission of X-ray and UV photons. Thus, contact binaries with evidence of optical variability should also be UV-bright \citep[p. 369][]{carroll2006introduction}.
+ Comparing the observed UV color as observed by GALEX to the level of optical variability as observed by CRTS will allow us to test the hypothesis that the coronal activity and photospheric brightness changes are related.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{hendry2000doppler_12_mod.png}
-\caption{Time-series maps of the starspot coverage on the contact binary VW Cephei, as reconstructed from Doppler imaging. We do not have many time-series maps of starspots like this one, making it difficult to understand how starspots evolve on contact binaries.}
+\caption{Time-series maps of the starspot coverage on the contact binary VW Cephei, as reconstructed from Doppler imaging. We do not have many time-series maps of starspots like this one, making it difficult to understand how starspots evolve on contact binaries as a function of mass, temperature, or other characteristics.}
 \label{fig: hendry2000doppler_12_mod}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.35]{lc_change_schematic.png}
+\caption{A schematic diagram of light-curve changes that occur when starspots appear on the photosphere of a contact binary, for four different starspot locations.}
+\label{fig: lc_change_schematic}
 \end{figure}
 
 \section[Methods]{\hyperlink{toc}{Methods}} \label{sec: Methods}
 
-First, we will describe the data that we will use in this study (\S\ref{sec: Sample Description}). Then, we will calculate the photospheric temperature of each binary using SDSS $ugriz$ photometry (\S\ref{sec: Measuring Photospheric Temperature with SDSS}). Then, we will perform a 4, 5, or 6 term harmonic fit on the phase folded light-curve, and convert the light-curve into units of flux (\S\ref{sec: Light-Curve Harmonic Fitting}). We will divide the flux curve into four distinct regions based on eclipse full-width at half-minimum (\S\ref{sec: Light-Curve Harmonic Fit Filters}), and perform a linear fit on the harmonic fit residuals as a function of time in each light-curve region (\S\ref{sec: Regression of the Residuals}). We will then compute a uniformity metric (named Region Disagreement) for the set of four brightness trends measured for each binary (\S\ref{sec: Computation of a Uniformity Metric}). We will compare this optical variability to UV data by computing the $FUV - NUV$ color and $FUV - NUV$ excess of each binary, as compared to a main-sequence star of similar temperature. After each one of the previous steps, we will remove systems with low-quality data from our sample, to ensure that the final sample is clean.
+In \S\ref{sec: Sample Description}, we describe the data that we will use in this study. We will calculate the photospheric temperature of each binary using SDSS $ugriz$ photometry (\S\ref{sec: Measuring Photospheric Temperature with SDSS}). Then, we will perform a 4, 5, or 6 term harmonic fit on the phase folded light-curve, and convert the light-curve into units of flux (\S\ref{sec: Light-Curve Harmonic Fitting}). We will divide the flux curve into four distinct regions based on eclipse full-width at half-minimum (\S\ref{sec: Light-Curve Harmonic Fit Filters}), and perform a linear fit on the harmonic fit residuals as a function of time in each light-curve region (\S\ref{sec: Regression of the Residuals}). We will then construct a uniformity metric (named Region Disagreement) for the set of four brightness trends measured for each binary (\S\ref{sec: Computation of a Uniformity Metric}). We will compare this optical variability to UV data by computing the $FUV - NUV$ color and $FUV - NUV$ excess of each binary, as compared to a main-sequence star of similar temperature. After each one of the previous steps, we will remove systems with low-quality data from our sample, to ensure that the final sample is clean.
 
 \subsection[Sample Description]{\hyperlink{toc}{Sample Description}} \label{sec: Sample Description}
 
@@ -1168,11 +1203,11 @@ In the \citet{drake2014catalina} sample there are 30,743 binaries classified as 
 
 \citet{drake2014catalina} have shown that 98.3\% of the sources classified as contact binaries in CRTS data are also classified as contact binaries in the analysis of LINEAR data in \citet{palaversa2013exploring}. They have also shown that many of the candidates have SDSS DR10 spectra consistent with known spectral characteristics of contact binaries. Because our contact binary sample is selected from the Drake subset, we expect that it will also have greater than 98\% purity. 
 
-Our initial sample of contact binaries contains systems for which we both have time-series photometry (provided by CRTS), and a temperature measurement using ($g - r$) color (provided by SDSS). From the 30,743 EW variables (corresponding to Contact Binaries), we find that 13,390 contain matching SDSS photometry. We elect to further filter these 13,390 systems, including only systems with orbital periods of less than two days $(P < 2.0 d)$, because orbital periods of longer than two days are not observed for true contact systems. This filter eliminates 161 systems to leave 13,229. We also elect to filter out systems with a reported mean $V_{CSS} < 13.5$, because \citet{marsh2016characterization} found that inconsistencies in the photometric aperture size chosen for bright sources renders the photometry of these bright sources unreliable. This filter eliminates 948 to leave 12,281.
+Our initial sample of contact binaries contains systems for which we both have time-series photometry (provided by CRTS), and a temperature measurement using ($g - r$) color (provided by SDSS). From the 30,743 EW variables (corresponding to Contact Binaries), we find that 13,390 contain matching SDSS photometry. We elect to further filter these 13,390 systems, including only systems with orbital periods of less than two days $(P < 2.0 d)$, because orbital periods of longer than two days are not observed for true contact systems. This filter eliminates 161 systems to leave 13,229. We also elect to filter out systems with a reported mean $V_{CSS} < 13.5$, because \citet{marsh2016characterization} found that inconsistencies in the photometric aperture size chosen for bright sources renders the photometry of these bright sources unreliable. This filter eliminates 948 systems to leave 12,281 in the sample.
 
 \subsection{Measuring Photospheric Temperature with SDSS} \label{sec: Measuring Photospheric Temperature with SDSS}
 
-In this section, we describe how we use SDSS $ugriz$ photometry to estimate the photospheric temperature of each contact binary.
+In this section, we describe how we use SDSS $g,$ $r$, and $i$ band photometry to estimate the photospheric temperature of each contact binary.
 
 1. We define color cutoffs that eliminate systems with saturated SDSS $g$ and $r$ band photometry. A sizable fraction of the SDSS $g$ band photometry is saturated for $g < 15$. To remove the saturated photometry, we define colour limits based on the observed distribution of contact binary colors and remove systems outside of those limits. See Fig. 4 of \citet{marsh2016characterization}. 
 
@@ -1183,9 +1218,9 @@ In this section, we describe how we use SDSS $ugriz$ photometry to estimate the 
 \end{split}
 \end{align} 
 
-Even though the vast majority of the systems lie far from the galactic plane ($l > 15^{\circ}$), the contact binaries in the sample are distant because this sample is fainter than the samples of most previous surveys. For this reason, we measure the photospheric temperature of each binary using extinction corrected SDSS $(g - r)$ photometry. We perform the extinction-correction process:
+Even though the vast majority of the systems lie far from the galactic plane ($l > 15^{\circ}$), the contact binaries in the sample are distant because this sample is fainter than the samples of most previous surveys. For this reason, we measure the photospheric temperature of each binary using extinction corrected SDSS $(g - r)$ photometry. 
 
-2. We compute the Johnson $V$ magnitude of the system by using maximum $V_{CSS}$ magnitude, and the uncorrected SDSS $r$ and $i$ measurements, using calibrations from \citet{jester2005sloan} and \citet{hovatta2014connection}.
+2. We begin the extinction correction process by computing the Johnson $V$ magnitude. Johnson $V$ can be computed using the maximum $V_{CSS}$ magnitude, and the uncorrected SDSS $r$ and $i$ measurements, using calibrations from \citet{jester2005sloan} and \citet{hovatta2014connection}.
 
 \begin{equation}
 (V - R) = 0.96*(r-i) + 0.21
@@ -1223,18 +1258,18 @@ This calibration is valid for main-sequence stars with temperatures between 3850
 
 \subsubsection{SDSS Photometry Data Cuts} \label{sec: SDSS Photometry Data Cuts}
 
-Of the 12,281 systems, 11,782 remained after the cuts in Eqn. \ref{color_cuts}. We restrict the $3850 < T_{\text{eff}} < 8000$. This filter restricts the binaries to the empirically verified range of Eqn. \ref{fukugita_cal}. Of the 11,782, 11,681 remain after this filter. We eliminate systems with $\delta T_{\text{eff}} \geq 500$K. Of the 11,681 remaining systems, 11,138 remain after this filter. 
+Of the 12,281 systems, 11,782 remained after the cuts in Eqn. \ref{color_cuts}. We restrict the $3850 < T_{\text{eff}} < 8000$. This filter restricts the binaries to the empirically verified range of Eqn. \ref{fukugita_cal}. Of 11,782 systems, 11,681 remain after this filter. We eliminate systems with $\delta T_{\text{eff}} \geq 500$K. Of the 11,681 remaining systems, 11,138 remain after this filter. 
 
 \subsection{Light-Curve Harmonic Fitting} \label{sec: Light-Curve Harmonic Fitting}
 
-We perform a harmonic fit on each set of relative flux measurements (\S \ref{sec: Flux Normalization and Phase Shifting}), using the \texttt{gatspy} package \citep{vanderplas2015gatspy, vanderplas2015periodograms}. We start with six sine terms, and six cosine terms. We then count the number of local maxima and local minima on the fit. In a physical light-curve, we expect to see two local maxima, and two local minima. This has been known since the first viable physical model was used to compute light-curves \citep{lucy1968light}.
+We perform a harmonic fit on each set of relative flux measurements (\S\ref{sec: Working with Survey Data}), using the \texttt{gatspy} package \citep{vanderplas2015gatspy, vanderplas2015periodograms}. We start with six sine terms, and six cosine terms. We then count the number of local maxima and local minima on the fit. In a physical light-curve, we expect to see two local maxima, and two local minima. This has been known since the first viable physical model was used to compute light-curves \citep{lucy1968light}.
 
 If the harmonic fit does not have precisely two local maxima and two local minima, we try the fit again, this time with five sine and five cosine terms. If the fit fails yet again, we try with four sine and four cosine terms, and so on. Of the 11,138 light-curves where a fit was attempted, 8,994 were fit by six terms, 901 by five, 523 by four, 635 by three and 87 by two terms. 
 
 CRTS photometry is reported in units of Catalina Sky Survey Magnitude $V_{CSS}$. For each contact binary system, we convert these magnitudes measurements into flux measurements, relative to the mean magnitude of all observations of the system. 
 
 \begin{equation} \label{css_flux}
-\text{Relative Flux }_{i} = \frac{10^{- \frac{V_{CSS,i}}{2.5}}}{10^{- \frac{\text{mean}(V_{CSS,i})}{2.5}}}
+\text{Relative Flux } = \frac{10^{- \frac{V_{CSS}}{2.5}}}{10^{- \frac{\text{mean}(V_{CSS})}{2.5}}}
 \end{equation}
 
 We then shift the contact binary light-curve in phase such that the deepest minimum of the flux (Min1) is located at $\theta = 0.25$. A light-curve prepared in this way is shown in Fig. \ref{lc_label} as the black line.
@@ -1248,7 +1283,7 @@ If a harmonic fit was reduced to three or fewer terms, the fit and corresponding
 Just because the harmonic fit has two local minima and two local maxima does not mean that it is a good approximation of the data. To separate light-curves that fit the observed data well from erroneous fits, we define a goodness-of-fit criterion:
 
 \begin{equation} \label{gof}
-\text{GOF} = \text{ standard deviation}\Bigg( \frac{\text{Residual}}{\text{Residual Error}}\Bigg)
+\text{GOF} = \text{ standard deviation}\Bigg( \frac{\text{Fit Residual}}{\text{Fit Residual Error}}\Bigg)
 \end{equation}
 
 Assuming gaussian residuals, observed data that is completely described by the harmonic fit has GOF$ = 1$. We choose to exclude light-curves with GOF $ < 1.5$ from our study.  Increasing the tolerance to GOF $ < 1.5$ allows for systems with significant variation in their light-curve during the observation timespan to pass through the filter. It does not allow, however for the passage of fits with large number distant outlying observations.
@@ -1256,10 +1291,8 @@ Assuming gaussian residuals, observed data that is completely described by the h
 After we perform a successful harmonic fit on the phase-folded photometry, we scale the flux measurements such that the maximum value of the harmonic fit has a flux measurement of 1:
 
 \begin{equation} \label{css_normalized_flux}
-\text{Normalized Relative Flux }_{i} = \frac{\text{Relative Flux }_{i}}{\text{Max(Relative Flux }_{i})}
+\text{Normalized Relative Flux } = \frac{\text{Relative Flux }}{\text{Max(Relative Flux })}
 \end{equation}
-
-
 
 \begin{figure}
 \centering
@@ -1273,31 +1306,75 @@ After we perform a successful harmonic fit on the phase-folded photometry, we sc
 
 In order to determine if the behavior of the light-curve variation is dependent on orbital phase, we divide the light-curve into four bins in orbital phase. We will check each light-curve for variation in these four regions separately. We elect to use four regions because the regions that correspond distinct orientations of the contact binary with respect to the line of sight (see the bottom panel of Fig. \ref{lc_label}). We elect to divide the light-curve at the eclipse full-width at half-minimum. The most important feature of this division is that for most contact binaries, it divides the phase into four bins of approximately equal phase-width. The regions of phase that include the eclipse minima (the regions including phase 0.25 and phase 0.75 in Fig. \ref{lc_label}) are slightly smaller in phase. We describe each light-curve region:
 
-Min1: At the first minimum, the hotter, brighter component is partially (or completely) blocked by the cooler, dimmer component. If the light-curve is most variable at Min1, the cooler component is the most variable physical component of the contact binary. 
+Min1: At the first minimum, the hotter, brighter component is partially (or completely) blocked by the cooler, dimmer component.
 
 Max1: At the first maximum, the longest axis of the binary is perpendicular to the line of sight. One half of the hotter component and one half of the cooler component are facing the observer.
 
-Min2:  At the second minimum, the cooler, dimmer component is partially (or completely) blocked the the hotter, brighter component. If the light-curve is most variable at Min2, the hotter, brighter component is the most variable physical component of the contact binary. 
+Min2:  At the second minimum, the cooler, dimmer component is partially (or completely) blocked the the hotter, brighter component. 
 
 Max2: At the second maximum, the longest axis of the binary is perpendicular to the line of sight.  One half of the hotter component and one half of the cooler component are facing the observer, but these are the opposite halves that are visible during Max1.
 
 The boundaries between the light-curve regions are defined to be the eclipse full-width at half-minima (FWHM). This width is calculated independently for each of the two eclipses. The light-curve region boundaries are not necessarily symmetrical about the phases 0.25 and 0.75. The half max fluxes are calculated, and then the phase coordinates of the light-curve intersections with that value are recorded.
 
-Given precision and amount of the CRTS data, we find that these four bins are the most appropriate choice for dividing the light-curve. We could divide the light-curve into more than four bins, however, as the bin size decreases, so will the number of observations in each bin. In order to ascertain trends in the harmonic fit residuals, there must be a large number of observations in each individual bin. Additionally, the choice of these four bins is understandable from a physical standpoint, and the bins are of approximately equal width in phase, so they have an approximately equal number of observations, yielding an approximately equal uncertainty in the trend.
+Given precision and amount of the CRTS data, we find that these four bins are the most appropriate choice for dividing the light-curve. We could divide the light-curve into more than four bins. However, as the bin size decreases, so will the number of observations in each bin. In order to ascertain trends in the harmonic fit residuals, there must be a large number of observations in each individual bin. Additionally, the choice of these four bins is understandable from a physical standpoint, and the bins are of approximately equal width in phase, so they have an approximately equal number of observations, yielding an approximately equal uncertainty in the trend.
 
 \subsubsection{Light-Curve Division Data Quality Cuts} \label{sec: Light-Curve Division Data Quality Cuts}
 
 In order to ensure a uniform analysis, we must place constraints on light-curves. We must ensure that there are enough photometric measurements in each bin to describe a brightness trend. We impose the following data quality cuts:
 
-We take the 10,418 contact binaries remaining after the cuts in \S\ref{sec: Light-Curve Harmonic Fitting}:
-
-1) We require that the smallest light-curve region be greater than 0.1 phases wide. We know from physical models that contact binaries are not expected to have eclipse FWHM smaller than 0.1 phases (see the light-curves in \citet{rucinski1993simple}). From the 10,418, this filter removes 94, to reduce the sample to 10,324.
+1) We require that the smallest light-curve region be greater than 0.1 phases wide. We know from physical models that contact binaries are not expected to have eclipse FWHM smaller than 0.1 phases (see the synthesized light-curves in \citet{rucinski1993simple}). From the 10,418, this filter removes 94, to reduce the sample to 10,324.
 
 2) We require that all systems have at least 20 observations in each phase bin. This is to ensure that $\dot{F}$ can be determined robustly by fitting a line to the data. From the 10,324 remaining after filter 1, this filter removes 445, leaving 9,879. Fig. \ref{nobs_filter} contains a visual depiction of this filter.
 
 3) We require that the time difference between the first observation and the last observation is at least 2000 days (5.5 years), in each bin. This is to ensure that the observed $\dot{F}$ is representative of the behavior over the majority of the eight year observation time baseline, and is not an extrapolation of the flux trend in a very small time window. From the 9,879 remaining after filter 2, this filter removes 228, leaving 9,651. Fig. \ref{trange_filter} contains a visual depiction of this filter.
 
-If any one of the light-curve regions fails any one of these tests, the binary must be removed from the sample, to ensure for uniform analysis.
+If any one of the light-curve regions fails any one of these tests, the binary must be removed from the sample, to ensure for uniform analysis. These filters remove 767 of the 10,418 systems  remaining after the cuts in \S\ref{sec: Light-Curve Harmonic Fitting} to leave 9,651.
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.75]{nobs_filter.png}
+\caption{A histogram of the number of observations in each light-curve region. We can see that the maxima regions (Max1, Max2) have a higher median number of observations ($\approx 100$) than the minima regions (Min1, Min2) ($\approx 60$). This is because maxima regions are wider in phase than the minima regions. In red, the filter is shown.}
+\label{nobs_filter}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.75]{trange_filter.png}
+\caption{A histogram of the time difference (in days) between the first and last observation of a given light-curve region (Max1, Min1, Max2, Min2). We can see that the distribution of observation timespans is similar across the four light-curve regions. In red, the filter is shown.}
+\label{trange_filter}
+\end{figure}
+
+\subsection{Regression of the Residuals} \label{sec: Regression of the Residuals}
+
+We measure the deviations of the observations with respect to the harmonic fit performed on all CRTS observations. We can consider the harmonic the ``average" light-curve of the contact binary during the eight-year CRTS observation timespan. This is because the CRTS measurements are randomly, (but relatively uniformly) sampled in time, and the harmonic fit does not preferentially weight observations by their time of observation.
+
+We subtract the harmonic fit from each observation, propagating the errors by adding in quadrature:
+
+\begin{multline} \label{residual} \\
+\text{ Residual } = \text{ Observed Flux } - \text{ Harmonic Fit } \\
+\text{ Residual Error } = \sqrt{\text{ Flux Error }^{2} + \text{ Harmonic Fit Error }^{2}} \\
+\end{multline}
+
+The number of measurements used to form the harmonic fit varies from binary to binary, with a median of 348. Because $348 >> 1$, we assume that an individual measurement has so little influence on the harmonic fit such that the errors are uncorrelated, and we can add the errors in quadrature.
+
+We then perform a linear regression on the fit residuals as a function of observation time. For each each light-curve region in every binary, we perform a linear fit of 500 Monte Carlo simulated datasets. The standard deviation of the distribution of the 500 measured slopes is taken to be the 1$\sigma$ uncertainty in $\dot{F}$ for that light-curve region.
+
+In this work we define to $\dot{F}$ to be the rate of change in flux received in units of the contact binary's maximum flux per year. To aid intuition, we report $\delta{F}$ as a \emph{percentage} of the contact binary's maximum flux. A $\dot{F} = 1$ measurement for a particular light-curve region indicates that the region is brightening by 1\% of the contact binary's maximum flux per year.
+
+\subsubsection{Regression of the Residuals Data Quality Cuts} \label{sec: Regression of the Residuals Data Quality Cuts}
+
+We require that the maximum 1$\sigma$ error in the $\dot{F}$ measurement is less than 0.5. This means that $\dot{F}$ must be known with an uncertainty of less than 0.5\% of the maximum flux per year. Of the 9,651 remaining after the cuts described in \ref{sec: Light-Curve Division Data Quality Cuts}, this filter removes 1,262, leaving 8,389. This filter is represented visually in Fig. \ref{fdot_filter}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.75]{fdot_filter.png}
+\caption{A histogram of the $\delta \dot{F}$ distribution of a given light-curve region (Max1, Min1, Max2, Min2). We have elected to filter remove from the sample systems with uncertainty in $\dot{F}$ of greater than 0.5.}
+\label{fdot_filter}
+\end{figure}
+
+Again, if any one of the light-curve regions fail this test, the binary must be removed from the sample.
 
 \begin{table}[H]
 \begin{center}
@@ -1305,8 +1382,8 @@ If any one of the light-curve regions fails any one of these tests, the binary m
 \begin{tabular}{|c|c|c|c|c|c|} \hline
 Filter Name & Input & Removed & Removed (\%) & Output & Section \\ \hline
 SDSS Match (3") & 30,743 & 17,353 & 56.4\% & 13,390 & \ref{sec: Sample Description} \\
-Period $< 2.0$ d & 13,390 & 161 & 1.2\% & 13,229 &  \ref{sec: sec: Sample Description} \\
-Mean $V_{CSS} > 13.5$  & 13,229 & 948  & 7.1\%  & 12,281 & \ref{sec: sec: Sample Description} \\
+Period $< 2.0$ d & 13,390 & 161 & 1.2\% & 13,229 &  \ref{sec: Sample Description} \\
+Mean $V_{CSS} > 13.5$  & 13,229 & 948  & 7.1\%  & 12,281 & \ref{sec: Sample Description} \\
 SDSS Photometry & 12,281 & 1,143 & 9.3\% & 11,138 & \ref{sec: SDSS Photometry Data Cuts} \\
 Harmonic Fit Filters & 11,138 & 720 &  6.4\% & 10,418 & \ref{sec: Light-Curve Harmonic Fit Filters} \\
 Light-Curve Division & 10,418 & 767 & 7.3\% & 9,651 & \ref{sec: Light-Curve Division Data Quality Cuts} \\
@@ -1318,53 +1395,9 @@ Residual Regression & 9,651 & 1,262 & 13.1\% & 8,389 & \ref{sec: Regression of t
 \label{filter_table}
 \end{table}%
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.75]{nobs_filter.png}
-\caption{A histogram of the number of observations in each light-curve region. We can see that the maxima regions (Max1, Max2) have a higher median number of observations ($\approx 100$) than the minima regions (Min1, Min2) ($\approx 60$). This is because maxima regions are wider in phase than the minima regions.}
-\label{nobs_filter}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.75]{trange_filter.png}
-\caption{A histogram of the time difference (in days) between the first and last observation of a given light-curve region (Max1, Min1, Max2, Min2). We can see that the distribution of observation timespans is similar across the four light-curve regions, with the median}
-\label{trange_filter}
-\end{figure}
-
-\subsection{Regression of the Residuals} \label{sec: Regression of the Residuals}
-
-We measure the deviations of the observations with respect to the harmonic fit performed on all CRTS observations. We can consider the harmonic the ``average" light-curve of the contact binary during the eight-year CRTS observation timespan. This is because the CRTS measurements are randomly, (but relatively uniformly) sampled in time, and the harmonic fit does not preferentially weight observations by their time of observation.
-
-We subtract the harmonic fit from each observation, propagating the errors by adding in quadrature:
-
-\begin{multline} \label{residual} \\
-\text{ Residual } = \text{ Flux }_{i} - \text{ Harmonic Fit } \\
-\text{ Residual Error } = \sqrt{\text{ Flux Error }_{i}^{2} + \text{ Harmonic Fit Error }^{2}} \\
-\end{multline}
-
-We add the individual measurement flux error and the error on the harmonic fit in quadrature, because we assume that they are uncorrelated. The number of measurements used to form the harmonic fit varies from binary to binary, with a median of 348. We assume that an individual measurement has so little influence on the harmonic fit, such that the errors are uncorrelated.
-
-We then perform a linear regression on the fit residuals as a function of observation time. For each each light-curve region in every binary, we perform a linear fit of 500 Monte Carlo simulated datasets. The standard deviation of the distribution of the 500 measured slopes is taken to be the 1$\sigma$ uncertainty in $\dot{F}$ for that light-curve region.
-
-In this work we define to $\dot{F}$ to be the rate of change in flux received in units of the contact binary's maximum flux per year. To aid intuition, we report $\delta{F}$ as a \emph{percentage} of the contact binary's maximum flux. A $\dot{F} = 1$ measurement for a particular light-curve region indicates that the region is brightening by 1\% of the contact binary's maximum flux per year.
-
-\subsubsection{Regression of the Residuals Data Quality Cuts} \label{sec: Regression of the Residuals Data Quality Cuts}
-
-We require that the maximum 1$\sigma$ error in the $\dot{F}$ is less than 0.5. This means that $\dot{F}$ must be known with an uncertainty of less than 0.5\% of the maximum flux per year. Of the 9,651 remaining after the cuts described in \ref{sec: Light-Curve Division Data Quality Cuts}, this filter removes 1,262, leaving 8,389. This filter is represented visually in Fig. \ref{fdot_filter}. 
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.75]{fdot_filter.png}
-\caption{A histogram of the $\delta \dot{F}$ distribution of a given light-curve region (Max1, Min1, Max2, Min2). We have elected to filter remove from the sample systems with uncertainty in $\dot{F}$ of greater than 0.5.}
-\label{fdot_filter}
-\end{figure}
-
-Again, if any one of the light-curve regions fail this test, the binary must be removed from the sample.
-
 \subsection{Computation of a Uniformity Metric} \label{sec: Computation of a Uniformity Metric}
 
-We would like to establish a metric that determines to what extent the measurements of brightness change in each of the four regions agree. We take the four measurements of [($\dot{F}$(Max1), $\dot{F}$(Min1), $\dot{F}$(Max2), $\dot{F}$(Min2)] and compute the weighted mean of their values. The weights, in this case are the reciprocal of the measurement uncertainties, $\frac{1}{\delta \dot{F} (\text{Reg.})}$.
+We would like to establish a metric that determines to what extent the measurements of brightness change in each of the four regions agree. We take the four measurements of [$\dot{F}$(Max1), $\dot{F}$(Min1), $\dot{F}$(Max2), $\dot{F}$(Min2)] and compute the weighted mean of their values. The weights in this case are the reciprocal of the measurement uncertainties, $\frac{1}{\delta \dot{F} (\text{Reg.})}$.
 
 \begin{equation} \label{weighted_mean}
 \mu = \sum_{\text{Reg.} = 1}^{4} \delta \dot{F} (\text{Reg.})^{-1} \Bigg(\frac{\dot{F}(\text{Max1})}{\delta \dot{F} (\text{Max1})} + \frac{\dot{F}(\text{Min1})}{\delta \dot{F} (\text{Min1})} + \frac{\dot{F}(\text{Max2})}{\delta \dot{F} (\text{Max2})} + \frac{\dot{F}(\text{Min2})}{\delta \dot{F} (\text{Min2})} \Bigg)
@@ -1372,37 +1405,40 @@ We would like to establish a metric that determines to what extent the measureme
 
 The weighted mean $\mu$ is similar to the $\dot{F}$ that would be measured had observations from all four light-curve regions been fit simultaneously.
 
-We use $\mu$ to compute a uniformity metric which we will name the Region Disagreement, or RD for short. This metric allows for the comparison of the level of disagreement between the four slopes supported by the data. The larger the value of RD metric, the more evidence exists for disparity between the four slopes measured for each light curve. A light-curve where all four slopes were identical would have a uniformity metric of zero.
+We use $\mu$ to compute a uniformity metric which we will name the Region Disagreement, or RD for short. This metric allows for the comparison of the level of disagreement between the four slopes supported by the data. The larger the value of RD metric, the more evidence exists for disparity between the four slopes measured for each light curve. A light-curve where all four slopes were identical would have a uniformity metric of zero (see Fig. \ref{fig: rd_explanation}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.35]{rd_explanation.png}
+\caption{A visual explanation of the Region Disagreement metric. In the top panel (a), all of the $\dot{F}$ measurements are equal, leading to an RD of zero. In the bottom panel (b), the four $\dot{F}$ do not agree on a single value, leading to a larger RD value.}
+\label{fig: rd_explanation}
+\end{figure}
 
 \begin{equation} \label{uniformity_metric}
 \text{RD} = \frac{|\dot{F}(\text{Max1}) - \mu|}{\delta \dot{F} \text{Max1}} + \frac{|\dot{F}(\text{Min1}) - \mu|}{\delta \dot{F} \text{Min1}} + \frac{|\dot{F}(\text{Max2}) - \mu|}{\delta \dot{F} \text{Max2}} + \frac{|\dot{F}(\text{Min2}) - \mu|}{\delta \dot{F} \text{Min2}}
 \end{equation} 
 
-The RD can be described as the sum of the distances of the individual $\dot{F}$ measurements from the weighted mean $\mu$, in units of the $1\sigma$ uncertainty $\delta \dot{F}$. While there are not statistical significances associated with specific values of the Region Disagreement, it does provide us a way to rank systems according to the evidence for light-curve changes that are not uniform across all phases.
+The RD can be described as the sum of the distances of the individual $\dot{F}$ measurements from the weighted mean $\mu$, in units of the $1\sigma$ uncertainty $\delta \dot{F}$. While there are not statistical significances associated with specific values of the RD, it does provide us a way to rank systems according to the evidence for light-curve changes that are not uniform across all phases.
 
 \subsection{GALEX Photometry} \label{GALEX Photometry}
 
-We queried the CASJobs server for all GALEX photometry within 3" of the 8,389 contact binaries remaining after the filters described in \S\ref{sec: Regression of the Residuals Data Quality Cuts}. When there was a one-to-one match between the catalogs with a source having both FUV and NUV mcat magnitudes, we included the contact binary in the GALEX subsample.
+We queried the CASJobs server for all GALEX photometry within 3" of the 8,389 contact binaries remaining after the filters described in \S\ref{sec: Regression of the Residuals Data Quality Cuts}. When there was a one-to-one match between the catalogs with a source having both FUV and NUV catalog magnitudes, we included the contact binary in the GALEX subsample.
 
-\citet{smith2014interesting} has determined a locus of UV-normality has been determined for main-sequence stars, using GALEX data. The FUV - NUV color of typical main-sequence stars can be fit with the following function.
+It has been shown that (for galactic model dust) there is little differential reddening between the GALEX FUV and NUV bands. This means that $FUV - NUV$ color does not depend on the amount of extinction due to interstellar dust. Because the vast majority of the contact binaries are not appreciably dust-reddened, and that $FUV - NUV$ color is largely independent of the amount of dust, we do not apply an extinction correction to the $FUV - NUV$ color.
+
+\citet{smith2014interesting} has determined a locus of UV-normality  for main-sequence stars, using GALEX data. The FUV - NUV color of typical main-sequence stars can be fit with the following function.
 
 \begin{equation} \label{uv_relation}
-FUV - NUV = \frac{1}{A(T_{\text{eff}} - B) + C}
+FUV - NUV = \frac{1}{A(T_{\text{eff}} - B) + C} \qquad [A,B,C] = [2.254 \times 10^{-6},-7,782, -25.77]
 \end{equation}
-
-where $[A,B,C] = [2.254 \times 10^{-6},-7,782, -25.77]$
 
 \citet{smith2014interesting} has also determined a condition for UV-abnormality. All objects satisfying the condition in Eqn. \ref{uv_normality} are considered to be ``UV Bright".
 
 \begin{equation} \label{uv_normality}
-FUV - NUV \geq \frac{T_{\text{eff}} - D}{E}
+FUV - NUV \leq \frac{T_{\text{eff}} - D}{E} \qquad [D,E] = [8550, -584]
 \end{equation}
 
-where $[D,E] = [8550, -584]$
-
 For each binary in the GALEX subsample, we compute both the $FUV - NUV$ color and $FUV - NUV$ excess with respect to Eqn. \ref{uv_relation}.
-
-It has been shown that (for galactic model dust) there is little differential reddening between the GALEX FUV and NUV bands. This means that $FUV - NUV$ color does not depend on the amount of extinction due to interstellar dust. Because the vast majority of the contact binaries are not appreciably dust-reddened, and that $FUV - NUV$ color is largely independent of the amount of dust, we do not apply an extinction correction to the $FUV - NUV$ color.
 
 \begin{figure}[H]
 \centering
@@ -1411,19 +1447,11 @@ It has been shown that (for galactic model dust) there is little differential re
 \label{fig: galex_err_filter}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.75]{uv_excess_fig.png}
-\caption{}
-\label{fig: uv_excess_fig}
-\end{figure}
-
 \section[Results]{\hyperlink{toc}{Results}} \label{sec: Results}
 
 \subsection{Correlation of Changes between Light-Curve Regions}
 
-Examining the correlation between light-curve regions as (for the whole sample) can reveal if the starspot formation occurs on both components, or just one.
-
+An initial examination of the $\dot{F}$ measurements for the four light-curve regions reveals that the $\dot{F}$ measurements are weakly correlated.
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.50]{vgrid.png}
@@ -1439,9 +1467,6 @@ Examining the correlation between light-curve regions as (for the whole sample) 
 \end{figure}
 
 In Fig. \ref{vgrid}, we see the scatterplot matrix of the $\dot{F}$ trend. The resulting Pearson $R^{2}$ correlation coefficients can be seen in Fig. \ref{v_cor}. Examine the correlation matrix, we see that for the whole sample the two maxima (Max1, Max2) exhibit the strongest correlation in $\dot{F}$ ($R^{2} = 0.35$). For the whole sample, the two minima (Min1, Min2) regions exhibit the weakest correlation in $\dot{F}$ ($R^{2} = 0.20$). All of the regions containing one minima region and one maxima region had a similar $R^{2}$ correlation coefficient of $\approx 0.3$. 
-If both components of the contact binary maintained equal spot-coverage for the entirety of the system's magnetic activity cycle, all light-curve regions would be equally correlated. During the maxima, one half of the primary, and one half of the secondary are visible. 
-
-During the minima, however, one component occults at least part of the other component. Again, if the same quantity of starspots were forming on each component, then the correlation of (Min1, Min2) should be the same as all of the other possible combinations of light-curve regions. However, if one component harbors the majority of the spots, the correlation between these regions should be less than all of the other possible combinations of light-curve regions.
 
 \subsection{$\dot{F}$ and Photospheric Temperature}
 
@@ -1465,14 +1490,13 @@ In this section, we determine which temperatures of contact binary exhibit chang
 
 We must first test the RD metric against instrumental effects. In the magnitude range of this study $13.5 < V_{CSS} < 19.0$, mean photometric uncertainty increases monotonically with $V_{CSS}$. If photometric uncertainties are measured and propagated incorrectly, the distribution of the Region Disagreement will change as a function of $V_{CSS}$. In Fig. \ref{RD_vcss}, we observe that the mean RD metric is stable across the range of $V_{CSS}$, indicating that photometric errors and saturation effects do not strongly influence this metric.
 
-In Fig. \ref{region_disagreement}, we see how the mean RD changes as a function of photospheric temperature.
-
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.75]{RD_vcss.png}
 \caption{The mean Region Disagreement as a function of binary magnitude $V_{CSS}$. The mean of the distribution is very close to 1. We see that this metric has the same mean value across the range of $V_{CSS}$ by observing the trend of the red points. }
 \label{RD_vcss}
 \end{figure}
+
 
 \begin{figure}[H]
 \centering
@@ -1481,12 +1505,39 @@ In Fig. \ref{region_disagreement}, we see how the mean RD changes as a function 
 \label{region_disagreement} 
 \end{figure}
 
+In Fig. \ref{region_disagreement}, we see how the mean RD changes as a function of photospheric temperature. For contact binaries with convective envelopes $T \leq 6200K$, the mean RD decreases monotonically with increasing temperature. This means that evidence for inhomogeneous spotting increases as the temperature of the contact binary decreases.
+
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.75]{minmax_corr.png}
-\caption{}
+\caption{The Pearson $R^{2}$ coefficient between the $\dot{F}$ measurements of light curve regions Min1, Min2 (in blue), and Max1, Max2 (in green).}
 \label{minmax_corr} 
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.50]{correlation_comp_1.png}
+\includegraphics[scale = 0.50]{correlation_comp_2.png}
+\caption{The correlation between $\dot{F}$ in the light-curve minima for solar-temperature contact binaries (left), and cool contact binaries (right). Note that the solar-temperature contact binaries exhibit a much better correlation between $\dot{F}$ measurements, while the $\dot{F}$ measurement for the cool contact binaries are essentially uncorrelated.}
+\label{corr_comp} 
+\end{figure}
+
+In Fig. \ref{minmax_corr}, we see how the Pearson $R^{2}$ coefficient evolves as a function of photospheric temperature. We observe that for all values of the temperature, the correlation between the light-curve maxima is stronger than the correlation between the light-curve minima. We observe that both the maxima and the minima correlation follows the same pattern: increasing from low values at low temperature, until a maximum is achieved at $5800K \leq T \leq 6200K$. For $T \geq 6200K$, the $R^{2}$ correlation between light-curve regions rapidly decreases.
+
+We can interpret these results in light of what we know about how the mean $\dot{F}$ changes as a function of photospheric temperature (see Fig. \ref{wmean_temp}). For systems with $T \geq 6200K$, the mean $\dot{F}$ is very low. This means that the light-curves don't change and most of the $\dot{F}$ measurements for individual light-curve measurements are 0, rendering them uncorrelated. We know that the mean $\dot{F}$ is large for systems with $5800K \leq T \leq 6200K$, we also see that the Pearson $R^{2}$ correlation coefficient is also large. This means that contact binaries of solar type form spots, but uniformly across the whole photosphere. Low temperature contact binaries $T \leq 4500K$ still have a moderate value of $\dot{F}$, but the Pearson $R^{2}$ correlation between light-curve regions is low. This means that low temperature contact binaries form spots, but not uniformly across the photosphere.
+
+
+
+
+\subsection{$FUV - NUV$ color}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.75]{uv_excess_fig.png}
+\caption{}
+\label{fig: uv_excess_fig}
+\end{figure}
+
 
 \begin{figure}[H]
 \centering
@@ -1497,6 +1548,7 @@ In Fig. \ref{region_disagreement}, we see how the mean RD changes as a function 
 
 \section[Conclusions]{\hyperlink{toc}{Conclusions}} \label{sec: Conclusions}
 
+We study the changes in light-curve shape of 8,389 contact binaries in the Catalina Surveys Variable Star Catalogue. We examine white-light photometry taken during the years of 2005 to 2013 for changes in light-curve shape. We find that binaries with photospheric temperatures ranging from $5700K \leq T_{\text{eff}} \leq  6200K$ have the most variable light-curves. For every light-curve, we compute the change in flux per year for four separate light-curve regions. We compute the $R^{2}$ correlation coefficient for all possible combinations of light-curve regions. We find that the flux change in light curve regions of binaries with $T_{\text{eff}} \leq 4500K$ are the least correlated, while those of  binaries with $5,700K \leq T_{\text{eff}} \leq  6,000K$ exhibit the strongest correlation. This supports the hypothesis that starspot size decreases with increasing photospheric temperature for convective binaries ($T_{\text{eff}} \leq 6200K$).
 
 \section[The Future]{\hyperlink{toc}{The Future}} \label{sec: The Future}
 
@@ -1504,36 +1556,30 @@ In this section, I'd like to outline a few projects that are possible with exist
 
 \subsection[Coronal Rotation with GALEX]{\hyperlink{toc}{Coronal Rotation with GALEX}}
 
-$\pi$ steradian (quarter of the sky) imaging survey. GALEX also completed a deep imaging survey, where a small portion of the sky was imaged for a long time. The two (FUV, NUV) detectors on GALEX are \emph{photon counting}\index{photon counting}, meaning that they record the time of arrival (to 5 milliseconds) and location (x,y pixel coordinated) of each incident photon. This means that it is possible construct light-curves from this data.
+The GALEX satellite has completed a $\pi$ steradian (quarter of the sky) imaging survey. GALEX has also completed a deep imaging survey, where a small portion of the sky was imaged for a long time. The two (FUV, NUV) detectors on GALEX are \emph{photon counting}\index{photon counting}, meaning that they record the time of arrival (to 5 milliseconds) and location (x,y pixel coordinated) of each incident photon. The python package \texttt{gphoton}\index{gphoton} allows the user to easily access and download GALEX photon-counting data (\url{https://archive.stsci.edu/prepds/gphoton/}). The user can construct light-curves out of the individual photon counts, to perform a periodicity analysis.
 
-The python package \texttt{gphoton}\index{gphoton} allows the user to easily access and download GALEX photon-counting data. The user can construct light-curves out of the individual photon counts, to perform a periodicity analysis.
-
-\url{https://archive.stsci.edu/prepds/gphoton/}
-
-\citet{mcgale1996rosat} have shown that the coronal rotation rate of convective contact binaries can be measured by using X-ray light-curves.
+\citet{mcgale1996rosat} have shown that the coronal rotation rate of convective contact binaries can be measured by using X-ray light-curves. For a sample of hundreds of contact binaries in the CRTS sample, a researcher can compare the orbital period as computed from the UV light-curve with the orbital period computed from the optical light-curve. The differential rotation rate of contact binary coronas can be measured for a sample with a variety of orbital periods, temperatures, and orbital inclinations.
 
 \subsection[Period Changes with Evryscope]{\hyperlink{toc}{Period Changes with Evryscope}}
 
-Evryscope is a wide-field, high-entendue survey instrument. It can perform photometry on the entire visible night-sky, down to magnitude $V \approx 16$. This places thousands of known contact binaries within its reach. What makes Evryscope special is its cadence: $V$-band photometry will be performed every 2-minutes on every star in the visible sky. The cadence of Evryscope enables complete light-curves to be constructed for each night of observing. The cadence of this data means that traditional $O - C$ analysis can be use to analyze period changes of over 1000 bright contact binaries.  
+Evryscope is a wide-field, high-entendue survey instrument. It can perform photometry on the entire visible night-sky, down to magnitude $V \approx 16$. This places thousands of known contact binaries within its reach. What makes Evryscope special is its cadence: $V$-band photometry will be performed every 2-minutes on every star in the visible sky. The cadence of Evryscope enables complete light-curves to be constructed for each night of observing. The cadence of this data means that traditional $O - C$ analysis can be use to analyze period changes for thousands bright contact binaries. These analyses will be extremely sensitive to period changes due to tertiary components and imminent merger\citep{lohr2015orbital}.
 
 \subsection[H$\alpha$ Fluxes in PTF]{\hyperlink{toc}{H$\alpha$ Fluxes in PTF}}
 
-The Palomar Transient Facility
+The Palomar Transient Facility is an all-sky survey. In addition to taking images in the $r$ and $g$ bands, PTF also observes in the narrowband H$\alpha$ \citep{law2009palomar}. In the coronas of active stars H$\alpha$ is an emission line. The strength of the H$\alpha$ line is another indicator of coronal activity. Comparing and contrasting H$\alpha$ excesses as observed by PTF with GALEX UV colors and optical variability data from CRTS should yield interesting results.
 
 \subsection[Future Surveys]{\hyperlink{toc}{Future Surveys}}
+
+We are only beginning to enter the era of all-sky surveys. There are many upcoming surveys that will provide data useful in understanding contact binary systems. Multi-band surveys like Pan-STARRS can provide multi-band light-curves for contact binary stars.
+
+In addition to being a precise photometer, Gaia performs parallax-based astrometry for hundreds of contact binaries. Hipparcos distance measurements were critical to calibration the contact binary period-luminosity relationships. Gaia will allow for a much better relationship to be calibrated.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.25]{future_missions.png}
-\caption{}
+\caption{Four future surveys that will have a big impact on the field of contact binary study. At top left, the camera array for the Zwicky Transient Facility. At top right, the dome for the Pan-STARRS1 telescope. At bottom left, a schematic of the LSST telescope. At bottom right, an illustration of the Gaia spacecraft.}
 \label{fig: future_missions}
 \end{figure}
-
-%----------------------------------------------------------------------------------------
-% Conclusion
-%----------------------------------------------------------------------------------------
-
-\section[Conclusion]{\hyperlink{toc}{Conclusion}}
 
 %----------------------------------------------------------------------------------------
 % Appendix
@@ -1551,7 +1597,6 @@ The Palomar Transient Facility
 \bibliographystyle{plainnat}
 \printindex
 \bibliography{thesis_bib}
-
 
 %----------------------------------------------------------------------------------------
 
