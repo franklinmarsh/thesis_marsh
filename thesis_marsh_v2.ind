@@ -25,15 +25,14 @@
 
   \indexspace
 
-  \item Early-Type, \hyperpage{45}
-  \item Early-type, \hyperpage{29}
+  \item Early-Type, \hyperpage{29}, \hyperpage{45}
   \item Einstein (satellite), \hyperpage{52}
   \item equations of stellar structure, \hyperpage{12}
 
   \indexspace
 
-  \item fill-out factor, \hyperpage{20}
-  \item fill-out factor $f$, \hyperpage{41}, \hyperpage{53}
+  \item fill-out factor $f$, \hyperpage{20}, \hyperpage{41}, 
+		\hyperpage{53}
   \item Fourier Transform, \hyperpage{63}
   \item frequency, \hyperpage{44}
 
@@ -70,14 +69,13 @@
   \indexspace
 
   \item M\"uller, Karl Hermann Gustav, \hyperpage{9}
-  \item mass ratio, \hyperpage{20}
-  \item mass ratio, $q$, \hyperpage{55}
+  \item Magellanic clouds, \hyperpage{45}
+  \item mass ratio $q$, \hyperpage{20}, \hyperpage{55}
   \item mass transfer, \hyperpage{36}
 
   \indexspace
 
-  \item opacity $\kappa$, \hyperpage{27}
-  \item opacity, $\kappa$, \hyperpage{13}
+  \item opacity $\kappa$, \hyperpage{13}, \hyperpage{27}
   \item orbital period, \hyperpage{31}
 
   \indexspace
@@ -104,12 +102,11 @@
 
   \indexspace
 
-  \item TAMS, \hyperpage{16}
-  \item TAMS, terminal age main-sequence, \hyperpage{40}
-  \item TAMS, Terminal-Age Main-Sequence, \hyperpage{15}
+  \item TAMS, Terminal-Age Main-Sequence, \hyperpage{15, 16}, 
+		\hyperpage{40}
   \item Tau Ceti, \hyperpage{14}
-  \item Thermal Relaxation Oscillation, \hyperpage{25}
-  \item Thermal Relaxation Oscillation, TRO, \hyperpage{61}
+  \item Thermal Relaxation Oscillation, TRO, \hyperpage{25}, 
+		\hyperpage{61}
   \item time-series, \hyperpage{63}
   \item transients, \hyperpage{6}
 
@@ -120,11 +117,7 @@
   \indexspace
 
   \item Z\"ollner's photometer, \hyperpage{9}
-  \item ZAMS, \hyperpage{16}, \hyperpage{32}, \hyperpage{35}
-  \item ZAMS, Zero-Age Main-Sequence, \hyperpage{15}
-  \item ZAMS, Zero-age main-sequence, \hyperpage{33}
-  \item ZAMS, zero-age main-sequence, \hyperpage{25}
-  \item Zero-Age Main Sequence, \hyperpage{35}
-  \item Zero-age main-sequence, \hyperpage{14}
+  \item ZAMS, Zero-Age Main-Sequence, \hyperpage{14--16}, 
+		\hyperpage{25}, \hyperpage{32, 33}, \hyperpage{35}
 
 \end{theindex}
