@@ -105,6 +105,7 @@ Pomona College}
 \maketitle
 \thispagestyle{empty}
 
+\pagenumbering{roman}
 \newpage
 
 %----------------------------------------------------------------------------------------
@@ -142,8 +143,10 @@ First, I'd like to thank Dr. Thomas Prince, Dr. Ashish Mahabal, and Dr. Eric Bel
 %----------------------------------------------------------------------------------------
 % INTRODUCTION
 %----------------------------------------------------------------------------------------
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
-\section[Introduction - Contact Binaries at the Intersection]{\hyperlink{toc}{Introduction - Contact Binaries at the Intersection}} \label{sec: intro}
+\section[Introduction]{\hyperlink{toc}{Introduction}} \label{sec: intro}
 
 A contact binary is a system that contains two stars (like our sun) in the closest possible proximity. These systems are shaped like peanuts, with a bridge of stellar material connecting the two components. The two components can transfer mass and energy through the bridge, allowing them to maintain their stability over a billions of years. Throughout their lifetime, mass transfers from the less massive secondary component, to the more massive primary component, while energy is pumped into the secondary component from the primary. When the secondary transfers almost all of its mass to the primary, the system becomes unstable, and the two components merge in a massive explosion. The contact binary star is placed at the intersection of some of the biggest questions in modern astronomy. In this introduction, we will see how contact binaries connect to a range of issues in modern astrophysics.
 
@@ -181,6 +184,7 @@ In this thesis, my main objectives are: \\
 \item To provide a roadmap that a future student can use to continue this work. 
 \end{enumerate}
 
+\newpage
 \section[Theory]{\hyperlink{toc}{Theory}} \label{sec: Theory}
 
 In this section, we will present a physical description of contact binary stars. Contact binary stars are made up of two main-sequence stars. In \S \ref{sec: The Main-Sequence Star} we will understand what main-sequence stars are like on the inside, how energy is generated in the cores of main-sequence stars, and how this energy is transported to their surfaces.
@@ -866,8 +870,7 @@ Flares have been observed on contact binary systems. Observations in visible lig
 \end{figure}
 
 \newpage
-
-\section[Observations]{\hyperlink{toc}{Observations}} \label{sec: observations}
+\section[Observations and Analysis Techniques]{\hyperlink{toc}{Observations and Analysis Techniques}} \label{sec: observations}
 
 Astronomy is unique as a science because almost all the information that can be obtained from an object in the sky comes to us as electromagnetic waves. Perhaps \emph{THE} question in observational astronomy is: ``What can we learn from these electromagnetic waves?". The study of contact binary stars is no different. In this section, we will learn the ways that researchers study electromagnetic waves from contact binary stars.
 
@@ -970,11 +973,11 @@ The first X-ray survey of contact binaries was conducted by the \emph{Einstein} 
 %\label{fig: cruddace1984contact_2}
 %\end{figure}
 
-\section[Analysis Techniques]{\hyperlink{toc}{Analysis Techniques}} \label{sec: analysis_techniques}
-
-In this section, we will learn how astronomers convert observations of contact binaries into measurements of physical parameters of the systems. Some parameters that can be measured for contact binary stars are the component masses $M_{1}, M_{2}$, the component luminosities and temperatures $L_{1}, L_{2}$, the system inclination $i$, and the fill-out factor $f$ \index{fill-out factor $f$}.
+%\section[Analysis Techniques]{\hyperlink{toc}{Analysis Techniques}} \label{sec: analysis_techniques}
 
 \subsection[Physical Light-Curve Modeling]{\hyperlink{toc}{Physical Light-Curve Modeling}} \label{sec: Physical Light-Curve Modeling}
+
+In this section, we will learn how astronomers convert observations of contact binaries into measurements of physical parameters of the systems. Some parameters that can be measured for contact binary stars are the component masses $M_{1}, M_{2}$, the component luminosities and temperatures $L_{1}, L_{2}$, the system inclination $i$, and the fill-out factor $f$ \index{fill-out factor $f$}.
 
 In \S\ref{sec: Photometry of Contact Binaries}, we learned that contact binary light-curves contain information about the physical nature of the system. Since the majority of data on contact binaries is in the form of photometric light-curve measurements, there has been much effort spent on refining the process of light-curve analysis.
 
@@ -1059,7 +1062,7 @@ Measurements of $\dot{P}$ provide an important constraint on models of contact b
 \label{fig: kubiak2006period_3}
 \end{figure}
 
-\section[Working with Survey Data]{\hyperlink{toc}{Working with Survey Data}} \label{sec: Working with Survey Data}
+\subsection[Working with Survey Data]{\hyperlink{toc}{Working with Survey Data}} \label{sec: Working with Survey Data}
 
 In recent years, vast quantities of photometric data from have been obtained by all-sky surveys. Some examples of all-sky surveys are the All-Sky Automated Survey \citep[ASAS,][]{pojmanski2000all}, Robotic Optical Transient Search Experiment \citep[ROTSE,][]{akerlof2000rotse}, Trans-Atlantic Exoplanet Survey \citep[TrES,][]{devor2008identification}, Lincoln Near-Earth Asteroid Research program \citep[LINEAR,][]{palaversa2013exploring}, and Catalina Real-Time Transient Survey \citep[CRTS,][]{drake2014catalina} (see Fig. \ref{fig: modern_surveys}). 
 
@@ -1147,6 +1150,7 @@ We have elected to use the harmonic fit, because contact binary light-curves do 
 \label{fig: lc_features}
 \end{figure}
 
+\newpage
 \section[Motivation]{\hyperlink{toc}{Motivation}} \label{sec: Motivation}
 
 In this section we will motivate our original work on contact binaries using survey data. Since the early 1960's observers have separated contact binaries into two types: A-type and W-type. The Roche geometry of the contact binary systems dictates that the primary (more massive) component of the contact binary has a slightly larger mean gravity. If contact systems obey a normal gravity-brightening law of the form $T_{\text{eff}} \propto g^{\beta}$, this would mean that the primary component should have a higher photospheric temperature \citep{rucinski1993realm}. The eclipse of the primary component by the cooler, dimmer, secondary should be the deepest eclipse. Contact binaries that conform to this model are called ``A-type" systems by observers.
@@ -1185,6 +1189,7 @@ Relationships between the starspot behavior of the two components provide eviden
 \label{fig: lc_change_schematic}
 \end{figure}
 
+\newpage
 \section[Methods]{\hyperlink{toc}{Methods}} \label{sec: Methods}
 
 In \S\ref{sec: Sample Description}, we describe the data that we will use in this study. We will calculate the photospheric temperature of each binary using SDSS $ugriz$ photometry (\S\ref{sec: Measuring Photospheric Temperature with SDSS}). Then, we will perform a 4, 5, or 6 term harmonic fit on the phase folded light-curve, and convert the light-curve into units of flux (\S\ref{sec: Light-Curve Harmonic Fitting}). We will divide the flux curve into four distinct regions based on eclipse full-width at half-minimum (\S\ref{sec: Light-Curve Harmonic Fit Filters}), and perform a linear fit on the harmonic fit residuals as a function of time in each light-curve region (\S\ref{sec: Regression of the Residuals}). We will then construct a uniformity metric (named Region Disagreement) for the set of four brightness trends measured for each binary (\S\ref{sec: Computation of a Uniformity Metric}). We will compare this optical variability to UV data by computing the $FUV - NUV$ color and $FUV - NUV$ excess of each binary, as compared to a main-sequence star of similar temperature. After each one of the previous steps, we will remove systems with low-quality data from our sample, to ensure that the final sample is clean.
@@ -1469,6 +1474,7 @@ The RD can be described as the sum of the distances of the individual $\dot{F}$ 
 %\label{fig: galex_err_filter}
 %\end{figure}
 
+\newpage
 \section[Results]{\hyperlink{toc}{Results}} \label{sec: Results}
 
 \subsection{$\dot{F}$ and Photospheric Temperature}
@@ -1566,7 +1572,7 @@ We can interpret these results in light of what we have observed about how the m
 %\label{fig: uv_excess_fig}
 %\end{figure}
 
-\section[Conclusions]{\hyperlink{toc}{Conclusions}} \label{sec: Conclusions}
+\subsection[Conclusions]{\hyperlink{toc}{Conclusions}} \label{sec: Conclusions}
 
 We study the changes in light-curve shape of 8,389 contact binaries in the Catalina Surveys Variable Star Catalogue. We examine white-light photometry taken during the years of 2005 to 2013 for changes in light-curve shape. We find that binaries with photospheric temperatures ranging from $5700K \leq T_{\text{eff}} \leq  6200K$ have the most variable light-curves. For every light-curve, we compute the change in flux per year for four separate regions in light-curve phase. We compute the $R^{2}$ correlation coefficient for all possible combinations of light-curve regions. We find that the flux change in light curve regions of binaries with $T_{\text{eff}} \leq 4500K$ are the least correlated, while those of  binaries with $5,700K \leq T_{\text{eff}} \leq  6,000K$ exhibit the strongest correlation. This supports the hypothesis that the uniformity of the photospheric surface brightness distribution increases with increasing photospheric temperature for convective binaries ($T_{\text{eff}} \leq 6200K$).
 
@@ -1574,7 +1580,8 @@ On contact binaries, we find that the starspot formation can be left-right asymm
 
 The depth of the binary convective envelope\index{convective envelope} decreases with increasing photospheric temperature. This suggests that for binaries with deep convective envelopes, the dynamo mechanisms for each of the component are independent, whereas for binary with shallow convective envelopes, the dynamo mechanisms are somehow related. Simulations of the common envelope of contact binary systems are needed to determine what this result means for the interior structure and circulation of the envelope.
 
-\section[The Future]{\hyperlink{toc}{The Future}} \label{sec: The Future}
+\newpage
+\section[Future Projects]{\hyperlink{toc}{The Future}} \label{sec: The Future}
 
 In this section, I'd like to outline a few projects that are possible with existing datasets. I will also summarize a few future surveys that I believe have great potential to improve our understanding of contact binary systems.
 
@@ -1610,7 +1617,7 @@ In addition to being a precise photometer, ESA's Gaia satellite performs paralla
 % Appendix
 %----------------------------------------------------------------------------------------
 
-\appendix \hyperlink{toc}{Appendix}
+\appendix %\hyperlink{toc}{Appendix}
 
 \includepdf[pages = -]{Marsh2017etal.pdf}
 
